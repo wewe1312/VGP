@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="output.css" rel="stylesheet" />
+    <link href="css/wstyle.min.css" rel="stylesheet" />
+    <!-- some script -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="script/wswiper.js" type="module"></script>
+    <script src="script/wmodal.js" type="module"></script>
+  </head>
+  <body>
+    <!-- this is the fake body div -->
+    <div class="page-wrapper">
+      <!-- offcanvas -->
+      <div id="w-offcanvas" class="offcanvas float">
+        <div class="offcanvas-content w-[15em] lg:w-[15em]">
+          <div class="icon w-image-block w-full mx-auto">
+            <img src="./images/game-icon.png" alt="" />
+          </div>
+          <!-- link -->
+          <div class="link grid grid-flow-row h-[20em]">
+            <a href="#">Trang Chủ</a>
+            <a href="#">Fanpage</a>
+            <a href="#">Tin Tức</a>
+            <a href="#">Sự Kiện</a>
+            <a href="#">Cộng Đồng</a>
+            <a href="#">Tải Game</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- float -->
+      <div
+        class="block-float hidden lg:block lg:w-[11em] aspect-[300/788] px-[1em] m-[.5em] overflow-hidden"
+      >
+        <div class="w-image-block w-full mx-auto">
+          <img src="./images/game-icon.png" alt="" />
+        </div>
+        <!-- store -->
+        <div
+          class="w-image-block w-full mx-auto mt-[1em] overflow-hidden relative"
+        >
+          <img src="./images/float/store.png" alt="" />
+          <div
+            class="grid grid-flow-row absolute h-full w-full top-0 left-0 z-[1]"
+          >
+            <a href="#" class="-indent-[9999px]">Appstore</a>
+            <a href="#" class="-indent-[9999px]">Googleplay</a>
+          </div>
+        </div>
+        <!-- link -->
+        <div
+          class="link text-white grid grid-flow-row text-center aspect-[150/184] mt-[.75em]"
+        >
+          <a href="#">Trang Chủ</a>
+          <a href="#">Fanpage</a>
+          <a href="#">Cộng Đồng</a>
+        </div>
+        <!-- minimize -->
+        <button
+          class="w-full h-[5em] mt-0 block"
+          data-toggle="minimize"
+          data-target=".block-float"
+        ></button>
+        <!-- block minimize -->
+        <button
+          class="block-mini w-image-button aspect-[300/156]"
+          data-toggle="minimize"
+          data-target=".block-float"
+        >
+          <img src="./images/float/float-minimize.png" alt="" />
+        </button>
+      </div>
+
+      <!-- header menu -->
+      <div class="absolute top-[.75em] left-[.75em] z-[3]">
+        <button
+          class="w-image-button w-[3em] lg:w-[2.5em]"
+          data-toggle="offcanvas"
+          data-target="w-offcanvas"
+        >
+          <svg
+            class="w-full"
+            fill="#fff"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- 001 -->
+      <div class="wcontainer">
+        <div class="w-full h-[33em] lg:h-[48em] overflow-hidden">
+          <!-- logo -->
+          <div class="w-image-block w-7/12 lg:w-[22em] lg:mt-[2em] mx-auto">
+            <img src="./images/game-logo.png" alt="" />
+          </div>
+          <!-- 18+ -->
+          <div class="w-[20em] mx-auto hidden lg:block lg:mt-[22.5em]">
+            <div class="grid grid-cols-2 gap-[.15em]">
+              <div class="flex flex-col justify-between">
+                <a href="#" class="w-image-button"
+                  ><img src="./images/appstore.png" alt=""
+                /></a>
+                <a href="#" class="w-image-button"
+                  ><img src="./images/googleplay.png" alt=""
+                /></a>
+              </div>
+              <div class="w-image-block">
+                <img src="./images/block18-big.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- section 2 -->
+      <section id="block-002">
+        <div class="wcontainer z-10 relative">
+          <div class="layout lg:grid lg:grid-cols-8">
+            <!-- download M-->
+            <div class="w-full mx-auto lg:hidden">
+              <button class="w-image-button w-full">
+                <img src="./images/btn-download-m.png" alt="" />
+              </button>
+            </div>
+            <!-- download LG-->
+            <div
+              class="block-download w-full mx-auto hidden lg:block pr-[.69em] lg:pr-[1em] relative"
+            >
+              <div class="w-image-block icon mx-auto w-10/12 relative z-10">
+                <img src="./images/game-icon.png" alt="" />
+              </div>
+              <div class="block-download-inside">
+                <div
+                  class="wrapper px-[.5em] mt-[8.5em] h-[18em] grid grid-rows-3"
+                >
+                  <a href="#">
+                    <div class="w-image-block w-[2.5em] mr-[.5em]">
+                      <img src="./images/icon-store_apk.png" alt="" />
+                    </div>
+                    <div>Tải APK<br />Trực Tiếp</div>
+                  </a>
+                  <a href="#">
+                    <div class="w-image-block w-[2.5em] mr-[.5em]">
+                      <img src="./images/icon-store_ios.png" alt="" />
+                    </div>
+                    <div>Tải trên <br />Appstore</div>
+                  </a>
+                  <a href="#">
+                    <div class="w-image-block w-[2.5em] mr-[.5em]">
+                      <img src="./images/icon-store_android.png" alt="" />
+                    </div>
+                    <div>Tải trên<br />Googleplay</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- button -->
+            <div
+              class="block-button col-span-1 lg:col-span-6 grid grid-cols-2 lg:grid-cols-3"
+            >
+              <a
+                href="#"
+                class="block aspect-[300/165] lg:aspect-[300/100] transition giftcode"
+              >
+              </a>
+              <a
+                href="#"
+                class="block aspect-[300/165] lg:aspect-[300/100] transition fanpage"
+              >
+              </a>
+              <a
+                href="#"
+                class="block aspect-[300/165] lg:aspect-[300/100] transition napxu"
+              >
+              </a>
+              <a
+                href="#"
+                class="block aspect-[300/165] lg:aspect-[300/100] transition sukien lg:hidden"
+              >
+              </a>
+            </div>
+
+            <!-- support -->
+            <div class="block-support grid grid-cols-4 lg:grid-cols-2 relative">
+              <a href="#" class="block aspect-square transition tanthu"> </a>
+              <a href="#" class="block aspect-square transition camnang"> </a>
+              <a href="#" class="block aspect-square transition vip"> </a>
+              <a href="#" class="block aspect-square transition hotro"> </a>
+            </div>
+
+            <!-- slider -->
+            <div class="w-full swiper newsboard">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="w-image-block w-full">
+                    <img src="./images/img001.png" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="w-image-block w-full">
+                    <img src="./images/img001.png" alt="" />
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- news -->
+            <div
+              class="block-news overflow-hidden aspect-[585/390] text-[.9em] p-[1em] mt-[0] lg:text-[1em] lg:p-[2em] lg:mt-[1em]"
+            >
+              <div class="title flex justify-between items-center">
+                <div class="text-white px-[1em] py-[.4em] bg-secondary">
+                  Tin tức
+                </div>
+                <button
+                  class="text-secondary opacity-50 hover:opacity-100 transiton"
+                >
+                  Xem thêm +
+                </button>
+              </div>
+              <div class="news-list mt-[1em] lg:mt-[2em]">
+                <ul>
+                  <li>
+                    <a href="#">"Of Drink A-Dreaming" - Gameplay Details</a>
+                  </li>
+                  <li>
+                    <a href="#">"Of Drink A-Dreaming" - Gameplay Details</a>
+                  </li>
+                  <li>
+                    <a href="#">"Of Drink A-Dreaming" - Gameplay Details</a>
+                  </li>
+                  <li>
+                    <a href="#">"Of Drink A-Dreaming" - Gameplay Details</a>
+                  </li>
+                  <li>
+                    <a href="#">"Of Drink A-Dreaming" - Gameplay Details</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- feature -->
+            <div class="block-feature grid grid-cols-3 mt-[1em]">
+              <a
+                href="#"
+                class="block aspect-[195/390] hover:brightness-110 transition landing"
+              >
+              </a>
+              <a
+                href="#"
+                class="block aspect-[195/390] hover:brightness-110 transition tonghopsukien"
+              >
+              </a>
+              <a
+                href="javascript:void(0);"
+                data-toggle="youtube"
+                data-target="https://www.youtube.com/embed/dYzD5tvqmos"
+                class="block aspect-[195/390] hover:brightness-110 transition trailer"
+              >
+              </a>
+            </div>
+          </div>
+
+          <!-- accordion -->
+          <div class="hidden lg:block w-accordion mt-[1em]" id="">
+            <div
+              class="w-accordion-container aspect-[1170/360] overflow-hidden flex"
+            >
+              <!-- 1 -->
+              <button
+                class="w-accordion-button aspect-[80/360]"
+                data-no="01"
+                data-toggle="accordion"
+                data-target="w-acc-01"
+              ></button>
+              <div class="w-accordion-slide active" id="w-acc-01">
+                <img src="images/character/accordion-slide-01.jpg" alt="" />
+              </div>
+              <!-- 2 -->
+              <button
+                class="w-accordion-button aspect-[80/360]"
+                data-no="02"
+                data-toggle="accordion"
+                data-target="w-acc-02"
+              ></button>
+              <div class="w-accordion-slide" id="w-acc-02">
+                <img src="images/character/accordion-slide-01.jpg" alt="" />
+              </div>
+              <!-- 3 -->
+              <button
+                class="w-accordion-button aspect-[80/360]"
+                data-no="03"
+                data-toggle="accordion"
+                data-target="w-acc-03"
+              ></button>
+              <div class="w-accordion-slide" id="w-acc-03">
+                <img src="images/character/accordion-slide-01.jpg" alt="" />
+              </div>
+              <!-- 4 -->
+              <button
+                class="w-accordion-button aspect-[80/360]"
+                data-no="04"
+                data-toggle="accordion"
+                data-target="w-acc-04"
+              ></button>
+              <div class="w-accordion-slide" id="w-acc-04">
+                <img src="images/character/accordion-slide-01.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 18+ -->
+        <div
+          class="text-[.8em] text-center mt-[3em] md:mt-[6em] px-[2em] py-[1em] text-primary bg-[#ddd]"
+        >
+          Chơi quá 180 phút một ngày sẽ ảnh hưởng xấu đến sức khỏe
+        </div>
+      </section>
+
+      <!-- footer -->
+      <section>
+        <!-- footer -->
+        <div
+          class="footer flex flex-col justify-center py-[.5em] mt-[2em] md:mt-0 md:pt-[2em]"
+        >
+          <div class="container-fluid">
+            <!-- logo -->
+            <div
+              class="mx-auto w-[8em] flex flex-1 justify-center items-center"
+            >
+              <div class="w-image-block mx-[.5em]">
+                <img src="./images/vgp-logo-simple.png" alt="" />
+              </div>
+              <!-- <div class="w-image-block mx-[.5em]">
+                <img src="./images/img18.png" alt="" />
+              </div> -->
+            </div>
+            <!-- text -->
+            <div class="text-center text-[0.8em] my-[2em]">
+              Hotline: 1900 636 521 (từ 8:00 đến 22:00) - Email:
+              hotro@vgpjsc.vn<br />Công ty CP VGP phân phối độc quyền tại Việt
+              Nam.<br />
+              15B Đông Quan - Phường Quan Hoa - Quận Cầu Giấy - Hà Nội<br />
+              Giấy phép phê duyệt nội dung số: 30/QĐ-BTTTT
+              <br />Bộ Thông Tin Và Truyền thông cấp ngày 08/01/2019
+            </div>
+          </div>
+        </div>
+        <!-- menu -->
+        <div class="footer-menu bg-[#111]">
+          <div class="container-fluid">
+            <div class="flex justify-center py-[1.5em]">
+              <a class="transition" href="#">Trang chủ</a>
+              <a class="transition" href="#">Tin tức</a>
+              <a class="transition" href="#">Sự kiện</a>
+              <a class="transition" href="#">Fanpage</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- modal youtube -->
+      <div class="wmodal" id="modal-youtube">
+        <div class="wmodal-content w-10/12 md:w-6/12">
+          <div class="w-full flex justify-end p-[.5em]">
+            <button class="text-white opacity-25" data-dismiss="modal">
+              Đóng
+            </button>
+          </div>
+          <div class="aspect-[16/9]">
+            <iframe
+              id="w-youtube"
+              width="100%"
+              height="100%"
+              src=""
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end div page-wrapper -->
+
+    <script src="./script/waccordion.js"></script>
+  </body>
+</html>
