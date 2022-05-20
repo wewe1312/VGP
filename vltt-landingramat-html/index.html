@@ -76,10 +76,10 @@
       <button
         class="w-image-button text-white cursor-pointer"
         data-toggle="modal"
-        data-target="modal-confirm"
+        data-target="modal-login"
       >
         <div class="flex justify-end items-center">
-          <span class="content text-[1.5em] lg:text-[1em]">Đăng xuất</span>
+          <span class="content text-[1.5em] lg:text-[1em]">Đăng nhập</span>
           <div class="w-[3em] lg:w-[2em]">
             <svg
               class="w-full"
@@ -94,6 +94,71 @@
           </div>
         </div>
       </button>
+    </div>
+    <!-- modal login -->
+    <div class="wmodal" id="modal-login">
+      <div class="wmodal-content">
+        <div class="content p-[3em] lg:p-[2em] lg:pb-[0]">
+          <h1 class="title text-primary text-center">
+            <span class="">Đăng nhập</span>
+          </h1>
+          <div class="content-scroll">
+            <div class="text-[1.6em] h-fit">
+              <div class="text-center mt-[2em]">
+                Xin hãy đăng nhập tài khoản
+              </div>
+              <form
+                class="mt-[1em] w-full overflow-hidden grid grid-flow-row gap-[.5em] text-center"
+              >
+                <input
+                  class="px-[1em] py-[.5em] rounded"
+                  type="text"
+                  placeholder="Tên Đăng Nhập"
+                />
+                <input
+                  class="px-[1em] py-[.5em] rounded"
+                  type="password"
+                  placeholder="Mật khẩu"
+                />
+                <button class="w-full p-[.5em] bg-vgp text-white rounded">
+                  Đăng nhập
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal logout -->
+    <div class="wmodal" id="modal-logout">
+      <div class="wmodal-content w-11/12 md:w-8/12">
+        <div class="content p-[3em] lg:p-[2em] lg:pb-[0]">
+          <h1 class="title text-primary text-center">
+            <span class="">Đăng xuất</span>
+          </h1>
+          <div class="content-scroll">
+            <div class="text-[1.6em] h-fit">
+              <div class="text-center mt-[2em]">
+                Bạn có chắc chắn muốn [Đăng Xuất]?
+              </div>
+              <div class="grid grid-cols-2 gap-[.5em] mt-[2em]">
+                <button
+                  class="p-[.5em] bg-gray-700 text-white rounded"
+                  data-dismiss="modal"
+                >
+                  Không
+                </button>
+                <button
+                  class="p-[.5em] bg-primary text-white rounded"
+                  data-dismiss="modal"
+                >
+                  Đồng ý
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- section 01 -->
@@ -272,7 +337,16 @@
           <div
             class="block-status mx-auto w-fit text-white text-[1.66em] lg:text-[1em] lg:leading-[1em] text-center"
           >
-            Bạn đang có <span class="mx-[.3em]"> [1] </span> lượt quay.
+            <div class="hidden">
+              Bạn đang có <span class="mx-[.3em]"> [1] </span> lượt quay.
+            </div>
+            <div>
+              Hãy
+              <button data-toggle="modal" data-target="modal-login">
+                <span>Đăng nhập</span>
+              </button>
+              để tham gia sự kiện.
+            </div>
           </div>
 
           <!-- wheel -->
@@ -286,7 +360,11 @@
             <div class="wheel w-full w-image-block z-[2]">
               <img src="./images/wheel/wheel.png" alt="" />
             </div>
-            <button class="wheel-button w-full w-image-button z-[3]">
+            <button
+              class="wheel-button w-full w-image-button z-[3]"
+              data-toggle="modal"
+              data-target="modal-wheel"
+            >
               <img class="" src="./images/wheel/button.png" alt="" />
             </button>
           </div>
@@ -308,7 +386,13 @@
             <div
               class="cum-button dark w-full mt-[.5em] grid grid-cols-3 text-[1.66em] lg:text-[1em]"
             >
-              <button class="transition">Lịch Sử</button>
+              <button
+                class="transition"
+                data-toggle="modal"
+                data-target="modal-vongquay-lichsu"
+              >
+                Lịch Sử
+              </button>
               <button class="transition">Chia Sẻ</button>
               <button
                 class="transition"
@@ -322,6 +406,158 @@
         </div>
       </div>
     </section>
+    <!-- modal simple wheel -->
+    <div class="wmodal" id="modal-wheel">
+      <div class="wmodal-content">
+        <button
+          class="btn-close-modal aspect-square w-[6em]"
+          data-dismiss="modal"
+        ></button>
+        <div class="content p-[3em] lg:p-[2em] lg:pb-[0]">
+          <h1 class="title text-primary text-center">
+            <span class="">Nhận Quà</span>
+          </h1>
+          <div class="content-scroll">
+            <div class="text-[1.6em] h-fit">
+              <div class="text-center mt-[2em] pb-[2em]">
+                Xin chúc mừng bạn đã nhận được
+                <span class="block uppercase text-primary text-[1.5em]"
+                  >[Thẻ điện thoại 20K]</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal vong quay lich su-->
+    <div class="wmodal" id="modal-vongquay-lichsu">
+      <div class="wmodal-dialog aspect-[512/682] relative w-11/12 md:w-8/12">
+        <button
+          class="btn-close-modal aspect-square w-[6em]"
+          data-dismiss="modal"
+        ></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Lịch Sử</span>
+          </h1>
+          <div class="content-scroll">
+            <div class="text-[1.6em] h-fit">
+              <table
+                class="w-full h-fit text-[1.5em] lg:text-[1em] leading-[4] text-center border-collapse border"
+              >
+                <thead>
+                  <th class="border">STT</th>
+                  <th class="border text-primary">Tên NV</th>
+                  <th class="border">ID Nhân Vật</th>
+                  <th class="border">Server</th>
+                  <th class="border text-primary">KNB</th>
+                </thead>
+                <tbody>
+                  <tr data-toggle="loop" data-loop="10">
+                    <td class="border">01</td>
+                    <td class="border text-primary">Thộn Đần Đọ</td>
+                    <td class="border">11040405</td>
+                    <td class="border">S125</td>
+                    <td class="border text-primary">128000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal vong quay the le -->
+    <div class="wmodal" id="modal-vongquay-thele">
+      <div class="wmodal-dialog aspect-[512/682] relative w-11/12 md:w-8/12">
+        <button
+          class="btn-close-modal aspect-square w-[6em]"
+          data-dismiss="modal"
+        ></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Thể Lệ Vòng Quay</span>
+          </h1>
+          <div class="content-scroll">
+            <div class="text-[1.6em] h-fit">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                sit amet tortor lacus. Mauris orci diam, luctus eget nibh vel,
+                sodales mattis nisi. Curabitur turpis ipsum, rutrum non metus
+                quis, euismod porta lectus. Morbi quis nunc id purus iaculis
+                rutrum. Pellentesque eget volutpat arcu. Aliquam erat volutpat.
+                Ut arcu ligula, placerat a ipsum cursus, sodales imperdiet
+                felis. Duis ut vulputate eros. Proin consectetur luctus mauris,
+                ac viverra felis malesuada sed. Aenean in vehicula ex, a commodo
+                dolor. Cras nec cursus ex. Aliquam id eros turpis. Maecenas at
+                quam enim. Mauris a massa sed urna consequat vestibulum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal vong quay nhiemvu -->
+    <div class="wmodal" id="modal-nhiemvu">
+      <div class="wmodal-dialog aspect-[512/682] relative w-11/12 md:w-8/12">
+        <button
+          class="btn-close-modal aspect-square w-[6em]"
+          data-dismiss="modal"
+        ></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Nhiệm Vụ</span>
+          </h1>
+          <div class="content-scroll">
+            <div class="text-[1.6em] h-fit">
+              <!-- nhiem vu -->
+              <div
+                class="grid grid-cols-3 gap-[.5em] py-[1em] border-b-[1px] border-b-[#ccc]"
+              >
+                <div class="col-span-2">
+                  <span class="text-primary">Nhiệm vụ hàng ngày</span><br />
+                  Useless selectors can be written using this pseudo-class.
+                </div>
+                <div class="col-span-1 flex justify-center items-center">
+                  <button class="p-[.5em] text-white bg-primary rounded">
+                    Nhận NV
+                  </button>
+                </div>
+              </div>
+              <!-- nhiem vu -->
+              <div
+                class="grid grid-cols-3 gap-[.5em] py-[1em] border-b-[1px] border-b-[#ccc]"
+              >
+                <div class="col-span-2">
+                  <span class="text-primary">Nhiệm vụ hàng ngày</span><br />
+                  Useless selectors can be written using this pseudo-class.
+                </div>
+                <div class="col-span-1 flex justify-center items-center">
+                  <button class="p-[.5em] text-white bg-green-400 rounded">
+                    Đã nhận
+                  </button>
+                </div>
+              </div>
+              <!-- nhiem vu -->
+              <div
+                class="grid grid-cols-3 gap-[.5em] py-[1em] border-b-[1px] border-b-[#ccc]"
+              >
+                <div class="col-span-2">
+                  <span class="text-primary">Nhiệm vụ hàng ngày</span><br />
+                  Useless selectors can be written using this pseudo-class.
+                </div>
+                <div class="col-span-1 flex justify-center items-center">
+                  <button class="p-[.5em] text-white bg-[#ccc] rounded">
+                    Hoàn thành
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- section 04 -->
     <section id="section-04" class="h-[95em] lg:h-[74em] relative z-[2]">
@@ -473,7 +709,10 @@
     </section>
 
     <!-- section final -->
-    <section id="section-final" class="h-[20em] lg:h-[31em] relative z-[2]">
+    <section
+      id="section-final"
+      class="h-[20em] lg:h-[31em] relative z-[2] w-full overflow-hidden"
+    >
       <div
         data-aos="zoom-out"
         class="h-full w-full flex justify-center items-center"
@@ -519,6 +758,7 @@
         <img class="h-[1em]" src="./images/vgp-logo-simple.png" alt="" />
       </div>
     </section>
+
     <!-- modal confirm simple -->
     <div class="wmodal" id="modal-confirm">
       <div class="wmodal-content w-11/12 md:w-8/12">
@@ -611,66 +851,7 @@
         </div>
       </div>
     </div>
-    <!-- modal nhiemvu -->
-    <div class="wmodal" id="modal-nhiemvu">
-      <div class="wmodal-dialog aspect-[512/682] relative w-11/12 md:w-8/12">
-        <button
-          class="btn-close-modal aspect-square w-[6em]"
-          data-dismiss="modal"
-        ></button>
-        <div class="content">
-          <h1 class="title">
-            <span>Nhiệm Vụ</span>
-          </h1>
-          <div class="content-scroll">
-            <div class="text-[1.6em] h-fit">
-              <!-- nhiem vu -->
-              <div
-                class="grid grid-cols-3 gap-[.5em] py-[1em] border-b-[1px] border-b-[#ccc]"
-              >
-                <div class="col-span-2">
-                  <span class="text-primary">Nhiệm vụ hàng ngày</span><br />
-                  Useless selectors can be written using this pseudo-class.
-                </div>
-                <div class="col-span-1 flex justify-center items-center">
-                  <button class="p-[.5em] text-white bg-primary rounded">
-                    Nhận NV
-                  </button>
-                </div>
-              </div>
-              <!-- nhiem vu -->
-              <div
-                class="grid grid-cols-3 gap-[.5em] py-[1em] border-b-[1px] border-b-[#ccc]"
-              >
-                <div class="col-span-2">
-                  <span class="text-primary">Nhiệm vụ hàng ngày</span><br />
-                  Useless selectors can be written using this pseudo-class.
-                </div>
-                <div class="col-span-1 flex justify-center items-center">
-                  <button class="p-[.5em] text-white bg-green-400 rounded">
-                    Đã nhận
-                  </button>
-                </div>
-              </div>
-              <!-- nhiem vu -->
-              <div
-                class="grid grid-cols-3 gap-[.5em] py-[1em] border-b-[1px] border-b-[#ccc]"
-              >
-                <div class="col-span-2">
-                  <span class="text-primary">Nhiệm vụ hàng ngày</span><br />
-                  Useless selectors can be written using this pseudo-class.
-                </div>
-                <div class="col-span-1 flex justify-center items-center">
-                  <button class="p-[.5em] text-white bg-[#ccc] rounded">
-                    Hoàn thành
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <!-- modal thapden -->
     <div class="wmodal" id="modal-thapden-thele">
       <div class="wmodal-dialog aspect-[512/682] relative w-11/12 md:w-8/12">
@@ -725,36 +906,7 @@
         </div>
       </div>
     </div>
-    <!-- modal vongquay -->
-    <div class="wmodal" id="modal-vongquay-thele">
-      <div class="wmodal-dialog aspect-[512/682] relative w-11/12 md:w-8/12">
-        <button
-          class="btn-close-modal aspect-square w-[6em]"
-          data-dismiss="modal"
-        ></button>
-        <div class="content">
-          <h1 class="title">
-            <span>Thể Lệ Vòng Quay</span>
-          </h1>
-          <div class="content-scroll">
-            <div class="text-[1.6em] h-fit">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                sit amet tortor lacus. Mauris orci diam, luctus eget nibh vel,
-                sodales mattis nisi. Curabitur turpis ipsum, rutrum non metus
-                quis, euismod porta lectus. Morbi quis nunc id purus iaculis
-                rutrum. Pellentesque eget volutpat arcu. Aliquam erat volutpat.
-                Ut arcu ligula, placerat a ipsum cursus, sodales imperdiet
-                felis. Duis ut vulputate eros. Proin consectetur luctus mauris,
-                ac viverra felis malesuada sed. Aenean in vehicula ex, a commodo
-                dolor. Cras nec cursus ex. Aliquam id eros turpis. Maecenas at
-                quam enim. Mauris a massa sed urna consequat vestibulum.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <!-- modal youtube -->
     <div class="wmodal" id="modal-youtube">
       <div class="wmodal-content w-10/12 md:w-8/12">
@@ -815,7 +967,7 @@
 
     <!-- script -->
     <script>
-      AOS.init({ delay: 200, duration: 500 });
+      AOS.init({ delay: 200, duration: 500, offset: 10 });
     </script>
   </body>
 </html>

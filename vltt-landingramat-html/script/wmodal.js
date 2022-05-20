@@ -33,6 +33,13 @@ for (i = 0; i < wmodaldialog.length; i++) {
     event.stopPropagation();
   });
 }
+var wmodalcontent = document.getElementsByClassName("wmodal-content");
+var i;
+for (i = 0; i < wmodalcontent.length; i++) {
+  wmodalcontent[i].addEventListener("click", function () {
+    event.stopPropagation();
+  });
+}
 
 // modal youtube
 const modalyoutube = document.getElementById("modal-youtube");
