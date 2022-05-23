@@ -1,0 +1,163 @@
+body {
+  background: var(--w-bg-color) url("../images/bg-sm.jpg") no-repeat center 0em
+    scroll;
+  background-size: 100% auto;
+}
+/* lg */
+@media (min-width: 1024px) {
+  body {
+    background: var(--w-bg-color) url("../images/bg-lg.jpg") no-repeat center
+      top scroll;
+    background-size: 100vw auto;
+  }
+  .wcontainer {
+    width: 75%;
+  }
+  /* 03 */
+  .layout-section03 {
+    grid-template-areas: "wheel slogan" "wheel status" "wheel button";
+  }
+
+  /* section 02 */
+  #section-02 {
+    background: transparent url("../images/bg-02.png") no-repeat center top;
+    background-size: 100vw auto;
+  }
+
+  .layout-02 {
+    grid-template-areas: "content wheel";
+  }
+}
+
+.header-sm {
+  background: transparent url("../images/bg-header.png") no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.block-henuoc {
+  background: transparent url("../images/block-henuoc.png") no-repeat center
+    center;
+  background-size: 100% 100%;
+}
+
+.block-status {
+  padding: 1em 2em;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--w-secondary);
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block-status span {
+  color: var(--w-highlight);
+}
+
+.cum-button {
+  border: 1px solid var(--w-secondary);
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+.cum-button button {
+  padding: 0.69em 0;
+  background-color: rgba(255, 255, 255, 0.69);
+  border-left: 1px solid var(--w-secondary);
+}
+.cum-button button:first-child {
+  border-left: 0px solid var(--w-secondary);
+}
+.cum-button button:hover {
+  color: var(--w-secondary);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.cum-button.dark {
+  border: 1px solid var(--w-primary);
+}
+.cum-button.dark button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-left: 1px solid var(--w-primary);
+  color: #fff;
+}
+.cum-button.dark button:hover {
+  color: var(--w-highlight);
+  background-color: var(--w-secondary);
+}
+
+#section-menu-nav a {
+  margin: 0 0.75em;
+  display: block;
+  text-align: center;
+  opacity: 0.8;
+  transition: opacity 0.36s ease;
+}
+#section-menu-nav a:hover {
+  opacity: 1;
+}
+
+.page-nav a {
+  opacity: 0.8;
+}
+.page-nav a:hover {
+  opacity: 1;
+}
+
+.wbadge {
+  color: #fff;
+  padding: 0.25em 0.5em;
+  position: absolute;
+  border-radius: 0.5em;
+}
+
+#section-final {
+  background: transparent url("../images/block-final.jpg") no-repeat center
+    center;
+  background-size: 100% 100%;
+}
+.block-img-store {
+  background: transparent url("../images/store-badge/img-store.png") no-repeat
+    center center;
+  background-size: 100% 100%;
+}
+.block-img-store a {
+  overflow: hidden;
+  display: block;
+  text-indent: -9999px;
+}
+.search-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 1em;
+  border: 1px solid var(--w-primary);
+}
+
+.block-info {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--w-primary);
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; */
+  border-radius: 1em;
+  a {
+    font-size: 0.69em;
+  }
+  span {
+    color: var(--w-primary);
+  }
+}
+
+.block-items {
+  background-color: #ccc;
+  border: 1px solid #ccc;
+}
+.item {
+  background-color: #eee;
+  padding: 1.5em 1em;
+}
+.item button {
+  background-color: var(--w-secondary);
+  color: #fff;
+  padding: 0.5em 1em;
+  margin-top: 0.5em;
+  border-radius: 1em;
+}
