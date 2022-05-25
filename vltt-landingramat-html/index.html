@@ -221,7 +221,11 @@
           data-aos="fade-up"
           class="w-[33.33em] lg:w-[27em] mx-auto mt-[5em] lg:mt-[32em]"
         >
-          <button class="w-image-button w-full e-btn-click e-btn-hover-glow">
+          <button
+            href="#section-02"
+            class="w-image-button w-full e-btn-click e-btn-hover-glow"
+            data-toggle="scroll"
+          >
             <img
               class="animate__glow animate__loop"
               src="./images/btn-henuocgiangho.png"
@@ -444,7 +448,7 @@
           <div class="content-scroll">
             <div class="text-[1.6em] h-fit">
               <table
-                class="w-full h-fit text-[1.5em] lg:text-[1em] leading-[4] text-center border-collapse border"
+                class="w-full h-fit lg:text-[1em] leading-[4] text-center border-collapse border"
               >
                 <thead>
                   <th class="border">STT</th>
@@ -954,8 +958,54 @@
     </div>
 
     <!-- script -->
+    <script src="script/jquery-3.6.0.slim.min.js"></script>
+    <script src="script/jquery.fortune.js"></script>
     <script>
       AOS.init({ delay: 200, duration: 500, offset: 10 });
+
+      //Wheel
+      var prices = [
+        {
+          name: "1",
+        },
+        {
+          name: "2",
+        },
+        {
+          name: "3",
+        },
+        {
+          name: "4",
+        },
+        {
+          name: "5",
+        },
+        {
+          name: "6",
+        },
+        {
+          name: "7",
+        },
+        {
+          name: "10",
+        },
+      ];
+
+      $(function () {
+        var $r = $(".wheel").fortune(prices);
+
+        var clickHandler = function () {
+          $(".wheel-button").off("click");
+          //$(".spinner span").hide();
+          $r.spin().done(function (price) {
+            //$('.price').text('You have: ' + price.name);
+            $(".wheel-button").on("click", clickHandler);
+            //$("#btn-wheel-fake").click();
+          });
+        };
+
+        $(".wheel-button").on("click", clickHandler);
+      });
     </script>
   </body>
 </html>
