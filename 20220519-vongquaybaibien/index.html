@@ -708,9 +708,51 @@
       </div>
     </div>
 
+    <script src="script/jquery-3.6.0.slim.min.js"></script>
+    <script src="script/jquery.fortune.js"></script>
     <!-- script -->
     <script>
       AOS.init({ delay: 200, duration: 500, offset: 10 });
+      //Wheel
+      var prices = [
+        {
+          name: "1",
+        },
+        {
+          name: "2",
+        },
+        {
+          name: "3",
+        },
+        {
+          name: "4",
+        },
+        {
+          name: "5",
+        },
+        {
+          name: "6",
+        },
+        {
+          name: "7",
+        },
+      ];
+
+      $(function () {
+        var $r = $(".wheel").fortune(prices);
+
+        var clickHandler = function () {
+          $(".wheel-button").off("click");
+          //$(".spinner span").hide();
+          $r.spin().done(function (price) {
+            //$('.price').text('You have: ' + price.name);
+            $(".wheel-button").on("click", clickHandler);
+            //$("#btn-wheel-fake").click();
+          });
+        };
+
+        $(".wheel-button").on("click", clickHandler);
+      });
     </script>
   </body>
 </html>
