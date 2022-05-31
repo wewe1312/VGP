@@ -530,6 +530,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-column: span 2 / span 2;
 }
 
+.col-span-1{
+  grid-column: span 1 / span 1;
+}
+
 .row-span-2{
   grid-row: span 2 / span 2;
 }
@@ -858,14 +862,42 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 1px;
 }
 
+.border-b-\[1px\]{
+  border-bottom-width: 1px;
+}
+
+.border-t-\[1px\]{
+  border-top-width: 1px;
+}
+
 .border-\[\#ccc\]{
   --tw-border-opacity: 1;
   border-color: rgb(204 204 204 / var(--tw-border-opacity));
 }
 
+.border-b-\[\#ccc\]{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(204 204 204 / var(--tw-border-opacity));
+}
+
+.border-t-\[\#ccc\]{
+  --tw-border-opacity: 1;
+  border-top-color: rgb(204 204 204 / var(--tw-border-opacity));
+}
+
 .bg-gray-700{
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.bg-green-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#ccc\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 204 204 / var(--tw-bg-opacity));
 }
 
 .fill-white{
@@ -892,6 +924,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-\[\.5em\]{
   padding-top: .5em;
   padding-bottom: .5em;
+}
+
+.py-\[1em\]{
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .px-\[\.5em\]{
@@ -1178,8 +1215,8 @@ body {
     margin-left: 6.5em;
   }
 
-  .lg\:mt-\[3em\]{
-    margin-top: 3em;
+  .lg\:mt-\[0em\]{
+    margin-top: 0em;
   }
 
   .lg\:mt-\[31em\]{
@@ -1216,10 +1253,6 @@ body {
 
   .lg\:mt-\[2\.5em\]{
     margin-top: 2.5em;
-  }
-
-  .lg\:mt-\[0em\]{
-    margin-top: 0em;
   }
 
   .lg\:block{
@@ -1260,10 +1293,6 @@ body {
 
   .lg\:w-\[38\.5em\]{
     width: 38.5em;
-  }
-
-  .lg\:w-\[26\.4em\]{
-    width: 26.4em;
   }
 
   .lg\:w-\[20em\]{

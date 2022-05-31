@@ -94,3 +94,17 @@ for (let i = 0; i < btnmini.length; i++) {
     target_el.classList.toggle("minimize");
   });
 }
+
+//Scroll to Element
+var wscroll = document.querySelectorAll("[data-toggle='scroll']");
+var i;
+for (i = 0; i < wscroll.length; i++) {
+  wscroll[i].addEventListener("click", function (e) {
+    let tar = this.getAttribute("href").replace("#", "");
+    console.log("scroll to " + tar);
+    e.preventDefault();
+    document.getElementById(tar).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+}
