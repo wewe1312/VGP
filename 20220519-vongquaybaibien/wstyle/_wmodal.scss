@@ -35,6 +35,11 @@
   height: 24em;
   padding: 0 2em 2em 2em;
 }
+.wmodal-content .content-scroll {
+  overflow: auto;
+  max-height: 26.5em;
+  padding: 0 0em 2em 0em;
+}
 
 .btn-close-modal:hover {
   filter: brightness(1.5);

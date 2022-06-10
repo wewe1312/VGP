@@ -108,3 +108,21 @@ for (i = 0; i < wscroll.length; i++) {
     });
   });
 }
+
+//SHOW ELEMENT
+var btnshow = document.querySelectorAll("[data-toggle='show']");
+var i;
+for (i = 0; i < btnshow.length; i++) {
+  btnshow[i].addEventListener("click", function () {
+    let target = this.dataset.target;
+    document.getElementById(target).classList.add("show");
+  });
+}
+
+var btnx = document.querySelectorAll(".btn-x");
+var i;
+for (i = 0; i < btnx.length; i++) {
+  btnx[i].addEventListener("click", function () {
+    document.getElementById("block-button-x").classList.remove("show");
+  });
+}

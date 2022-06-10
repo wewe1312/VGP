@@ -294,11 +294,40 @@
             </div>
             <button
               class="wheel-button w-full w-image-button z-[3]"
-              data-toggle="modal"
-              data-target="modal-wheel"
+              data-toggle="show"
+              data-target="block-button-x"
             >
               <img class="" src="./images/wheel/button.png" alt="" />
             </button>
+            <!-- button x1 x10 x50 -->
+            <div
+              id="block-button-x"
+              class="block-button-x w-full h-full absolute top-0 left-0 z-[4] flex justify-center items-center"
+            >
+              <div class="wrapp w-fit grid grid-cols-4 gap-x-[.5em]">
+                <button
+                  class="btn-x1 btn-x w-image-button col-span-2 col-start-2"
+                  data-toggle="modal"
+                  data-target="modal-wheel"
+                >
+                  <img src="./images/wheel/btn-quayx1.png" alt="" />
+                </button>
+                <button
+                  class="btn-x10 btn-x w-image-button col-span-2"
+                  data-toggle="modal"
+                  data-target="modal-wheel-2"
+                >
+                  <img src="./images/wheel/btn-quayx10.png" alt="" />
+                </button>
+                <button
+                  class="btn-x50 btn-x w-image-button col-span-2"
+                  data-toggle="modal"
+                  data-target="modal-wheel-2"
+                >
+                  <img src="./images/wheel/btn-quayx50.png" alt="" />
+                </button>
+              </div>
+            </div>
           </div>
 
           <!-- content -->
@@ -369,12 +398,40 @@
             <span class="">Nhận Quà</span>
           </h1>
           <div class="content-scroll">
-            <div class="text-[1.6em] h-fit">
+            <div class="h-fit">
               <div class="text-center mt-[2em] pb-[2em]">
                 Xin chúc mừng bạn đã nhận được
                 <span class="block uppercase text-primary text-[1.5em]"
                   >[Thẻ điện thoại 20K]</span
                 >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal simple wheel -->
+    <div class="wmodal" id="modal-wheel-2">
+      <div class="wmodal-content">
+        <button
+          class="btn-close-modal aspect-square w-[6em]"
+          data-dismiss="modal"
+        ></button>
+        <div class="content p-[3em] lg:p-[2em] lg:pb-[0]">
+          <h1 class="title text-primary text-center">
+            <span class="">Nhận Quà</span>
+          </h1>
+          <div class="content-scroll">
+            <div class="h-fit">
+              <div class="text-center mt-[2em] pb-[2em]">
+                Xin chúc mừng bạn đã nhận được
+                <div class="mt-[.5em] grid grid-flow-row gap-[.5em]">
+                  <div data-toggle="loop" data-loop="50">
+                    <span class="block uppercase text-primary text-[1.5em]">
+                      [Thẻ điện thoại 20K]
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -772,16 +829,16 @@
         var $r = $(".wheel").fortune(prices);
 
         var clickHandler = function () {
-          $(".wheel-button").off("click");
+          $(".btn-x").off("click");
           //$(".spinner span").hide();
           $r.spin().done(function (price) {
             //$('.price').text('You have: ' + price.name);
-            $(".wheel-button").on("click", clickHandler);
+            $(".btn-x").on("click", clickHandler);
             //$("#btn-wheel-fake").click();
           });
         };
 
-        $(".wheel-button").on("click", clickHandler);
+        $(".btn-x").on("click", clickHandler);
       });
     </script>
   </body>
