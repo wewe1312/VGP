@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="output.css" rel="stylesheet" />
+    <link href="css/wwstyle.min.css" rel="stylesheet" />
+
+    <!-- my script -->
+    <script type="module" src="./script/wloop.js"></script>
+    <script type="module" src="./script/wmodal.js"></script>
+    <script type="module" src="./script/wtabs.js"></script>
+    <!-- <script type="module" src="./script/countdown.js"></script> -->
+
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script type="module" src="./script/wswiper.js"></script>
+    <!-- AOS -->
+    <link href="plugin/aos/aos.css" rel="stylesheet" />
+    <script src="plugin/aos/aos.js"></script>
+    <!-- simplebar -->
+    <link href="plugin/simplebar/simplebar.min.css" rel="stylesheet" />
+    <script src="plugin/simplebar/simplebar.min.js"></script>
+    <!-- dragscroll -->
+    <script src="plugin/dragscroll.js"></script>
+    <!-- scrollspy -->
+    <script src="plugin/simple-scrollspy.min.js"></script>
+  </head>
+  <body class="fullpagebg">
+    <!-- offcanvas -->
+    <div id="w-offcanvas" class="offcanvas float">
+      <div class="offcanvas-content w-[25em] lg:w-[15em]">
+        <div class="icon w-image-block w-full mx-auto">
+          <img src="./images/game-icon.png" alt="" />
+        </div>
+        <!-- link -->
+        <div class="link grid grid-flow-row h-[25em]">
+          <a href="#">Trang Chủ</a>
+          <a href="#">Fanpage</a>
+          <a href="#">Tin Tức</a>
+          <a href="#">Sự Kiện</a>
+          <a href="#">Cộng Đồng</a>
+          <a href="#">Tải Game</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- login block -->
+    <div
+      id="vgp-login-block"
+      class="btn-login-vgp absolute top-0 right-0 m-[1em] p-[.75em] z-[9]"
+    >
+      <!-- login 
+      <button class="w-image-button text-white cursor-pointer">
+        <div class="flex justify-end items-center">
+          <span class="content text-[1.5em] lg:text-[1em]">Đăng nhập</span>
+          <div class="w-[3em] md:w-[2em]">
+            <svg
+              class="w-full"
+              fill="#fff"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M 8 2 C 6.347656 2 5 3.347656 5 5 C 5 6.652344 6.347656 8 8 8 C 9.652344 8 11 6.652344 11 5 C 11 3.347656 9.652344 2 8 2 Z M 8 8 C 5.246094 8 3 10.246094 3 13 L 4 13 C 4 10.785156 5.785156 9 8 9 C 10.214844 9 12 10.785156 12 13 L 13 13 C 13 10.246094 10.753906 8 8 8 Z M 8 3 C 9.109375 3 10 3.890625 10 5 C 10 6.109375 9.109375 7 8 7 C 6.890625 7 6 6.109375 6 5 C 6 3.890625 6.890625 3 8 3 Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </button>
+    -->
+      <!-- logout -->
+      <button
+        class="w-image-button text-white cursor-pointer"
+        data-toggle="modal"
+        data-target="modal-login"
+      >
+        <div class="flex justify-end items-center">
+          <span class="content text-[1.5em] lg:text-[1em]">Đăng nhập</span>
+          <div class="w-[3em] lg:w-[2em]">
+            <svg
+              class="w-full"
+              fill="#fff"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M 8 2 C 6.347656 2 5 3.347656 5 5 C 5 6.652344 6.347656 8 8 8 C 9.652344 8 11 6.652344 11 5 C 11 3.347656 9.652344 2 8 2 Z M 8 8 C 5.246094 8 3 10.246094 3 13 L 4 13 C 4 10.785156 5.785156 9 8 9 C 10.214844 9 12 10.785156 12 13 L 13 13 C 13 10.246094 10.753906 8 8 8 Z M 8 3 C 9.109375 3 10 3.890625 10 5 C 10 6.109375 9.109375 7 8 7 C 6.890625 7 6 6.109375 6 5 C 6 3.890625 6.890625 3 8 3 Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </button>
+    </div>
+    <!-- modal login -->
+    <div class="wmodal" id="modal-login">
+      <div class="wmodal-content">
+        <button
+          class="btn-close-modal aspect-square w-[6em]"
+          data-dismiss="modal"
+        ></button>
+        <div class="content">
+          <h1 class="title text-primary text-center">
+            <span class="">Đăng nhập</span>
+          </h1>
+          <div class="content-scroll">
+            <div class="h-fit">
+              <div class="text-center mt-[2em]">
+                Xin hãy đăng nhập tài khoản
+              </div>
+              <form
+                class="mt-[1em] w-full overflow-hidden grid grid-flow-row gap-[.5em] text-center"
+              >
+                <input
+                  class="px-[1em] py-[.5em] rounded"
+                  type="text"
+                  placeholder="Tên Đăng Nhập"
+                />
+                <input
+                  class="px-[1em] py-[.5em] rounded"
+                  type="password"
+                  placeholder="Mật khẩu"
+                />
+                <select class="px-[1em] py-[.5em] rounded">
+                  <option value="1" selected disabled>Chọn máy chủ</option>
+                  <option value="1">Chọn máy chủ</option>
+                </select>
+                <select class="px-[1em] py-[.5em] rounded">
+                  <option selected disabled>Chọn nhân vật</option>
+                </select>
+                <button class="w-full p-[.5em] bg-vgp text-white rounded">
+                  Đăng nhập
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal logout -->
+    <div class="wmodal" id="modal-logout">
+      <div class="wmodal-content w-11/12 md:w-8/12">
+        <button
+          class="btn-close-modal aspect-square w-[6em]"
+          data-dismiss="modal"
+        ></button>
+        <div class="content">
+          <h1 class="title text-primary text-center">
+            <span class="">Đăng xuất</span>
+          </h1>
+          <div class="content-scroll">
+            <div class="text-[1.6em] h-fit">
+              <div class="text-center mt-[2em]">
+                Bạn có chắc chắn muốn [Đăng Xuất]?
+              </div>
+              <div class="grid grid-cols-2 gap-[.5em] mt-[2em]">
+                <button
+                  class="p-[.5em] bg-gray-700 text-white rounded"
+                  data-dismiss="modal"
+                >
+                  Không
+                </button>
+                <button
+                  class="p-[.5em] bg-primary text-white rounded"
+                  data-dismiss="modal"
+                >
+                  Đồng ý
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- float -->
+    <div
+      class="block-float right-0 hidden lg:block lg:w-[11em] aspect-[300/788] px-[1em] m-[.5em] overflow-hidden z-[3]"
+    >
+      <div class="w-image-block w-full mx-auto">
+        <img src="./images/game-icon.png" alt="" />
+      </div>
+      <!-- store -->
+      <div
+        class="w-image-block w-full mx-auto mt-[1em] overflow-hidden relative"
+      >
+        <img src="./images/float/store.png" alt="" />
+        <div
+          class="grid grid-flow-row absolute h-full w-full top-0 left-0 z-[1]"
+        >
+          <a href="#" class="-indent-[9999px]">Appstore</a>
+          <a href="#" class="-indent-[9999px]">Googleplay</a>
+        </div>
+      </div>
+      <!-- link -->
+      <div
+        class="link text-white grid grid-flow-row text-center aspect-[150/184] mt-[.75em]"
+      >
+        <a href="#">Trang Chủ</a>
+        <a href="#">Fanpage</a>
+        <a href="#">Cộng Đồng</a>
+      </div>
+      <!-- minimize -->
+      <button
+        class="w-full h-[5em] mt-0 block"
+        data-toggle="minimize"
+        data-target=".block-float"
+      ></button>
+      <!-- block minimize -->
+      <button
+        class="block-mini w-image-button aspect-[300/156]"
+        data-toggle="minimize"
+        data-target=".block-float"
+      >
+        <img src="./images/float/float-minimize.png" alt="" />
+      </button>
+    </div>
+
+    <!--------------------------------------- section scrollspy ---------------------------------------------->
+    <section class="scrollspy hidden lg:block z-[5]" id="page-num">
+      <nav>
+        <ul id="menu-scrollspy" class="grid grid-flow-row gap-[2em]">
+          <li>
+            <a
+              data-toggle="scroll"
+              href="#section-01"
+              class="active"
+              data-scrollspy="#section-01"
+            >
+              01
+            </a>
+          </li>
+          <li class="menu__item">
+            <a
+              data-toggle="scroll"
+              href="#section-02"
+              data-scrollspy="#section-02"
+            >
+              02
+            </a>
+          </li>
+          <li class="menu__item">
+            <a
+              data-toggle="scroll"
+              href="#section-03"
+              data-scrollspy="#section-03"
+            >
+              03
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!--------------------------------------- section 01 ---------------------------------------------->
+    <section
+      id="section-01"
+      class="scrollspy h-[80em] lg:h-[62.5em] relative z-[2]"
+    >
+      <!-- header menu -->
+      <div class="absolute top-[.75em] left-[.75em] z-[4]">
+        <button
+          class="w-image-button w-[5em] lg:w-[2.5em]"
+          data-toggle="offcanvas"
+          data-target="w-offcanvas"
+        >
+          <svg
+            class="w-full"
+            fill="#fff"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="wcontainer relative z-[3] lg:pl-[43em]">
+        <!-- logo -->
+        <div
+          data-aos="fade-down"
+          class="w-image-block mx-auto w-[30em] mt-[9em] lg:w-[21em] lg:mt-[9em] relative z-10"
+        >
+          <img src="./images/game-logo.png" alt="" />
+        </div>
+
+        <!-- scroll down -->
+        <div
+          class="w-image-block mx-auto w-[8.66em] mt-[29.5em] lg:w-[5em] lg:mt-[28em] animate-bounce cursor-pointer"
+          data-toggle="scroll"
+          href="#section-02"
+        >
+          <img src="./images/scroll-down.png" alt="" />
+        </div>
+
+        <!-- slogan
+        <div class="hidden">
+          <div
+            data-aos="zoom-out"
+            class="w-image-block mx-auto w-[47em] mt-[45em] lg:w-[36.56em] lg:-mt-[1em]"
+          >
+            <img src="./images/img-text-01.png" alt="" />
+          </div>
+        </div>
+ -->
+        <!-- button 
+        <div
+          data-aos="fade-up"
+          class="block-button w-10/12 lg:w-[37.5em] grid grid-cols-2 gap-[1em] mx-auto mt-[2em] lg:mt-[38em]"
+        >
+          <button
+            class="w-image-button w-full e-btn-click e-btn-hover-glow"
+            data-toggle="modal"
+            data-target="modal-thele-01"
+          >
+            <img
+              class="animate__glow animate__loop"
+              src="./images/btn-thele.png"
+              alt=""
+            />
+          </button>
+          <button
+            href="#section-02"
+            class="w-image-button w-full e-btn-click e-btn-hover-glow"
+            data-toggle="scroll"
+          >
+            <img
+              class="animate__glow animate__loop"
+              src="./images/btn-nhanbanh.png"
+              alt=""
+            />
+          </button>
+        </div>-->
+        <!-- trailer 
+        <div class="">
+          <button
+            class="w-image-button w-[8.5em] mx-auto mt-[7.2em] md:w-[10em] md:mt-[10.5em] lg:w-[9em]"
+            data-toggle="youtube"
+            data-target="https://www.youtube.com/embed/eN5mG_yMDiM"
+          >
+            <img
+              class="animate__blingbling animate__loop"
+              src="./images/button-play.png"
+              alt=""
+            />
+          </button>
+        </div>-->
+      </div>
+
+      <!-- bg video -->
+      <div class="bgvideo hidden lg:block">
+        <div class="aspect-[1920/1000] w-[100vw]">
+          <video nocontrol loop autoplay muted>
+            <source src="./video/bgvideo.mp4" type="video/mp4" />
+            <source src="./video/bgvideo.webm" type="video/ogg" />
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------------------------- section 02 ---------------------------------------------->
+    <section
+      id="section-02"
+      class="scrollspy h-[167em] lg:h-[75em] relative z-[2] overflow-hidden"
+    >
+      <div
+        class="wcontainer lg:grid lg:grid-cols-[31.25em_auto] overflow-hidden"
+      >
+        <!-- gui loi chuc -->
+        <div
+          data-aos="zoom-out"
+          class="block-guiloichuc w-full aspect-[676/492] lg:aspect-[451/882] lg:mt-[5em]"
+        >
+          <div
+            class="w-7/12 lg:w-9/12 mx-auto grid grid-cols-1 gap-[.5em] pt-[22em] lg:pt-[45em]"
+          >
+            <button
+              class="w-image-button e-btn-hover-glow"
+              data-toggle="modal"
+              data-target="modal-guiloichuc"
+            >
+              <img
+                class="animate__loop animate__bling"
+                src="./images/btn-guiloichuc.png"
+                alt=""
+              />
+            </button>
+            <button
+              class="w-image-button e-btn-hover-glow"
+              data-toggle="modal"
+              data-target="modal-thele"
+            >
+              <img src="./images/btn-thele-2.png" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="block-shopdoidiem mt-[3em] lg:w-full lg:grid lg:grid-cols-2 lg:px-[6em]"
+        >
+          <!-- slogan -->
+          <div
+            data-aos="zoom-out"
+            class="w-image-block mx-auto w-[30em] lg:mx-0 lg:w-full lg:h-fit"
+          >
+            <img src="./images/img-text-02.png" alt="" />
+          </div>
+          <!-- btn -->
+          <button
+            class="w-image-button w-6/12 mx-auto e-btn-hover-glow lg:w-8/12"
+            data-toggle="modal"
+            data-target="modal-kiemdiem"
+          >
+            <img
+              class="animate__loop animate__bling"
+              src="./images/btn-kiemdiem.png"
+              alt=""
+            />
+          </button>
+          <!-- desc -->
+          <div
+            class="decs text-[2em] mt-[1em] mx-auto w-8/12 text-center p-[.5em] bg-[#eadacc] bg-opacity-50 rounded-[1em] lg:col-span-2 lg:w-full lg:flex lg:mt-0 lg:text-[1.25em] lg:items-center lg:justify-between"
+          >
+            <div
+              class="text-primary p-[.5em] lg:w-[22em] lg:p-[1em] lg:flex lg:items-center"
+            >
+              Bạn đang có XXX điểm.
+            </div>
+            <div class="grid grid-cols-2 gap-[.5em]">
+              <button
+                class="w-image-button e-btn-hover-glow"
+                data-toggle="modal"
+                data-target="modal-thele-02"
+              >
+                <img src="./images/btn-thele.png" alt="" />
+              </button>
+              <button
+                class="w-image-button e-btn-hover-glow"
+                data-toggle="modal"
+                data-target="modal-bangxh"
+              >
+                <img src="./images/btn-bangxh.png" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- shop -->
+          <div
+            class="block-shop mt-[1.5em] grid grid-cols-3 gap-[1.1em] px-[4em] lg:col-span-2 lg:grid-cols-5 lg:pt-[0em] lg:px-[0em] lg:gap-y-[2em] lg:h-[44em] lg:mt-[1em]"
+          >
+            <div data-toggle="loop" data-loop="14">
+              <div
+                class="item w-image-block"
+                data-toggle="modal"
+                data-target="modal-item"
+              >
+                <img src="./images/item/item01.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- modal thele guiloichuc -->
+    <div class="wmodal" id="modal-thele">
+      <div class="wmodal-content relative">
+        <button
+          class="btn-close-modal aspect-square"
+          data-dismiss="modal"
+        ></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Thể lệ</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                sit amet tortor lacus. Mauris orci diam, luctus eget nibh vel,
+                sodales mattis nisi. Curabitur turpis ipsum, rutrum non metus
+                quis, euismod porta lectus. Morbi quis nunc id purus iaculis
+                rutrum. Pellentesque eget volutpat arcu. Aliquam erat volutpat.
+                Ut arcu ligula, placerat a ipsum cursus, sodales imperdiet
+                felis. Duis ut vulputate eros. Proin consectetur luctus mauris,
+                ac viverra felis malesuada sed. Aenean in vehicula ex, a commodo
+                dolor. Cras nec cursus ex. Aliquam id eros turpis. Maecenas at
+                quam enim. Mauris a massa sed urna consequat vestibulum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                sit amet tortor lacus. Mauris orci diam, luctus eget nibh vel,
+                sodales mattis nisi. Curabitur turpis ipsum, rutrum non metus
+                quis, euismod porta lectus. Morbi quis nunc id purus iaculis
+                rutrum. Pellentesque eget volutpat arcu. Aliquam erat volutpat.
+                Ut arcu ligula, placerat a ipsum cursus, sodales imperdiet
+                felis. Duis ut vulputate eros. Proin consectetur luctus mauris,
+                ac viverra felis malesuada sed. Aenean in vehicula ex, a commodo
+                dolor. Cras nec cursus ex. Aliquam id eros turpis. Maecenas at
+                quam enim. Mauris a massa sed urna consequat vestibulum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal guiloichuc -->
+    <div class="wmodal" id="modal-guiloichuc">
+      <div class="wmodal-content relative">
+        <button
+          class="btn-close-modal aspect-square"
+          data-dismiss="modal"
+        ></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Gửi Lời Chúc</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit text-center">
+              Bạn hãy gửi lời chúc đến với Yêu Linh Giới nhé!
+              <form>
+                <textarea
+                  class="w-full h-[10em] mt-[1em] border-[#ccc]"
+                  style="resize: none"
+                ></textarea>
+              </form>
+              <button class="mt-[1em] btn-primary">Gửi Lời Chúc</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal thele 02 -->
+    <div class="wmodal" id="modal-thele-02">
+      <div class="wmodal-dialog aspect-[512/682] relative">
+        <button
+          class="btn-close-modal aspect-square"
+          data-dismiss="modal"
+        ></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Thể lệ</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                sit amet tortor lacus. Mauris orci diam, luctus eget nibh vel,
+                sodales mattis nisi. Curabitur turpis ipsum, rutrum non metus
+                quis, euismod porta lectus. Morbi quis nunc id purus iaculis
+                rutrum. Pellentesque eget volutpat arcu. Aliquam erat volutpat.
+                Ut arcu ligula, placerat a ipsum cursus, sodales imperdiet
+                felis. Duis ut vulputate eros. Proin consectetur luctus mauris,
+                ac viverra felis malesuada sed. Aenean in vehicula ex, a commodo
+                dolor. Cras nec cursus ex. Aliquam id eros turpis. Maecenas at
+                quam enim. Mauris a massa sed urna consequat vestibulum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                sit amet tortor lacus. Mauris orci diam, luctus eget nibh vel,
+                sodales mattis nisi. Curabitur turpis ipsum, rutrum non metus
+                quis, euismod porta lectus. Morbi quis nunc id purus iaculis
+                rutrum. Pellentesque eget volutpat arcu. Aliquam erat volutpat.
+                Ut arcu ligula, placerat a ipsum cursus, sodales imperdiet
+                felis. Duis ut vulputate eros. Proin consectetur luctus mauris,
+                ac viverra felis malesuada sed. Aenean in vehicula ex, a commodo
+                dolor. Cras nec cursus ex. Aliquam id eros turpis. Maecenas at
+                quam enim. Mauris a massa sed urna consequat vestibulum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal bang xep hang -->
+    <div class="wmodal" id="modal-bangxh">
+      <div class="wmodal-dialog aspect-[512/682] relative">
+        <button
+          class="btn-close-modal aspect-square"
+          data-dismiss="modal"
+        ></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Bảng Xếp Hạng</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit">
+              <table
+                class="w-full h-fit leading-[3em] text-center border-collapse border"
+              >
+                <thead>
+                  <tr>
+                    <th class="border">STT</th>
+                    <th class="border text-primary">Tên NV</th>
+                    <th class="border">ID Nhân Vật</th>
+                    <th class="border">Điểm</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-toggle="loop" data-loop="10">
+                    <td class="border">01</td>
+                    <td class="border text-primary">Thộn Đần Đọ</td>
+                    <td class="border">11040405</td>
+                    <td class="border text-primary">1104</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal kiem diem -->
+    <div class="wmodal" id="modal-kiemdiem">
+      <div class="wmodal-dialog aspect-[512/682] relative">
+        <button
+          class="btn-close-modal aspect-square"
+          data-dismiss="modal"
+        ></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Kiếm điểm</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit">
+              <!-- nhiem vu -->
+              <div
+                class="grid grid-cols-3 gap-[.5em] py-[1em] border-b-[1px] border-b-[#ccc]"
+              >
+                <div class="col-span-2">
+                  <span class="text-primary">Nhiệm vụ hàng ngày</span><br />
+                  Useless selectors can be written using this pseudo-class.
+                </div>
+                <div class="col-span-1 flex justify-center items-center">
+                  <button class="p-[.5em] text-white bg-primary rounded">
+                    Nhận NV
+                  </button>
+                </div>
+              </div>
+              <!-- nhiem vu -->
+              <div
+                class="grid grid-cols-3 gap-[.5em] py-[1em] border-b-[1px] border-b-[#ccc]"
+              >
+                <div class="col-span-2">
+                  <span class="text-primary">Nhiệm vụ hàng ngày</span><br />
+                  Useless selectors can be written using this pseudo-class.
+                </div>
+                <div class="col-span-1 flex justify-center items-center">
+                  <button class="p-[.5em] text-white bg-green-400 rounded">
+                    Đã nhận
+                  </button>
+                </div>
+              </div>
+              <!-- nhiem vu -->
+              <div
+                class="grid grid-cols-3 gap-[.5em] py-[1em] border-b-[1px] border-b-[#ccc]"
+              >
+                <div class="col-span-2">
+                  <span class="text-primary">Nhiệm vụ hàng ngày</span><br />
+                  Useless selectors can be written using this pseudo-class.
+                </div>
+                <div class="col-span-1 flex justify-center items-center">
+                  <button class="p-[.5em] text-white bg-[#ccc] rounded">
+                    Hoàn thành
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal item soluong -->
+    <div class="wmodal" id="modal-item">
+      <div class="wmodal-content relative">
+        <button
+          class="btn-close-modal aspect-square"
+          data-dismiss="modal"
+        ></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Đổi vật phẩm</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit">
+              <div class="text-center mt-[1em] pb-[2em]">
+                Bạn đang đổi vật phẩm
+                <div class="w-image-block w-[8em] my-[.5em] mx-auto">
+                  <img src="./images/item/item01.png" alt="" />
+                </div>
+                <span class="block text-[1.25em] text-primary">
+                  [Tên Vật phẩm ở đây]
+                </span>
+                <span class="text-red-700 text-[.8em]"
+                  >Giới hạn đổi quà 5/12
+                </span>
+                <div
+                  class="mt-[1em] mx-auto w-full lg:w-10/12 p-[1em] border-[1px] border-[#ccc] rounded"
+                >
+                  <div class="mx-auto flex flex-1 justify-center items-center">
+                    <span class="mr-[1em]">Hãy nhập số lượng:</span>
+                    <input
+                      class="w-[4em] h-[3em] text-center"
+                      type="text"
+                      placeholder="0"
+                    />
+                    <button
+                      class="px-[1em] h-[3em] bg-secondary text-white rounded"
+                    >
+                      Đổi
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------------------------- section 03 ---------------------------------------------->
+    <section
+      id="section-03"
+      class="scrollspy h-[76em] lg:h-[50em] relative z-[2]"
+    >
+      <div class="wcontainer">
+        <!-- slogan -->
+        <div class="">
+          <div
+            data-aos="zoom-out"
+            class="w-image-block mx-auto w-[40em] mt-[8em] lg:mt-[3em] lg:w-[33em]"
+          >
+            <img src="./images/img-text-03.png" alt="" />
+          </div>
+        </div>
+        <!-- button -->
+        <div class="grid grid-cols-2 mx-auto w-9/12 gap-[1em] lg:w-4/12">
+          <button
+            class="w-image-button e-btn-hover-glow"
+            data-toggle="modal"
+            data-target="modal-thele-03"
+          >
+            <img src="./images/btn-thele-3.png" alt="" />
+          </button>
+          <button class="w-image-button e-btn-hover-glow">
+            <img src="./images/btn-phanthuong.png" alt="" />
+          </button>
+        </div>
+        <!-- gifts -->
+        <div
+          class="block-gifts flex flex-wrap justify-center items-center mt-[3em]"
+        >
+          <div class="w-image-block" data-aos="fade-down" data-aos-delay="0">
+            <img src="./images/gifts/gift-01.png" alt="" />
+          </div>
+          <div
+            class="w-image-block mt-[5em]"
+            data-aos="fade-down"
+            data-aos-delay="100"
+          >
+            <img src="./images/gifts/gift-01.png" alt="" />
+          </div>
+          <div class="w-image-block" data-aos="fade-down" data-aos-delay="200">
+            <img src="./images/gifts/gift-01.png" alt="" />
+          </div>
+          <div
+            class="w-image-block lg:mt-[5em]"
+            data-aos="fade-down"
+            data-aos-delay="300"
+          >
+            <img src="./images/gifts/gift-01.png" alt="" />
+          </div>
+          <div class="w-image-block" data-aos="fade-down" data-aos-delay="400">
+            <img src="./images/gifts/gift-01.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- modal thele 03 -->
+    <div class="wmodal" id="modal-thele-03">
+      <div class="wmodal-dialog aspect-[512/682] relative">
+        <button
+          class="btn-close-modal aspect-square"
+          data-dismiss="modal"
+        ></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Thể lệ</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                sit amet tortor lacus. Mauris orci diam, luctus eget nibh vel,
+                sodales mattis nisi. Curabitur turpis ipsum, rutrum non metus
+                quis, euismod porta lectus. Morbi quis nunc id purus iaculis
+                rutrum. Pellentesque eget volutpat arcu. Aliquam erat volutpat.
+                Ut arcu ligula, placerat a ipsum cursus, sodales imperdiet
+                felis. Duis ut vulputate eros. Proin consectetur luctus mauris,
+                ac viverra felis malesuada sed. Aenean in vehicula ex, a commodo
+                dolor. Cras nec cursus ex. Aliquam id eros turpis. Maecenas at
+                quam enim. Mauris a massa sed urna consequat vestibulum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                sit amet tortor lacus. Mauris orci diam, luctus eget nibh vel,
+                sodales mattis nisi. Curabitur turpis ipsum, rutrum non metus
+                quis, euismod porta lectus. Morbi quis nunc id purus iaculis
+                rutrum. Pellentesque eget volutpat arcu. Aliquam erat volutpat.
+                Ut arcu ligula, placerat a ipsum cursus, sodales imperdiet
+                felis. Duis ut vulputate eros. Proin consectetur luctus mauris,
+                ac viverra felis malesuada sed. Aenean in vehicula ex, a commodo
+                dolor. Cras nec cursus ex. Aliquam id eros turpis. Maecenas at
+                quam enim. Mauris a massa sed urna consequat vestibulum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------------------------- section final ---------------------------------------------->
+    <section
+      id="section-final"
+      class="h-[20em] lg:h-[31em] relative z-[2] w-full overflow-hidden"
+    >
+      <div
+        data-aos="zoom-out"
+        class="h-full w-full flex justify-center items-center"
+      >
+        <!-- icon -->
+        <div class="w-image-block w-[12.5em] lg:w-[11.75em] mr-[.75em]">
+          <img
+            class="animate__loop animate__glow"
+            src="./images/game-icon.png"
+          />
+        </div>
+        <!-- 18+ -->
+        <div class="w-[18em] lg:w-[19em]">
+          <div
+            class="search-box px-[1em] py-[.75em] flex justify-between items-center"
+          >
+            <span class="text-[1.5em] lg:text-[1.25em] text-primary">
+              Yeu Linh Gioi
+            </span>
+            <div class="w-image-block w-[1em]">
+              <img src="./images/store-badge/icon-search.png" alt="" />
+            </div>
+          </div>
+          <div class="mt-[.5em] grid grid-cols-3 gap-[.25em]">
+            <div
+              class="block-img-store aspect-[240/125] col-span-2 grid grid-rows-2"
+            >
+              <a href="#">Googleplay</a>
+              <a href="#">Appstore</a>
+            </div>
+            <div class="w-image-block row-span-2">
+              <img src="./images/store-badge/18-square-02.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------------------------- section vgp ---------------------------------------------->
+    <section id="section-vgp" class="h-[3em]">
+      <div class="h-full w-full text-[1em] flex justify-center items-center">
+        <span>Phát hành bới Công ty Cổ Phần</span>
+        <img class="h-[1em]" src="./images/vgp-logo-simple.png" alt="" />
+      </div>
+    </section>
+
+    <!-- modal confirm -->
+    <div class="wmodal" id="modal-confirm">
+      <div class="wmodal-content relative">
+        <button
+          class="btn-close-modal aspect-square"
+          data-dismiss="modal"
+        ></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Bạn có chắc</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit text-center">
+              <p>
+                Đổi 500 Bánh để lấy quà
+                <span class="block text-primary text-[1.5em]"
+                  >[Áo Bức Tiềm Tại Uyên]</span
+                >
+              </p>
+              <div class="mt-[2em] grid grid-flow-col gap-[1em] w-8/12 mx-auto">
+                <button
+                  data-dismiss="modal"
+                  class="bg-gray-700 py-[.5em] text-white rounded"
+                >
+                  Không
+                </button>
+                <button
+                  data-dismiss="modal"
+                  class="bg-primary py-[.5em] text-white rounded"
+                >
+                  Đồng ý
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal youtube -->
+    <div class="wmodal" id="modal-youtube">
+      <div class="wmodal-content youtube">
+        <button
+          class="float-right p-[.5em] flex justify-center items-center text-[1em]"
+          data-dismiss="modal"
+        >
+          <svg
+            class="w-[.8em] fill-white mr-[.25em]"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 460.775 460.775"
+            style="enable-background: new 0 0 460.775 460.775"
+            xml:space="preserve"
+          >
+            <path
+              d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+	c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+	c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+	c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+	l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+	c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"
+            />
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg>
+          Đóng
+        </button>
+        <div class="aspect-[16/9]">
+          <iframe
+            id="w-youtube"
+            width="100%"
+            height="100%"
+            src=""
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script>
+      AOS.init({ delay: 200, duration: 500, offset: 10 });
+
+      //scrollspy
+      window.onload = function () {
+        scrollSpy("#menu-scrollspy");
+      };
+    </script>
+  </body>
+</html>

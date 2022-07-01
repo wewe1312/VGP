@@ -1,0 +1,39 @@
+/* float */
+.block-float {
+  position: fixed;
+  transition: transform 0.36s ease, height 0.36s ease;
+
+  .link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+}
+.block-float:not(.minimize) {
+  background: transparent url("../images/float/float-bg.png") no-repeat center
+    center;
+  background-size: 100% 100%;
+
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  .block-mini {
+    display: none;
+  }
+}
+
+.block-float.minimize {
+  padding: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(0);
+  aspect-ratio: auto;
+  > * {
+    display: none;
+  }
+  .block-mini {
+    display: block;
+  }
+}
