@@ -1,0 +1,115 @@
+// @import "../wstyle/wstyle";
+@import "../wstyle/woffcanvas";
+//@import "../wstyle/wwheel";
+//@import "../wstyle/ztimeline";
+@import "../wstyle/wmodal";
+//@import "../wstyle/zbgvideo";
+@import "../wstyle/zanimate";
+@import "../wstyle/countdown";
+//@import "../wstyle/wtabs";
+
+.wmodal,
+.btn-login-vgp,
+.header-menu,
+.offcanvas {
+  font-size: 2vw;
+}
+
+.stars-owner {
+  background-color: rgba(#4ccc83, 0.75);
+  opacity: 1;
+}
+.starfishs > .w-image-block {
+  animation-name: bling;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+// ocean shop
+.item {
+  display: grid;
+  height: 15em;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1em;
+  border-radius: 1em;
+  border: solid 1px var(--w-tertiary);
+  text-align: center;
+  gap: 0.5em;
+
+  .name {
+    line-height: 1.25;
+    color: var(--w-primary);
+    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+  > button {
+    background-color: var(--w-tertiary);
+    padding: 0.35em 0.75em;
+    color: #fff;
+    border-radius: 0.5em;
+  }
+
+  > .item-pic {
+    width: 50%;
+  }
+}
+
+.rank {
+  margin-top: 0em;
+  padding-top: 0em;
+  height: 28em;
+}
+
+//summer card
+.card-summer {
+  background: transparent url(../images/cardid.png) no-repeat center center;
+  background-size: 100% 100%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  > span {
+    color: #fff;
+    font-size: 1.5em;
+    padding-right: 2em;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  body {
+    font-size: 0.9375vw;
+  }
+  .wmodal,
+  .btn-login-vgp,
+  .header-menu,
+  .offcanvas {
+    font-size: 1em;
+  }
+  .turn {
+    font-size: 2em;
+  }
+
+  .card-manager {
+    margin: 4em auto 0 auto;
+    padding: 0;
+    transform: translateX(14em);
+    width: 18em;
+  }
+
+  .section-03-grid {
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  .rank-check {
+    display: block;
+  }
+  .check {
+    margin: 0;
+    margin-top: 0px;
+  }
+}

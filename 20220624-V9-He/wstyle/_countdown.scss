@@ -1,0 +1,21 @@
+.num > div {
+  font-size: 1.5em;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0 0.5em rgb(0, 132, 255);
+}
+
+.num > .time {
+  margin-top: -1em;
+  line-height: 1;
+  font-size: 0.8em;
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .num > div {
+    font-size: 3em;
+  }
+}
