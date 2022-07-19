@@ -1,0 +1,131 @@
+#scroll-truyuc::-webkit-scrollbar {
+  display: none;
+}
+#scroll-truyuc {
+  cursor: grab;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scroll {
+  background: transparent url("../images/scroll/scroll.png") no-repeat center
+    center;
+  background-size: 100% 100%;
+}
+.button-scroll button {
+  font-size: 1.69em;
+  line-height: 3;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.25em;
+  border: solid 1px var(--w-secondary);
+}
+
+.pic {
+  width: 49.33em;
+  position: relative;
+
+  .pic-nhancode {
+    opacity: 0;
+    transition: all 0.36 ease 1s;
+    display: none;
+  }
+
+  &.active .pic-nhancode {
+    display: grid;
+    opacity: 1;
+  }
+}
+
+.pic-01 {
+  background: transparent url("../images/scroll/active/img-01.png") no-repeat
+    center center;
+  background-size: 100% 100%;
+}
+.pic-02 {
+  background: transparent url("../images/scroll/active/img-02.png") no-repeat
+    center center;
+  background-size: 100% 100%;
+}
+.pic-03 {
+  background: transparent url("../images/scroll/active/img-03.png") no-repeat
+    center center;
+  background-size: 100% 100%;
+}
+
+.pic-nhancode {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25em;
+  z-index: 10;
+  grid-template-columns: 1fr 1fr;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  transition: all 1s cubic-bezier(0.5, 0, 0.75, 0);
+}
+.mask.hide {
+  filter: brightness(3);
+  opacity: 0;
+  transform: scale(1.1);
+
+  //display: none;
+}
+.mask-01 {
+  width: 100%;
+  height: 100%;
+  mask: url("../images/scroll/mask/01.png") no-repeat;
+  mask-size: 100% 100%;
+}
+.mask-02 {
+  width: 100%;
+  height: 100%;
+  mask: url("../images/scroll/mask/02.png") no-repeat;
+  mask-size: 100% 100%;
+}
+.mask-03 {
+  width: 100%;
+  height: 100%;
+  mask: url("../images/scroll/mask/03.png") no-repeat;
+  mask-size: 100% 100%;
+}
+.mask-04 {
+  width: 100%;
+  height: 100%;
+  mask: url("../images/scroll/mask/04.png") no-repeat;
+  mask-size: 100% 100%;
+}
+.mask-05 {
+  width: 100%;
+  height: 100%;
+  mask: url("../images/scroll/mask/05.png") no-repeat;
+  mask-size: 100% 100%;
+}
+.mask-06 {
+  width: 100%;
+  height: 100%;
+  mask: url("../images/scroll/mask/09.png") no-repeat;
+  mask-size: 100% 100%;
+}
+.mask-07 {
+  width: 100%;
+  height: 100%;
+  mask: url("../images/scroll/mask/08.png") no-repeat;
+  mask-size: 100% 100%;
+}
+.mask-08 {
+  width: 100%;
+  height: 100%;
+  mask: url("../images/scroll/mask/07.png") no-repeat;
+  mask-size: 100% 100%;
+}
+.mask-09 {
+  width: 100%;
+  height: 100%;
+  mask: url("../images/scroll/mask/06.png") no-repeat;
+  mask-size: 100% 100%;
+}
