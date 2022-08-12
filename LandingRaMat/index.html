@@ -195,7 +195,7 @@
     <!--------------------------------------- section scrollspy ---------------------------------------------->
     <section class="scrollspy hidden lg:block z-[5]" id="page-num">
       <nav>
-        <ul id="menu-scrollspy" class="grid grid-flow-row gap-[2em]">
+        <ul id="menu-scrollspy" class="grid grid-flow-row gap-[1.69em]">
           <li>
             <a
               data-toggle="scroll"
@@ -231,6 +231,15 @@
               data-scrollspy="#section-04"
             >
               04
+            </a>
+          </li>
+          <li class="menu__item">
+            <a
+              data-toggle="scroll"
+              href="#section-05"
+              data-scrollspy="#section-05"
+            >
+              05
             </a>
           </li>
         </ul>
@@ -1128,6 +1137,164 @@ c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"
             <span>Cốt truyện 01</span>
           </h1>
           <div class="content-scroll" data-simplebar="">
+            <div class="h-fit">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                sit amet tortor lacus. Mauris orci diam, luctus eget nibh vel,
+                sodales mattis nisi. Curabitur turpis ipsum, rutrum non metus
+                quis, euismod porta lectus. Morbi quis nunc id purus iaculis
+                rutrum. Pellentesque eget volutpat arcu. Aliquam erat volutpat.
+                Ut arcu ligula, placerat a ipsum cursus, sodales imperdiet
+                felis. Duis ut vulputate eros. Proin consectetur luctus mauris,
+                ac viverra felis malesuada sed. Aenean in vehicula ex, a commodo
+                dolor. Cras nec cursus ex. Aliquam id eros turpis. Maecenas at
+                quam enim. Mauris a massa sed urna consequat vestibulum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                sit amet tortor lacus. Mauris orci diam, luctus eget nibh vel,
+                sodales mattis nisi. Curabitur turpis ipsum, rutrum non metus
+                quis, euismod porta lectus. Morbi quis nunc id purus iaculis
+                rutrum. Pellentesque eget volutpat arcu. Aliquam erat volutpat.
+                Ut arcu ligula, placerat a ipsum cursus, sodales imperdiet
+                felis. Duis ut vulputate eros. Proin consectetur luctus mauris,
+                ac viverra felis malesuada sed. Aenean in vehicula ex, a commodo
+                dolor. Cras nec cursus ex. Aliquam id eros turpis. Maecenas at
+                quam enim. Mauris a massa sed urna consequat vestibulum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------------------------- section 05 ---------------------------------------------->
+    <section
+      id="section-05"
+      class="scrollspy h-auto lg:h-[83em] relative z-[2] pb-[5em]"
+    >
+      <div class="wcontainer">
+        <!-- tabs -->
+        <div
+          class="wrapp mt-[15em] lg:mt-[12em] lg:w-[48.5em] mx-auto"
+          data-toggle="tab"
+        >
+          <!-- <div
+            class="tabs-button w-8/12 mx-auto grid grid-cols-1 lg:grid-cols-2 lg:w-9/12 gap-[.5em] mt-[2em]"
+          >
+            <button class="w-image-button active" data-target="tab-01">
+              <img src="./images/btn-bxh-allserver.png" alt="" />
+            </button>
+            <button class="w-image-button" data-target="tab-02">
+              <img src="./images/btn-bxh-banghoi.png" alt="" />
+            </button>
+          </div> -->
+
+          <select
+            name=""
+            id=""
+            class="text-[2em] lg:text-[1em] lg:py-[1em] lg:w-[6/12] mx-auto bg-black block py-[.5em] w-8/12 text-center rounded-[.5em] border-[#999]"
+          >
+            <option>Tất cả Server</option>
+            <option>Tất cả Server</option>
+            <option>Tất cả Server</option>
+          </select>
+
+          <!-- table -->
+          <div
+            class="block-bxh bg-transparent tabs-content mx-auto w-full mt-[1em] lg:mt-0 lg:pt-[2.5em] lg:px-[1em]"
+          >
+            <div
+              class="content active bg-[rgba(0,0,0,.9)] lg:bg-transparent pb-[2em]"
+              id="tab-01"
+            >
+              <div
+                class="w-full mx-auto h-[56em] p-[1em] lg:w-11/12 lg:h-[35em] lg:p-0 lg:mt-[1.5em] overflow-auto"
+              >
+                <table
+                  class="w-full h-fit text-[1.5em] lg:text-[1em] leading-[3] text-center border-collapse border"
+                >
+                  <thead>
+                    <th class="border">STT</th>
+                    <th class="border text-secondary">Tên NV</th>
+                    <th class="border">ID Nhân Vật</th>
+                    <th class="border">Server</th>
+                    <th class="border text-secondary">KNB</th>
+                  </thead>
+                  <tbody>
+                    <tr data-toggle="loop" data-loop="9">
+                      <td class="border">01</td>
+                      <td class="border text-secondary">Thộn Đần Đọ</td>
+                      <td class="border">11040405</td>
+                      <td class="border">S125</td>
+                      <td class="border text-secondary">128000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- update -->
+              <div
+                class="flex justify-between text-[1.5em] lg:text-[1em] leading-[2.5] px-[1em] lg:mt-[2em] lg:px-[2em]"
+              >
+                <button
+                  class="px-[2em] border-[#ffd694] border-[1px] rounded"
+                  class="text-secondary"
+                  data-toggle="modal"
+                  data-target="modal-thele-bxh"
+                >
+                  Thể Lệ
+                </button>
+                <div class="update text-center text-primary">
+                  Cập nhật ngày 25/05 lúc 12:00.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- gifts -->
+
+      <div class="w-image-block mx-auto w-10/12 mt-[2em] lg:w-[40em]">
+        <img
+          data-aos="zoom-in"
+          data-aos-delay="000"
+          src="./images/bxh/gift-001.png"
+          alt=""
+        />
+      </div>
+      <div
+        class="w-image-block mx-auto w-9/12 lg:w-[36em] lg:absolute lg:left-[1em] lg:bottom-[10em]"
+      >
+        <img
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          src="./images/bxh/gift-002.png"
+          alt=""
+        />
+      </div>
+      <div
+        class="w-image-block mx-auto w-8/12 lg:w-[36em] lg:absolute lg:right-[1em] lg:bottom-[10em]"
+      >
+        <img
+          data-aos="zoom-in"
+          data-aos-delay="400"
+          src="./images/bxh/gift-003.png"
+          alt=""
+        />
+      </div>
+    </section>
+    <!-- modal  -->
+    <div class="wmodal" id="modal-thele-bxh">
+      <div class="wmodal-dialog aspect-[512/682] relative w-11/12 md:w-8/12">
+        <button
+          class="btn-close-modal aspect-square w-[6em]"
+          data-dismiss="modal"
+        ></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Thể Lệ</span>
+          </h1>
+          <div class="content-scroll">
             <div class="h-fit">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc

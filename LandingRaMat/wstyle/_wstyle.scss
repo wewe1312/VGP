@@ -22,6 +22,10 @@ body {
       center 0em scroll;
     background-size: 100vw auto;
   }
+  #section-05 {
+    background: #000 url("../images/bg-005-sm.jpg") no-repeat center 0em scroll;
+    background-size: 100vw auto;
+  }
 }
 /* lg */
 @media (min-width: 1024px) {
@@ -42,6 +46,15 @@ body {
     }
     #section-04 {
       background-image: url(../images/bg-004.jpg);
+    }
+    #section-05 {
+      background-image: url(../images/bg-005.jpg);
+    }
+
+    #section-05 .block-bxh {
+      background: transparent url("../images/bxh/bg-bxh.png") no-repeat center
+        center scroll;
+      background-size: cover;
     }
   }
   .wcontainer {
@@ -231,4 +244,8 @@ form select {
     background-color: #131517;
     border: solid 1px rgba(255, 255, 255, 0.5);
   }
+}
+
+.border {
+  border-color: #414141;
 }
