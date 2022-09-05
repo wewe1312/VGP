@@ -1,0 +1,59 @@
+.grid-section-02 {
+  grid-template-areas: "tiembanh" "shopmattrang";
+}
+
+.block-tiembanh {
+  grid-area: tiembanh;
+  background: rgba($color: #fff, $alpha: 0.5);
+  border: 2px var(--w-primary) solid;
+  border-radius: 2em;
+  padding: 1.5em 2em 2em;
+}
+.block-shopmattrang {
+  grid-area: shopmattrang;
+  background: transparent url("../images/shop/btn-shop.png") no-repeat center
+    center;
+  background-size: 100% 100%;
+}
+
+#modal-shop-cungtrang .item {
+  background: #fff;
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  border-radius: 1em;
+  > .name {
+    text-transform: uppercase;
+    color: var(--w-primary);
+  }
+
+  > .icon {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  > .w-btn {
+    background-color: var(--w-secondary);
+    color: #fff;
+  }
+}
+
+// ON LG
+@media (min-width: 1024px) {
+  .grid-section-02 {
+    grid-template-areas: "shopmattrang tiembanh";
+  }
+
+  .block-tiembanh {
+    grid-area: tiembanh;
+    background: transparent url(../images/shop/khung.png) no-repeat center
+      center;
+    background-size: 100% auto;
+    border: none;
+    border-radius: 0em;
+    padding: 10em 7em 0em;
+  }
+}
