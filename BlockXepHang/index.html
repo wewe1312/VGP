@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="output.css" rel="stylesheet" />
+    <link href="css/wwstyle.min.css" rel="stylesheet" />
+
+    <!-- my script -->
+    <script type="module" src="./script/ztimeline.js"></script>
+    <script type="module" src="./script/wmodal.js"></script>
+    <script type="module" src="./script/wloop.js"></script>
+    <script type="module" src="./script/wtabs.js"></script>
+    <script type="module" src="./script/countdown.js"></script>
+
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script type="module" src="./script/wswiper.js"></script>
+    <!-- AOS -->
+    <link href="plugin/aos/aos.css" rel="stylesheet" />
+    <script src="plugin/aos/aos.js"></script>
+    <!-- simplebar -->
+    <link href="plugin/simplebar/simplebar.min.css" rel="stylesheet" />
+    <script src="plugin/simplebar/simplebar.min.js"></script>
+    <!-- dragscroll -->
+    <script src="plugin/dragscroll.js"></script>
+    <!-- scrollspy -->
+    <script src="plugin/simple-scrollspy.min.js"></script>
+  </head>
+  <body>
+    <!-- offcanvas -->
+    <div id="w-offcanvas" class="offcanvas float">
+      <div class="offcanvas-content w-[15em] lg:w-[15em]">
+        <div class="icon w-image-block w-full mx-auto">
+          <img src="./images/game-icon.png" alt="" />
+        </div>
+        <!-- link -->
+        <div class="link grid grid-flow-row h-[25em]">
+          <a href="#">Trang Chủ</a>
+          <a href="#">Fanpage</a>
+          <a href="#">Tin Tức</a>
+          <a href="#">Sự Kiện</a>
+          <a href="#">Cộng Đồng</a>
+          <a href="#">Tải Game</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- float banner -->
+    <div
+      class="float-banner hidden lg:block fixed bottom-3 right-3 z-10"
+      data-toggle="modal"
+      data-target="modal-dangkytruoc"
+    >
+      <button class="w-image-button w-[10em]">
+        <img
+          class="animate__loop animate__bling"
+          src="./images/float-banner.png"
+          alt=""
+        />
+      </button>
+    </div>
+
+    <!-- header menu -->
+    <div class="absolute top-[.75em] left-[.75em] z-[3]">
+      <button
+        class="w-image-button w-[5em] lg:w-[2.5em]"
+        data-toggle="offcanvas"
+        data-target="w-offcanvas"
+      >
+        <svg
+          class="w-full"
+          fill="#fff"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <a
+      href="#"
+      class="logo w-image-block absolute w-[10em] top-[.75em] right-[1em] z-[3]"
+    >
+      <img src="./images/game-logo.png" alt="" />
+    </a>
+
+    <!--------------------------------------- section 05 ---------------------------------------------->
+    <section
+      id="section-05"
+      class="scrollspy h-auto lg:h-[83em] relative z-[2] pb-[5em]"
+    >
+      <div class="wcontainer">
+        <!-- tabs -->
+        <div
+          class="wrapp mt-[15em] lg:mt-[12em] lg:w-[48.5em] mx-auto"
+          data-toggle="tab"
+        >
+          <!-- <div
+            class="tabs-button w-8/12 mx-auto grid grid-cols-1 lg:grid-cols-2 lg:w-9/12 gap-[.5em] mt-[2em]"
+          >
+            <button class="w-image-button active" data-target="tab-01">
+              <img src="./images/btn-bxh-allserver.png" alt="" />
+            </button>
+            <button class="w-image-button" data-target="tab-02">
+              <img src="./images/btn-bxh-banghoi.png" alt="" />
+            </button>
+          </div> -->
+
+          <select
+            name=""
+            id=""
+            class="text-[2em] lg:text-[1em] lg:py-[1em] lg:w-[6/12] mx-auto bg-black block py-[.5em] w-8/12 text-center rounded-[.5em] border-[#999]"
+          >
+            <option>Tất cả Server</option>
+            <option>Tất cả Server</option>
+            <option>Tất cả Server</option>
+          </select>
+
+          <!-- table -->
+          <div
+            class="block-bxh bg-transparent tabs-content mx-auto w-full mt-[1em] lg:mt-0 lg:pt-[2.5em] lg:px-[1em]"
+          >
+            <div
+              class="content active bg-[rgba(0,0,0,.9)] lg:bg-transparent pb-[2em]"
+              id="tab-01"
+            >
+              <div
+                class="w-full mx-auto h-[56em] p-[1em] lg:w-11/12 lg:h-[35em] lg:p-0 lg:mt-[1.5em] overflow-auto"
+              >
+                <table
+                  class="w-full h-fit text-[1.5em] lg:text-[1em] leading-[3] text-center border-collapse border"
+                >
+                  <thead>
+                    <th class="border">STT</th>
+                    <th class="border text-secondary">Tên NV</th>
+                    <th class="border">ID Nhân Vật</th>
+                    <th class="border">Server</th>
+                    <th class="border text-secondary">KNB</th>
+                  </thead>
+                  <tbody>
+                    <tr data-toggle="loop" data-loop="9">
+                      <td class="border">01</td>
+                      <td class="border text-secondary">Thộn Đần Đọ</td>
+                      <td class="border">11040405</td>
+                      <td class="border">S125</td>
+                      <td class="border text-secondary">128000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- update -->
+              <div
+                class="flex justify-between text-[1.5em] lg:text-[1em] leading-[2.5] px-[1em] lg:mt-[2em] lg:px-[2em]"
+              >
+                <button
+                  class="px-[2em] border-[#ffd694] border-[1px] rounded"
+                  class="text-secondary"
+                  data-toggle="modal"
+                  data-target="modal-thele-bxh"
+                >
+                  Thể Lệ
+                </button>
+                <div class="update text-center text-primary">
+                  Cập nhật ngày 25/05 lúc 12:00.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- gifts -->
+
+      <div class="w-image-block mx-auto w-10/12 mt-[2em] lg:w-[40em]">
+        <img
+          data-aos="zoom-in"
+          data-aos-delay="000"
+          src="./images/bxh/gift-001.png"
+          alt=""
+        />
+      </div>
+      <div
+        class="w-image-block mx-auto w-9/12 lg:w-[36em] lg:absolute lg:left-[1em] lg:bottom-[10em]"
+      >
+        <img
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          src="./images/bxh/gift-002.png"
+          alt=""
+        />
+      </div>
+      <div
+        class="w-image-block mx-auto w-8/12 lg:w-[36em] lg:absolute lg:right-[1em] lg:bottom-[10em]"
+      >
+        <img
+          data-aos="zoom-in"
+          data-aos-delay="400"
+          src="./images/bxh/gift-003.png"
+          alt=""
+        />
+      </div>
+    </section>
+    <!-- modal  -->
+    <div class="wmodal" id="modal-thele-bxh">
+      <div class="wmodal-dialog aspect-[512/682] relative w-11/12 md:w-8/12">
+        <button
+          class="btn-close-modal aspect-square w-[6em]"
+          data-dismiss="modal"
+        ></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Thể Lệ</span>
+          </h1>
+          <div class="content-scroll">
+            <div class="h-fit">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                sit amet tortor lacus. Mauris orci diam, luctus eget nibh vel,
+                sodales mattis nisi. Curabitur turpis ipsum, rutrum non metus
+                quis, euismod porta lectus. Morbi quis nunc id purus iaculis
+                rutrum. Pellentesque eget volutpat arcu. Aliquam erat volutpat.
+                Ut arcu ligula, placerat a ipsum cursus, sodales imperdiet
+                felis. Duis ut vulputate eros. Proin consectetur luctus mauris,
+                ac viverra felis malesuada sed. Aenean in vehicula ex, a commodo
+                dolor. Cras nec cursus ex. Aliquam id eros turpis. Maecenas at
+                quam enim. Mauris a massa sed urna consequat vestibulum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                sit amet tortor lacus. Mauris orci diam, luctus eget nibh vel,
+                sodales mattis nisi. Curabitur turpis ipsum, rutrum non metus
+                quis, euismod porta lectus. Morbi quis nunc id purus iaculis
+                rutrum. Pellentesque eget volutpat arcu. Aliquam erat volutpat.
+                Ut arcu ligula, placerat a ipsum cursus, sodales imperdiet
+                felis. Duis ut vulputate eros. Proin consectetur luctus mauris,
+                ac viverra felis malesuada sed. Aenean in vehicula ex, a commodo
+                dolor. Cras nec cursus ex. Aliquam id eros turpis. Maecenas at
+                quam enim. Mauris a massa sed urna consequat vestibulum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------------------------- section final ---------------------------------------------->
+    <section
+      id="section-final"
+      class="h-[20em] lg:h-[31em] relative z-[2] w-full overflow-hidden"
+    >
+      <div
+        data-aos="zoom-out"
+        class="h-full w-full flex justify-center items-center"
+      >
+        <!-- icon -->
+        <div class="w-image-block w-[12.5em] lg:w-[11.75em] mr-[.75em]">
+          <img
+            class="animate__loop animate__glow"
+            src="./images/game-icon.png"
+          />
+        </div>
+        <!-- 18+ -->
+        <div class="w-[18em] lg:w-[19em]">
+          <div
+            class="search-box px-[1em] py-[.75em] flex justify-between items-center"
+          >
+            <span class="text-[1.25em] lg:text-[1.25em] text-primary">
+              Ma Kiem Vo Song
+            </span>
+            <div class="w-image-block w-[1em]">
+              <img src="./images/store-badge/icon-search.png" alt="" />
+            </div>
+          </div>
+          <div class="mt-[.5em] grid grid-cols-3 gap-[.25em]">
+            <div
+              class="block-img-store aspect-[240/125] col-span-2 grid grid-rows-2"
+            >
+              <a href="#">Googleplay</a>
+              <a href="#">Appstore</a>
+            </div>
+            <div class="w-image-block row-span-2">
+              <img src="./images/store-badge/18-square-02.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------------------------- section vgp ---------------------------------------------->
+    <section id="section-vgp" class="h-[3em]">
+      <div class="h-full w-full text-[1em] flex justify-center items-center">
+        <span>Phát hành bới Công ty Cổ Phần</span>
+        <img class="h-[1em]" src="./images/vgp-logo-simple.png" alt="" />
+      </div>
+    </section>
+
+    <!-- modal confirm simple -->
+    <div class="wmodal" id="modal-confirm">
+      <div class="wmodal-content w-11/12 md:w-8/12">
+        <div class="content p-[3em] lg:p-[2em] lg:pb-[0]">
+          <h1 class="title text-primary text-center">
+            <span class="">Đăng xuất</span>
+          </h1>
+          <div class="content-scroll">
+            <div class="text-[1.6em] h-fit">
+              <div class="text-center mt-[2em]">
+                Bạn có chắc chắn muốn [Đăng Xuất]?
+              </div>
+              <div class="grid grid-cols-2 gap-[.5em] mt-[2em]">
+                <button
+                  class="p-[.5em] bg-gray-700 text-white rounded"
+                  data-dismiss="modal"
+                >
+                  Không
+                </button>
+                <button
+                  class="p-[.5em] bg-primary text-white rounded"
+                  data-dismiss="modal"
+                >
+                  Đồng ý
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal congratz 
+    <div class="wmodal" id="modal-congratz">
+      <div class="wmodal-dialog aspect-[512/682] relative w-11/12 md:w-8/12">
+        <button
+          class="btn-close-modal aspect-square w-[6em]"
+          data-dismiss="modal"
+        ></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Chúc Mừng</span>
+          </h1>
+          <div class="content-scroll">
+            <div class="w-image-block mx-auto w-8/12">
+              <img src="./images/img-thanhcong.png" alt="" />
+            </div>
+            <div class="text-[1.6em] h-fit">
+              <div class="text-center text-primary">
+                Bạn vừa làm một việc gì đó thành công!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+    <!-- modal youtube -->
+    <div class="wmodal" id="modal-youtube">
+      <div class="wmodal-content youtube">
+        <button
+          class="float-right p-[.5em] flex justify-center items-center text-[1.5em] lg:text-[1em]"
+          data-dismiss="modal"
+        >
+          <svg
+            class="w-[.8em] fill-white mr-[.25em]"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 460.775 460.775"
+            style="enable-background: new 0 0 460.775 460.775"
+            xml:space="preserve"
+          >
+            <path
+              d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+	c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+	c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+	c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+	l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+	c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"
+            />
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg>
+          Đóng
+        </button>
+        <div class="aspect-[16/9]">
+          <iframe
+            id="w-youtube"
+            width="100%"
+            height="100%"
+            src=""
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+
+    <script>
+      AOS.init({ delay: 200, duration: 500, offset: 10 });
+      //Mo hoi uc
+      var scroll = "pic-01";
+      var scroll_counter = 0;
+      function mohoiuc() {
+        var mask = document.querySelectorAll(
+          "#" + scroll + " .mask:not(.hide)"
+        );
+        mask[Math.floor(Math.random() * mask.length)].classList.add("hide");
+        scroll_counter = scroll_counter + 1;
+        console.log(scroll_counter);
+        if (scroll_counter == 9) {
+          document.getElementById(scroll).classList.add("active");
+          scroll = "pic-02";
+        }
+        if (scroll_counter == 18) {
+          document.getElementById(scroll).classList.add("active");
+          scroll = "pic-03";
+        }
+        if (scroll_counter >= 27) {
+          document.getElementById(scroll).classList.add("active");
+          //scroll = "pic-03";
+        }
+      }
+      //scrollspy
+      window.onload = function () {
+        scrollSpy("#menu-scrollspy");
+      };
+    </script>
+  </body>
+</html>
