@@ -1,0 +1,105 @@
+.block-gal {
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper-slide {
+    height: calc((100% - 30px) / 2) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item {
+    background: transparent url("../images/gal/bg-item.png") no-repeat center
+      center;
+    background-size: 100% 100%;
+    padding: 6.9%;
+    position: relative;
+    cursor: pointer;
+    //font-size: 1.5em;
+    transition: all 0.36s ease;
+    //filter: drop-shadow(0 0.5em 1em rgba(0, 0, 0, 0.15));
+
+    > .info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.69);
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.25s ease-in;
+      span {
+        color: #ccc;
+      }
+    }
+
+    &:hover {
+      filter: brightness(1.1);
+      > .info {
+        opacity: 1;
+      }
+    }
+
+    .w-image-block {
+      border: 1px var(--w-secondary) solid;
+      border-radius: 1em;
+    }
+
+    button {
+      color: #fff;
+      background-color: var(--w-secondary);
+      padding: 0.15em 0.75em;
+      border-radius: 0.75em;
+    }
+  }
+}
+
+.btn-gal-tangbanh {
+  button {
+    height: 2em;
+    width: 2em;
+    background-color: var(--w-secondary);
+    color: #fff;
+  }
+  input {
+    height: 2em;
+    width: 3em;
+    text-align: center;
+    padding: 0 1em;
+  }
+}
+
+.block-top10 {
+  background: transparent url("../images/gal/bg-top10.png") no-repeat center
+    center;
+  background-size: 100% 100%;
+  padding: 16.5em 3em 0em 3em;
+  .border {
+    border: none;
+    border-bottom: 1px var(--w-secondary) dotted;
+  }
+  td span {
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    background-color: #111;
+    color: white;
+    border-radius: 0.25em;
+    display: block;
+  }
+
+  tr:nth-child(1) td span,
+  tr:nth-child(2) td span,
+  tr:nth-child(3) td span {
+    background-color: var(--w-secondary);
+  }
+}

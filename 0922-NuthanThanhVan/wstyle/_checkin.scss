@@ -1,0 +1,26 @@
+.block-checkin-board .day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    display: block;
+    height: 3em;
+    opacity: 0.25;
+    filter: grayscale(0.69);
+  }
+  &.active img {
+    opacity: 1;
+    filter: grayscale(0);
+  }
+
+  span {
+    color: var(--w-tertiary);
+    font-size: 4em;
+    opacity: 0.25;
+  }
+  &.active span {
+    color: var(--w-primary);
+    opacity: 1;
+  }
+}
