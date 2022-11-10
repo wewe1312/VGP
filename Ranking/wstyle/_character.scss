@@ -1,0 +1,166 @@
+.block-char .card img {
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-name: bling;
+}
+.name {
+  color: #66542e;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2em;
+  text-align: center;
+}
+.stats {
+}
+.stats-small {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+
+  .stats-num {
+    width: 100%;
+    background-color: #91cabc;
+    padding: 0 0.5em;
+    letter-spacing: 0.15em;
+  }
+}
+
+.desc {
+  .ability-icon {
+    border-radius: 100%;
+    overflow: hidden;
+    border: 5px #f9eac6 solid;
+  }
+  .ability-name {
+    font-size: 2em;
+    color: #3e8a3f;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .ability-desc {
+    text-align: center;
+    padding: 1em;
+    color: #66542e;
+  }
+}
+
+.select-class {
+  background: transparent url(../images/bg-select-class.png) no-repeat center
+    center;
+  background-size: 100% 100%;
+  aspect-ratio: 365/40;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-bottom: 0.6em solid #fff;
+    margin-top: -0.2em;
+    position: absolute;
+    top: 50%;
+    right: 20%;
+  }
+}
+.option-class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  display: none;
+  text-transform: uppercase;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.wmodal .option-class {
+  width: 100%;
+  height: 3em;
+  border-bottom: 1px dotted #aaa;
+}
+
+.select-character {
+  padding: 1em;
+  background-color: rgba($color: #fff, $alpha: 0.5);
+  border-radius: 2em;
+  text-align: center;
+
+  .w-image-button {
+    display: inline-block;
+    width: 5em;
+    border: 5px solid #fff;
+    border-radius: 1em;
+    opacity: 0.6;
+    filter: grayscale(0.6);
+
+    &.active {
+      filter: grayscale(0);
+      opacity: 1;
+      border-color: #fbedcb;
+    }
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .content-char {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas: "info card decs";
+    .info {
+      grid-area: info;
+    }
+    .block-char {
+      grid-area: card;
+    }
+    .desc {
+      grid-area: decs;
+    }
+  }
+}
+
+.ranking-button {
+  button {
+    background: transparent url(../images/ranking/button.png) no-repeat center
+      center;
+    background-size: 100% 100%;
+    aspect-ratio: 316/90;
+  }
+}
+
+.ranking-content {
+  min-height: 30em;
+  background-color: #fbfff8;
+  border: 2px #74a59a solid;
+  border-radius: 1em;
+  padding: 1em;
+  table {
+    color: #414141;
+    thead {
+      color: var(--w-primary);
+      border-bottom: 1px #ccc dashed;
+    }
+    tr {
+      line-height: 3;
+    }
+  }
+}
+/* lg */
+@media (min-width: 1024px) {
+  .ranking-content {
+    padding-top: 3em;
+    background-color: transparent;
+    border: none;
+  }
+}
