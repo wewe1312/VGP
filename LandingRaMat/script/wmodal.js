@@ -48,7 +48,7 @@ const btnyoutube = document.querySelectorAll("[data-toggle='youtube']");
 for (let i = 0; i < btnyoutube.length; i++) {
   btnyoutube[i].addEventListener("click", function () {
     let target = this.dataset.target;
-    blockyoutube.src = "";
+
     blockyoutube.src = target;
     // alert(target);
     modalyoutube.classList.add("show");
@@ -57,6 +57,7 @@ for (let i = 0; i < btnyoutube.length; i++) {
     modalyoutube.addEventListener("click", function () {
       this.classList.remove("show");
       myBody.classList.remove("overflow-hidden");
+      blockyoutube.src = "";
     });
   });
 }
