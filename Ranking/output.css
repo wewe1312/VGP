@@ -852,6 +852,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 16em;
 }
 
+.w-\[20em\]{
+  width: 20em;
+}
+
 .w-\[8em\]{
   width: 8em;
 }
@@ -872,12 +876,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: .8em;
 }
 
-.w-\[30em\]{
-  width: 30em;
+.w-9\/12{
+  width: 75%;
 }
 
-.w-\[20em\]{
-  width: 20em;
+.w-10\/12{
+  width: 83.333333%;
 }
 
 .flex-shrink{
@@ -1201,6 +1205,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-flow-col-dense{
   grid-auto-flow: column dense;
+}
+
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-cols-3{
@@ -1975,6 +1983,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-family: "some font",sans-serif;
 }
 
+.text-\[\.9em\]{
+  font-size: .9em;
+}
+
 .text-\[\.8em\]{
   font-size: .8em;
 }
@@ -1986,10 +1998,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.text-\[\.9em\]{
-  font-size: .9em;
 }
 
 .uppercase{
@@ -2703,10 +2711,6 @@ body {
     height: 31em;
   }
 
-  .lg\:min-h-\[100em\]{
-    min-height: 100em;
-  }
-
   .lg\:min-h-\[80em\]{
     min-height: 80em;
   }
@@ -2727,6 +2731,18 @@ body {
     width: 21.5em;
   }
 
+  .lg\:w-\[38em\]{
+    width: 38em;
+  }
+
+  .lg\:w-\[61\.25em\]{
+    width: 61.25em;
+  }
+
+  .lg\:w-9\/12{
+    width: 75%;
+  }
+
   .lg\:w-\[11\.75em\]{
     width: 11.75em;
   }
@@ -2735,32 +2751,12 @@ body {
     width: 19em;
   }
 
-  .lg\:w-\[42\.5em\]{
-    width: 42.5em;
+  .lg\:w-6\/12{
+    width: 50%;
   }
 
-  .lg\:w-\[61\.25em\]{
-    width: 61.25em;
-  }
-
-  .lg\:w-10\/12{
-    width: 83.333333%;
-  }
-
-  .lg\:w-\[40em\]{
-    width: 40em;
-  }
-
-  .lg\:w-\[38em\]{
-    width: 38em;
-  }
-
-  .lg\:w-8\/12{
-    width: 66.666667%;
-  }
-
-  .lg\:w-9\/12{
-    width: 75%;
+  .lg\:w-5\/12{
+    width: 41.666667%;
   }
 
   .lg\:text-\[1\.25em\]{
