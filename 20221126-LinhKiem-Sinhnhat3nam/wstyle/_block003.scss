@@ -1,0 +1,72 @@
+.block-bxh {
+  background: rgba($color: #fff, $alpha: 0.8);
+  padding: 1em;
+  border-radius: 1em;
+  border: 1px var(--w-secondary) solid;
+}
+
+.block-gift {
+  padding: 1em;
+  text-align: center;
+
+  h1 {
+    display: block;
+  }
+
+  span {
+    display: block;
+  }
+
+  li {
+    border-top: 1px #bbb dotted;
+    padding-top: 1em;
+  }
+}
+
+.block-bxh table tr {
+  border-bottom: 1px var(--w-secondary) dotted;
+
+  .num span {
+    padding: 0.15em 0.5em;
+    border-radius: 0.25em;
+    color: #fff;
+    background-color: var(--w-secondary);
+  }
+}
+
+.bxh-gift {
+  h1 {
+    color: var(--w-secondary);
+    font-size: 1.25em;
+  }
+
+  .gift {
+    padding: 1em;
+    display: flex;
+    //align-items: center;
+    justify-content: left;
+    flex-direction: column;
+  }
+}
+
+// ON LG
+@media (min-width: 1024px) {
+  .block-bxh {
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    border: none;
+    padding: 3em;
+  }
+
+  .bxh-gift {
+    padding-top: 5em;
+    padding-left: 4em;
+    height: 36.5em;
+    h1 {
+      display: none;
+    }
+    .gift {
+      font-size: 0.9em;
+    }
+  }
+}
