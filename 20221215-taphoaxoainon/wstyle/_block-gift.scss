@@ -1,0 +1,54 @@
+.block-gift {
+  background-color: #ffebbc !important;
+  padding-bottom: 5em;
+}
+.item {
+  background-color: rgba($color: #6b0f08, $alpha: 0.69);
+  background-size: 100% 100%;
+  aspect-ratio: 300/350;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  text-align: center;
+  gap: 1em;
+  border: 1px solid #aa4838;
+  border-radius: 1em;
+
+  .name {
+    line-height: 1;
+  }
+  h1 {
+    font-size: 1.1em;
+    line-height: 1;
+  }
+  h3 {
+    color: var(--w-primary);
+  }
+  button {
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--w-secondary);
+    padding: 0.5em;
+    border-radius: 1em;
+  }
+}
+
+.btn-arrow {
+  background: url("../images/block002/arrow.png") no-repeat center center;
+  background-size: 100% 100%;
+  width: 6em !important;
+  aspect-ratio: 1/1;
+  position: absolute;
+  top: 50%;
+  margin-top: -3.8em;
+}
+
+.btn-arrow.arrow-button-next {
+  right: 14em;
+  transform: scale(-1);
+}
+.btn-arrow.arrow-button-prev {
+  left: 14em;
+}
