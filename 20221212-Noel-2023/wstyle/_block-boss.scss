@@ -20,6 +20,11 @@
   opacity: 1;
   z-index: 1;
 }
+.info {
+  background-color: rgba($color: #fff, $alpha: 0.85);
+  border-radius: 1em;
+  border: dashed var(--w-primary) 1px;
+}
 
 @media (min-width: 1024px) {
   .block-boss {
