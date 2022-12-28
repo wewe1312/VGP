@@ -1,0 +1,17 @@
+.select-game {
+  padding: 0.5em;
+  background-color: rgba($color: #fff, $alpha: 0.9);
+  border-radius: 0.69em;
+  border: solid 1px var(--w-primary);
+  display: block;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .block-toplixi,
+  .block-bxhtailoc {
+    width: 19.5em;
+    position: absolute;
+    top: 26em;
+  }
+}

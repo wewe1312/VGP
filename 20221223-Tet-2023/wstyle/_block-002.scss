@@ -1,0 +1,27 @@
+.block-gieoque {
+  grid-template-areas: "gieoque" "shoptailoc" "button";
+
+  .grp-button {
+    grid-area: button;
+  }
+  .grp-gieoque {
+    grid-area: gieoque;
+  }
+  .grp-shoptailoc {
+    grid-area: shoptailoc;
+  }
+}
+
+.info {
+  background-color: rgba($color: #fff, $alpha: 0.9);
+  padding: 1em;
+  border-radius: 1em;
+  text-align: center;
+  //border: solid 1px var(--w-primary);
+}
+
+@media (min-width: 1024px) {
+  .block-gieoque {
+    grid-template-areas: "button shoptailoc" "gieoque gieoque";
+  }
+}
