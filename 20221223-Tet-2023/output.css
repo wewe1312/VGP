@@ -864,6 +864,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: auto;
 }
 
+.h-\[33em\]{
+  height: 33em;
+}
+
 .h-\[15em\]{
   height: 15em;
 }
@@ -882,22 +886,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-\[calc\(100\%-theme\(\"spacing\.1\"\)\)\]{
   height: calc(100% - 0.25rem);
-}
-
-.h-\[30em\]{
-  height: 30em;
-}
-
-.h-\[35em\]{
-  height: 35em;
-}
-
-.h-\[34em\]{
-  height: 34em;
-}
-
-.h-\[33em\]{
-  height: 33em;
 }
 
 .w-\[15em\]{
@@ -1289,10 +1277,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-cols-4{
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-row{
@@ -2003,10 +1987,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: .5em;
 }
 
-.p-\[1em\]{
-  padding: 1em;
-}
-
 .px-\[1em\]{
   padding-left: 1em;
   padding-right: 1em;
@@ -2025,16 +2005,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-}
-
-.py-\[2em\]{
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-
-.py-\[1em\]{
-  padding-top: 1em;
-  padding-bottom: 1em;
 }
 
 .pb-\[5em\]{
@@ -2198,16 +2168,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.5;
 }
 
-.leading-\[3\]{
-  line-height: 3;
-}
-
 .leading-\[2\.8\]{
   line-height: 2.8;
-}
-
-.leading-\[2\.85\]{
-  line-height: 2.85;
 }
 
 .text-white{
@@ -2847,22 +2809,6 @@ input:focus-visible {
 }
 
 @media (min-width: 1024px){
-  .lg\:left-0{
-    left: 0px;
-  }
-
-  .lg\:right-0{
-    right: 0px;
-  }
-
-  .lg\:left-\[1em\]{
-    left: 1em;
-  }
-
-  .lg\:left-\[1\.5em\]{
-    left: 1.5em;
-  }
-
   .lg\:left-\[1\.25em\]{
     left: 1.25em;
   }
@@ -2892,16 +2838,24 @@ input:focus-visible {
     margin-left: 20em;
   }
 
-  .lg\:mt-\[3em\]{
-    margin-top: 3em;
-  }
-
-  .lg\:mt-\[4em\]{
-    margin-top: 4em;
-  }
-
   .lg\:mt-\[4\.5em\]{
     margin-top: 4.5em;
+  }
+
+  .lg\:mt-\[4\.4em\]{
+    margin-top: 4.4em;
+  }
+
+  .lg\:mt-\[4\.35em\]{
+    margin-top: 4.35em;
+  }
+
+  .lg\:mt-\[4\.32em\]{
+    margin-top: 4.32em;
+  }
+
+  .lg\:mt-\[4\.325em\]{
+    margin-top: 4.325em;
   }
 
   .lg\:block{
@@ -2920,12 +2874,12 @@ input:focus-visible {
     height: 67.5em;
   }
 
-  .lg\:h-\[31em\]{
-    height: 31em;
+  .lg\:h-\[78\.125em\]{
+    height: 78.125em;
   }
 
-  .lg\:h-\[75em\]{
-    height: 75em;
+  .lg\:h-\[31em\]{
+    height: 31em;
   }
 
   .lg\:w-\[15em\]{
@@ -2960,6 +2914,10 @@ input:focus-visible {
     width: 19.375em;
   }
 
+  .lg\:w-10\/12{
+    width: 83.333333%;
+  }
+
   .lg\:w-6\/12{
     width: 50%;
   }
@@ -2968,36 +2926,20 @@ input:focus-visible {
     width: 21em;
   }
 
-  .lg\:w-full{
-    width: 100%;
-  }
-
-  .lg\:w-10\/12{
-    width: 83.333333%;
-  }
-
   .lg\:w-4\/12{
     width: 33.333333%;
-  }
-
-  .lg\:w-3\/12{
-    width: 25%;
   }
 
   .lg\:w-\[46em\]{
     width: 46em;
   }
 
-  .lg\:w-\[19\.5em\]{
-    width: 19.5em;
-  }
-
-  .lg\:w-8\/12{
-    width: 66.666667%;
-  }
-
   .lg\:w-9\/12{
     width: 75%;
+  }
+
+  .lg\:w-full{
+    width: 100%;
   }
 
   .lg\:grid-cols-2{
@@ -3018,14 +2960,6 @@ input:focus-visible {
 
   .lg\:pt-\[20em\]{
     padding-top: 20em;
-  }
-
-  .lg\:pt-0{
-    padding-top: 0px;
-  }
-
-  .lg\:pt-\[5em\]{
-    padding-top: 5em;
   }
 
   .lg\:pt-\[2em\]{
