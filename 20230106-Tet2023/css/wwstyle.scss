@@ -1,0 +1,43 @@
+@import "../wstyle/wstyle";
+@import "../wstyle/woffcanvas";
+@import "../wstyle/ztimeline";
+@import "../wstyle/wmodal";
+@import "../wstyle/zbgvideo";
+@import "../wstyle/zanimate";
+@import "../wstyle/wtabs";
+@import "../wstyle/scroll";
+@import "../wstyle/checkin";
+@import "../wstyle/float";
+@import "../wstyle/character";
+@import "../wstyle/wwheel";
+@import "../wstyle/block-gift";
+@import "../wstyle/wrapp";
+@import "../wstyle/splitter";
+
+.w-btn {
+  padding: 0.5em 1em;
+  border: 1px var(--w-secondary) solid;
+  border-radius: 1em;
+}
+
+#section-03 .w-image-button {
+  img {
+    transform: scale(1.15);
+  }
+
+  .content {
+    max-height: 65em;
+  }
+}
+
+@media (min-width: 1024px) {
+  #section-03 .w-image-button {
+    img {
+      transform: scale(1);
+    }
+
+    /* .content {
+      max-height: 65em;
+    } */
+  }
+}
