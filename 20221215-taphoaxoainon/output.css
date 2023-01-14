@@ -726,6 +726,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.5rem;
 }
 
+.ml-\[\.25em\]{
+  margin-left: .25em;
+}
+
+.ml-\[\.5em\]{
+  margin-left: .5em;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -1463,6 +1471,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: .25em;
 }
 
+.gap-\[\.75em\]{
+  gap: .75em;
+}
+
 .space-y-reverse > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 1;
 }
@@ -1846,6 +1858,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#111\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 17 17 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\.\.\.\'\)\]{
   background-image: url('...');
 }
@@ -2181,6 +2198,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -2827,8 +2849,16 @@ body {
     margin-top: 2em;
   }
 
+  .lg\:mb-\[\.5em\]{
+    margin-bottom: .5em;
+  }
+
   .lg\:block{
     display: block;
+  }
+
+  .lg\:flex{
+    display: flex;
   }
 
   .lg\:h-\[60em\]{
@@ -2885,6 +2915,26 @@ body {
 
   .lg\:w-\[19em\]{
     width: 19em;
+  }
+
+  .lg\:w-\[6\/12\]{
+    width: 6 / 12;
+  }
+
+  .lg\:w-6\/12{
+    width: 50%;
+  }
+
+  .lg\:w-5\/12{
+    width: 41.666667%;
+  }
+
+  .lg\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:items-center{
+    align-items: center;
   }
 
   .lg\:pr-\[45em\]{

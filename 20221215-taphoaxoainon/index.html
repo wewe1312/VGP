@@ -471,9 +471,30 @@
       class="scrollspy h-auto lg:h-[59.5em] relative z-[2] overflow-hidden"
     >
       <div class="wcontainer">
-        <h5 class="text-center mt-[13em] mb-[1.5em] lg:mt-[20.5em]">
-          Bạn đang có <span class="text-secondary">1000 Bánh</span>
-        </h5>
+        <div
+          class="grid grid-cols-1 gap-[.75em] text-center mt-[13em] mb-[1.5em] mx-auto lg:w-6/12 lg:grid-cols-2 lg:mt-[20.5em] lg:mb-[.5em]"
+        >
+          <h5 class="lg:flex lg:items-center">
+            Bạn đang có:
+            <span class="text-secondary ml-[.5em]"> 1000 Bánh</span>
+          </h5>
+          <div class="">
+            <input
+              class="w-btn bg-[#111]"
+              list="browsers"
+              name="browser"
+              id="browser"
+            />
+            <datalist id="browsers">
+              <option value="Edge"></option>
+              <option value="Firefox"></option>
+              <option value="Chrome"></option>
+              <option value="Opera"></option>
+              <option value="Safari"></option>
+            </datalist>
+            <button class="w-btn bg-primary" type="submit">Tìm</button>
+          </div>
+        </div>
         <!-- slide -->
         <div class="relative">
           <div
