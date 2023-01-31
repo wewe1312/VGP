@@ -1,0 +1,13 @@
+.slide-character-wrap {
+  background: transparent url("../images/character/bg.jpg") no-repeat center
+    center scroll;
+  background-size: 100% auto;
+
+  .button-prev,
+  .button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+  }
+}
