@@ -832,8 +832,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.aspect-\[300\/788\]{
-  aspect-ratio: 300 / 788;
+.aspect-\[300\/900\]{
+  aspect-ratio: 300 / 900;
 }
 
 .aspect-\[150\/184\]{
@@ -2035,6 +2035,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: .5em;
 }
 
+.px-\[\.5em\]{
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
 .py-\[\.75em\]{
   padding-top: .75em;
   padding-bottom: .75em;
@@ -2063,6 +2068,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.px-\[\.75em\]{
+  padding-left: .75em;
+  padding-right: .75em;
 }
 
 .text-left{
