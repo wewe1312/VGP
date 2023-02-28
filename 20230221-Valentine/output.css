@@ -637,6 +637,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-column: span 4 / span 4;
 }
 
+.col-span-6{
+  grid-column: span 6 / span 6;
+}
+
 .col-span-1{
   grid-column: span 1 / span 1;
 }
@@ -742,6 +746,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-2{
   margin-top: 0.5rem;
+}
+
+.mt-\[-3\.5em\]{
+  margin-top: -3.5em;
 }
 
 .box-border{
@@ -1303,6 +1311,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-4{
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-8{
+  grid-template-columns: repeat(8, minmax(0, 1fr));
 }
 
 .grid-cols-3{
@@ -1900,39 +1912,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(17 17 17 / var(--tw-bg-opacity));
 }
 
-.bg-\[rgb\(255\2c 0\2c 0\)\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#222\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 34 34 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#333\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
-}
-
-.bg-slate-800{
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#151515\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 21 21 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#050505\]{
   --tw-bg-opacity: 1;
   background-color: rgb(5 5 5 / var(--tw-bg-opacity));
+}
+
+.bg-\[rgb\(255\2c 0\2c 0\)\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\.\.\'\)\]{
@@ -2291,11 +2278,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-\[\#666\]{
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity));
-}
-
-.text-\[\#999\]{
-  --tw-text-opacity: 1;
-  color: rgb(153 153 153 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -2976,6 +2958,10 @@ body {
 
   .lg\:ml-\[10em\]{
     margin-left: 10em;
+  }
+
+  .lg\:mt-\[-4\.5em\]{
+    margin-top: -4.5em;
   }
 
   .lg\:block{
