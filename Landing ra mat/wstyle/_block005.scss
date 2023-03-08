@@ -1,0 +1,76 @@
+.block-character {
+  .w-image-block {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  .swiper-slide {
+    position: relative;
+  }
+  .swiper-slide img {
+    transform: scale(1.6);
+  }
+
+  .vid {
+    display: none;
+  }
+  .swiper-pagination-bullet {
+    width: 4em;
+    height: 4em;
+    opacity: 1;
+    filter: brightness(0.5);
+
+    &.swiper-pagination-bullet-active {
+      filter: brightness(1);
+    }
+  }
+  .swiper-pagination-bullet:nth-child(1) {
+    background: url("../images/block002/icon-001.png") no-repeat center center /
+      100% 100%;
+  }
+  .swiper-pagination-bullet:nth-child(2) {
+    background: url("../images/block002/icon-002.png") no-repeat center center /
+      100% 100%;
+  }
+  .swiper-pagination-bullet:nth-child(3) {
+    background: url("../images/block002/icon-003.png") no-repeat center center /
+      100% 100%;
+  }
+  .swiper-pagination-bullet:nth-child(4) {
+    background: url("../images/block002/icon-004.png") no-repeat center center /
+      100% 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .block-character {
+    .swiper-slide .w-image-block {
+      height: 48em;
+      width: auto;
+      > img {
+        height: 100%;
+        width: auto;
+      }
+    }
+    .swiper-slide img {
+      transform: scale(1);
+    }
+
+    .vid {
+      display: block;
+      width: 100vw;
+      height: 100%;
+      position: absolute;
+      top: 4em;
+      left: 0;
+      z-index: 0;
+      .wrapp {
+        aspect-ratio: 1920/624;
+      }
+    }
+    .swiper-pagination-bullet {
+      width: 6em;
+      height: 6em;
+    }
+  }
+}

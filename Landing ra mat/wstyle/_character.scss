@@ -2,12 +2,16 @@
   background: transparent url("../images/text-share.png") no-repeat center
     center;
   background-size: 100% 100%;
-  aspect-ratio: 261/62;
+  aspect-ratio: 574/96;
   text-align: center;
-  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.35em;
+
+  span {
+    color: var(--w-active);
+  }
 }
 
 .block-gal {

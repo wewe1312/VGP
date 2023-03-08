@@ -24,6 +24,11 @@ body:not(.fullpagebg) {
       center 0em scroll;
     background-size: 100vw auto;
   }
+  #section-05 {
+    background: var(--w-bg-color) url("../images/bg-005-sm.jpg") no-repeat
+      center 0em scroll;
+    background-size: 100vw auto;
+  }
 }
 
 #section-vgp {
@@ -48,6 +53,9 @@ body:not(.fullpagebg) {
     }
     #section-04 {
       background-image: url(../images/bg-004.jpg);
+    }
+    #section-05 {
+      background-image: url(../images/bg-005.jpg);
     }
   }
   .wcontainer {
