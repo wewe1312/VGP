@@ -1,0 +1,311 @@
+.text-share {
+  background: transparent url("../images/text-share.png") no-repeat center
+    center;
+  background-size: 100% 100%;
+  aspect-ratio: 261/62;
+  text-align: center;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block-gal {
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper-slide {
+    height: calc((100% - 30px) / 2) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item {
+    background: transparent url("../images/gal/bg-item.png") no-repeat center
+      center;
+    background-size: 100% 100%;
+    padding: 6.9%;
+    position: relative;
+    cursor: pointer;
+    //font-size: 1.5em;
+    transition: all 0.36s ease;
+    //filter: drop-shadow(0 0.5em 1em rgba(0, 0, 0, 0.15));
+
+    > .info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.69);
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.25s ease-in;
+      span {
+        color: #ccc;
+      }
+    }
+
+    &:hover {
+      filter: brightness(1.1);
+      > .info {
+        opacity: 1;
+      }
+    }
+
+    .w-image-block {
+      border: 1px var(--w-secondary) solid;
+      border-radius: 1em;
+    }
+
+    button {
+      color: #fff;
+      background-color: var(--w-secondary);
+      padding: 0.15em 0.75em;
+      border-radius: 0.75em;
+    }
+  }
+}
+
+.btn-gal-tangbanh {
+  button {
+    height: 2em;
+    width: 2em;
+    background-color: var(--w-secondary);
+    color: #fff;
+  }
+  input {
+    height: 2em;
+    width: 3em;
+    text-align: center;
+    padding: 0 1em;
+  }
+}
+
+.block-top10 {
+  background: transparent url("../images/gal/bg-top10.png") no-repeat center
+    center;
+  background-size: 100% 100%;
+  padding: 16.5em 3em 0em 3em;
+  .border {
+    border: none;
+    border-bottom: 1px var(--w-secondary) dotted;
+  }
+  td span {
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    background-color: #111;
+    color: white;
+    border-radius: 0.25em;
+    display: block;
+  }
+
+  tr:nth-child(1) td span,
+  tr:nth-child(2) td span,
+  tr:nth-child(3) td span {
+    background-color: var(--w-secondary);
+  }
+}
+
+.btn-dapngay {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  .tag-luotdap {
+    background-color: rgba(0, 0, 0, 0.69);
+    padding: 0.5em;
+    border-radius: 1em;
+    border: 1px solid var(--w-primary);
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}
+
+.block-items {
+  background-color: #ccc;
+  border: #ccc solid 1px;
+  .item {
+    background-color: #fff;
+    padding: 1.75em 1em;
+
+    button {
+      padding: 0.5em 0.75em;
+      background-color: var(--w-primary);
+      color: #fff;
+      border-radius: 1em;
+    }
+  }
+}
+
+.char-slide {
+  position: relative;
+  > a {
+    width: 11em;
+    margin: -1em auto 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  .char-slide {
+    > a {
+      width: 20em;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 3%;
+      left: 50%;
+      margin-left: -10em;
+    }
+  }
+}
+.char-pagination {
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+
+  span {
+    text-indent: -9999px;
+    overflow: hidden;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    width: 4em;
+    height: 4em;
+  }
+
+  @for $i from 1 through 5 {
+    span:nth-child(#{$i}) {
+      $link: "../images/character/icon-class-0" + $i + ".png";
+      background-image: url($link);
+    }
+  }
+}
+
+.block-submit {
+  .swiper-slide:not(.swiper-slide-active) {
+    background-color: #fff;
+    > img {
+      opacity: 0.3;
+      transition: all 0.36s ease;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 2em;
+    &::after {
+      display: none;
+    }
+  }
+  .swiper-button-next {
+    right: 0.5em;
+  }
+  .swiper-button-prev {
+    left: 0.5em;
+  }
+}
+@media (min-width: 1024px) {
+  .block-submit {
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 3em;
+    }
+    .swiper-button-next {
+      right: 5em;
+    }
+    .swiper-button-prev {
+      left: 5em;
+    }
+  }
+}
+
+.ranking-content {
+  color: var(--w-primary);
+  line-height: 2.65;
+  background-color: #fff;
+  border-radius: 1em;
+  padding: 1em 2em;
+  overflow: auto;
+
+  thead {
+    border-bottom: #ccc 1px solid;
+  }
+}
+
+.quatop {
+  // background: transparent url("../images/block002/quatop.png") no-repeat center
+  //   center;
+  // background-size: 100% 100%;
+  line-height: 1.1;
+  > li {
+    display: grid;
+    grid-template-columns: 5em auto;
+    gap: 1em;
+    overflow: hidden;
+    border-top: 1px solid rgba(#429892, 0.3);
+    padding: 1em 0;
+    > span {
+      font-size: 0.9em;
+      display: flex;
+      align-items: center;
+    }
+    .w-image-block {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .ranking-content {
+    //color: #fff;
+    background-color: transparent;
+    height: auto;
+    padding: 2em 8em;
+    line-height: 2.5;
+
+    > .content {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      gap: 1em;
+    }
+
+    .quatop {
+      width: 95%;
+      border: 1px solid rgba(#429892, 0.3);
+      padding: 1.5em;
+      aspect-ratio: 1/0.9;
+      display: grid;
+      grid-template-rows: 25% 25% 25% 25%;
+
+      li:nth-child(1) {
+        border: none;
+      }
+    }
+  }
+}
+
+.block-quabaovat {
+  background: transparent url("../images/block005/bg-quabaovat.png") no-repeat
+    center center;
+  background-size: 100% 100%;
+  aspect-ratio: 350/600;
+  padding: 5em 1.5em 0 1.5em;
+}
+
+.block-lichsunhan {
+  background: transparent url("../images/block005/bg-lichsunhan.png") no-repeat
+    center center;
+  background-size: 100% 100%;
+  //aspect-ratio: 350/460;
+  padding: 5em 1.5em 0 1.5em;
+}

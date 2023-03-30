@@ -1,0 +1,12 @@
+.checkin {
+  > .w-image-button {
+    background: transparent url("../images/block003/active/gift-01.png")
+      no-repeat center center;
+    background-size: 100% auto;
+  }
+  .active {
+    > img {
+      opacity: 0;
+    }
+  }
+}
