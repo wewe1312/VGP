@@ -1,0 +1,22 @@
+.body-content {
+  grid-area: content;
+  background-color: var(--w-bodycontent);
+  overflow: auto;
+}
+.body-content .content p {
+  line-height: 1.75;
+  margin: 1em 0;
+}
+
+.layout {
+  grid-template-areas:
+    "download download button button button button button button"
+    "download download content content content content content content"
+    "feature feature feature feature support support support support";
+}
+
+@media (min-width: 1024px) {
+  .block-download {
+    max-height: 33em;
+  }
+}
