@@ -728,12 +728,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 12em;
 }
 
-.mr-\[\.75em\]{
-  margin-right: .75em;
+.mt-\[12\.5em\]{
+  margin-top: 12.5em;
+}
+
+.mt-\[8em\]{
+  margin-top: 8em;
 }
 
 .mt-\[\.5em\]{
   margin-top: .5em;
+}
+
+.mt-\[13em\]{
+  margin-top: 13em;
+}
+
+.mr-\[\.75em\]{
+  margin-right: .75em;
 }
 
 .mt-\[0em\]{
@@ -748,28 +760,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.5rem;
 }
 
-.mt-\[8em\]{
-  margin-top: 8em;
-}
-
-.mt-\[5em\]{
-  margin-top: 5em;
-}
-
-.mt-\[3em\]{
-  margin-top: 3em;
-}
-
-.mt-\[1\.5em\]{
-  margin-top: 1.5em;
-}
-
 .mt-\[15em\]{
   margin-top: 15em;
 }
 
-.mt-\[12\.5em\]{
-  margin-top: 12.5em;
+.mt-\[14em\]{
+  margin-top: 14em;
 }
 
 .box-border{
@@ -880,24 +876,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   aspect-ratio: 1920 / 1080;
 }
 
-.aspect-\[240\/125\]{
-  aspect-ratio: 240 / 125;
-}
-
-.aspect-\[16\/9\]{
-  aspect-ratio: 16 / 9;
+.aspect-\[1200\/279\]{
+  aspect-ratio: 1200 / 279;
 }
 
 .aspect-square{
   aspect-ratio: 1 / 1;
 }
 
-.aspect-\[928\/107\]{
-  aspect-ratio: 928 / 107;
+.aspect-\[240\/125\]{
+  aspect-ratio: 240 / 125;
 }
 
-.aspect-\[1200\/279\]{
-  aspect-ratio: 1200 / 279;
+.aspect-\[16\/9\]{
+  aspect-ratio: 16 / 9;
 }
 
 .h-fit{
@@ -922,8 +914,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 40em;
 }
 
-.h-\[48em\]{
-  height: 48em;
+.h-\[57\.6em\]{
+  height: 57.6em;
+}
+
+.h-\[64em\]{
+  height: 64em;
 }
 
 .h-\[57\.69em\]{
@@ -940,30 +936,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-\[calc\(100\%-theme\(\"spacing\.1\"\)\)\]{
   height: calc(100% - 0.25rem);
-}
-
-.h-\[50em\]{
-  height: 50em;
-}
-
-.h-\[55em\]{
-  height: 55em;
-}
-
-.h-\[57\.6em\]{
-  height: 57.6em;
-}
-
-.h-\[60em\]{
-  height: 60em;
-}
-
-.h-\[65em\]{
-  height: 65em;
-}
-
-.h-\[64em\]{
-  height: 64em;
 }
 
 .w-\[15em\]{
@@ -1004,6 +976,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-10\/12{
   width: 83.333333%;
+}
+
+.w-11\/12{
+  width: 91.666667%;
 }
 
 .w-\[8em\]{
@@ -1375,10 +1351,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-4{
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
 .grid-rows-2{
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
@@ -1557,10 +1529,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-\[\.25em\]{
   gap: .25em;
-}
-
-.gap-\[-2em\]{
-  gap: -2em;
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]){
@@ -2106,6 +2074,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: .5em;
 }
 
+.p-\[1em\]{
+  padding: 1em;
+}
+
 .px-\[1em\]{
   padding-left: 1em;
   padding-right: 1em;
@@ -2114,11 +2086,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-\[\.5em\]{
   padding-top: .5em;
   padding-bottom: .5em;
-}
-
-.py-\[1em\]{
-  padding-top: 1em;
-  padding-bottom: 1em;
 }
 
 .py-\[\.75em\]{
@@ -2240,6 +2207,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
+.text-\[0\.8em\]{
+  font-size: 0.8em;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -2312,14 +2283,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 
+.leading-\[2\.5\]{
+  line-height: 2.5;
+}
+
+.leading-\[2\.75\]{
+  line-height: 2.75;
+}
+
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-green-400{
-  --tw-text-opacity: 1;
-  color: rgb(74 222 128 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -2572,11 +2546,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grayscale{
   --tw-grayscale: grayscale(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.grayscale-0{
-  --tw-grayscale: grayscale(0);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -2959,16 +2928,8 @@ body {
 }
 
 @media (min-width: 1024px){
-  .lg\:left-\[-2\.5em\]{
-    left: -2.5em;
-  }
-
-  .lg\:right-\[-2\.5em\]{
-    right: -2.5em;
-  }
-
-  .lg\:top-\[5em\]{
-    top: 5em;
+  .lg\:top-\[8em\]{
+    top: 8em;
   }
 
   .lg\:right-\[5em\]{
@@ -2979,40 +2940,16 @@ body {
     top: 10em;
   }
 
-  .lg\:top-\[8em\]{
-    top: 8em;
+  .lg\:left-\[-2\.5em\]{
+    left: -2.5em;
   }
 
-  .lg\:right-\[3em\]{
-    right: 3em;
-  }
-
-  .lg\:mt-\[6em\]{
-    margin-top: 6em;
-  }
-
-  .lg\:mt-\[17\.5em\]{
-    margin-top: 17.5em;
-  }
-
-  .lg\:mt-\[5em\]{
-    margin-top: 5em;
+  .lg\:right-\[-2\.5em\]{
+    right: -2.5em;
   }
 
   .lg\:mt-\[3em\]{
     margin-top: 3em;
-  }
-
-  .lg\:mt-\[4em\]{
-    margin-top: 4em;
-  }
-
-  .lg\:mt-\[25em\]{
-    margin-top: 25em;
-  }
-
-  .lg\:mt-\[20em\]{
-    margin-top: 20em;
   }
 
   .lg\:mt-\[22em\]{
@@ -3023,32 +2960,40 @@ body {
     margin-top: 10em;
   }
 
-  .lg\:mt-\[8em\]{
-    margin-top: 8em;
+  .lg\:mt-\[28em\]{
+    margin-top: 28em;
   }
 
-  .lg\:mt-\[9em\]{
-    margin-top: 9em;
+  .lg\:ml-\[37\.5em\]{
+    margin-left: 37.5em;
   }
 
-  .lg\:mt-\[1em\]{
-    margin-top: 1em;
+  .lg\:mt-\[17em\]{
+    margin-top: 17em;
+  }
+
+  .lg\:mt-\[-2\.5em\]{
+    margin-top: -2.5em;
+  }
+
+  .lg\:mt-\[1\.75em\]{
+    margin-top: 1.75em;
+  }
+
+  .lg\:ml-\[35em\]{
+    margin-left: 35em;
   }
 
   .lg\:mt-\[15em\]{
     margin-top: 15em;
   }
 
-  .lg\:mt-\[28em\]{
-    margin-top: 28em;
+  .lg\:mt-\[-1\.5em\]{
+    margin-top: -1.5em;
   }
 
-  .lg\:mt-\[30em\]{
-    margin-top: 30em;
-  }
-
-  .lg\:mt-\[2em\]{
-    margin-top: 2em;
+  .lg\:mt-\[-2em\]{
+    margin-top: -2em;
   }
 
   .lg\:block{
@@ -3063,16 +3008,20 @@ body {
     height: 60em;
   }
 
-  .lg\:h-\[31em\]{
-    height: 31em;
-  }
-
   .lg\:h-\[55\.55em\]{
     height: 55.55em;
   }
 
   .lg\:h-\[50em\]{
     height: 50em;
+  }
+
+  .lg\:h-\[67\.25em\]{
+    height: 67.25em;
+  }
+
+  .lg\:h-\[31em\]{
+    height: 31em;
   }
 
   .lg\:w-\[15em\]{
@@ -3091,44 +3040,12 @@ body {
     width: 3em;
   }
 
-  .lg\:w-\[33\.33em\]{
-    width: 33.33em;
-  }
-
-  .lg\:w-\[71\.5em\]{
-    width: 71.5em;
+  .lg\:w-\[18em\]{
+    width: 18em;
   }
 
   .lg\:w-5\/12{
     width: 41.666667%;
-  }
-
-  .lg\:w-\[6em\]{
-    width: 6em;
-  }
-
-  .lg\:w-\[11\.75em\]{
-    width: 11.75em;
-  }
-
-  .lg\:w-\[19em\]{
-    width: 19em;
-  }
-
-  .lg\:w-\[20em\]{
-    width: 20em;
-  }
-
-  .lg\:w-\[50em\]{
-    width: 50em;
-  }
-
-  .lg\:w-\[30em\]{
-    width: 30em;
-  }
-
-  .lg\:w-\[18em\]{
-    width: 18em;
   }
 
   .lg\:w-\[65em\]{
@@ -3147,52 +3064,48 @@ body {
     width: 58.333333%;
   }
 
-  .lg\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .lg\:w-\[6em\]{
+    width: 6em;
   }
 
-  .lg\:gap-\[2em\]{
-    gap: 2em;
+  .lg\:w-\[40em\]{
+    width: 40em;
+  }
+
+  .lg\:w-10\/12{
+    width: 83.333333%;
+  }
+
+  .lg\:w-\[11\.75em\]{
+    width: 11.75em;
+  }
+
+  .lg\:w-\[19em\]{
+    width: 19em;
+  }
+
+  .lg\:w-\[35em\]{
+    width: 35em;
+  }
+
+  .lg\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:gap-\[2\.5em\]{
     gap: 2.5em;
   }
 
-  .lg\:p-\[2em\]{
-    padding: 2em;
+  .lg\:gap-\[3em\]{
+    gap: 3em;
   }
 
-  .lg\:p-\[3em\]{
-    padding: 3em;
-  }
-
-  .lg\:p-\[5em\]{
-    padding: 5em;
+  .lg\:gap-\[1em\]{
+    gap: 1em;
   }
 
   .lg\:p-\[5\.5em\]{
     padding: 5.5em;
-  }
-
-  .lg\:pr-\[10em\]{
-    padding-right: 10em;
-  }
-
-  .lg\:pr-\[20em\]{
-    padding-right: 20em;
-  }
-
-  .lg\:pr-\[25em\]{
-    padding-right: 25em;
-  }
-
-  .lg\:pr-\[30em\]{
-    padding-right: 30em;
-  }
-
-  .lg\:pr-\[35em\]{
-    padding-right: 35em;
   }
 
   .lg\:pr-\[38em\]{
@@ -3211,8 +3124,8 @@ body {
     font-size: .8em;
   }
 
-  .lg\:opacity-0{
-    opacity: 0;
+  .lg\:leading-\[2\.75\]{
+    line-height: 2.75;
   }
 }
 
