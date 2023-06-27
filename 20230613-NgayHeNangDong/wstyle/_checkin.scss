@@ -1,0 +1,31 @@
+.checkin {
+  > .w-image-button {
+    background: transparent url("../images/block003/active/gift-01.webp")
+      no-repeat center center;
+    background-size: 100% auto;
+    filter: grayscale(0.3) brightness(0.8);
+  }
+
+  .w-image-button:nth-child(1) {
+    background-image: url("../images/block003/active/gift-01.webp");
+  }
+  .w-image-button:nth-child(2) {
+    background-image: url("../images/block003/active/gift-02.webp");
+  }
+  .w-image-button:nth-child(3) {
+    background-image: url("../images/block003/active/gift-03.webp");
+  }
+  .w-image-button:nth-child(4) {
+    background-image: url("../images/block003/active/gift-04.webp");
+  }
+  .w-image-button:nth-child(5) {
+    background-image: url("../images/block003/active/gift-05.webp");
+  }
+
+  .active {
+    filter: grayscale(0) brightness(1);
+    > img {
+      opacity: 0;
+    }
+  }
+}
