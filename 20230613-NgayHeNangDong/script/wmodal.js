@@ -129,16 +129,16 @@ const active = document.querySelectorAll("[data-toggle='show']");
 for (let i = 0; i < active.length; i++) {
   active[i].addEventListener("click", function () {
     let x = active[i].dataset.target;
-    document.getElementById(x).classList.add("show");
+    document.getElementById(x).classList.remove("whidden");
   });
 }
 //button close
 const btndismiss = document.querySelectorAll("[data-dismiss='show']");
 for (let i = 0; i < btndismiss.length; i++) {
   btndismiss[i].addEventListener("click", function () {
-    let target_el = this.closest(".block-show.show");
-    target_el.classList.remove("show");
-    myBody.classList.remove("overflow-hidden");
+    let target_el = this.parentElement;
+    target_el.classList.add("whidden");
+    // myBody.classList.remove("overflow-hidden");
   });
 }
 

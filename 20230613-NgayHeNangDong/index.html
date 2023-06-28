@@ -768,12 +768,22 @@
               src="./images/block005/wheel.webp"
               alt="" />
           </div>
-          <button class="wheel-button w-image-block w-1/2 z-10">
+          <button
+            class="wheel-button w-image-block w-1/2 z-10"
+            data-toggle="show"
+            data-target="wheel-button-small">
             <div class="num mt-[7.75em] lg:mt-[9.25em] lg:text-[1.25em]">
               05
             </div>
             <img src="./images/block005/button.webp" alt="" />
           </button>
+          <!-- button -->
+          <div
+            id="wheel-button-small"
+            class="whidden wheel-button-small lg:text-[1.5em]">
+            <button data-dismiss="show">Quay x1 Lần</button>
+            <button data-dismiss="show">Quay x10 Lần</button>
+          </div>
         </div>
 
         <div class="lg:absolute lg:top-[17em] lg:right-0 lg:w-[19.72em]">
@@ -1230,13 +1240,13 @@
         var $r = $(".wheel").fortune(prices);
 
         var clickHandler = function () {
-          $(".wheel-button").off("click");
+          $(".wheel-button-small > button").off("click");
           $r.spin().done(function (price) {
-            $(".wheel-button").on("click", clickHandler);
+            $(".wheel-button-small > button").on("click", clickHandler);
           });
         };
 
-        $(".wheel-button").on("click", clickHandler);
+        $(".wheel-button-small > button").on("click", clickHandler);
       });
 
       //scrollspy

@@ -728,8 +728,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 30em;
 }
 
-.mt-\[6\.25em\]{
-  margin-top: 6.25em;
+.mt-\[7\.75em\]{
+  margin-top: 7.75em;
 }
 
 .mt-\[\.5em\]{
@@ -746,18 +746,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.mt-\[8\.25em\]{
-  margin-top: 8.25em;
-}
-
-.mt-\[8em\]{
-  margin-top: 8em;
-}
-
-.mt-\[7\.75em\]{
-  margin-top: 7.75em;
 }
 
 .box-border{
@@ -970,8 +958,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 91.666667%;
 }
 
-.w-\[9\.5em\]{
-  width: 9.5em;
+.w-1\/2{
+  width: 50%;
 }
 
 .w-\[6em\]{
@@ -984,10 +972,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[\.8em\]{
   width: .8em;
-}
-
-.w-1\/2{
-  width: 50%;
 }
 
 .flex-1{
@@ -2722,6 +2706,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   fill: var(--w-primary);
 }
 
+.whidden {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  transition: all 0.36s ease;
+}
+
 body {
   background: var(--w-bg-color) url("images/bg-sm.jpg") no-repeat center top
     scroll;
@@ -2937,60 +2929,24 @@ body {
     position: absolute;
   }
 
-  .lg\:top-\[15em\]{
-    top: 15em;
+  .lg\:top-\[12em\]{
+    top: 12em;
   }
 
   .lg\:right-0{
     right: 0px;
   }
 
-  .lg\:left-0{
-    left: 0px;
-  }
-
   .lg\:top-\[17em\]{
     top: 17em;
   }
 
-  .lg\:top-\[12em\]{
-    top: 12em;
+  .lg\:left-0{
+    left: 0px;
   }
 
   .lg\:col-span-1{
     grid-column: span 1 / span 1;
-  }
-
-  .lg\:mt-\[6em\]{
-    margin-top: 6em;
-  }
-
-  .lg\:mt-\[19\.5em\]{
-    margin-top: 19.5em;
-  }
-
-  .lg\:mt-\[2em\]{
-    margin-top: 2em;
-  }
-
-  .lg\:mt-\[12em\]{
-    margin-top: 12em;
-  }
-
-  .lg\:mt-\[5em\]{
-    margin-top: 5em;
-  }
-
-  .lg\:mt-\[42em\]{
-    margin-top: 42em;
-  }
-
-  .lg\:mt-\[15em\]{
-    margin-top: 15em;
-  }
-
-  .lg\:mt-\[10em\]{
-    margin-top: 10em;
   }
 
   .lg\:mt-\[4em\]{
@@ -3001,40 +2957,16 @@ body {
     margin-top: 21em;
   }
 
-  .lg\:mt-\[14em\]{
-    margin-top: 14em;
+  .lg\:mt-\[2em\]{
+    margin-top: 2em;
   }
 
-  .lg\:mt-\[1em\]{
-    margin-top: 1em;
+  .lg\:mt-\[15em\]{
+    margin-top: 15em;
   }
 
   .lg\:mt-\[45em\]{
     margin-top: 45em;
-  }
-
-  .lg\:mt-\[13em\]{
-    margin-top: 13em;
-  }
-
-  .lg\:mt-\[11\.5em\]{
-    margin-top: 11.5em;
-  }
-
-  .lg\:mt-\[7\.5em\]{
-    margin-top: 7.5em;
-  }
-
-  .lg\:mt-\[8\.5em\]{
-    margin-top: 8.5em;
-  }
-
-  .lg\:mt-\[9\.5em\]{
-    margin-top: 9.5em;
-  }
-
-  .lg\:mt-\[9em\]{
-    margin-top: 9em;
   }
 
   .lg\:mt-\[9\.25em\]{
@@ -3049,20 +2981,12 @@ body {
     display: none;
   }
 
-  .lg\:h-\[60em\]{
-    height: 60em;
-  }
-
-  .lg\:h-\[31em\]{
-    height: 31em;
-  }
-
   .lg\:h-\[55\.55em\]{
     height: 55.55em;
   }
 
-  .lg\:h-\[30em\]{
-    height: 30em;
+  .lg\:h-\[60em\]{
+    height: 60em;
   }
 
   .lg\:h-\[25em\]{
@@ -3085,28 +3009,28 @@ body {
     width: 3em;
   }
 
-  .lg\:w-\[33\.33em\]{
-    width: 33.33em;
+  .lg\:w-\[20em\]{
+    width: 20em;
   }
 
-  .lg\:w-\[40em\]{
-    width: 40em;
+  .lg\:w-\[30em\]{
+    width: 30em;
   }
 
-  .lg\:w-\[50\.7em\]{
-    width: 50.7em;
+  .lg\:w-\[32em\]{
+    width: 32em;
   }
 
   .lg\:w-11\/12{
     width: 91.666667%;
   }
 
-  .lg\:w-5\/12{
-    width: 41.666667%;
+  .lg\:w-4\/12{
+    width: 33.333333%;
   }
 
-  .lg\:w-\[20em\]{
-    width: 20em;
+  .lg\:w-10\/12{
+    width: 83.333333%;
   }
 
   .lg\:w-\[18em\]{
@@ -3125,28 +3049,8 @@ body {
     width: 100%;
   }
 
-  .lg\:w-\[30em\]{
-    width: 30em;
-  }
-
-  .lg\:w-\[35em\]{
-    width: 35em;
-  }
-
-  .lg\:w-\[32em\]{
-    width: 32em;
-  }
-
-  .lg\:w-4\/12{
-    width: 33.333333%;
-  }
-
-  .lg\:w-10\/12{
-    width: 83.333333%;
-  }
-
-  .lg\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .lg\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-5{
@@ -3157,20 +3061,12 @@ body {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .lg\:grid-cols-2{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .lg\:gap-\[1\.5em\]{
-    gap: 1.5em;
+  .lg\:gap-\[0\.5em\]{
+    gap: 0.5em;
   }
 
   .lg\:gap-\[1em\]{
     gap: 1em;
-  }
-
-  .lg\:gap-\[0\.5em\]{
-    gap: 0.5em;
   }
 
   .lg\:pt-\[1em\]{
@@ -3181,12 +3077,16 @@ body {
     font-size: 1em;
   }
 
-  .lg\:text-\[\.8em\]{
-    font-size: .8em;
-  }
-
   .lg\:text-\[1\.25em\]{
     font-size: 1.25em;
+  }
+
+  .lg\:text-\[1\.5em\]{
+    font-size: 1.5em;
+  }
+
+  .lg\:text-\[\.8em\]{
+    font-size: .8em;
   }
 }
 

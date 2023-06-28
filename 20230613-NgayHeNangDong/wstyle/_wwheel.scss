@@ -32,3 +32,21 @@
     display: block;
   }
 }
+
+.wheel-button-small {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: grid;
+  gap: 0.5em;
+  filter: drop-shadow(0 0 1em rgba(0, 0, 0, 0.5));
+
+  > button {
+    padding: 0.5em 1em;
+    background-color: var(--w-primary);
+    color: white;
+    border-radius: 1em;
+  }
+}
