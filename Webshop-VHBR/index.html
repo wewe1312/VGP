@@ -8,7 +8,7 @@
 
     <!-- my script -->
     <script type="module" src="./script/wloop.js"></script>
-    <script type="module" src="./script/ztimeline.js"></script>
+    <script type="module" src="./script/countdown.js"></script>
     <script type="module" src="./script/wmodal.js"></script>
     <script type="module" src="./script/wtabs.js"></script>
     <script type="module" src="./script/wsound.js"></script>
@@ -259,7 +259,7 @@
     <!--------------------------------------- section 01 ---------------------------------------------->
     <section
       id="section-01"
-      class="scrollspy h-[58em] lg:h-[60em] relative z-[2]">
+      class="scrollspy h-[50em] lg:h-[55.55em] relative z-[2]">
       <!-- header menu -->
       <div class="absolute top-[.75em] left-[.75em] z-[4]">
         <button
@@ -281,42 +281,27 @@
         </div>
       </div>
 
-      <div class="wcontainer h-full lg:pr-[38em] relative z-[3]">
+      <div class="wcontainer h-full lg:pr-[23em] relative z-[3]">
         <!-- logo -->
         <div
           data-aos="fade-down"
-          class="w-image-block mx-auto w-[13em] mt-[2em] lg:w-[18em] lg:mt-[3em] relative z-10">
+          class="w-image-block mx-auto w-[13em] mt-[0em] lg:w-[15em] lg:mt-[0em] relative z-10">
           <img class="" src="./images/game-logo.png" alt="" />
         </div>
-        <!-- button -->
+        <!-- countdown -->
         <div
-          class="w-5/12 mt-[13em] mx-auto lg:w-5/12 lg:mt-[22em]"
-          data-aos="fade-up">
-          <button
-            class="w-image-button w-full animate__loop animate__bling"
-            data-toggle="youtube"
-            data-target="https://www.youtube.com/embed/qyPCGAJgx9U">
-            <img
-              class="e-btn-hover-glow"
-              src="./images/block001/btn-trailer.gif"
-              alt="" />
-          </button>
+          id="countdown"
+          class="mt-[28em] mx-auto w-[20em] px-[2em] countdown grid grid-cols-4 text-center lg:w-[18em] lg:mt-[26em] lg:ml-[55em]">
+          <div class="day">00</div>
+          <div class="hour">00</div>
+          <div class="min">00</div>
+          <div class="sec text-primary">00</div>
         </div>
-      </div>
-
-      <div
-        class="w-[14em] absolute top-[45em] left-[50%] ml-[-7em] z-[99] lg:w-[20em] lg:left-[70%] lg:top-[34em]">
-        <a href="#" class="w-image-button w-full cursor-pointer">
-          <img
-            class="e-btn-hover-glow animate__loop animate__bling"
-            src="./images/btn-vhbr.webp"
-            alt="" />
-        </a>
       </div>
 
       <!-- bg video -->
       <div class="bgvideo hidden lg:block">
-        <div class="aspect-[1920/1080] w-[100vw]">
+        <div class="aspect-[1920/1000] w-[100vw]">
           <video nocontrol loop autoplay muted playsinline>
             <source src="./video/bgvideo.webm" type="video/ogg" />
             <source src="./video/bgvideo.mp4" type="video/mp4" />
@@ -326,331 +311,191 @@
       <!--end bg video -->
     </section>
 
+    <section class="pb-[4em]">
+      <div class="wcontainer">
+        <div class="grid grid-cols-3 gap-[0.5em] lg:w-6/12 mx-auto">
+          <button class="w-btn">Nạp Xu</button>
+          <button class="w-btn" data-toggle="modal" data-target="modal-thele">
+            Thể Lệ
+          </button>
+          <button class="w-btn bg-primary">Đăng Nhập</button>
+          <!-- infomation -->
+          <div class="col-span-3 text-center hidden">
+            Xin chào, Thọ Đần Độn
+            <a
+              class="text-primary text-[.8em] cursor-pointer"
+              data-toggle="modal"
+              data-target="modal-logout"
+              >Đăng xuất</a
+            >
+            <div class="grid grid-cols-1">
+              <div>Lượt gieo quẻ: <span class="text-primary">1000</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!--------------------------------------- section 02 ---------------------------------------------->
     <section
       id="section-02"
-      class="scrollspy h-[40em] lg:h-[55.55em] relative z-[2] overflow-hidden">
+      class="scrollspy h-[45em] lg:h-[50em] relative z-[2] overflow-hidden">
       <div class="wcontainer">
-        <!-- Slider main container -->
-        <div
-          style="overflow: visible"
-          class="swiper character-slide relative w-full mt-[10em] lg:w-[65em] lg:mt-[10em]">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="flex w-full">
-                <button
-                  class="w-image-button w-[4em] absolute top-[1em] right-[1em] lg:w-[5em] lg:top-[8em] lg:right-[5em]"
-                  data-toggle="youtube"
-                  data-target="https://www.youtube.com/embed/qyPCGAJgx9U">
-                  <img
-                    class="animate__loop animate__bling"
-                    src="./images/block002/character/btn-video.png"
-                    alt="" />
-                </button>
-                <div class="w-image-block hidden lg:block">
-                  <img
-                    class="animate__loop animate__breath"
-                    src="./images/block002/character/weapon01.webp"
-                    alt="" />
-                </div>
-                <div class="w-image-block">
-                  <img src="./images/block002/character/char01.webp" alt="" />
-                </div>
-              </div>
-            </div>
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="flex w-full relative">
-                <button
-                  class="w-image-button w-[4em] absolute top-[1em] right-[1em] lg:w-[5em] lg:top-[10em] lg:right-[5em]"
-                  data-toggle="youtube"
-                  data-target="https://www.youtube.com/embed/qyPCGAJgx9U">
-                  <img
-                    class="animate__loop animate__bling"
-                    src="./images/block002/character/btn-video.png"
-                    alt="" />
-                </button>
-                <div class="w-image-block hidden lg:block">
-                  <img
-                    class="animate__loop animate__breath"
-                    src="./images/block002/character/weapon02.webp"
-                    alt="" />
-                </div>
-                <div class="w-image-block">
-                  <img src="./images/block002/character/char02.webp" alt="" />
-                </div>
-              </div>
-            </div>
-            <!-- Slides -->
-            <div class="swiper-slide">
+        <div class="title w-image-block mt-[2em] w-7/12 mx-auto lg:w-[22em]">
+          <img src="./images/block002/txt-item-01.webp" alt="" />
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-[25em_auto] mt-[2em]">
+          <!-- side -->
+          <div class="w-full">
+            <div class="box w-image-block w-12/12 mx-auto">
               <div
-                class="flex w-full"
-                data-toggle="youtube"
-                data-target="https://www.youtube.com/embed/qyPCGAJgx9U">
-                <button
-                  class="w-image-button w-[4em] absolute top-[1em] right-[1em] lg:w-[5em] lg:top-[10em] lg:right-[5em]"
-                  data-="">
-                  <img
-                    class="animate__loop animate__bling"
-                    src="./images/block002/character/btn-video.png"
-                    alt="" />
-                </button>
-                <div class="w-image-block hidden lg:block">
-                  <img
-                    class="animate__loop animate__breath"
-                    src="./images/block002/character/weapon03.webp"
-                    alt="" />
-                </div>
-                <div class="w-image-block">
-                  <img src="./images/block002/character/char03.webp" alt="" />
-                </div>
+                class="btn-xemqua lg:hidden"
+                data-toggle="modal"
+                data-target="modal-gift">
+                <img src="./images/block002/btn-xemqua.webp" alt="" />
               </div>
+              <img
+                class="animate__loop animate__bling"
+                src="./images/block002/box-01.webp"
+                alt="" />
             </div>
-          </div>
-          <!-- thumbs -->
-          <div
-            class="char-pagination mt-[1em] flex justify-center items-center"></div>
-        </div>
-      </div>
-    </section>
-
-    <!--------------------------------------- section 03 ---------------------------------------------->
-    <section
-      id="section-03"
-      class="scrollspy h-[57.6em] lg:h-[50em] relative z-[2] overflow-hidden">
-      <div class="wcontainer">
-        <!-- bao danh -->
-        <div
-          class="checkin-small lg:hidden mt-[12em] w-10/12 mx-auto grid grid-cols-2 gap-[1em]"
-          data-aos="zoom-out">
-          <button class="grid" data-toggle="modal" data-target="modal-gift">
-            <div class="w-image-block">
-              <img src="./images/block003/gift.webp" alt="" />
+            <div class="cost mx-auto text-center">
+              <div class="price-old">Giá gốc: 35.000 VXu</div>
+              <div class="price-new">10.000 VXu <span>-75%</span></div>
             </div>
-            <span>5.000</span>
-          </button>
-          <button class="grid disabled">
-            <div class="w-image-block">
-              <img src="./images/block003/gift.webp" alt="" />
-            </div>
-            <span>10.000</span>
-          </button>
-          <button class="grid disabled">
-            <div class="w-image-block">
-              <img src="./images/block003/gift.webp" alt="" />
-            </div>
-            <span>20.000</span>
-          </button>
-          <button class="grid disabled">
-            <div class="w-image-block">
-              <img src="./images/block003/gift.webp" alt="" />
-            </div>
-            <span>50.000</span>
-          </button>
-        </div>
-        <!-- bao danh big -->
-        <!-- timeline -->
-        <div
-          class="ztimeline w-10/12 mt-[12.5em] mx-auto aspect-[1200/279] hidden lg:block cursor-pointer"
-          data-aos="zoom-out"
-          data-toggle="modal"
-          data-target="modal-gift">
-          <div class="timeline-bar" data-percent="25%"></div>
-          <div class="timeline-gifts" data-active="1/4"></div>
-        </div>
-        <!-- decs -->
-        <p class="text-[1em] pt-[2em] text-center lg:w-6/12 mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ipsum ut
-          doloribus labore omnis reprehenderit sit porro odio dolorem
-          consequatur quasi a repellat sequi, corporis nobis facere architecto,
-          dolorum voluptatem?
-        </p>
-        <!-- cum nut -->
-        <div
-          class="w-12/12 mx-auto grid grid-cols-3 mt-[2em] gap-[1.5em] lg:w-7/12 lg:mt-[3em] lg:gap-[2.5em]">
-          <button
-            class="w-image-button w-full"
-            data-toggle="modal"
-            data-target="modal-gift">
-            <img src="./images/block003/btn-phanqua.webp" alt="" />
-          </button>
-          <button
-            class="w-image-button w-full"
-            data-toggle="modal"
-            data-target="modal-baodanh">
-            <img
-              class="scale-125"
-              src="./images/block003/btn-dangky.webp"
-              alt="" />
-          </button>
-          <button class="w-image-button w-full">
-            <img src="./images/block003/btn-chiase.webp" alt="" />
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!--------------------------------------- section 04 ---------------------------------------------->
-    <section
-      id="section-04"
-      class="scrollspy h-[64em] lg:h-[55.55em] relative z-[2] overflow-hidden">
-      <div class="wcontainer relative">
-        <div
-          data-aos="fade-down"
-          class="feature w-10/12 mx-auto mt-[8em] grid grid-cols-1 lg:grid-cols-3 lg:mt-[28em] lg:p-[5.5em]">
-          <button
-            data-aos="zoom-in"
-            data-aos-delay="100"
-            class="w-image-button w-full"
-            data-toggle="youtube"
-            data-target="https://www.youtube.com/embed/qyPCGAJgx9U">
-            <img
-              class="animate__loop animate__blingbling"
-              src="./images/block004/feature-01.webp"
-              alt="" />
-          </button>
-          <button
-            data-aos="zoom-in"
-            data-aos-delay="300"
-            class="w-image-button w-full"
-            data-toggle="youtube"
-            data-target="https://www.youtube.com/embed/qyPCGAJgx9U">
-            <img
-              class="animate__loop animate__blingbling"
-              src="./images/block004/feature-02.webp"
-              alt="" />
-          </button>
-          <button
-            data-aos="zoom-in"
-            data-aos-delay="500"
-            class="w-image-button w-full"
-            data-toggle="youtube"
-            data-target="https://www.youtube.com/embed/qyPCGAJgx9U">
-            <img
-              class="animate__loop animate__blingbling"
-              src="./images/block004/feature-03.webp"
-              alt="" />
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!--------------------------------------- section 05 ---------------------------------------------->
-    <section
-      id="section-05"
-      class="scrollspy hidden lg:block h-[57.69em] lg:h-[50em] relative z-[2] overflow-hidden">
-      <div class="wcontainer relative">
-        <!-- Slider main container -->
-        <div
-          style="overflow: visible"
-          class="swiper feature-slide relative w-10/12 mt-[8em]">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="w-image-block">
-                <img src="./images/block005/ingame/001.webp" alt="" />
-              </div>
-            </div>
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="w-image-block">
-                <img src="./images/block005/ingame/002.webp" alt="" />
-              </div>
-            </div>
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="w-image-block">
-                <img src="./images/block005/ingame/003.webp" alt="" />
-              </div>
-            </div>
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="w-image-block">
-                <img src="./images/block005/ingame/004.webp" alt="" />
-              </div>
-            </div>
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="w-image-block">
-                <img src="./images/block005/ingame/005.webp" alt="" />
-              </div>
-            </div>
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="w-image-block">
-                <img src="./images/block005/ingame/006.webp" alt="" />
-              </div>
-            </div>
-          </div>
-          <!-- If we need navigation buttons -->
-          <div
-            class="button-prev w-[3em] left-0 lg:w-[6em] lg:left-[-2.5em] z-[50]">
-            <img
-              style="transform: scaleX(-1)"
-              src="./images/block005/btn-arrow.webp"
-              alt="" />
-          </div>
-          <div class="button-next w-[3em] right-0 lg:w-[6em] lg:right-[-2.5em]">
-            <img src="./images/block005/btn-arrow.webp" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--------------------------------------- section 06 ---------------------------------------------->
-    <section
-      id="section-06"
-      class="scrollspy h-[57.6em] lg:h-[60em] relative z-[2] overflow-hidden">
-      <div class="wcontainer">
-        <div
-          data-aos="zoom-out"
-          data-toggle="tab"
-          class="mx-auto w-full lg:w-[35em] lg:ml-[35em]">
-          <div
-            class="tabs-button grid grid-cols-2 mx-auto w-11/12 mt-[14em] gap-[1em] lg:w-10/12 lg:mt-[15em]">
-            <button class="w-image-button active" data-target="cum01">
-              <img src="./images/block006/btn-hang01.webp" alt="" />
+            <button
+              class="w-image-button mx-auto w-8/12"
+              data-toggle="modal"
+              data-target="modal-confirm">
+              <img src="./images/block002/btn-mua.webp" alt="" />
             </button>
-            <button class="w-image-button" data-target="cum02">
-              <img src="./images/block006/btn-hang02.webp" alt="" />
+            <div class="available text-center -mt-[1em]">
+              Còn lại: <span>100</span> Bảo Rương
+            </div>
+          </div>
+          <!-- side -->
+          <div class="content-gift hidden lg:block">
+            <ul class="gift grid grid-cols-1 mt-[1em] rounded-[1em]">
+              <li data-toggle="loop" data-loop="7">
+                <div class="icon"><img src="./images/item.png" alt="" /></div>
+                <div class="desc">
+                  <div>
+                    <span>[Trang Phục] Hầu Tước x1</span>
+                    Ngoại quan siêu ngầu, lực chiến tăng mạnh.
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------------------------- section 02 ---------------------------------------------->
+    <section
+      id="section-02"
+      class="scrollspy h-[45em] lg:h-[50em] relative z-[2] overflow-hidden">
+      <div class="wcontainer">
+        <div class="title w-image-block mt-[2em] w-7/12 mx-auto lg:w-[22em]">
+          <img src="./images/block002/text-item-02.webp" alt="" />
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-[auto_25em] mt-[2em]">
+          <!-- side -->
+          <div class="content-gift hidden lg:block">
+            <ul class="gift grid grid-cols-1 mt-[1em] rounded-[1em]">
+              <li data-toggle="loop" data-loop="7">
+                <div class="icon"><img src="./images/item.png" alt="" /></div>
+                <div class="desc">
+                  <div>
+                    <span>[Trang Phục] Hầu Tước x1</span>
+                    Ngoại quan siêu ngầu, lực chiến tăng mạnh.
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- side -->
+          <div class="w-full">
+            <div class="box w-image-block w-12/12 mx-auto">
+              <div
+                class="btn-xemqua lg:hidden"
+                data-toggle="modal"
+                data-target="modal-gift">
+                <img src="./images/block002/btn-xemqua.webp" alt="" />
+              </div>
+              <img
+                class="animate__loop animate__bling"
+                src="./images/block002/box-02.webp"
+                alt="" />
+            </div>
+            <div class="cost mx-auto text-center">
+              <div class="price-old">Giá gốc: 35.000 VXu</div>
+              <div class="price-new">10.000 VXu <span>-75%</span></div>
+            </div>
+            <button
+              class="w-image-button mx-auto w-8/12"
+              data-toggle="modal"
+              data-target="modal-confirm">
+              <img src="./images/block002/btn-mua.webp" alt="" />
             </button>
+            <div class="available text-center -mt-[1em]">
+              Còn lại: <span>100</span> Bảo Rương
+            </div>
           </div>
-          <!-- tab content -->
-          <div
-            class="board aspect-square leading-[2.75] p-[1em] tabs-content mt-[1em] lg:mt-[-2em] lg:leading-[2.75]">
-            <table class="w-full text-center lg:mt-[1.75em]">
-              <thead class="text-secondary">
-                <tr>
-                  <th class="st1">Top</th>
-                  <th class="st3">Tên</th>
-                  <th class="st2">Server</th>
-                  <th class="st4">Chiến Lực</th>
-                </tr>
-              </thead>
-              <tbody class="content active" id="cum01">
-                <tr data-toggle="loop" data-loop="10">
-                  <td><span>1</span></td>
-                  <td>G63.AMG</td>
-                  <td>Thần Vương 1</td>
-                  <td>528404</td>
-                </tr>
-              </tbody>
-              <tbody class="content" id="cum02">
-                <tr data-toggle="loop" data-loop="10">
-                  <td><span>2</span></td>
-                  <td>G63.AMG</td>
-                  <td>Thần Vương 1</td>
-                  <td>528404</td>
-                </tr>
-              </tbody>
-            </table>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------------------------- section 02 ---------------------------------------------->
+    <section
+      id="section-02"
+      class="scrollspy h-[45em] lg:h-[50em] relative z-[2] overflow-hidden">
+      <div class="wcontainer">
+        <div class="title w-image-block mt-[2em] w-7/12 mx-auto lg:w-[22em]">
+          <img src="./images/block002/text-item-03.webp" alt="" />
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-[25em_auto] mt-[2em]">
+          <!-- side -->
+          <div class="w-full">
+            <div class="box w-image-block w-12/12 mx-auto">
+              <div
+                class="btn-xemqua lg:hidden"
+                data-toggle="modal"
+                data-target="modal-gift">
+                <img src="./images/block002/btn-xemqua.webp" alt="" />
+              </div>
+              <img
+                class="animate__loop animate__bling"
+                src="./images/block002/box-03.webp"
+                alt="" />
+            </div>
+            <div class="cost mx-auto text-center">
+              <div class="price-old">Giá gốc: 35.000 VXu</div>
+              <div class="price-new">10.000 VXu <span>-75%</span></div>
+            </div>
+            <button
+              class="w-image-button mx-auto w-8/12"
+              data-toggle="modal"
+              data-target="modal-confirm">
+              <img src="./images/block002/btn-mua.webp" alt="" />
+            </button>
+            <div class="available text-center -mt-[1em]">
+              Còn lại: <span>100</span> Bảo Rương
+            </div>
           </div>
-          <!-- status -->
-          <div class="text-center text-[0.8em] text-white mt-[1em] opacity-50">
-            Cập nhật lúc 12:00 ngày 25/06/2023
+          <!-- side -->
+          <div class="content-gift hidden lg:block">
+            <ul class="gift grid grid-cols-1 mt-[1em] rounded-[1em]">
+              <li data-toggle="loop" data-loop="7">
+                <div class="icon"><img src="./images/item.png" alt="" /></div>
+                <div class="desc">
+                  <div>
+                    <span>[Trang Phục] Hầu Tước x1</span>
+                    Ngoại quan siêu ngầu, lực chiến tăng mạnh.
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -766,91 +611,59 @@
       </div>
     </div>
 
-    <!-- modal bao danh -->
-    <div class="wmodal" id="modal-baodanh">
-      <div class="wmodal-content relative">
-        <button class="btn-close-modal" data-dismiss="modal"></button>
-        <div class="content">
-          <h1 class="title">
-            <span>Báo danh trước</span>
-          </h1>
-          <div class="content-scroll" data-simplebar="">
-            <form
-              class="mt-[1em] w-full overflow-hidden grid grid-flow-row gap-[.5em] text-center">
-              <input
-                class="px-[1em] py-[.5em] rounded"
-                type="text"
-                placeholder="Họ tên" />
-              <input
-                class="px-[1em] py-[.5em] rounded"
-                type="text"
-                placeholder="Số điện thoại" />
-              <input
-                class="px-[1em] py-[.5em] rounded"
-                type="text"
-                placeholder="Email" />
-
-              <button class="w-full p-[.5em] bg-vgp text-white rounded">
-                Báo danh
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- modal gift -->
     <div class="wmodal" id="modal-gift">
       <div class="wmodal-content relative">
         <button class="btn-close-modal" data-dismiss="modal"></button>
         <div class="content">
           <h1 class="title">
-            <span>Phần quà</span>
+            <span
+              >Kỷ Nguyên<br />
+              Bảo Rương</span
+            >
           </h1>
           <div class="content-scroll" data-simplebar="">
-            <ul
-              class="modal-gift-content grid grid-cols-1 mt-[1em] rounded-[1em]">
-              <li>
-                <div>5.000 lượt</div>
-                <div class="font-bold">
-                  Áo Choàng Bóng Tối x 1, Áo Choàng Bóng Tối x 1, Áo Choàng Bóng
-                  Tối x 1, Áo Choàng Bóng Tối x 1
-                </div>
-                <div>
-                  <div class="icon w-[3em]"></div>
-                </div>
-              </li>
-              <li>
-                <div>5.000 lượt</div>
-                <div class="font-bold">
-                  Áo Choàng Bóng Tối x 1, Áo Choàng Bóng Tối x 1, Áo Choàng Bóng
-                  Tối x 1, Áo Choàng Bóng Tối x 1
-                </div>
-                <div>
-                  <div class="icon w-[3em] opacity-50 grayscale"></div>
-                </div>
-              </li>
-              <li>
-                <div>5.000 lượt</div>
-                <div class="font-bold">
-                  Áo Choàng Bóng Tối x 1, Áo Choàng Bóng Tối x 1, Áo Choàng Bóng
-                  Tối x 1, Áo Choàng Bóng Tối x 1
-                </div>
-                <div>
-                  <div class="icon w-[3em] opacity-50 grayscale"></div>
-                </div>
-              </li>
-              <li>
-                <div>5.000 lượt</div>
-                <div class="font-bold">
-                  Áo Choàng Bóng Tối x 1, Áo Choàng Bóng Tối x 1, Áo Choàng Bóng
-                  Tối x 1, Áo Choàng Bóng Tối x 1
-                </div>
-                <div>
-                  <div class="icon w-[3em] opacity-50 grayscale"></div>
+            <ul class="gift grid grid-cols-1 mt-[1em] rounded-[1em]">
+              <li data-toggle="loop" data-loop="7">
+                <div class="icon"><img src="./images/item.png" alt="" /></div>
+                <div class="desc">
+                  <div>
+                    <span>[Trang Phục] Hầu Tước x1</span>
+                    Ngoại quan siêu ngầu, lực chiến tăng mạnh.
+                  </div>
                 </div>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal thele -->
+    <div class="wmodal" id="modal-thele">
+      <div class="wmodal-content relative">
+        <button class="btn-close-modal" data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Thể lệ</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit text-center">
+              <p>
+                Lorem ipsum dolor sit amet, officia excepteur ex fugiat
+                reprehenderit enim labore culpa sint ad nisi Lorem pariatur
+                mollit ex esse exercitation amet. Nisi animcupidatat excepteur
+                officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip
+                amet voluptate voluptate dolor minim nulla est proident. Nostrud
+                officia pariatur ut officia. Sit irure elit esse ea nulla sunt
+                ex occaecat reprehenderit commodo officia dolor Lorem duis
+                laboris cupidatat officia voluptate. Culpa proident adipisicing
+                id nulla nisi laboris ex in Lorem sunt duis officia eiusmod.
+                Aliqua reprehenderit commodo ex non excepteur duis sunt velit
+                enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur
+                et est culpa et culpa duis.
+              </p>
+            </div>
           </div>
         </div>
       </div>
