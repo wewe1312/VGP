@@ -1,0 +1,51 @@
+.block-shop {
+  /* .wrow {
+    background: url("../images/block003/bg-shelf.webp") no-repeat center bottom;
+    background-size: 100% auto;
+    padding-bottom: 0.65em;
+    margin-bottom: 1em;
+  } */
+
+  .item {
+    background: url("../images/block003/item.webp") no-repeat center bottom;
+    background-size: 100% 100%;
+    aspect-ratio: 160/220;
+    padding: 0.5em 0.5em;
+
+    .name {
+      color: #fff;
+      text-align: center;
+      font-size: 0.9em;
+      line-height: 1;
+    }
+    .price {
+      display: block;
+      margin: 0 auto;
+      width: 90%;
+      padding: 0.25em;
+      color: #fff;
+      background-color: var(--w-secondary);
+      border-radius: 1em;
+      text-align: center;
+      font-size: 0.9em;
+      line-height: 1;
+    }
+    .quantity {
+      color: var(--w-highlight);
+      text-align: center;
+      font-size: 0.8em;
+      line-height: 1;
+    }
+  }
+}
+/* lg */
+@media (min-width: 1024px) {
+  .wrow {
+    background: url("../images/block003/bg-shelf.webp") repeat-y center bottom;
+    background-size: 100% 33.33%;
+
+    .item {
+      margin-top: 1em;
+    }
+  }
+}
