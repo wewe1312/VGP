@@ -585,6 +585,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: .5em;
 }
 
+.bottom-\[0em\]{
+  bottom: 0em;
+}
+
+.left-\[0em\]{
+  left: 0em;
+}
+
 .top-\[\.75em\]{
   top: .75em;
 }
@@ -593,32 +601,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: .75em;
 }
 
-.top-\[1em\]{
-  top: 1em;
-}
-
-.right-\[1em\]{
-  right: 1em;
-}
-
-.top-\[20em\]{
-  top: 20em;
+.top-\[45em\]{
+  top: 45em;
 }
 
 .left-\[50\%\]{
   left: 50%;
 }
 
-.top-\[30em\]{
-  top: 30em;
+.top-\[1em\]{
+  top: 1em;
 }
 
-.top-\[40em\]{
-  top: 40em;
-}
-
-.top-\[45em\]{
-  top: 45em;
+.right-\[1em\]{
+  right: 1em;
 }
 
 .isolate{
@@ -649,6 +645,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 5;
 }
 
+.z-\[99\]{
+  z-index: 99;
+}
+
 .z-\[2\]{
   z-index: 2;
 }
@@ -659,10 +659,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .z-\[50\]{
   z-index: 50;
-}
-
-.z-\[99\]{
-  z-index: 99;
 }
 
 .col-span-2{
@@ -740,8 +736,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0px;
 }
 
-.mt-\[34em\]{
-  margin-top: 34em;
+.mt-\[13em\]{
+  margin-top: 13em;
+}
+
+.ml-\[-7em\]{
+  margin-left: -7em;
 }
 
 .mt-\[10em\]{
@@ -782,34 +782,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.ml-\[-5em\]{
-  margin-left: -5em;
-}
-
-.ml-\[-7\.5em\]{
-  margin-left: -7.5em;
-}
-
-.mt-\[20em\]{
-  margin-top: 20em;
-}
-
-.mt-\[15em\]{
-  margin-top: 15em;
-}
-
-.mt-\[11em\]{
-  margin-top: 11em;
-}
-
-.mt-\[13em\]{
-  margin-top: 13em;
-}
-
-.ml-\[-7em\]{
-  margin-left: -7em;
 }
 
 .box-border{
@@ -1006,12 +978,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 13em;
 }
 
-.w-6\/12{
-  width: 50%;
+.w-5\/12{
+  width: 41.666667%;
 }
 
-.w-\[10em\]{
-  width: 10em;
+.w-\[14em\]{
+  width: 14em;
 }
 
 .w-\[100vw\]{
@@ -1048,14 +1020,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[\.8em\]{
   width: .8em;
-}
-
-.w-5\/12{
-  width: 41.666667%;
-}
-
-.w-\[14em\]{
-  width: 14em;
 }
 
 .flex-1{
@@ -2980,6 +2944,14 @@ body {
 }
 
 @media (min-width: 1024px){
+  .lg\:left-\[70\%\]{
+    left: 70%;
+  }
+
+  .lg\:top-\[34em\]{
+    top: 34em;
+  }
+
   .lg\:top-\[8em\]{
     top: 8em;
   }
@@ -2998,34 +2970,6 @@ body {
 
   .lg\:right-\[-2\.5em\]{
     right: -2.5em;
-  }
-
-  .lg\:right-0{
-    right: 0px;
-  }
-
-  .lg\:left-\[80\%\]{
-    left: 80%;
-  }
-
-  .lg\:top-\[40em\]{
-    top: 40em;
-  }
-
-  .lg\:left-\[75\%\]{
-    left: 75%;
-  }
-
-  .lg\:top-\[35em\]{
-    top: 35em;
-  }
-
-  .lg\:left-\[70\%\]{
-    left: 70%;
-  }
-
-  .lg\:top-\[34em\]{
-    top: 34em;
   }
 
   .lg\:mt-\[3em\]{
@@ -3096,16 +3040,20 @@ body {
     width: 11em;
   }
 
-  .lg\:w-\[3em\]{
-    width: 3em;
-  }
-
   .lg\:w-\[18em\]{
     width: 18em;
   }
 
+  .lg\:w-\[3em\]{
+    width: 3em;
+  }
+
   .lg\:w-5\/12{
     width: 41.666667%;
+  }
+
+  .lg\:w-\[20em\]{
+    width: 20em;
   }
 
   .lg\:w-\[65em\]{
@@ -3142,10 +3090,6 @@ body {
 
   .lg\:w-\[19em\]{
     width: 19em;
-  }
-
-  .lg\:w-\[20em\]{
-    width: 20em;
   }
 
   .lg\:grid-cols-3{

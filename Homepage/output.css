@@ -585,8 +585,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: .75em;
 }
 
-.top-\[45em\]{
-  top: 45em;
+.top-\[14em\]{
+  top: 14em;
 }
 
 .left-\[50\%\]{
@@ -597,28 +597,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 50%;
 }
 
-.top-\[25em\]{
-  top: 25em;
+.bottom-\[0em\]{
+  bottom: 0em;
 }
 
-.top-\[5em\]{
-  top: 5em;
-}
-
-.top-\[10em\]{
-  top: 10em;
-}
-
-.top-\[12em\]{
-  top: 12em;
-}
-
-.top-\[13em\]{
-  top: 13em;
-}
-
-.top-\[14em\]{
-  top: 14em;
+.left-\[0em\]{
+  left: 0em;
 }
 
 .isolate{
@@ -720,8 +704,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 28.5em;
 }
 
-.ml-\[-7em\]{
-  margin-left: -7em;
+.ml-\[-6em\]{
+  margin-left: -6em;
 }
 
 .mt-\[8\.5em\]{
@@ -750,10 +734,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.ml-\[-6em\]{
-  margin-left: -6em;
 }
 
 .box-border{
@@ -940,6 +920,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 16em;
 }
 
+.w-\[12em\]{
+  width: 12em;
+}
+
 .w-10\/12{
   width: 83.333333%;
 }
@@ -950,10 +934,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[8em\]{
   width: 8em;
-}
-
-.w-\[12em\]{
-  width: 12em;
 }
 
 .flex-1{
@@ -2678,12 +2658,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 1024px){
-  .lg\:left-\[70\%\]{
-    left: 70%;
+  .lg\:left-\[20\%\]{
+    left: 20%;
   }
 
-  .lg\:top-\[34em\]{
-    top: 34em;
+  .lg\:top-\[3em\]{
+    top: 3em;
   }
 
   .lg\:left-\[0em\]{
@@ -2692,34 +2672,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:right-\[0em\]{
     right: 0em;
-  }
-
-  .lg\:left-\[20\%\]{
-    left: 20%;
-  }
-
-  .lg\:left-\[30\%\]{
-    left: 30%;
-  }
-
-  .lg\:left-\[25\%\]{
-    left: 25%;
-  }
-
-  .lg\:top-\[32em\]{
-    top: 32em;
-  }
-
-  .lg\:top-\[1em\]{
-    top: 1em;
-  }
-
-  .lg\:left-\[15\%\]{
-    left: 15%;
-  }
-
-  .lg\:top-\[3em\]{
-    top: 3em;
   }
 
   .lg\:col-span-6{
@@ -2782,12 +2734,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 22.5em;
   }
 
+  .lg\:w-\[16em\]{
+    width: 16em;
+  }
+
   .lg\:w-\[6em\]{
     width: 6em;
   }
 
-  .lg\:w-\[16em\]{
-    width: 16em;
+  .lg\:w-\[18em\]{
+    width: 18em;
   }
 
   .lg\:grid-cols-8{
