@@ -16,7 +16,7 @@
     <!-- swiper -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script type="module" src="./script/wswiper.js"></script>
     <!-- AOS -->
     <link href="plugin/aos/aos.css" rel="stylesheet" />
@@ -409,12 +409,12 @@
     <section
       style="background-position: center bottom"
       id="section-03"
-      class="scrollspy h-[auto] pb-[3em] lg:h-[60em] relative z-[2] overflow-hidden">
-      <div class="w-[90%] lg:w-[80%] mx-auto lg:grid lg:grid-cols-[23em_auto]">
+      class="scrollspy h-[auto] pb-[3em] lg:h-[55em] relative z-[2] overflow-hidden">
+      <div class="wcontainer mx-auto lg:grid lg:grid-cols-[24em_56em]">
         <!-- gui loi chuc -->
         <div
           data-aos="zoom-out"
-          class="block-guiloichuc w-full lg:mt-[10em] relative">
+          class="block-guiloichuc w-full lg:mt-[5em] relative">
           <img
             class="block w-full h-auto lg:hidden"
             src="./images/block003/block-guiloichuc-sm.webp"
@@ -427,26 +427,28 @@
 
         <!-- block shop -->
         <div
-          class="block-shopdoidiem mt-[1em] lg:w-full lg:grid lg:grid-cols-2 lg:px-[2em]">
-          <!-- slogan -->
-          <div
-            data-aos="zoom-out"
-            class="w-image-block mx-auto w-9/12 lg:mx-0 lg:w-[20em] lg:h-fit">
-            <img src="./images/block003/text-doidiem.webp" alt="" />
+          class="block-shopdoidiem mt-[1em] lg:w-full lg:px-[1em] lg:mt-[4em]">
+          <div class="w-full flex justify-between">
+            <!-- slogan -->
+            <div
+              data-aos="zoom-out"
+              class="w-image-block mx-auto w-9/12 lg:mx-0 lg:w-[20em] lg:h-fit">
+              <img src="./images/block003/text-doidiem.webp" alt="" />
+            </div>
+            <!-- btn -->
+            <button
+              class="w-image-button w-6/12 mx-auto e-btn-hover-glow mt-[1em] lg:w-[15em] lg:mt-0 lg:mx-0 lg:float-right"
+              data-toggle="modal"
+              data-target="modal-nhiemvu">
+              <img
+                class="animate__loop animate__bling"
+                src="./images/block003/btn-kiemdiem.webp"
+                alt="" />
+            </button>
           </div>
-          <!-- btn -->
-          <button
-            class="w-image-button w-6/12 mx-auto e-btn-hover-glow mt-[1em] lg:w-6/12 lg:mt-0 lg:float-right"
-            data-toggle="modal"
-            data-target="modal-nhiemvu">
-            <img
-              class="animate__loop animate__bling"
-              src="./images/block003/btn-kiemdiem.webp"
-              alt="" />
-          </button>
           <!-- desc -->
           <div
-            class="decs text-[1em] mt-[1em] mx-auto w-10/12 text-center p-[1em] bg-[#fff] bg-opacity-80 rounded-[1em] lg:col-span-2 lg:w-full lg:flex lg:mt-[1em] lg:text-[1em] lg:items-center lg:justify-between">
+            class="decs text-[1em] mt-[1em] mx-auto w-10/12 text-center p-[1em] bg-[#fff] bg-opacity-80 rounded-[1em] lg:h-[5em] lg:col-span-2 lg:w-full lg:flex lg:mt-[1em] lg:text-[1em] lg:items-center lg:justify-between">
             <div
               class="text-primary lg:w-[22em] lg:p-[1em] lg:flex lg:items-center">
               Bạn đang có XXX điểm.
@@ -468,24 +470,64 @@
             </div>
           </div>
           <!-- shop -->
-          <div class="block-shop lg:col-span-2 mt-[1.5em]">
-            <div
-              class="wrow grid grid-cols-3 lg:grid-cols-7 gap-[0.75em] lg:px-[1em] lg:gap-y-[1em] lg:pb-[1em]">
-              <div data-toggle="loop" data-loop="21">
-                <div
-                  class="item grid grid-cols-1 gap-[0.15em] cursor-pointer e-btn-hover-glow"
-                  data-toggle="modal"
-                  data-target="modal-item">
-                  <h1 class="name">Ngự Long Tại Gia Gia Gia</h1>
-                  <div class="w-img-block w-10/12 mx-auto">
-                    <img src="./images/item.png" alt="" />
+          <div class="block-shop relative lg:col-span-2 mt-[2em] lg:px-[2em]">
+            <!-- slide -->
+            <div class="shop-swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <!-- slide content -->
+                  <div
+                    class="wrow grid grid-cols-3 lg:grid-cols-7 gap-[0.5em] lg:px-[1em] lg:gap-y-[1em] lg:pb-[1em]">
+                    <div data-toggle="loop" data-loop="14">
+                      <div
+                        class="item grid grid-cols-1 gap-[0.15em] cursor-pointer e-btn-hover-glow"
+                        data-toggle="modal"
+                        data-target="modal-item">
+                        <h1 class="name">Ngự Long Tại Gia Gia Gia</h1>
+                        <div class="w-img-block w-10/12 mx-auto">
+                          <img src="./images/item.png" alt="" />
+                        </div>
+                        <h2 class="price">1000</h2>
+                        <h3 class="quantity">4/5</h3>
+                      </div>
+                    </div>
                   </div>
-                  <h2 class="price">1000</h2>
-                  <h3 class="quantity">4/5</h3>
+                </div>
+                <div class="swiper-slide">
+                  <!-- slide content -->
+                  <div
+                    class="wrow grid grid-cols-3 lg:grid-cols-7 gap-[0.5em] lg:px-[1em] lg:gap-y-[1em] lg:pb-[1em]">
+                    <div data-toggle="loop" data-loop="14">
+                      <div
+                        class="item grid grid-cols-1 gap-[0.15em] cursor-pointer e-btn-hover-glow"
+                        data-toggle="modal"
+                        data-target="modal-item">
+                        <h1 class="name">Ngự Long Tại Gia Gia Gia</h1>
+                        <div class="w-img-block w-10/12 mx-auto">
+                          <img src="./images/item.png" alt="" />
+                        </div>
+                        <h2 class="price">1000</h2>
+                        <h3 class="quantity">4/5</h3>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="button-prev left-[0em]">
+              <img
+                class="-scale-x-100 w-[3em]"
+                src="./images/block003/arrow.png"
+                alt="" />
+            </div>
+            <div class="button-next right-[0em] w-[3em]">
+              <img src="./images/block003/arrow.png" alt="" />
+            </div>
           </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pag pt-[1em]"></div>
         </div>
       </div>
     </section>
