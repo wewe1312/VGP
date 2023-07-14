@@ -629,12 +629,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 4;
 }
 
-.col-span-2{
-  grid-column: span 2 / span 2;
-}
-
 .col-span-3{
   grid-column: span 3 / span 3;
+}
+
+.col-span-2{
+  grid-column: span 2 / span 2;
 }
 
 .row-span-2{
@@ -734,6 +734,34 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-2{
   margin-top: 0.5rem;
+}
+
+.mt-\[-1em\]{
+  margin-top: -1em;
+}
+
+.mt-\[-0\.5em\]{
+  margin-top: -0.5em;
+}
+
+.mt-\[-0\.75em\]{
+  margin-top: -0.75em;
+}
+
+.mr-\[-1em\]{
+  margin-right: -1em;
+}
+
+.ml-\[-1em\]{
+  margin-left: -1em;
+}
+
+.ml-\[-2em\]{
+  margin-left: -2em;
+}
+
+.ml-\[-3em\]{
+  margin-left: -3em;
 }
 
 .box-border{
@@ -890,6 +918,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: calc(100% - 0.25rem);
 }
 
+.h-auto{
+  height: auto;
+}
+
 .w-\[15em\]{
   width: 15em;
 }
@@ -944,6 +976,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[\.8em\]{
   width: .8em;
+}
+
+.w-10\/12{
+  width: 83.333333%;
+}
+
+.w-9\/12{
+  width: 75%;
+}
+
+.w-6\/12{
+  width: 50%;
 }
 
 .flex-1{
@@ -1293,6 +1337,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.grid-cols-\[60\%_40\%\]{
+  grid-template-columns: 60% 40%;
+}
+
+.grid-cols-\[55\%_45\%\]{
+  grid-template-columns: 55% 45%;
+}
+
 .grid-rows-2{
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
@@ -1471,6 +1523,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-\[1em\]{
   gap: 1em;
+}
+
+.gap-\[3em\]{
+  gap: 3em;
+}
+
+.gap-\[4em\]{
+  gap: 4em;
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]){
@@ -2031,11 +2091,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 2em;
 }
 
-.py-\[2em\]{
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-
 .py-\[\.75em\]{
   padding-top: .75em;
   padding-bottom: .75em;
@@ -2061,16 +2116,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.25rem;
 }
 
+.pb-\[4em\]{
+  padding-bottom: 4em;
+}
+
 .pt-\[2em\]{
   padding-top: 2em;
 }
 
-.pb-\[2em\]{
-  padding-bottom: 2em;
-}
-
-.pb-\[4em\]{
-  padding-bottom: 4em;
+.pb-\[5em\]{
+  padding-bottom: 5em;
 }
 
 .text-left{
@@ -2145,6 +2200,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.6em;
 }
 
+.text-\[\.8em\]{
+  font-size: .8em;
+}
+
 .text-\[\.85em\]{
   font-size: .85em;
 }
@@ -2156,10 +2215,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.text-\[\.8em\]{
-  font-size: .8em;
 }
 
 .uppercase{
@@ -2899,6 +2954,10 @@ body {
     height: 31em;
   }
 
+  .lg\:h-auto{
+    height: auto;
+  }
+
   .lg\:w-\[15em\]{
     width: 15em;
   }
@@ -2935,12 +2994,36 @@ body {
     width: 19em;
   }
 
+  .lg\:w-full{
+    width: 100%;
+  }
+
   .lg\:grid-cols-\[25em_auto\]{
     grid-template-columns: 25em auto;
   }
 
   .lg\:grid-cols-\[auto_25em\]{
     grid-template-columns: auto 25em;
+  }
+
+  .lg\:grid-cols-\[25\%_auto\]{
+    grid-template-columns: 25% auto;
+  }
+
+  .lg\:grid-cols-\[30\%_auto\]{
+    grid-template-columns: 30% auto;
+  }
+
+  .lg\:grid-cols-\[40\%_auto\]{
+    grid-template-columns: 40% auto;
+  }
+
+  .lg\:gap-\[1em\]{
+    gap: 1em;
+  }
+
+  .lg\:gap-\[2em\]{
+    gap: 2em;
   }
 
   .lg\:pr-\[23em\]{
