@@ -1,0 +1,75 @@
+.item-big {
+  background: transparent url("../images/block003/item-big.webp") scroll center
+    center;
+  background-size: 100% 100%;
+  padding: 3.5em 1em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25em;
+  aspect-ratio: 275/369;
+
+  .icon {
+    margin: 0 auto;
+    width: 80%;
+  }
+  h1 {
+    text-align: center;
+    color: var(--w-secondary);
+    line-height: 1;
+    font-size: 1.25em;
+  }
+  .btn-doi {
+    margin: 0 auto;
+    width: 69%;
+  }
+}
+
+.item-small {
+  background: transparent url("../images/block003/item-small.webp") scroll
+    center center;
+  background-size: 100% 100%;
+  padding: 0.75em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25em;
+  aspect-ratio: 200/250;
+
+  .icon {
+    margin: 0 auto;
+    width: 90%;
+  }
+  h1 {
+    text-align: center;
+    color: var(--w-secondary);
+    line-height: 1;
+  }
+  .btn-doi {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .item-big {
+    gap: 0.75em;
+    .icon {
+      width: 50%;
+    }
+    .btn-doi {
+      width: 50%;
+    }
+  }
+  .item-small {
+    gap: 0.5em;
+    .icon {
+      width: 50%;
+    }
+    .btn-doi {
+      width: 50%;
+    }
+  }
+}
