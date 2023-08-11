@@ -2,23 +2,25 @@
   background: transparent url("../images/block003/item-big.webp") scroll center
     center;
   background-size: 100% 100%;
-  padding: 3.5em 1em 1em;
+  padding: 4em 1em 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.25em;
+  gap: 0em;
   aspect-ratio: 275/369;
+  animation: glow 4s ease-in-out infinite;
 
   .icon {
     margin: 0 auto;
     width: 80%;
+    animation: bling 3s ease infinite;
   }
   h1 {
     text-align: center;
     color: var(--w-secondary);
     line-height: 1;
-    font-size: 1.25em;
+    font-size: 1.15em;
   }
   .btn-doi {
     margin: 0 auto;
