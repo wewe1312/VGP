@@ -1,0 +1,35 @@
+.w-accordion-button {
+  background: transparent url("../images/character/accordion-button.png.jpg")
+    no-repeat scroll;
+  background-size: 400% auto;
+  width: 6.8376%;
+}
+.w-accordion-button[data-no="01"] {
+  background-position: 0% 0%;
+}
+.w-accordion-button[data-no="02"] {
+  background-position: 33.33% 0%;
+}
+.w-accordion-button[data-no="03"] {
+  background-position: 66.66% 0%;
+}
+.w-accordion-button[data-no="04"] {
+  background-position: 100% 0%;
+}
+.w-accordion .w-accordion-slide {
+  transition: width 0.36s ease;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    width: auto;
+    max-width: 9999% !important;
+  }
+}
+.w-accordion .w-accordion-slide:not(.active) {
+  width: 0%;
+}
+.w-accordion .w-accordion-slide.active {
+  width: 72.64%;
+  height: 100%;
+}
