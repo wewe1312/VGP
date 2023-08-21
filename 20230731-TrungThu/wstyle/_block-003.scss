@@ -9,12 +9,12 @@
   align-items: center;
   gap: 0em;
   aspect-ratio: 275/369;
-  animation: glow 4s ease-in-out infinite;
+  animation: glow 2s ease-in-out infinite;
 
   .icon {
     margin: 0 auto;
-    width: 80%;
-    animation: bling 3s ease infinite;
+    width: 70%;
+    animation: bling 1s ease infinite;
   }
   h1 {
     text-align: center;
@@ -32,13 +32,13 @@
   background: transparent url("../images/block003/item-small.webp") scroll
     center center;
   background-size: 100% 100%;
-  padding: 0.75em;
+  padding: 1em 0.75em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 0.25em;
-  aspect-ratio: 200/250;
+  height: 100%;
 
   .icon {
     margin: 0 auto;
@@ -66,6 +66,7 @@
     }
   }
   .item-small {
+    aspect-ratio: 200/250;
     gap: 0.5em;
     .icon {
       width: 50%;
