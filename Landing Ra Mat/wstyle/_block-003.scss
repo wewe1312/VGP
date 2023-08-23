@@ -7,3 +7,13 @@
   border-radius: 1em;
   border: dashed var(--w-primary) 1px;
 }
+
+.text-animate {
+  text-shadow: 0px 0px 0.75em rgba($color: #000, $alpha: 1);
+}
+
+@media (min-width: 1024px) {
+  .text-animate {
+    font-size: 1.35em;
+  }
+}

@@ -414,23 +414,37 @@
         </div>
         <!-- map -->
         <div class="map w-full mt-[9em]">
-          <div class="w-image-block w-full relative lg:w-10/12 mx-auto">
+          <div
+            class="w-image-block w-full relative lg:w-10/12 mx-auto overflow-hidden">
+            <div
+              class="w-full absolute grid gap-[0.75em] pt-[1em] z-[1] text-center overflow-hidden lg:w-[full] lg:pt-[13em] lg:gap-[1.35em] mx-auto">
+              <div class="text-animate">
+                <span class="text-highlight">Tên nhân vật</span> đăng ký thành
+                công!
+              </div>
+              <div class="text-animate">
+                <span class="text-highlight">Tên nhân vật</span> đăng ký thành
+                công!
+              </div>
+              <div class="text-animate">
+                <span class="text-highlight">Tên nhân vật</span> đăng ký thành
+                công!
+              </div>
+              <div class="text-animate">
+                <span class="text-highlight">Tên nhân vật</span> đăng ký thành
+                công!
+              </div>
+              <div class="text-animate">
+                <span class="text-highlight">Tên nhân vật</span> đăng ký thành
+                công!
+              </div>
+            </div>
             <img
               class="animate__loop animate__bling"
               src="./images/block002/map-scroll.webp"
               alt="" />
           </div>
-          <div class="w-full text-center overflow-hidden lg:w-[20em] mx-auto">
-            <div
-              class="animate__text animate__loop"
-              style="
-                animation-duration: 10s;
-                animation-timing-function: linear;
-              ">
-              <span class="text-highlight">Tên nhân vật</span> đăng ký thành
-              công!
-            </div>
-          </div>
+
           <div
             class="grid grid-cols-2 gap-[0.5em] mt-[2.5em] mx-auto w-10/12 lg:w-4/12">
             <button
@@ -837,6 +851,8 @@
     <!-- script -->
     <script src="./script/jquery-3.6.0.slim.min.js"></script>
     <script src="./script/jquery.fortune.js"></script>
+    <script src="./script/text-animate.js"></script>
+
     <script>
       AOS.init({ delay: 200, duration: 500, offset: 10 });
 
