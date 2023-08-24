@@ -1,0 +1,132 @@
+.price-old {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.price-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  font-size: 2em;
+  color: var(--w-highlight);
+  > span {
+    font-size: 0.75em;
+    color: #fff;
+    border-radius: 0.25em;
+    display: block;
+    padding: 0em 0.25em;
+    background-color: red;
+  }
+}
+.available > span {
+  color: #fc0;
+}
+
+.box {
+  position: relative;
+  > .btn-xemqua {
+    position: absolute;
+    bottom: 1.5em;
+    left: 50%;
+    width: 12em;
+    margin-left: -6em;
+    z-index: 9;
+    cursor: pointer;
+  }
+}
+
+.gift li {
+  display: grid;
+  grid-template-columns: 5em auto;
+  gap: 1em;
+  border: 1px dotted #aaa;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+
+  .desc {
+    display: flex;
+    align-items: center;
+  }
+  .desc span {
+    color: var(--w-secondary);
+    font-weight: bold;
+    display: block;
+  }
+}
+
+.btn-xemqua {
+  cursor: pointer;
+
+  > img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#section-03 {
+  .price-new {
+    font-size: 1em;
+  }
+  .cost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .btn-xemqua {
+    margin-top: 0.5em;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+  .item {
+    position: relative;
+  }
+  .info {
+    width: 50%;
+    margin: -5em 0em 0 11em;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .wcontainer {
+    width: 69%;
+  }
+
+  .content-gift {
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    padding: 1em;
+    border: 1px solid var(--w-primary);
+    border-radius: 0.25em;
+
+    ul {
+      margin: 0;
+      grid-template-columns: auto auto;
+      gap: 0.5em;
+
+      li {
+        border: 1px #222 solid;
+      }
+    }
+  }
+
+  #section-03 {
+    .wrapp {
+      padding: 1.5em 1em 2em;
+      background-color: rgba($color: #000000, $alpha: 0.6);
+      border: 1px solid rgba($color: #f7b44a, $alpha: 0.3);
+      border-radius: 1em;
+    }
+    .content-gift {
+      border: none;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+    }
+    .info {
+      width: 50%;
+      margin: -4em 0em 0 9em;
+    }
+  }
+}
