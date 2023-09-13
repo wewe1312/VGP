@@ -1,0 +1,65 @@
+#section-04 {
+  .event {
+    display: block;
+    position: relative;
+    background: transparent url(../images/block004/event/event-01.webp)
+      no-repeat center center;
+    background-size: 100% 100%;
+    aspect-ratio: 276/357;
+
+    .btn-thamgia {
+      width: 69%;
+      margin: 11em auto 0 auto;
+    }
+  }
+
+  .event.disabled {
+    .btn-thamgia {
+      display: none;
+    }
+  }
+
+  .event:nth-child(1) {
+    background-image: url(../images/block004/event/active/event-01.webp);
+  }
+  .event:nth-child(2) {
+    background-image: url(../images/block004/event/active/event-02.webp);
+  }
+  .event:nth-child(3) {
+    background-image: url(../images/block004/event/active/event-03.webp);
+  }
+  .event:nth-child(4) {
+    background-image: url(../images/block004/event/active/event-04.webp);
+  }
+  .event:nth-child(5) {
+    background-image: url(../images/block004/event/active/event-05.webp);
+  }
+
+  .event.disabled:nth-child(1) {
+    background-image: url(../images/block004/event/ac/event-01.webp);
+  }
+  .event.disabled:nth-child(2) {
+    background-image: url(../images/block004/event/event-02.webp);
+  }
+  .event.disabled:nth-child(3) {
+    background-image: url(../images/block004/event/event-03.webp);
+  }
+  .event.disabled:nth-child(4) {
+    background-image: url(../images/block004/event/event-04.webp);
+  }
+  .event.disabled:nth-child(5) {
+    background-image: url(../images/block004/event/event-05.webp);
+  }
+}
+
+@media (min-width: 1024px) {
+  .event:nth-child(2),
+  .event:nth-child(4) {
+    margin-top: 2em;
+  }
+
+  #section-04 .event .btn-thamgia {
+    width: 69%;
+    margin: 13.25em auto 0 auto;
+  }
+}
