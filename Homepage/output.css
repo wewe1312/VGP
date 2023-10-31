@@ -589,16 +589,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 50%;
 }
 
-.right-\[-1em\]{
-  right: -1em;
+.left-\[0\.5em\]{
+  left: 0.5em;
 }
 
 .right-\[0\.5em\]{
   right: 0.5em;
-}
-
-.left-\[0\.5em\]{
-  left: 0.5em;
 }
 
 .isolate{
@@ -712,8 +708,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1em;
 }
 
-.mt-\[5em\]{
-  margin-top: 5em;
+.mt-\[3em\]{
+  margin-top: 3em;
 }
 
 .mt-\[0em\]{
@@ -724,8 +720,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.5rem;
 }
 
-.mt-\[3em\]{
-  margin-top: 3em;
+.mt-\[29em\]{
+  margin-top: 29em;
 }
 
 .box-border{
@@ -848,14 +844,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   aspect-ratio: 195 / 390;
 }
 
-.aspect-\[1170\/360\]{
-  aspect-ratio: 1170 / 360;
-}
-
-.aspect-\[80\/360\]{
-  aspect-ratio: 80 / 360;
-}
-
 .aspect-\[16\/9\]{
   aspect-ratio: 16 / 9;
 }
@@ -916,12 +904,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2.5em;
 }
 
+.w-\[2em\]{
+  width: 2em;
+}
+
 .w-\[8em\]{
   width: 8em;
 }
 
-.w-\[2em\]{
-  width: 2em;
+.w-\[14em\]{
+  width: 14em;
 }
 
 .flex-1{
@@ -1255,12 +1247,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-4{
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4{
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-rows-3{
@@ -2642,18 +2634,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 1024px){
-  .lg\:left-\[0em\]{
-    left: 0em;
-  }
-
-  .lg\:right-\[0em\]{
-    right: 0em;
-  }
-
-  .lg\:left-\[2em\]{
-    left: 2em;
-  }
-
   .lg\:left-\[1em\]{
     left: 1em;
   }
@@ -2678,20 +2658,20 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: 22em;
   }
 
+  .lg\:mb-\[0\.5em\]{
+    margin-bottom: 0.5em;
+  }
+
   .lg\:mt-\[1em\]{
     margin-top: 1em;
   }
 
-  .lg\:mb-\[1em\]{
-    margin-bottom: 1em;
+  .lg\:mt-\[20em\]{
+    margin-top: 20em;
   }
 
-  .lg\:mb-\[0\.75em\]{
-    margin-bottom: 0.75em;
-  }
-
-  .lg\:mb-\[0\.5em\]{
-    margin-bottom: 0.5em;
+  .lg\:mt-\[21em\]{
+    margin-top: 21em;
   }
 
   .lg\:block{
@@ -2710,14 +2690,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     aspect-ratio: 300 / 100;
   }
 
-  .lg\:h-\[50em\]{
-    height: 50em;
-  }
-
-  .lg\:h-\[45em\]{
-    height: 45em;
-  }
-
   .lg\:h-\[46em\]{
     height: 46em;
   }
@@ -2734,44 +2706,40 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 2.5em;
   }
 
-  .lg\:w-\[20em\]{
-    width: 20em;
+  .lg\:w-\[22em\]{
+    width: 22em;
   }
 
   .lg\:w-\[22\.5em\]{
     width: 22.5em;
   }
 
-  .lg\:w-\[6em\]{
-    width: 6em;
-  }
-
-  .lg\:w-\[22em\]{
-    width: 22em;
-  }
-
-  .lg\:w-\[4em\]{
-    width: 4em;
-  }
-
   .lg\:w-\[5em\]{
     width: 5em;
+  }
+
+  .lg\:w-\[20em\]{
+    width: 20em;
+  }
+
+  .lg\:w-\[18em\]{
+    width: 18em;
   }
 
   .lg\:grid-cols-8{
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .lg\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .lg\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .lg\:grid-cols-4{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .lg\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:gap-\[0\.25em\]{
@@ -2782,16 +2750,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding: 2em;
   }
 
-  .lg\:pl-\[37em\]{
-    padding-left: 37em;
+  .lg\:pr-\[37em\]{
+    padding-right: 37em;
   }
 
   .lg\:pr-\[1em\]{
     padding-right: 1em;
-  }
-
-  .lg\:pr-\[37em\]{
-    padding-right: 37em;
   }
 
   .lg\:text-\[1em\]{

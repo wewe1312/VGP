@@ -637,10 +637,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-column-start: 2;
 }
 
-.row-span-2{
-  grid-row: span 2 / span 2;
-}
-
 .float-right{
   float: right;
 }
@@ -864,10 +860,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   aspect-ratio: 1 / 1;
 }
 
-.aspect-\[240\/125\]{
-  aspect-ratio: 240 / 125;
-}
-
 .aspect-\[16\/9\]{
   aspect-ratio: 16 / 9;
 }
@@ -964,6 +956,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[\.8em\]{
   width: .8em;
+}
+
+.w-\[10em\]{
+  width: 10em;
+}
+
+.w-\[9em\]{
+  width: 9em;
 }
 
 .flex-1{
@@ -1309,16 +1309,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.grid-cols-3{
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-rows-2{
-  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row{
@@ -1485,6 +1477,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 2em;
 }
 
+.gap-\[0\.75em\]{
+  gap: 0.75em;
+}
+
 .gap-\[0\.5em\]{
   gap: 0.5em;
 }
@@ -1495,10 +1491,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-\[1em\]{
   gap: 1em;
-}
-
-.gap-\[0\.75em\]{
-  gap: 0.75em;
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]){
@@ -2044,6 +2036,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: .5em;
 }
 
+.p-\[0\.5em\]{
+  padding: 0.5em;
+}
+
 .px-\[1em\]{
   padding-left: 1em;
   padding-right: 1em;
@@ -2096,16 +2092,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1.5em;
 }
 
-.pt-\[10em\]{
-  padding-top: 10em;
+.pt-\[1em\]{
+  padding-top: 1em;
 }
 
 .pt-\[2em\]{
   padding-top: 2em;
-}
-
-.pt-\[1em\]{
-  padding-top: 1em;
 }
 
 .text-left{
@@ -3000,8 +2992,8 @@ body {
     width: 83.333333%;
   }
 
-  .lg\:w-\[20em\]{
-    width: 20em;
+  .lg\:w-\[full\]{
+    width: full;
   }
 
   .lg\:w-4\/12{
@@ -3012,24 +3004,12 @@ body {
     width: 66.666667%;
   }
 
-  .lg\:w-\[11\.75em\]{
-    width: 11.75em;
+  .lg\:w-\[12em\]{
+    width: 12em;
   }
 
   .lg\:w-\[19em\]{
     width: 19em;
-  }
-
-  .lg\:w-\[40em\]{
-    width: 40em;
-  }
-
-  .lg\:w-\[50em\]{
-    width: 50em;
-  }
-
-  .lg\:w-\[full\]{
-    width: full;
   }
 
   .lg\:grid-cols-10{
@@ -3040,12 +3020,12 @@ body {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .lg\:gap-\[1\.5em\]{
-    gap: 1.5em;
-  }
-
   .lg\:gap-\[1\.35em\]{
     gap: 1.35em;
+  }
+
+  .lg\:p-\[\.75em\]{
+    padding: .75em;
   }
 
   .lg\:px-\[3em\]{
@@ -3053,21 +3033,8 @@ body {
     padding-right: 3em;
   }
 
-  .lg\:px-\[5em\]{
-    padding-left: 5em;
-    padding-right: 5em;
-  }
-
   .lg\:pl-\[75\%\]{
     padding-left: 75%;
-  }
-
-  .lg\:pt-\[10em\]{
-    padding-top: 10em;
-  }
-
-  .lg\:pt-\[15em\]{
-    padding-top: 15em;
   }
 
   .lg\:pt-\[13em\]{
