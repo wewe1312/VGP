@@ -637,14 +637,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-column-start: 2;
 }
 
-.col-start-1{
-  grid-column-start: 1;
-}
-
-.row-span-2{
-  grid-row: span 2 / span 2;
-}
-
 .float-right{
   float: right;
 }
@@ -720,8 +712,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 10em;
 }
 
+.mt-\[0em\]{
+  margin-top: 0em;
+}
+
 .mt-\[15\.5em\]{
   margin-top: 15.5em;
+}
+
+.mt-\[7\.5em\]{
+  margin-top: 7.5em;
 }
 
 .mr-\[\.75em\]{
@@ -732,40 +732,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: .5em;
 }
 
-.mt-\[0em\]{
-  margin-top: 0em;
-}
-
 .mr-\[\.25em\]{
   margin-right: .25em;
 }
 
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.mt-\[11em\]{
-  margin-top: 11em;
-}
-
-.mt-\[7\.75em\]{
-  margin-top: 7.75em;
-}
-
-.mt-\[5em\]{
-  margin-top: 5em;
-}
-
-.mt-\[8em\]{
-  margin-top: 8em;
-}
-
-.mt-\[7em\]{
-  margin-top: 7em;
-}
-
-.mt-\[7\.5em\]{
-  margin-top: 7.5em;
 }
 
 .box-border{
@@ -872,10 +844,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   aspect-ratio: 300 / 156;
 }
 
-.aspect-\[240\/125\]{
-  aspect-ratio: 240 / 125;
-}
-
 .aspect-\[16\/9\]{
   aspect-ratio: 16 / 9;
 }
@@ -898,6 +866,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 60em;
 }
 
+.h-\[70em\]{
+  height: 70em;
+}
+
+.h-\[59em\]{
+  height: 59em;
+}
+
 .h-\[15em\]{
   height: 15em;
 }
@@ -908,22 +884,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-\[calc\(100\%-theme\(\"spacing\.1\"\)\)\]{
   height: calc(100% - 0.25rem);
-}
-
-.h-\[59em\]{
-  height: 59em;
-}
-
-.h-\[65em\]{
-  height: 65em;
-}
-
-.h-\[69em\]{
-  height: 69em;
-}
-
-.h-\[70em\]{
-  height: 70em;
 }
 
 .w-\[15em\]{
@@ -1321,16 +1281,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.grid-cols-3{
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-rows-2{
-  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row{
@@ -1501,26 +1453,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 1em;
 }
 
-.gap-\[\.25em\]{
-  gap: .25em;
-}
-
-.gap-\[3\.33em\]{
-  gap: 3.33em;
-}
-
 .gap-\[-1em\]{
   gap: -1em;
+}
+
+.gap-\[\.25em\]{
+  gap: .25em;
 }
 
 .gap-x-\[0\.5em\]{
   -moz-column-gap: 0.5em;
        column-gap: 0.5em;
-}
-
-.gap-x-\[3\.33em\]{
-  -moz-column-gap: 3.33em;
-       column-gap: 3.33em;
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]){
@@ -2111,39 +2054,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.25rem;
 }
 
-.px-\[3em\]{
-  padding-left: 3em;
-  padding-right: 3em;
-}
-
-.px-\[10em\]{
-  padding-left: 10em;
-  padding-right: 10em;
-}
-
-.px-\[12em\]{
-  padding-left: 12em;
-  padding-right: 12em;
-}
-
 .pt-\[2em\]{
   padding-top: 2em;
-}
-
-.pr-\[35em\]{
-  padding-right: 35em;
-}
-
-.pr-\[30em\]{
-  padding-right: 30em;
-}
-
-.pr-\[28em\]{
-  padding-right: 28em;
-}
-
-.pr-\[25em\]{
-  padding-right: 25em;
 }
 
 .text-left{
@@ -2970,37 +2882,8 @@ body {
     grid-column-start: auto;
   }
 
-  .lg\:mx-auto{
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .lg\:mt-\[1em\]{
-    margin-top: 1em;
-  }
-
   .lg\:mt-\[8em\]{
     margin-top: 8em;
-  }
-
-  .lg\:mt-\[15em\]{
-    margin-top: 15em;
-  }
-
-  .lg\:mt-\[9\.25em\]{
-    margin-top: 9.25em;
-  }
-
-  .lg\:mt-\[10em\]{
-    margin-top: 10em;
-  }
-
-  .lg\:mt-\[20em\]{
-    margin-top: 20em;
-  }
-
-  .lg\:mt-\[22em\]{
-    margin-top: 22em;
   }
 
   .lg\:mt-\[21em\]{
@@ -3011,104 +2894,52 @@ body {
     margin-top: 13em;
   }
 
-  .lg\:mt-\[12em\]{
-    margin-top: 12em;
-  }
-
-  .lg\:ml-\[10em\]{
-    margin-left: 10em;
-  }
-
-  .lg\:ml-\[5em\]{
-    margin-left: 5em;
-  }
-
-  .lg\:ml-\[6em\]{
-    margin-left: 6em;
-  }
-
-  .lg\:ml-\[6\.25em\]{
-    margin-left: 6.25em;
-  }
-
   .lg\:ml-\[8em\]{
     margin-left: 8em;
-  }
-
-  .lg\:ml-\[16em\]{
-    margin-left: 16em;
-  }
-
-  .lg\:ml-\[18em\]{
-    margin-left: 18em;
   }
 
   .lg\:ml-\[17em\]{
     margin-left: 17em;
   }
 
-  .lg\:mt-\[7em\]{
-    margin-top: 7em;
-  }
-
   .lg\:mt-\[7\.5em\]{
     margin-top: 7.5em;
   }
 
-  .lg\:mt-\[25em\]{
-    margin-top: 25em;
-  }
-
-  .lg\:mt-\[35em\]{
-    margin-top: 35em;
+  .lg\:ml-\[5em\]{
+    margin-left: 5em;
   }
 
   .lg\:mt-\[36em\]{
     margin-top: 36em;
   }
 
-  .lg\:block{
-    display: block;
+  .lg\:mt-\[12em\]{
+    margin-top: 12em;
   }
 
-  .lg\:flex{
-    display: flex;
+  .lg\:block{
+    display: block;
   }
 
   .lg\:grid{
     display: grid;
   }
 
-  .lg\:h-\[88\.88em\]{
-    height: 88.88em;
-  }
-
-  .lg\:h-\[63\.88em\]{
-    height: 63.88em;
-  }
-
-  .lg\:h-\[31em\]{
-    height: 31em;
-  }
-
   .lg\:h-\[60em\]{
     height: 60em;
-  }
-
-  .lg\:h-\[50em\]{
-    height: 50em;
   }
 
   .lg\:h-\[55em\]{
     height: 55em;
   }
 
-  .lg\:h-\[44\.44em\]{
-    height: 44.44em;
-  }
-
   .lg\:h-\[38\.88em\]{
     height: 38.88em;
+  }
+
+  .lg\:h-\[31em\]{
+    height: 31em;
   }
 
   .lg\:w-\[15em\]{
@@ -3127,60 +2958,16 @@ body {
     width: 3em;
   }
 
-  .lg\:w-\[18em\]{
-    width: 18em;
-  }
-
-  .lg\:w-\[6em\]{
-    width: 6em;
-  }
-
-  .lg\:w-\[38em\]{
-    width: 38em;
-  }
-
-  .lg\:w-full{
-    width: 100%;
-  }
-
-  .lg\:w-\[11\.75em\]{
-    width: 11.75em;
-  }
-
-  .lg\:w-\[19em\]{
-    width: 19em;
-  }
-
   .lg\:w-\[25em\]{
     width: 25em;
-  }
-
-  .lg\:w-\[16em\]{
-    width: 16em;
   }
 
   .lg\:w-\[20em\]{
     width: 20em;
   }
 
-  .lg\:w-6\/12{
-    width: 50%;
-  }
-
-  .lg\:w-5\/12{
-    width: 41.666667%;
-  }
-
-  .lg\:w-4\/12{
-    width: 33.333333%;
-  }
-
   .lg\:w-\[30em\]{
     width: 30em;
-  }
-
-  .lg\:w-\[58em\]{
-    width: 58em;
   }
 
   .lg\:w-\[56em\]{
@@ -3195,8 +2982,12 @@ body {
     width: 66.666667%;
   }
 
-  .lg\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .lg\:w-\[11\.75em\]{
+    width: 11.75em;
+  }
+
+  .lg\:w-\[19em\]{
+    width: 19em;
   }
 
   .lg\:grid-cols-6{
@@ -3234,10 +3025,6 @@ body {
 
   .lg\:text-\[\.8em\]{
     font-size: .8em;
-  }
-
-  .lg\:text-\[1\.25em\]{
-    font-size: 1.25em;
   }
 }
 
