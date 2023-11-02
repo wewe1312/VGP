@@ -1,0 +1,131 @@
+// WEWE ANIMATION
+// WITH animation.css
+@import url("../css/libs/animate.min.css");
+/* This changes all the animations globally */
+:root {
+    --animate-duration: .6s;
+    --animate-delay: 1s;
+
+    --lightsweep-duration: 2.5s;
+    --lightsweep-ease: linear;
+    --lightsweep-delay: 1s;
+
+    --hover-duration: .15s;
+    --hover-ease: ease-in;
+  }
+
+//HOVER
+.whover {
+    transition: all var(--hover-ease) var(--hover-duration);
+}
+.whover-lighter:hover {
+    filter: brightness(1.25);
+}
+.whover-zoomOut:hover {
+    transform: scale(102%);
+}
+
+//Glow Breathe In
+.glow-breath-in {
+    animation: glow-breath-in var(--wfx-timer) linear 0s infinite alternate;      
+}
+@keyframes glow-breath-in {
+    0%   {
+        filter: brightness(100%);
+    }
+    50%   {
+        filter: brightness(120%);
+    }
+    100%   {
+        filter: brightness(100%);
+    }
+}
+
+//Animation When Clicked/Touched
+.wclick-bounce:hover {
+    transform: scale(102%);          
+}
+.wclick-bounce:active {
+    transform: clicked-bounce .5s linear 0s infinite alternate;          
+}
+@keyframes clicked-bounce {
+    0%   {
+        transform: scale(100%);
+    }
+    10%   {
+        transform: scale(97%);
+    }
+    20%   {
+        transform: scale(101%);
+    }
+    30%   {
+        transform: scale(99%);
+    }
+    40%   {
+        transform: scale(100%);
+    }
+}
+
+//Animation Up Down
+.translate-bounce-y img {
+    animation: translate-bounce var(--wfx-timer) linear 0s infinite alternate;           
+}
+@keyframes translate-bounce {
+    0%   {
+        transform: translateY(0%);
+    }
+    50%   {
+        transform: translateY(25%);
+    }
+    100%   {
+        transform: translateY(0%);
+    }
+}
+
+// MORE ANIMATION
+
+// zoomOutIn
+@keyframes zoomOutIn {
+    from {
+      opacity: 0;
+      transform: scale3d(1.5, 1.5, 1.5);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  }
+  .animate__zoomOutIn {
+    animation-name: zoomOutIn;
+  }
+  .zoomOutIn {
+    animation-name: zoomOutIn;
+  }
+
+
+// LIGHT SWEEP
+.wblock-lightsweep {
+    position: relative;
+}
+.lightSweep {
+	position: absolute;
+    top: 0;left: 0;
+    z-index: 2;
+  	overflow: hidden;
+	filter: brightness(2);
+	mask-size: 300% 200%;
+	mask-image: -webkit-linear-gradient(-45deg, rgba(255,255,255,0) 40%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 60%);
+	animation: lightSweep var(--lightsweep-ease) var(--lightsweep-duration) infinite var(--lightsweep-delay);
+}
+
+@keyframes lightSweep {
+from {
+    mask-position: 150% 0px; 
+}
+
+100% {
+    mask-position: 0% 0px; 
+}
+}
+
+

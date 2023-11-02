@@ -1,0 +1,78 @@
+//SINGLE
+.list-button-download-s {
+    @include media-breakpoint-up(md) {
+        max-height: 220px;
+    }
+    @include media-breakpoint-up(lg) {
+        max-height: 300px;
+    }
+    @include media-breakpoint-up(xl) {
+        max-height: 400px;
+    }
+    @include media-breakpoint-up(xxl) {
+        max-height: 440px;
+    }
+}
+
+.block-body-content {
+    font-size: 1rem;
+    background-color: #222;
+    border: solid 1px #414141;
+    min-height: 400px;width: 100%;
+    padding: 10%;
+
+    @include media-breakpoint-up(md) {
+        padding: 2em;
+        max-height: 500px;
+        overflow: auto;
+        margin-top: 1em;
+        border-radius: 1em;
+    }
+    @include media-breakpoint-up(lg) {
+        padding: 3em;
+        max-height: 600px;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 1.5rem;
+        padding: 3em;
+        max-height: 1000px;
+    }
+    @include media-breakpoint-up(xxl) {
+        font-size: 1.3rem;
+        padding: 3em;
+        max-height: 1000px;
+    }
+
+    h5.date {font-size: .8em;opacity: .5;}
+
+    .content {
+        width: 100%;
+        padding: 2em 0;
+        color: #ccc;
+        border-top: dotted 1px #ccc;
+        border-bottom: dotted 1px #ccc;
+        font-size: 1em;
+        line-height: 1.8;
+    }
+
+    .list-post {
+        padding: 2em 2em 2em .5em;
+        a {
+            display: block;
+            overflow: hidden;
+            line-height: 3.5em;height: 3.5em;width: 100%;
+            color: var(--bs-secondary);
+            border-top: dashed 1px #666;
+            transition: all .25s ease;
+            position: relative;
+            padding-right: 2.5em;
+
+            span.wicon {
+                right: 1em;
+                width: 1em;
+            }
+
+            &:hover {padding-left: 1em;}
+        }
+    }
+}

@@ -1,0 +1,49 @@
+// X Larger devices
+@media (min-width: $breakpoint-xl ) {
+    body {
+        font-size: 16px;
+    }
+
+    wrapper {
+        background-size: $breakpoint-xxl auto;
+    }
+
+    .video-background {
+        width: $breakpoint-xxl;
+    }
+
+    #block-header {height: var(--header-height-xl);}
+
+    .block-logo {
+        width: var(--block-logo-width-xl);
+        margin-top: var(--block-logo-mt-xl);
+    }
+
+    .block-download {
+        .icon-game {
+            width: 256px;
+        }
+        .list-button-download a {font-size: 24px;}
+    }
+
+    #block-footer .block-company .img img {
+        width: 150px;
+    }
+
+
+//END    
+}
+
+
+@media (min-width: $breakpoint-xxl ) {
+    wrapper {
+        background-size: 100% auto;
+    }
+
+    .video-background {
+        width: 100%;
+    }
+
+    floated {width: 90px;}
+    floated:hover {width: 100px;}
+}

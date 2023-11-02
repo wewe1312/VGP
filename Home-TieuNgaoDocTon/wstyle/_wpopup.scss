@@ -1,0 +1,79 @@
+
+
+
+.wpopup {
+    position: fixed;
+    top: 0;left: 0;
+    width: 100vw;height: 100vh;
+    background-color: rgba(0,0,0,.8);
+    backdrop-filter: blur(5px);
+    z-index: 1080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.popup-body {
+    padding-top: 1em;
+}
+
+.box-youtube {
+    width: 90%;
+    .wicon-xclose {
+        width: 4em !important;
+    }
+    @include media-breakpoint-up(md) {
+        width: 75%;
+        .wicon-xclose {
+            width: 4em !important;
+        }
+    }    
+}
+
+.btn-xclose {
+    background: transparent;
+    border: none;
+}
+
+.box-early-reg {
+    font-size: wUnitConvert(32);
+    position: relative;
+    background:url(../images/popup-bg.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    padding: 5%;
+    border-radius: 1em;
+    width: 90%;
+    max-width: wUnitConvert(600);
+    
+    .content { 
+        h3 {
+            font-size: 1.25em;
+        }
+        * {
+            font-size: 1em;
+        }
+    }
+
+    .wbtn {
+        padding: .375em .0em;
+        border-radius: .5em;
+    }
+
+    .btn-xclose {
+        background: transparent;
+        border: none;
+    }
+    .wicon-xclose {
+        width: 4em !important;
+    }
+    
+    @include media-breakpoint-up(md) {
+        font-size: wUnitConvert(18);
+        padding: 2em;
+        border-radius: 1em;
+        .wicon-xclose {
+            width: 4em !important;
+        }
+    }
+}

@@ -1,0 +1,501 @@
+// CSS INDEX HOMEPAGE
+
+body {
+  background: $body-bg url("../images/block-001-m-h.jpg") no-repeat 50% 0%
+    scroll;
+  background-size: 125% auto;
+  display: block;
+
+  @include media-breakpoint-up(sm) {
+    $bg-width: 768px;
+    background-size: 768px auto;
+  }
+
+  @include media-breakpoint-up(md) {
+    background: $body-bg url("../images/block-001.jpg") no-repeat 50% 0% scroll;
+    $bg-width: 1024px;
+    background-size: 1024px auto;
+
+    .video-background video {
+      width: $bg-width;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    $bg-width: 1400px;
+    background-size: 1400px auto;
+
+    .video-background video {
+      width: $bg-width;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    $bg-width: 1920px;
+    background-size: 1920px auto;
+
+    .video-background video {
+      width: $bg-width;
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    $bg-width: 2560px;
+    background-size: 2560px auto;
+
+    .video-background video {
+      width: $bg-width;
+    }
+  }
+}
+
+wrapper {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+#block-header {
+  max-width: 100vw;
+  overflow: hidden;
+  font-size: 1rem;
+  --bs-aspect-ratio: #{1200 / 750 * 100%};
+
+  @include media-breakpoint-up(sm) {
+    --bs-aspect-ratio: none;
+    height: 800px;
+    background: none;
+  }
+  @include media-breakpoint-up(md) {
+    --bs-aspect-ratio: none;
+    height: 400px;
+    background: none;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 550px;
+  }
+  @include media-breakpoint-up(xl) {
+    height: 700px;
+  }
+  @include media-breakpoint-up(xxl) {
+    height: 800px;
+  }
+}
+
+.block-logo {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 46%;
+  font-size: 1rem;
+
+  @include media-breakpoint-up(sm) {
+    margin-top: 55%;
+  }
+  @include media-breakpoint-up(md) {
+    margin-top: 10%;
+  }
+
+  .logo-game {
+    width: 60%;
+    @include media-breakpoint-up(md) {
+      width: 40%;
+    }
+  }
+  .text-slogan {
+    width: 100%;
+    margin-top: 0em;
+  }
+  .block-18 {
+    width: 45%;
+    margin-top: 1em;
+    @include media-breakpoint-up(md) {
+      width: 35%;
+    }
+  }
+}
+
+#block-main {
+  padding-top: 0em;
+  background-color: var(--bg-color);
+  @include media-breakpoint-up(md) {
+    background-color: transparent;
+  }
+}
+
+.btn-download-m {
+  width: 100%;
+}
+
+.block-download {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  font-size: 1rem;
+
+  .icon-game {
+    width: 120px;
+    position: relative;
+    z-index: 1;
+
+    @include media-breakpoint-up(lg) {
+      width: 180px;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 220px;
+    }
+    @include media-breakpoint-up(xxl) {
+      width: 260px;
+    }
+  }
+
+  .list-button-download {
+    background: url("../images/block-download.png") no-repeat 50% 50%;
+    background-size: 100% 100%;
+    height: auto;
+    flex-grow: 1;
+    padding-top: 20%;
+    margin-top: -20%;
+    border-radius: 0.5em;
+    font-size: 1rem;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.4rem;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 1.75rem;
+    }
+    @include media-breakpoint-up(xxl) {
+      font-size: 1.8rem;
+    }
+
+    a {
+      width: 100%;
+      height: calc(98% / 3);
+      text-align: center;
+      color: var(--download-a-color-md);
+      position: relative;
+      padding-left: 15%;
+
+      &::after {
+        content: "";
+        width: 69%;
+        height: 1px;
+        background-color: var(--blockdownload-border-color);
+        position: absolute;
+        left: 50%;
+        top: 0px;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+      }
+      &:first-child::after {
+        display: none;
+      }
+
+      .text {
+        text-align: left;
+        padding-left: 0.5em;
+        font-size: 1em;
+
+        span {
+          display: block;
+          font-size: 1em;
+          line-height: 0.8;
+        }
+      }
+
+      transition: all 0.5s ease;
+
+      &:hover {
+        background-color: rgba(#e99c7e, 0.3);
+      }
+    }
+
+    .wicon {
+      background: transparent url("../images/icon-store.png") no-repeat 50% 50%;
+      background-size: auto 400%;
+      width: 2.5em;
+    }
+
+    .button-download-pc > .wicon {
+      background-position: 50% 33.33%;
+    }
+    .button-download-ios > .wicon {
+      background-position: 50% 66.66%;
+    }
+    .button-download-android > .wicon {
+      background-position: 50% 100%;
+    }
+  }
+}
+
+.block-buttonbig {
+  margin-bottom: 0px;
+  .row {
+    padding: 0 0.75rem;
+  }
+  .col-6 {
+    padding: 0px;
+  }
+  .buttonbig {
+    background: url("../images/btn-big-m.png") no-repeat 50% 50%;
+    background-size: 400% auto;
+    display: block;
+    span {
+      display: none;
+    }
+    --bs-aspect-ratio: #{165 / 1200 * 4 * 100%};
+  }
+
+  .btn-giftcode {
+    background-position: 0% 0%;
+  }
+  .btn-fanpage {
+    background-position: 33.33% 0%;
+  }
+  .btn-recharge {
+    background-position: 66.66% 0%;
+  }
+  .btn-event {
+    background-position: 100% 0%;
+  }
+
+  @include media-breakpoint-up(md) {
+    .buttonbig {
+      background: url("../images/btn-big.png") no-repeat 50% 50%;
+      background-size: auto 300%;
+      --bs-aspect-ratio: #{100 / 300 * 100%};
+    }
+
+    .btn-giftcode {
+      background-position: 0% 0%;
+    }
+    .btn-fanpage {
+      background-position: 0% 50%;
+    }
+    .btn-recharge {
+      background-position: 0% 100%;
+    }
+  }
+}
+
+.block-newsboard {
+  background: url("../images/newsboard-border.png") no-repeat 50% 50%;
+  background-size: 100% 100%;
+  padding: 0.3rem;
+
+  @include media-breakpoint-up(md) {
+    padding: 0.1rem;
+  }
+}
+
+.block-support {
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  overflow: hidden;
+  position: relative;
+
+  a.btn-support {
+    position: relative;
+    line-height: 4rem;
+    width: 100%;
+    display: block;
+    height: 4rem;
+    text-indent: 2rem;
+    font-size: 1.15rem;
+    color: #fff;
+    text-align: left;
+    background: url("../images/block-support.png") no-repeat 50% 50%;
+    background-size: 100% auto;
+
+    span.wicon {
+      right: 1.5rem;
+      width: 1.5em;
+      line-height: inherit;
+    }
+
+    &:hover {
+      span.wicon {
+        right: 1rem;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      height: auto;
+      --bs-aspect-ratio: 100%;
+      background: url("../images/btn-support.png") no-repeat 50% 50%;
+      background-size: 400% auto;
+
+      &.btn-tanthu {
+        background-position: 0% 0%;
+      }
+      &.btn-camnang {
+        background-position: 33.33% 0%;
+      }
+      &.btn-vip {
+        background-position: 66.66% 0%;
+      }
+      &.btn-hotro {
+        background-position: 100% 0%;
+      }
+
+      > * {
+        display: none;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    border-bottom-left-radius: 0em;
+    border-bottom-right-radius: 0em;
+    background: url("../images/block-support.png") no-repeat 50% 50%;
+    background-size: 100% auto;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: var(--blocksupport-border-color);
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 100%;
+      background-color: var(--blocksupport-border-color);
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.block-accordion {
+  > .container {
+    overflow: hidden;
+  }
+}
+
+#block-footer {
+  padding-top: 2.5em;
+  background-color: var(--bg-color);
+
+  .block-company {
+    text-align: center;
+    .img {
+      margin: 1em auto;
+      img {
+        width: 20vw;
+
+        @include media-breakpoint-up(md) {
+          width: 100px;
+        }
+      }
+    }
+    p {
+      width: 100%;
+      padding: 0.5em;
+      font-size: 0.8em;
+      color: #aaa;
+    }
+  }
+}
+
+.block-footer-nav {
+  font-size: 1rem;
+  a {
+    display: block;
+  }
+  a.btn-totop {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: var(--bs-primary);
+    color: var(--bs-light);
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    overflow: hidden;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 1rem;
+    padding: 0.5em 0;
+    a {
+      margin: 0 1em;
+    }
+    a.btn-totop {
+      width: auto;
+      height: auto;
+      line-height: inherit;
+      text-align: center;
+      background-color: transparent;
+      color: var(--bs-secondary);
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+.modal-dialog {
+  max-width: 600px !important;
+}
+
+/*WEWE ACCORDION*/
+.w-accordion {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  --bs-aspect-ratio: 30.76%;
+
+  .w-accordion-container {
+    display: block;
+    overflow: hidden;
+  }
+
+  .w-accordion-button {
+    float: left;
+    width: 6.83%;
+    --bs-aspect-ratio: 450%;
+    background: transparent url("../images/accordion-button.png") no-repeat 0%
+      0%;
+    background-size: 400% auto;
+    display: block;
+    text-indent: -9999px;
+    border: none;
+    padding: 0;
+
+    &.no-001 {
+      background-position: 0% 0%;
+    }
+    &.no-002 {
+      background-position: 33.33% 0%;
+    }
+    &.no-003 {
+      background-position: 66.66% 0%;
+    }
+    &.no-004 {
+      background-position: 100% 0%;
+    }
+  }
+
+  .w-accordion-content {
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    float: left;
+    transition: width ease 0.5s;
+    &.w-accordion-content-active {
+      width: 72.64%;
+    }
+
+    > img {
+      height: 100%;
+    }
+  }
+}

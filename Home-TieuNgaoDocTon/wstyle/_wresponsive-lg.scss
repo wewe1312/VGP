@@ -1,0 +1,35 @@
+// Larger devices
+@media (min-width: $breakpoint-lg ) {
+    body {
+        font-size: 16px;
+    }
+
+    wrapper {
+        background-size: $breakpoint-xl auto;
+    }
+
+    .video-background {
+        width: $breakpoint-xl;
+    }
+
+    #block-header {height: var(--header-height-lg);}
+
+    .block-logo {
+        width: var(--block-logo-width-lg);
+        margin-top: var(--block-logo-mt-lg);
+
+    }
+
+    .block-download {
+        
+        .icon-game {
+            width: 210px;
+        }
+        .list-button-download a {font-size: 20px;}
+    }
+
+    floated {width: 70px;}
+    floated:hover {width: 80px;}
+
+//END    
+}

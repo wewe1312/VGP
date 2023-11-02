@@ -1,0 +1,124 @@
+//WEWE NAVBAR v1.0
+// w BS 5.0
+
+.block-navbar {position: absolute;top: 0;left: 0;z-index: 9;width: 100%;height:15vw;overflow: hidden;
+    font-size: 1rem;
+    //background: transparent url("../images/bg-navbar.png") repeat-x 0% 0% scroll;
+    .btn-navmenu {
+        background: transparent;
+        border: none;
+        float: left;
+        padding :0;
+        > .wicon {
+            width: 4em;
+        }
+    }
+    //.block-18-m {width: 15vw;padding: 3vw;float: right;}
+    
+    @include media-breakpoint-up(md) {
+        font-size: 1rem;
+        .btn-navmenu {
+            > .wicon {
+                width: 5em;
+            }
+        }
+    }
+}
+
+.menu-nav {background-color: rgba(20,20,20,.95);
+    color: #fff;
+    font-size: 1rem;
+    backdrop-filter: blur(3px);
+    width: 65vw !important;
+    min-width: 250px;
+
+    //.btn-close {position: absolute;top: 5px;right: -30px;}
+    .offcanvas-header {position: relative;
+        height: auto;
+        overflow: hidden;
+        padding: 2em 0;
+        &::after {
+            content: "";width: 125%;height: 125%;position: absolute;top: 50%;left: 50%;
+            transform: translate(-50%,-50%);
+            background: transparent url("../images/block-001.jpg") no-repeat 50% 0% scroll;background-size: 100% auto;
+            filter: brightness(110%) blur(3px);
+            }
+        .icon-game {width: 10em;position: relative;z-index: 1;}
+    }
+    .offcanvas-body {padding: 0;}
+    .block-menunav {padding: 0 2em;
+        a {
+            line-height: 4.5em;width: 100%;height: 4.5em;
+            font-size: 1em;
+            text-align: left;text-transform: uppercase;overflow: hidden;
+            border-bottom: 1px dotted #333;
+            position: relative;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            color: white;
+            
+            i {
+                margin-right: 1em;
+                width: 2em;
+                //background-color: var(--bs-primary);
+                border-radius: .5em;
+                transition: margin .25s ease;
+            }
+
+            span {letter-spacing: 1px;}
+
+            &::after {
+                content: var(--menunav-a-arrow-content );
+                color: var(--menunav-a-arrow-color );
+                position: absolute;
+                top: 0%;right: 3%;
+            }
+
+            &:hover {
+                i {margin-left: 1em;}
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+
+        //font-size: wUnitConvert(14);
+
+        &.offcanvas-start {
+            width: 15vw !important;
+        }
+    }   
+}
+
+.float-menu-top {
+    font-size: 3rem;
+    a {
+        background-color: rgba(20,20,20,.69);
+        border-radius: .25em;
+        display: block;
+        width: 1em;
+        height: 1em;
+        margin-right: .1em;
+    }
+
+    a.btn-soundcontrol {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 2.25em !important;
+        height:  1em !important;
+        > .wicon {
+            width: 1em;
+            height: 1em;
+        }
+        > .form-switch {
+            font-size: .5em;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: wUnitConvert(36);
+    } 
+}

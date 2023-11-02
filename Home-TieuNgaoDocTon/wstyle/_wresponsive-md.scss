@@ -1,0 +1,233 @@
+
+// Medium devices
+@media (min-width: $breakpoint-md ) {
+
+  body {
+    background:  url("../images/bg-footer.jpg") no-repeat 50% 100% fixed;
+    background-size: 100% auto;
+  }
+  wrapper {
+    background: transparent url("../images/bg-big.jpg") no-repeat 50% 0% scroll;
+    background-size: $breakpoint-lg auto;
+  }
+  
+  .video-background {
+    position: absolute;top: 0;left: 50%;z-index: 0;
+    transform: translateX(-50%);
+    width: $breakpoint-lg;
+
+    div {
+      --bs-aspect-ratio: 48.82%;
+    }
+    div > video {width: 100%;height: 100%;}
+  }
+
+  #block-header {background-image: none;height: var(--header-height-md);
+    > * {position: relative;}
+  }
+
+  .block-navbar .btn-navmenu {
+    color: var(--color-btn-navmenu-md);
+  }
+
+  
+  .block-logo {
+    width: var(--block-logo-width-md);
+    position: relative;
+    left: 0;transform: translateX(0%);
+    margin-top: var(--block-logo-mt-md);
+
+    .logo-game {
+      width: 40%;
+    }
+
+    .block-18 {
+        margin-top: 1rem;
+    }
+
+    .slogan-game {
+      width: 100%;
+    }
+    
+  }
+  
+  
+  #block-main {
+    background-color: transparent;
+  }
+  
+  .block-download {width: 100%;height:100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+   
+    .icon-game {
+        width: 160px;max-width: var(--logo-max-width);
+        position: relative;z-index: 1;
+
+        filter: var(--box-drop-shadow);
+    }
+  
+    .list-button-download {
+      background: url("../images/block-download.png") no-repeat 50% 50%;
+      background-size: 100% 100%;
+      height: auto;flex-grow: 1;
+      padding-top: 20%;margin-top: -20%;
+      border-radius: 1em;
+
+      filter: var(--box-drop-shadow);
+  
+      a {
+        width: 100%;height: calc(98% / 3);text-align: center;color: var(--download-a-color-md);position: relative;padding-left:16%;
+  
+          &::after {content: "";width: 69%;height: 1px;background-color: var(--blockdownload-border-color);position: absolute;left: 50%;top: 0px;transform: translateX(-50%);-webkit-transform: translateX(-50%);}
+          &:first-child::after {display: none;}
+  
+          .text {text-align: left;padding-left:.5em;
+            span {display: block;font-size: 1.3em;line-height: .8em;}
+          }
+
+          transition: all .5s ease;
+          &:hover {background-color: var(--blockdownload-hover-color);}
+        }
+  
+        .wicon {
+          background: transparent url("../images/icon-store.png") no-repeat 50% 50%;
+          background-size: auto 400%;
+  
+          width: 25%;max-width: 70px;
+        }
+  
+        .button-download-pc > .wicon {background-position: 50% 33.33%;}
+        .button-download-ios > .wicon {background-position: 50% 66.66%;}
+        .button-download-android > .wicon {background-position: 50% 100%;}
+    }
+  
+  }
+  
+  
+  .block-buttonbig {margin-bottom: 0px;
+    .row {padding: 0;margin-right: 0;}
+    .col-6 {padding: 0px;}
+    .buttonbig {
+        background: url("../images/btn-big.png") no-repeat 50% 50%;
+        background-size: auto 300%;
+        display: block;
+        span {display: none;}
+
+        filter: var(--box-drop-shadow);
+    }
+  
+    .btn-giftcode {background-position: 0% 0%;}
+    .btn-fanpage {background-position: 0% 50%;}
+    .btn-recharge {background-position: 0% 100%;}
+    //.btn-event {background-position: 0% 100%;}
+  }
+  
+  .block-news {
+    margin-right: 0em !important;
+    > .col-md-6 {padding: 0;}
+
+    filter: var(--box-drop-shadow);
+  }
+  
+  .block-newsboard {
+    padding: 0%;
+  }
+  
+  .block-support {
+    background: url("../images/block-support.png") no-repeat 50% 50%;
+    background-size: 100% auto;
+    border-radius: 0;
+    position: relative;
+  
+    &::before {
+      content:"";
+      width: 100%;height: 1px;
+      background-color: var(--blocksupport-border-color);
+      position: absolute;top:50%;left: 0%;
+      transform: translateY(-50%);
+    }
+  
+    &::after {
+      content:"";
+      width: 1px;height: 100%;
+      background-color: var(--blocksupport-border-color);
+      position: absolute;top:0%;left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .btn-support.ratio {
+      --bs-aspect-ratio: 100%;
+    }
+    .row {margin: 0;}
+    .row > .col-md-6 {padding: 0;}
+  
+    a.btn-support {
+      background: url("../images/btn-support.png") no-repeat 50% 50%;
+      background-size: 400% auto;
+      display: block;
+      height: auto;
+  
+      span {display: none;}
+    }
+  
+    a.btn-tanthu {background-position: 0% 0%;}
+    a.btn-camnang {background-position: 33.33% 0%;}
+    a.btn-vip {background-position: 66.66% 0%;}
+    a.btn-hotro {background-position: 100% 0%;}
+  
+  }
+  
+  #block-accordion {
+    filter: var(--box-drop-shadow);
+  }
+
+  #block-footer {background-color: transparent;
+    .block-company p {font-size: 1em;}
+  }
+  .block-footer-nav {
+    a {width: 120px;height: 2.5em;line-height: 2.5em;text-align: center;
+      background-color: transparent !important;
+      color: var(--footer-a-color-md) !important;
+      border-left: solid 1px var(--footer-a-border-color-md);
+      
+      &:first-child {border-left: none;}
+    }
+  }
+ 
+  .modal-dialog {
+    max-width: 80% !important;
+  }
+
+  //FLOATED BAR
+  floated {
+    width: 55px;height: auto;
+    position: fixed;top: 50%;right: 0%;
+    transform: translateY(-50%);
+
+    > a {
+        display: block;
+        background: transparent url("../images/float-bar.png") no-repeat 0% 0%;
+        background-size: auto 300%;
+        border-radius: 15%;
+
+        span {display: none;}
+    }
+
+    .floated-giftcode {background-position: 0% 0%;}
+    .floated-recharge {background-position: 0% 50%;}
+    .floated-support {background-position: 0% 100%;}
+
+    &:hover {
+      width: 60px;right: 10px;
+      
+      > a {margin: .25em 0;
+        box-shadow: 0px 0px 20px -5px rgba(0,0,0,.25);
+      }
+    }
+  }
+
+//END
+}

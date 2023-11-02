@@ -1,0 +1,271 @@
+// wstyle-teaser.scss
+//
+// This is a SCSS file use for Teaser, scale by screen width, just 2 species screen (mobile and landscape).
+// Convert Screen width "vw" to "em"
+//
+// Option B: Include parts of Bootstrap
+
+// Import Fonts First in HTML 
+//@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+//// Set to 2 breakpoints container xs ( 100% for Mobile) and md ( 72,91% for Landscape)
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+$container-max-widths: (
+  sm: 100%,
+  md: 72.91%,
+  lg: 72.91%,
+  xl: 72.91%,
+  xxl: 72.91%
+);
+
+//// Color
+$primary:       #33ccff !default;
+$secondary:     #fff3c0 !default;
+
+////Link
+$link-decoration:    none !default;
+
+//// Settings for the `<body>` element.
+$body-bg:                   #121416 !default;
+$body-color:                #fff !default;
+$body-text-align:           null !default;
+$font-family-sans-serif: 'Roboto Condensed', sans-serif !default;
+$font-family-monospace:   SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+//// Offcanvas
+$offcanvas-horizontal-width:        wUnitConvert(450) !default;
+$offcanvas-vertical-height:         30vh !default;
+//// Remove Gutter
+$grid-columns:                12 !default;
+$grid-gutter-width:           0rem !default;
+$grid-row-columns:            6 !default;
+$spacer: 1rem !default;
+
+// Input
+$input-bg:                              #fff !default;
+$input-color:                           #121416 !default;
+
+// Toasts
+$toast-max-width:                   80vw !default;
+$toast-padding-x:                   .75rem !default;
+$toast-padding-y:                   .5rem !default;
+$toast-font-size:                   1rem !default;
+$toast-color:                       null !default;
+$toast-background-color:            rgba(#121416, .85) !default;
+$toast-border-width:                1px !default;
+$toast-border-color:                rgba(0, 0, 0, .1) !default;
+
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 4. Include any optional Bootstrap CSS as needed
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/offcanvas";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/toasts";
+@import "../node_modules/bootstrap/scss/close";
+@import "../node_modules/bootstrap/scss/spinners";
+
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utililies.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+//// IMPORTANT CONVERTION
+////RATIO
+//Set REM value on Mobile, 14px is default
+$font-size-value: 14;
+$screensize: 750;
+html {
+  font-size:  $font-size-value / $screensize * 100 + vw !important;
+}
+
+// MD SCREEN
+@include media-breakpoint-up(md) {
+  $screensize: 1920;
+  html {
+    font-size:  $font-size-value / $screensize * 100 + vw !important;
+  }
+  .d-md-invisible {visibility: hidden;}
+}
+
+body {
+  font-size: 1.2rem;
+  overflow-x: hidden;
+}
+
+// Convert Pixel To REM!
+@function wUnitConvert($base){
+  $result: $base / $font-size-value + rem;
+  @return $result;
+}
+
+//Block 001
+#block-001 {
+  --ratio-m: calc(1400 / 750 * 100%);
+  --ratio-l: calc(1000 / 1920 * 100%);
+}
+#block-002 {
+  --ratio-m: calc(1060 / 750 * 100%);
+  --ratio-l: calc(1000 / 1920 * 100%);
+}
+#block-003 {
+  --ratio-m: calc(1300 / 750 * 100%);
+  --ratio-l: calc(1000 / 1920 * 100%);
+}
+#block-004 {
+  --ratio-m: calc(1400 / 750 * 100%);
+  --ratio-l: calc(1000 / 1920 * 100%);
+}
+
+// Import page SCSS
+@import "../wstyle/block001";
+@import "../wstyle/block002";
+@import "../wstyle/block003";
+@import "../wstyle/block004";
+@import "../wstyle/blockfinal";
+@import "../wstyle/blockfooter";
+
+// Import some W Component
+@import "../wstyle/wpopup";
+@import "../wstyle/wnav";
+@import "../wstyle/wanimation";
+
+// 6. Add additional custom code here
+:root {
+  --bs-gutter-x: 0;
+}
+html
+.wblock-image {
+    display: block;
+    max-width: 100vw;
+
+    > img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+.wblock-shadow {
+  filter: drop-shadow(0 1rem 5rem rgba(0,0,0,.36));
+}
+.wcursor-pointer {
+  cursor: pointer;
+}
+.wcursor-noevent {
+  pointer-events: none;
+}
+.wbtn {
+  background: transparent;
+  border: none;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+
+  &.wbtn-full {
+    width: 100%;
+  }
+  &.wbtn-primary {
+    background-color: var(--bs-primary);
+  }
+}
+.wicon {
+  display: inline-block;
+  background: url('../images/icon-nav.png') 50% 0%;
+  background-size: 600% auto;
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+  &.wicon-search {background-position: 100% 100%;}
+  &.wicon-xclose {background-position: 80% 100%;}
+  &.wicon-home {background-position: 0% 0%;}
+  &.wicon-facebook {background-position: 20% 0%;}
+  &.wicon-group {background-position: 40% 0%;}
+  &.wicon-star {background-position: 80% 0%;}
+  &.wicon-download {background-position: 60% 0%;}
+  &.wicon-user {background-position: 100% 0%;}
+  &.wicon-menu {background-position: 0% 100%;}
+  &.wicon-sound {background-position: 20% 100%;}
+  &.wicon-sound.muted {background-position: 40% 100%;}
+}
+.toast {
+  font-size: wUnitConvert(32) !important;
+  @include media-breakpoint-up(md) {
+    font-size: wUnitConvert(18) !important;
+    max-width: wUnitConvert(500);
+  }
+}
+.wtext-kerning-wide {
+  letter-spacing: .2em;
+}
+.wtext-kerning-wider {
+  letter-spacing: .4em;
+}
+
+.video-background {
+  width: 100vw;
+  z-index: 1;
+  > video {
+    width: 100%;
+  }
+}
+
+#scrollspy {
+  font-size: wUnitConvert(14);
+  z-index: 100;
+
+  --button-color: #fff;
+  
+  > a {
+    font-size: 1em;
+    line-height: 1;
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+    padding-left: 2em;
+    position: relative;
+    margin: 1em 0;
+    opacity: .69;
+
+    &::before {
+      content: "";
+      width: .8em;
+      height: .8em;
+      display: block;
+      border: 2px solid var(--button-color);
+      border-radius: 100%;
+      position: absolute;
+      top:50%;left: 0;
+      margin: -.4em .5em 0;
+    }
+    &.active {
+      opacity: 1;
+    }
+    &.active::before {
+      background-color: var(--button-color);
+    }
+  }
+}
+

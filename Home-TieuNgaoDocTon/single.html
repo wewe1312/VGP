@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- My CSS -->
+    <link href="css/wstyle.min.css" rel="stylesheet">
+    <title>Tiếu Ngạo Độc Tôn</title>
+  </head>
+  <body>
+    <!-- HEADER TEMP -->
+    <!-- Nav -->
+    <div class="block-navbar position-fixed">
+        <button class="btn-navmenu nofocus" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasnavbar" aria-controls="offcanvasnavbar">
+            <i class="wicon wicon-menu"></i>
+        </button>
+        <!-- <div class="block-18-m wblock-image d-md-none"><img src="images/18-square-02.png" alt=""/></div>     -->
+    </div>
+    <!-- Off Canvas -->   
+    <div class="menu-nav offcanvas offcanvas-start" tabindex="-1" id="offcanvasnavbar" aria-labelledby="offcanvasExampleLabel">
+        <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+        <div class="offcanvas-header">
+            <a href="#" class="icon-game wblock-image mx-auto"><img src="images/icon-game.png" alt=""/></a>
+        </div>
+        <div class="offcanvas-body">
+            <div class="block-menunav">
+                <a href="#" class=""><i class="wicon ratio ratio-1x1 wicon-home"></i><span>Trang Chủ</span></a>
+                <a href="#" class=""><i class="wicon ratio ratio-1x1 wicon-facebook"></i><span>Fanpage</span></a>
+                <a href="#" class=""><i class="wicon ratio ratio-1x1 wicon-group"></i><span>Cộng Đồng</span></a>
+                <a href="#" class=""><i class="wicon ratio ratio-1x1 wicon-star"></i><span>Nạp Xu</span></a>
+                <a href="#" class=""><i class="wicon ratio ratio-1x1 wicon-download"></i><span>Tải Game</span></a>
+                <a href="#" class=""><i class="wicon ratio ratio-1x1 wicon-event"></i><span>Sự Kiện</span></a>
+                <a href="#" class=""><i class="wicon ratio ratio-1x1 wicon-user"></i><span>Hỗ trợ CSKH</span></a>
+            </div>
+        </div>
+    </div>
+    <!--FLOAT-->
+    <div class="float-menu float-menu-top position-absolute top-0 end-0 p-2" style="z-index: 10;">
+        <div class="d-flex">
+            <a href="#" class="ratio ratio-1x1"><span class="wicon wicon-home"></span></a>
+            <a href="#" class="ratio ratio-1x1"><span class="wicon wicon-facebook"></span></a>
+            <a href="#" class="ratio ratio-1x1"><span class="wicon wicon-user"></span></a>
+        </div>
+    </div><!-- header temp end -->
+
+    <!-- Wrapper -->
+    <wrapper>
+
+        <!-- Block Header -->
+        <div id="block-header" class="ratio ratio-header">
+            <div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-md-7">
+                            <div class="block-logo mx-auto">
+                                <a href="#" class="logo-game wblock-image mx-auto"><img src="images/logo-final.png" alt=""/></a>
+                                <div class="wblock-image wblock-lightsweep text-slogan wcursor-pointer whover whover-zoomOut mx-auto wpopup-trigger wpopup-trigger-youtube" data-w-popup-target="#wpopup-youtube" data-w-popup-youtube="https://www.youtube-nocookie.com/embed/K_7To_y9IAM?controls=0">
+                                    <img class="animate__onready animate__fadeInUp" src="images/text-slogan.png" alt=""/>
+                                </div>
+                                <div class="block-18 wblock-image mx-auto">
+                                    <img src="images/img-pg18.png" alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+        <!-- Block Main -->
+        <div id="block-main">
+            <div class="container">
+                <div class="row g-3">
+                    <!-- Block-download -->
+                    <div class="col-12 col-md-3">
+                        <div class="block-download d-none d-md-flex">
+                            <div class="icon-game wblock-image mx-auto">
+                                <img src="images/icon-game.png" alt=""/>
+                            </div>
+                            <div class="list-button-download list-button-download-s">
+                                <a href="#" class="button-download-pc d-flex justify-content-start align-items-center whover">
+                                    <div class="wicon ratio ratio-1x1"></div>
+                                    <div class="text">Tải APK <span>Trực tiếp</span></div>
+                                </a>
+                                <a href="#" class="button-download-ios d-flex justify-content-start align-items-center whover">
+                                    <div class="wicon ratio ratio-1x1"></div>
+                                    <div class="text">Tải trên <span>App Store</span></div>
+                                </a>
+                                <a href="#" class="button-download-android d-flex justify-content-start align-items-center whover">
+                                    <div class="wicon ratio ratio-1x1"></div>
+                                    <div class="text">Tải trên <span>Google Play</span></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Block-download -->
+                    <div class="col-12 col-md-9">
+                        <!-- Download Mobile -->
+                        <a href="#" id="downloadBtn" class="btn-download-m wblock-image mx-auto clicked-bounce d-md-none" data-bs-toggle="modal" data-bs-target="#downloadModal"><img src="images/btn-download-m.png" alt=""/></a>
+                        <!-- Button Big -->
+                        <div class="block-buttonbig">
+                            <div class="row">
+                                <div class="col-6 col-md-4">
+                                    <a href="#" class="ratio buttonbig btn-giftcode mover mover-lighter "><span>Giftcode</span></a>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <a href="#" class="ratio buttonbig btn-fanpage mover mover-lighter"><span>Fanpage</span></a>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <a href="#" class="ratio buttonbig btn-recharge mover mover-lighter"><span>Nạp Xu</span></a>
+                                </div>
+                                <div class="col-6 col-md-4 d-md-none">
+                                    <a href="#" class="ratio buttonbig btn-event mover mover-lighter"><span>Sự Kiện</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Body Content -->
+                        <div class="block-body-content">
+                            <div class="wrapp">
+                                <div class="title pb-3">
+                                    <h4 class="text-uppercase text-primary">HLV Judo thẳng tay tát mạnh 2 cái vào mặt nữ học trò ngay tại Olympic, không ai còn chỉ trích khi biết lý do thực sự</h4>
+                                    <h5 class="date">Thứ 6, ngày 13/09/2021</h5>
+                                </div>
+                                <div class="content">
+                                    <p>Tuy nhiên, ông Claudiu Pusa lại có một cách vô cùng đặc biệt. Trước lúc nữ VĐV Martyna Trajdos (đoàn thể thao Đức) bước vào trận gặp đối thủ Szofi Ozbas tại vòng 1/16 của môn Judo hôm 27/7, ông Pusa đã dùng tay lắc mạnh Trajdos. Chưa dừng lại, ông còn dùng tay tát mạnh 2 phát vào mặt cô nàng 32 tuổi.</p>
+                                    <p>Tuy nhiên, ông Claudiu Pusa lại có một cách vô cùng đặc biệt. Trước lúc nữ VĐV Martyna Trajdos (đoàn thể thao Đức) bước vào trận gặp đối thủ Szofi Ozbas tại vòng 1/16 của môn Judo hôm 27/7, ông Pusa đã dùng tay lắc mạnh Trajdos. Chưa dừng lại, ông còn dùng tay tát mạnh 2 phát vào mặt cô nàng 32 tuổi.</p>
+                                    <p>Tuy nhiên, ông Claudiu Pusa lại có một cách vô cùng đặc biệt. Trước lúc nữ VĐV Martyna Trajdos (đoàn thể thao Đức) bước vào trận gặp đối thủ Szofi Ozbas tại vòng 1/16 của môn Judo hôm 27/7, ông Pusa đã dùng tay lắc mạnh Trajdos. Chưa dừng lại, ông còn dùng tay tát mạnh 2 phát vào mặt cô nàng 32 tuổi.</p>
+                                </div>
+                                <div class="list-post">
+                                    <div class="title pb-3">
+                                        <h4 class="text-uppercase text-primary">Tin tức liên quan</h4>
+                                    </div>
+                                    <a href="#">Hướng dẫn tân thủ <span class="wicon wicon-right position-absolute top-50 translate-middle-y"></span></a>
+                                    <a href="#">Hướng dẫn tân thủ <span class="wicon wicon-right position-absolute top-50 translate-middle-y"></span></a>
+                                    <a href="#">Hướng dẫn tân thủ <span class="wicon wicon-right position-absolute top-50 translate-middle-y"></span></a>
+                                    <a href="#">Hướng dẫn tân thủ <span class="wicon wicon-right position-absolute top-50 translate-middle-y"></span></a>
+                                    <a href="#">Hướng dẫn tân thủ <span class="wicon wicon-right position-absolute top-50 translate-middle-y"></span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Block Footer -->
+        <div id="block-footer">
+            <div class="container">
+                <div class="block-company">
+                    <div class="img">
+                        <img src="images/logo-footer.png" alt="VGP"/>
+                        <img src="images/logo-final.png" alt="VGP"/>
+                    </div>
+                    <p class="mx-auto">Hotline: <b>1901 636 521</b> - Email: <b>hotro@vgpjsc.vn</b> - Chơi quá 180 phút một ngày sẽ ảnh hưởng xấu đến sức khỏe<br>Công ty CP VGP phân phối độc quyền tại Việt Nam. Địa chỉ: Số 48 Tố Hữu - Phường Trung Văn - Quận Nam Từ Liêm - Hà Nội<br>Giấy phép phê duyệt nội dung số: 1705/QĐ-BTTTT cấp ngày 15/10/2019</p>
+                </div>
+                <div class="block-footer-nav d-flex justify-content-center align-items-center">
+                    <a href="#" class="d-none d-md-block">Trang chủ</a>
+                    <a href="#" class="d-none d-md-block">Fanpage</a>
+                    <a href="#" class="d-none d-md-block">Cộng Đồng</a>
+                    <a href="#" class="d-none d-md-block">Sự Kiện</a>
+                    <a href="#" class="btn-totop">Đầu Trang <i class="bi bi-arrow-up"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </wrapper>
+    
+<!-- FOOTER TEMP -->
+<!-- MODAL DOWNLOAD Vertically centered modal -->
+<div id="downloadModal" class="modal fade " tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-dark" id="exampleModalLabel">Chọn Phương Thức Tải Game</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-grid gap-2">
+                <button type="button" class="btn btn-primary"><i class="bi bi-download"></i> Tải APK Trực Tiếp</button>
+                <button type="button" class="btn btn-dark"><i class="bi bi-download"></i> Tải trên Google Play</button>
+                <button type="button" class="btn btn-dark"><i class="bi bi-download"></i> Tải trên App Store</button>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPT -->
+    <script src="script/libs/bootstrap.bundle.min.js"></script>
+    <script src="script/jquery-3.6.0.slim.min.js"></script>
+    <script src="script/wpopup-youtube.js"></script>
+    <script src="script/wpopup.js"></script>
+   <script>
+// WANIMATE
+$('.wblock-lightsweep img').each(function(){
+    lightsweep = $(this).clone().insertAfter($(this));
+    lightsweep.addClass('lightSweep');
+});
+
+// //WEWE ACCORDION
+// var elements = document.getElementsByClassName("w-accordion-button");
+// var z = document.getElementsByClassName("w-accordion-content-active");
+// var myFunction = function() {
+//     z[0].classList.remove("w-accordion-content-active");
+//     var attribute = this.getAttribute("data-w-accordion");
+//     //alert(attribute);
+//     document.getElementById(attribute).classList.add("w-accordion-content-active");
+
+// };
+// for (var i = 0; i < elements.length; i++) {
+//     elements[i].addEventListener('click', myFunction, false);
+// }
+
+    </script>
+  </body>
+</html>
