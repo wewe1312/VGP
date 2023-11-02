@@ -593,6 +593,46 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: .75em;
 }
 
+.top-\[10em\]{
+  top: 10em;
+}
+
+.top-\[30em\]{
+  top: 30em;
+}
+
+.top-\[50em\]{
+  top: 50em;
+}
+
+.top-\[40em\]{
+  top: 40em;
+}
+
+.top-\[45em\]{
+  top: 45em;
+}
+
+.left-\[-5em\]{
+  left: -5em;
+}
+
+.left-\[5em\]{
+  left: 5em;
+}
+
+.left-\[10em\]{
+  left: 10em;
+}
+
+.left-\[50\%\]{
+  left: 50%;
+}
+
+.top-\[44em\]{
+  top: 44em;
+}
+
 .isolate{
   isolation: isolate;
 }
@@ -750,6 +790,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-2{
   margin-top: 0.5rem;
+}
+
+.ml-\[-5em\]{
+  margin-left: -5em;
+}
+
+.ml-\[-6em\]{
+  margin-left: -6em;
 }
 
 .box-border{
@@ -938,16 +986,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 91.666667%;
 }
 
-.w-\[8em\]{
-  width: 8em;
+.w-\[9em\]{
+  width: 9em;
 }
 
-.w-\[12em\]{
-  width: 12em;
+.w-\[10em\]{
+  width: 10em;
 }
 
 .w-\[1em\]{
   width: 1em;
+}
+
+.w-\[8em\]{
+  width: 8em;
 }
 
 .w-8\/12{
@@ -958,12 +1010,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: .8em;
 }
 
-.w-\[10em\]{
-  width: 10em;
+.w-\[5em\]{
+  width: 5em;
 }
 
-.w-\[9em\]{
-  width: 9em;
+.w-\[12em\]{
+  width: 12em;
 }
 
 .flex-1{
@@ -2050,11 +2102,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: .5em;
 }
 
-.py-\[\.75em\]{
-  padding-top: .75em;
-  padding-bottom: .75em;
-}
-
 .px-\[2em\]{
   padding-left: 2em;
   padding-right: 2em;
@@ -2916,6 +2963,14 @@ body {
 }
 
 @media (min-width: 1024px){
+  .lg\:top-\[43em\]{
+    top: 43em;
+  }
+
+  .lg\:top-\[44em\]{
+    top: 44em;
+  }
+
   .lg\:col-start-auto{
     grid-column-start: auto;
   }
@@ -2942,6 +2997,10 @@ body {
 
   .lg\:mt-\[13em\]{
     margin-top: 13em;
+  }
+
+  .lg\:ml-\[-7em\]{
+    margin-left: -7em;
   }
 
   .lg\:block{
@@ -2988,6 +3047,10 @@ body {
     width: 91.666667%;
   }
 
+  .lg\:w-\[12em\]{
+    width: 12em;
+  }
+
   .lg\:w-10\/12{
     width: 83.333333%;
   }
@@ -3004,12 +3067,12 @@ body {
     width: 66.666667%;
   }
 
-  .lg\:w-\[12em\]{
-    width: 12em;
+  .lg\:w-\[13em\]{
+    width: 13em;
   }
 
-  .lg\:w-\[19em\]{
-    width: 19em;
+  .lg\:w-\[14em\]{
+    width: 14em;
   }
 
   .lg\:grid-cols-10{
