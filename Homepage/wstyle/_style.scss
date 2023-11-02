@@ -105,14 +105,12 @@ body {
   background: transparent url("../images/img-pg18.webp") no-repeat center bottom
     scroll;
   background-size: 100% 100%;
-  aspect-ratio: 355/105;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  aspect-ratio: 585/274;
 
   > div {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    height: 33%;
     width: 100%;
 
     a {
