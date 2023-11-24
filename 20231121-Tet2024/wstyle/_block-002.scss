@@ -1,0 +1,47 @@
+.character-small {
+  .char {
+    background: url("../images/block002/character/001-char.webp") no-repeat
+      center center;
+    background-size: auto 100%;
+    width: 100%;
+    height: 30em;
+    margin: 0 auto;
+  }
+
+  .char01 {
+    background-image: url("../images/block002/character/001-char.webp");
+  }
+  .char02 {
+    background-image: url("../images/block002/character/002-char.webp");
+  }
+  .char03 {
+    background-image: url("../images/block002/character/003-char.webp");
+  }
+
+  .desc {
+    width: 100%;
+    margin: 1em auto 0 auto;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1024px) {
+  .character-small {
+    position: relative;
+
+    .char {
+      width: 69.5em;
+      height: 48em;
+      margin-left: 3em;
+    }
+
+    .desc {
+      width: 34em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-left: 22em;
+    }
+  }
+}
