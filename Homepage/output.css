@@ -676,16 +676,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0px;
 }
 
-.mt-\[em\]{
-  margin-top: em;
+.mt-\[20em\]{
+  margin-top: 20em;
 }
 
 .mt-\[14em\]{
   margin-top: 14em;
 }
 
-.mt-\[29\.25em\]{
-  margin-top: 29.25em;
+.mt-\[0em\]{
+  margin-top: 0em;
 }
 
 .mt-\[8\.5em\]{
@@ -706,10 +706,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-\[5em\]{
   margin-top: 5em;
-}
-
-.mt-\[0em\]{
-  margin-top: 0em;
 }
 
 .mt-2{
@@ -852,8 +848,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 5em;
 }
 
-.h-\[45em\]{
-  height: 45em;
+.h-\[46em\]{
+  height: 46em;
 }
 
 .h-\[18em\]{
@@ -882,6 +878,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[3em\]{
   width: 3em;
+}
+
+.w-\[17\.5em\]{
+  width: 17.5em;
 }
 
 .w-\[13em\]{
@@ -2525,10 +2525,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   /*26px in sm*/
   font-family: "Lexend", sans-serif;
   color: #414141;
-  --w-primary: #0e9135;
-  --w-secondary: #900;
+  --w-primary: #850d7f;
+  --w-secondary: rgb(21, 179, 48);
   --w-active: #009999;
-  --w-bg-color: #eee;
+  --w-bg-color: #fff;
   --w-offcanvas: #fff;
   --w-vgp: #ff6600;
   --w-nav: #fff;
@@ -2621,8 +2621,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-column: span 6 / span 6;
   }
 
-  .lg\:mt-\[9em\]{
-    margin-top: 9em;
+  .lg\:mt-\[6\.5em\]{
+    margin-top: 6.5em;
   }
 
   .lg\:mt-\[5em\]{
@@ -2657,8 +2657,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: none;
   }
 
-  .lg\:h-\[53em\]{
-    height: 53em;
+  .lg\:h-\[50em\]{
+    height: 50em;
   }
 
   .lg\:w-\[15em\]{
@@ -2699,6 +2699,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:p-\[2em\]{
     padding: 2em;
+  }
+
+  .lg\:pl-\[50em\]{
+    padding-left: 50em;
   }
 
   .lg\:pr-\[1em\]{
