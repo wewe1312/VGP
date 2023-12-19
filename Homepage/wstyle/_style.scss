@@ -337,30 +337,30 @@ a.hotro {
   border-bottom: 1px solid #222;
 }
 
-@media (min-width: 1024px) {
-  .block-support::after {
-    content: "";
-    width: 1px;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--w-border);
-    display: block;
-  }
-  .block-support::before {
-    content: "";
-    width: 1px;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translateX(-50%) rotate(90deg);
-    background-color: var(--w-border);
-    display: block;
-  }
+/* block support border split */
+.block-support::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--w-border);
+  display: block;
 }
+.block-support::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  background-color: var(--w-border);
+  display: block;
+}
+
 .block-float {
   position: fixed;
   transition: transform 0.36s ease, height 0.36s ease;

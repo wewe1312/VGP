@@ -2526,7 +2526,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-family: "Lexend", sans-serif;
   color: #414141;
   --w-primary: #850d7f;
-  --w-secondary: rgb(21, 179, 48);
+  --w-secondary: #900;
   --w-active: #009999;
   --w-bg-color: #fff;
   --w-offcanvas: #fff;
