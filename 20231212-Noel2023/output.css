@@ -721,8 +721,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 12em;
 }
 
-.mt-\[10em\]{
-  margin-top: 10em;
+.mt-\[15em\]{
+  margin-top: 15em;
 }
 
 .mt-\[11em\]{
@@ -755,10 +755,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.mt-\[15em\]{
-  margin-top: 15em;
 }
 
 .box-border{
@@ -955,8 +951,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 91.666667%;
 }
 
-.w-9\/12{
-  width: 75%;
+.w-4\/12{
+  width: 33.333333%;
 }
 
 .w-\[8em\]{
@@ -985,6 +981,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[\.8em\]{
   width: .8em;
+}
+
+.w-5\/12{
+  width: 41.666667%;
+}
+
+.w-6\/12{
+  width: 50%;
 }
 
 .flex-1{
@@ -3027,8 +3031,8 @@ body {
     margin-top: -2.5em;
   }
 
-  .lg\:mt-\[-2em\]{
-    margin-top: -2em;
+  .lg\:mt-\[21em\]{
+    margin-top: 21em;
   }
 
   .lg\:mt-\[10em\]{
@@ -3041,26 +3045,6 @@ body {
 
   .lg\:mt-\[0\]{
     margin-top: 0;
-  }
-
-  .lg\:mt-\[5em\]{
-    margin-top: 5em;
-  }
-
-  .lg\:mt-\[18em\]{
-    margin-top: 18em;
-  }
-
-  .lg\:mt-\[20em\]{
-    margin-top: 20em;
-  }
-
-  .lg\:mt-\[22em\]{
-    margin-top: 22em;
-  }
-
-  .lg\:mt-\[21em\]{
-    margin-top: 21em;
   }
 
   .lg\:block{
@@ -3141,6 +3125,18 @@ body {
 
   .lg\:w-10\/12{
     width: 83.333333%;
+  }
+
+  .lg\:w-\[10em\]{
+    width: 10em;
+  }
+
+  .lg\:w-\[9em\]{
+    width: 9em;
+  }
+
+  .lg\:w-\[8em\]{
+    width: 8em;
   }
 
   .lg\:basis-\[18\%\]{
