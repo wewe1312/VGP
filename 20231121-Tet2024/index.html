@@ -275,11 +275,14 @@
         <!-- timeline -->
         <div
           class="ztimeline w-11/12 mt-[1em] mx-auto aspect-[697/262] cursor-pointer lg:w-6/12 lg:mt-[2em]"
-          data-aos="zoom-out"
-          data-toggle="modal"
-          data-target="modal-gift">
+          data-aos="zoom-out">
           <div class="timeline-bar" data-percent="25%"></div>
           <div class="timeline-gifts" data-active="1/3"></div>
+          <div class="timeline-popovers grid grid-cols-3">
+            <div data-toggle="modal" data-target="modal-list-gift"></div>
+            <div data-toggle="modal" data-target="modal-list-gift"></div>
+            <div data-toggle="modal" data-target="modal-list-gift"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -673,6 +676,31 @@
                 <div>
                   <div class="icon w-[3em] opacity-50 grayscale"></div>
                 </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal list gift -->
+    <div class="wmodal" id="modal-list-gift">
+      <div class="wmodal-content relative">
+        <button class="btn-close-modal" data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>5000 Luợt</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <ul class="grid grid-cols-1 gap-[1em] mt-[1em]">
+              <li
+                class="flex flex-row justify-center items-center gap-[0.5em]"
+                data-toggle="loop"
+                data-loop="5">
+                <div class="w-[3em] w-image-block">
+                  <img src="./images/item.png" alt="" />
+                </div>
+                <div class="font-bold">Áo Choàng Bóng Tối x 1</div>
               </li>
             </ul>
           </div>
