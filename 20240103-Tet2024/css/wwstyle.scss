@@ -1,0 +1,144 @@
+@import "../wstyle/wstyle";
+@import "../wstyle/woffcanvas";
+@import "../wstyle/ztimeline";
+@import "../wstyle/wmodal";
+@import "../wstyle/zbgvideo";
+@import "../wstyle/zanimate";
+@import "../wstyle/wtabs";
+@import "../wstyle/scroll";
+@import "../wstyle/checkin";
+@import "../wstyle/float";
+@import "../wstyle/character";
+@import "../wstyle/wwheel";
+@import "../wstyle/modal-gift-content";
+@import "../wstyle/saber";
+
+@import "../wstyle/block-002";
+@import "../wstyle/block-003";
+@import "../wstyle/block-004";
+
+.w-btn {
+  padding: 0.5em 1em;
+  border: 1px var(--w-secondary) solid;
+  border-radius: 1em;
+}
+
+/* ANCHOR section 01 */
+.block-gift {
+  background: transparent url("../images/block001/block-gift.webp") no-repeat
+    scroll;
+  background-size: 100% 100%;
+  aspect-ratio: 153/178;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 1em 0 0 0;
+  filter: drop-shadow(0em 0.25em 1em rgba(0, 0, 0, 0.5));
+  > img {
+    width: 60%;
+  }
+
+  > h1 {
+    font-size: 0.8em;
+    line-height: 1;
+    text-align: center;
+    color: var(--w-highlight);
+    padding: 0.5em 0em;
+  }
+}
+@media (min-width: 1024px) {
+  .block-gift:nth-child(2n + 1) {
+    transform: translateY(1em);
+  }
+  .block-gift > h1 {
+    font-size: 1em;
+  }
+}
+
+/* ANCHOR section-02 */
+.block-cauhoi {
+  background: transparent url("../images/block002/block-cauhoi.webp") no-repeat
+    scroll;
+  background-size: 100% 100%;
+  aspect-ratio: 735/601;
+  padding: 6em 3em 4em 3em;
+  display: grid;
+  gap: 1em;
+
+  > h1 {
+    line-height: 1;
+  }
+
+  > .question {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: rgba(255, 255, 255, 0.8);
+    filter: drop-shadow(0em 0.25em 1em rgba(0, 0, 0, 0.15));
+  }
+
+  > .answer {
+    display: grid;
+    padding: 0.5em;
+    gap: 0.5em;
+    grid-template-columns: auto auto;
+    filter: drop-shadow(0em 0.25em 1em rgba(0, 0, 0, 0.15));
+
+    > div {
+      padding: 1em;
+      border-radius: 1em;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 2px solid #eee;
+      cursor: pointer;
+      line-height: 1.15;
+
+      &.picked {
+        border-color: rgb(255, 153, 0);
+      }
+      &.correct {
+        border-color: rgb(49, 226, 49);
+        background-color: rgb(220, 255, 220);
+      }
+      &.wrong {
+        border-color: rgb(226, 49, 49);
+        background-color: rgb(255, 220, 220);
+      }
+
+      > span {
+        opacity: 0.25;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .block-cauhoi {
+    padding: 7em 5em 5em 5em;
+  }
+}
+
+/* section-03 */
+.block-board {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 1em;
+  padding: 1em;
+  .wrapp {
+    height: 30em;
+    overflow: auto;
+  }
+
+  .current {
+    background-color: #ffd8d8;
+    border: 1px solid #f90;
+  }
+}
+@media (min-width: 1024px) {
+  .block-board {
+    background-color: transparent;
+    .wrapp {
+      height: 28.5em;
+    }
+  }
+}
