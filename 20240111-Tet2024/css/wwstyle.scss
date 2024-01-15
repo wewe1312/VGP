@@ -1,0 +1,99 @@
+@import "../wstyle/wstyle";
+@import "../wstyle/woffcanvas";
+@import "../wstyle/ztimeline";
+@import "../wstyle/wmodal";
+@import "../wstyle/zbgvideo";
+@import "../wstyle/zanimate";
+@import "../wstyle/wtabs";
+@import "../wstyle/scroll";
+@import "../wstyle/checkin";
+@import "../wstyle/float";
+@import "../wstyle/character";
+@import "../wstyle/wwheel";
+@import "../wstyle/modal-gift-content";
+
+.w-btn {
+  padding: 0.5em 1em;
+  border: 1px var(--w-secondary) solid;
+  border-radius: 1em;
+}
+
+.info {
+  background-color: rgba($color: #fff, $alpha: 0.8);
+  filter: drop-shadow(0 0 0.5em rgba(0, 0, 0, 0.25));
+  border-radius: 1em;
+}
+
+/* ANCHOR section-002 */
+@media (min-width: 1024px) {
+  .block-boss {
+    grid-template-areas: "start center end";
+
+    .cum-btn {
+      grid-area: start;
+    }
+    .boss {
+      grid-area: center;
+    }
+    .info {
+      grid-area: end;
+      height: fit-content;
+    }
+  }
+}
+.wheel-button-small {
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: grid;
+  gap: 0.5em;
+  filter: drop-shadow(0 0 1em rgba(0, 0, 0, 0.5));
+}
+
+/* ANCHOR section-003 */
+.item-big {
+  background: rgba(0, 0, 0, 0) url(../images/block002/block-item.webp) no-repeat
+    center center scroll;
+  background-size: auto;
+  background-size: 100% 100%;
+  aspect-ratio: 291/400;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.75em 0.5em;
+  text-align: center;
+  gap: 0.25em;
+  color: #fff;
+  line-height: 1;
+  cursor: pointer;
+  .icon {
+    width: 69%;
+    animation: glow 1s ease 0s infinite;
+  }
+  .price {
+    background-color: var(--w-primary);
+    color: #fff;
+    padding: 0.25em 0.5em;
+    border-radius: 1em;
+  }
+  .quantity {
+    color: #fcff49;
+    opacity: 0.69;
+    font-size: 0.8em;
+  }
+}
+.swiper-pag {
+  display: flex;
+  justify-content: center;
+  > span {
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    color: var(--w-primary);
+    border-radius: 0.25em;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
