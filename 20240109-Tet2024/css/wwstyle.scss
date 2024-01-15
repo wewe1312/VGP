@@ -1,0 +1,47 @@
+@import "../wstyle/wstyle";
+@import "../wstyle/woffcanvas";
+@import "../wstyle/ztimeline";
+@import "../wstyle/wmodal";
+@import "../wstyle/zbgvideo";
+@import "../wstyle/zanimate";
+@import "../wstyle/wtabs";
+@import "../wstyle/scroll";
+@import "../wstyle/checkin";
+@import "../wstyle/float";
+@import "../wstyle/character";
+@import "../wstyle/wwheel";
+@import "../wstyle/modal-gift-content";
+@import "../wstyle/saber";
+
+@import "../wstyle/block-002";
+@import "../wstyle/block-003";
+@import "../wstyle/block-004";
+
+.w-btn {
+  padding: 0.5em 1em;
+  border: 1px var(--w-secondary) solid;
+  border-radius: 1em;
+}
+
+/* ANCHOR section 01 */
+
+/* ANCHOR section-02 */
+
+/* section-03 */
+
+@media (min-width: 1024px) {
+  .block-boss {
+    grid-template-areas: "start center end";
+
+    .cum-btn {
+      grid-area: start;
+    }
+    .boss {
+      grid-area: center;
+    }
+    .info {
+      grid-area: end;
+      height: fit-content;
+    }
+  }
+}
