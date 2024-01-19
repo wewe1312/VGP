@@ -507,16 +507,24 @@
     <section
       id="section-05"
       class="scrollspy h-[57.5em] lg:h-[55.5em] relative z-[2] overflow-hidden">
-      <div class="wcontainer relative">
+      <div class="wcontainer relative pb-[5em]">
         <!-- wheel -->
         <div
-          class="w-9/12 mx-auto mt-[30em] lg:w-[25em] lg:mt-[42em] animate__loop animate__blingbling">
+          class="w-9/12 mx-auto mt-[30em] lg:w-[25em] lg:mt-[42em] relative z-10 animate__loop animate__blingbling">
           <button
             class="w-image-button w-full"
-            data-toggle="modal"
-            data-target="modal-confirm">
+            data-toggle="show"
+            data-target="wheel-button-small">
             <img src="./images/block005/btn-hailoc.webp" alt="" />
           </button>
+          <!-- small -->
+          <div
+            id="wheel-button-small"
+            class="whidden wheel-button-small text-[1.15em] top-[50%]">
+            <button data-dismiss="show">Hái x1 Lần</button>
+            <button data-dismiss="show">Hái x10 Lần</button>
+            <button data-dismiss="show">Hái x20 Lần</button>
+          </div>
         </div>
 
         <div class="lg:absolute lg:top-[18em] lg:right-[2.5em] lg:w-[16.75em]">
