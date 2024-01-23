@@ -1,0 +1,125 @@
+@import "../wstyle/wstyle";
+@import "../wstyle/woffcanvas";
+@import "../wstyle/ztimeline";
+@import "../wstyle/wmodal";
+@import "../wstyle/zbgvideo";
+@import "../wstyle/zanimate";
+@import "../wstyle/wtabs";
+@import "../wstyle/scroll";
+@import "../wstyle/checkin";
+@import "../wstyle/float";
+@import "../wstyle/character";
+@import "../wstyle/wwheel";
+@import "../wstyle/modal-gift-content";
+
+.w-btn {
+  padding: 0.5em 1em;
+  border: 1px var(--w-secondary) solid;
+  border-radius: 1em;
+}
+
+.info {
+  background-color: rgba($color: #fff, $alpha: 0.8);
+  filter: drop-shadow(0 0 0.5em rgba(0, 0, 0, 0.25));
+  border-radius: 1em;
+}
+
+/* ANCHOR section-001 */
+
+/* ANCHOR section-002 */
+.block-baodanh {
+  background-color: rgba($color: #5957a4, $alpha: 0.8);
+  padding: 1em;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 2em;
+}
+@media (min-width: 1024px) {
+  .block-baodanh {
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.block-gift-baodanh {
+  .w-image-block > img {
+    transform: scale(1.075);
+  }
+}
+
+/* ANCHOR section-003 */
+.character-slide {
+  .w-image-block > img {
+    transform: scale(1.5);
+  }
+
+  .swiper-slide {
+    opacity: 0 !important;
+    transition: all 0.36s ease;
+  }
+  .swiper-slide-active {
+    opacity: 1 !important;
+  }
+}
+.character-thumb-slide {
+  .swiper-slide {
+    opacity: 0.69;
+    transition: all 0.36s ease;
+    filter: grayscale(0.5);
+  }
+
+  .swiper-slide-thumb-active {
+    opacity: 1;
+    filter: grayscale(0);
+  }
+}
+@media (min-width: 1024px) {
+  .character-slide {
+    .w-image-block > img {
+      transform: scale(1);
+    }
+  }
+}
+
+/* ANCHOR section-004 */
+.card {
+  background: url("../images/block004/card-front.webp") no-repeat center center
+    scroll;
+  background-size: 100% 100%;
+  display: block;
+  cursor: pointer;
+  transition: all ease 0.36s;
+
+  > img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all ease 0.36s;
+  }
+
+  &.active {
+    transform: scaleX(-1);
+    > img {
+      opacity: 0;
+    }
+  }
+}
+
+.block-feature {
+  button {
+    margin-top: -2em;
+  }
+}
+
+/* ANCHOR section-006 */
+.board {
+  background-color: rgba($color: #fff, $alpha: 0.8);
+  border-radius: 2em;
+  border: 2px solid var(--w-secondary);
+}
+@media (min-width: 1024px) {
+  .board {
+    background-color: transparent;
+    border: none;
+  }
+}
