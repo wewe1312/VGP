@@ -1,0 +1,23 @@
+.info {
+  background-color: rgba($color: #fff, $alpha: 0.85);
+  border-radius: 1em;
+  border: dashed var(--w-primary) 1px;
+}
+
+@media (min-width: 1024px) {
+  /* .block-quabaovat {
+    background: transparent url("../images/block003/bg-quabaovat.webp")
+      no-repeat center center;
+    background-size: 100% 100%;
+    aspect-ratio: 350/600;
+    padding: 5em 1.5em 1em 1.5em;
+  }
+
+  .block-lichsunhan {
+    background: transparent url("../images/block003/bg-lichsunhan.webp")
+      no-repeat center center;
+    background-size: 100% 100%;
+    //aspect-ratio: 350/460;
+    padding: 5em 1.5em 1em 1.5em;
+  } */
+}
