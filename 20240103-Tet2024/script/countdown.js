@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = new Date("June 20, 2022 15:37:25").getTime();
+var countDownDate = new Date("February 07, 2024 23:59:59").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -11,8 +11,8 @@ var x = setInterval(function () {
 
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  //var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var hours = Math.floor(distance / (1000 * 60 * 60));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  // var hours = Math.floor(distance / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
@@ -22,6 +22,7 @@ var x = setInterval(function () {
 
   const el = document.getElementById("countdown");
   //console.log(el);
+  var elhourt = (el.querySelector(".day").innerHTML = days);
   var elhourt = (el.querySelector(".hour").innerHTML = hours);
   var elmin = (el.querySelector(".min").innerHTML = minutes);
   var elsec = (el.querySelector(".sec").innerHTML = seconds);

@@ -8,7 +8,7 @@
 
     <!-- my script -->
     <script type="module" src="./script/wloop.js"></script>
-    <script type="module" src="./script/ztimeline.js"></script>
+    <script type="module" src="./script/countdown.js"></script>
     <script type="module" src="./script/wmodal.js"></script>
     <script type="module" src="./script/wtabs.js"></script>
     <script type="module" src="./script/wsound.js"></script>
@@ -290,9 +290,18 @@
       id="section-02"
       class="min-h-[51em] lg:min-h-[60em] overflow-hidden">
       <!-- block cauhoi -->
-      <div
-        class="block-cauhoi mt-[8em] mx-auto w-full lg:w-[41em] lg:mt-[10em]">
-        <h1 class="text-center text-primary">Câu 01/10</h1>
+      <div class="block-cauhoi mt-[8em] mx-auto w-full lg:w-[41em] lg:mt-[8em]">
+        <div class="flex justify-between items-center">
+          <h1
+            class="text-center text-white w-[10em] bg-secondary py-[0.35em] rounded-[1em]">
+            Câu 01/10
+          </h1>
+          <h1
+            class="text-center text-[0.8em] text-white w-[6em] bg-primary py-[0.35em] rounded-[1em]">
+            Vòng 1
+          </h1>
+        </div>
+
         <div class="question">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius quaerat
           a enim corporis! Fugiat facilis beatae sint, corrupti ad aut
@@ -305,6 +314,23 @@
           <div class="correct"><span>C</span> Lorem Ipsum sit amet</div>
           <div class="wrong"><span>D</span> Lorem Ipsum sit amet</div>
         </div>
+        <!-- countdown -->
+        <h1
+          class="text-center text-primary text-[0.85em] w-full bg-white bg-opacity-50 py-[0.35em] rounded-[1em] mx-auto mt-[0.5em] flex justify-center">
+          Vòng 1 kết thúc trong &nbsp;
+          <div
+            id="countdown"
+            class="countdown font-bold flex justify-center gap-[0.25em]">
+            <div class="day">00</div>
+            ngày
+            <div class="hour">00</div>
+            giờ
+            <div class="min">00</div>
+            phút
+            <div class="sec">00</div>
+            giây
+          </div>
+        </h1>
       </div>
 
       <div class="wcontainer">
@@ -337,7 +363,7 @@
     <!-- ANCHOR section 03 ---------------------------------------------->
     <section
       id="section-03"
-      class="scrollspy h-[48em] lg:h-[55.5em] relative z-[2] overflow-hidden">
+      class="scrollspy h-[48em] lg:h-[55.5em] relative z-[2] overflow-hidden hidden">
       <div class="wcontainer">
         <!-- table -->
         <div

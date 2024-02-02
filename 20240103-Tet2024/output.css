@@ -704,8 +704,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 8em;
 }
 
-.mt-\[0em\]{
-  margin-top: 0em;
+.mt-\[0\.25em\]{
+  margin-top: 0.25em;
 }
 
 .mr-\[\.75em\]{
@@ -716,6 +716,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: .5em;
 }
 
+.mt-\[0em\]{
+  margin-top: 0em;
+}
+
 .mr-\[\.25em\]{
   margin-right: .25em;
 }
@@ -724,20 +728,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.5rem;
 }
 
-.mt-\[5em\]{
-  margin-top: 5em;
-}
-
-.mt-\[9em\]{
-  margin-top: 9em;
-}
-
 .mt-\[0\.5em\]{
   margin-top: 0.5em;
-}
-
-.mt-\[0\.25em\]{
-  margin-top: 0.25em;
 }
 
 .box-border{
@@ -844,10 +836,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   aspect-ratio: 300 / 156;
 }
 
-.aspect-square{
-  aspect-ratio: 1 / 1;
-}
-
 .aspect-\[16\/9\]{
   aspect-ratio: 16 / 9;
 }
@@ -884,14 +872,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-\[calc\(100\%-theme\(\"spacing\.1\"\)\)\]{
   height: calc(100% - 0.25rem);
-}
-
-.h-\[50em\]{
-  height: 50em;
-}
-
-.h-\[51em\]{
-  height: 51em;
 }
 
 .min-h-\[51em\]{
@@ -948,6 +928,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[\.8em\]{
   width: .8em;
+}
+
+.w-\[4em\]{
+  width: 4em;
+}
+
+.w-\[5em\]{
+  width: 5em;
+}
+
+.w-\[6em\]{
+  width: 6em;
+}
+
+.w-\[20em\]{
+  width: 20em;
 }
 
 .flex-1{
@@ -1461,8 +1457,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: .25em;
 }
 
-.gap-\[2em\]{
-  gap: 2em;
+.gap-\[0\.25em\]{
+  gap: 0.25em;
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]){
@@ -1862,6 +1858,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-50{
+  --tw-bg-opacity: 0.5;
+}
+
 .bg-\[url\(\'\.\.\.\'\)\]{
   background-image: url('...');
 }
@@ -2018,6 +2023,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: .5em;
 }
 
+.py-\[0\.5em\]{
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
 .py-\[\.75em\]{
   padding-top: .75em;
   padding-bottom: .75em;
@@ -2046,6 +2056,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.py-\[0\.35em\]{
+  padding-top: 0.35em;
+  padding-bottom: 0.35em;
 }
 
 .pt-\[2em\]{
@@ -2141,6 +2156,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
+.text-\[0\.85em\]{
+  font-size: 0.85em;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -2213,20 +2232,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 
-.leading-\[2\.75\]{
-  line-height: 2.75;
+.leading-\[2\.5\]{
+  line-height: 2.5;
 }
 
 .leading-\[1\]{
   line-height: 1;
 }
 
-.leading-\[2\.5\]{
-  line-height: 2.5;
+.leading-\[1em\]{
+  line-height: 1em;
 }
 
 .leading-\[2\]{
   line-height: 2;
+}
+
+.leading-3{
+  line-height: .75rem;
 }
 
 .text-white{
@@ -2896,24 +2919,24 @@ body {
     margin-top: 10em;
   }
 
-  .lg\:mt-\[20em\]{
-    margin-top: 20em;
-  }
-
   .lg\:mt-\[15em\]{
     margin-top: 15em;
   }
 
-  .lg\:mt-\[0\.5em\]{
-    margin-top: 0.5em;
+  .lg\:mt-\[0em\]{
+    margin-top: 0em;
   }
 
   .lg\:mt-0{
     margin-top: 0px;
   }
 
-  .lg\:mt-\[0em\]{
-    margin-top: 0em;
+  .lg\:mt-\[9em\]{
+    margin-top: 9em;
+  }
+
+  .lg\:mt-\[8em\]{
+    margin-top: 8em;
   }
 
   .lg\:block{
@@ -2924,28 +2947,12 @@ body {
     height: 60em;
   }
 
-  .lg\:h-\[65em\]{
-    height: 65em;
-  }
-
-  .lg\:h-\[31em\]{
-    height: 31em;
-  }
-
-  .lg\:h-\[58em\]{
-    height: 58em;
-  }
-
-  .lg\:h-\[55em\]{
-    height: 55em;
-  }
-
   .lg\:h-\[55\.5em\]{
     height: 55.5em;
   }
 
-  .lg\:h-\[56em\]{
-    height: 56em;
+  .lg\:h-\[31em\]{
+    height: 31em;
   }
 
   .lg\:min-h-\[60em\]{
@@ -2988,20 +2995,16 @@ body {
     width: 41em;
   }
 
+  .lg\:w-\[60em\]{
+    width: 60em;
+  }
+
   .lg\:w-\[11\.75em\]{
     width: 11.75em;
   }
 
   .lg\:w-\[19em\]{
     width: 19em;
-  }
-
-  .lg\:w-\[50em\]{
-    width: 50em;
-  }
-
-  .lg\:w-\[60em\]{
-    width: 60em;
   }
 
   .lg\:gap-\[1em\]{
@@ -3018,10 +3021,6 @@ body {
 
   .lg\:text-\[\.8em\]{
     font-size: .8em;
-  }
-
-  .lg\:leading-\[2\.75\]{
-    line-height: 2.75;
   }
 
   .lg\:leading-\[2\.5\]{
