@@ -1,0 +1,57 @@
+@import "../wstyle/wstyle";
+@import "../wstyle/woffcanvas";
+@import "../wstyle/ztimeline";
+@import "../wstyle/wmodal";
+@import "../wstyle/zbgvideo";
+@import "../wstyle/zanimate";
+@import "../wstyle/wtabs";
+@import "../wstyle/scroll";
+@import "../wstyle/checkin";
+@import "../wstyle/float";
+@import "../wstyle/character";
+@import "../wstyle/wwheel";
+@import "../wstyle/modal-gift-content";
+
+.w-btn {
+  padding: 0.5em 1em;
+  border: 1px var(--w-secondary) solid;
+  border-radius: 1em;
+}
+
+.info {
+  background-color: rgba($color: #fff, $alpha: 0.8);
+  filter: drop-shadow(0 0 0.5em rgba(0, 0, 0, 0.25));
+  border-radius: 1em;
+}
+
+/* ANCHOR section-001 */
+.block-luotbaodanh {
+  background: url("../images/block001/bg-luotbaodanh.webp") no-repeat center
+    center scroll;
+  background-size: 100% 100%;
+  aspect-ratio: 393/41;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25em;
+  color: #fff;
+}
+
+/* ANCHOR section-002 */
+
+/* ANCHOR section-003 */
+
+/* ANCHOR section-004 */
+
+/* ANCHOR section-005 */
+.board {
+  background-color: rgba($color: #fff, $alpha: 0.8);
+  border-radius: 2em;
+  border: 2px solid var(--w-primary);
+}
+@media (min-width: 1024px) {
+  .board {
+    background-color: transparent;
+    border: none;
+  }
+}
