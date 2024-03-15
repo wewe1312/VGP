@@ -287,8 +287,8 @@
     </section>
 
     <!-- ANCHOR section 02 ---------------------------------------------->
-    <section id="section-02" class="h-[44.4em] lg:h-[60em] overflow-hidden">
-      <div class="wcontainer">
+    <section id="section-02" class="h-[50em] lg:h-[60em] overflow-hidden">
+      <div class="wcontainer pb-[1em]">
         <div
           class="w-12/12 mx-auto mt-[8em] flex flex-wrap justify-center gap-y-[0.5em] lg:w-[36em] lg:mt-[11em]">
           <button class="w-image-button w-1/2 lg:w-1/3 e-btn-hover-glow">
@@ -316,27 +316,44 @@
               alt="" />
           </button>
         </div>
-        <!-- wheel -->
-        <div
-          class="wwheel w-12/12 mx-auto mt-[1em] lg:w-[34em] lg:mt-[5em] lg:translate-x-[18em]">
-          <div class="wheel w-full">
-            <img class="" src="./images/block002/wheel.webp" alt="" />
-          </div>
-          <button
-            class="wheel-button w-image-block w-2/3 lg:w-7/12 z-10"
-            data-toggle="show"
-            data-target="wheel-button-small">
-            <img
-              class="animate__loop animate__bling"
-              src="./images/block002/button.webp"
-              alt="" />
-          </button>
-          <!-- button -->
+        <div class="lg:flex lg:flex-nowrap lg:justify-center lg:pl-[19em]">
+          <!-- wheel -->
           <div
-            id="wheel-button-small"
-            class="whidden wheel-button-small lg:text-[1.25em]">
-            <button data-dismiss="show">Quay x1 Lần</button>
-            <button data-dismiss="show">Quay x10 Lần</button>
+            class="wwheel w-12/12 mx-auto mt-[1em] lg:mx-0 lg:w-[34em] lg:mt-[5em] lg:order-2">
+            <div class="wheel w-full">
+              <img class="" src="./images/block002/wheel.webp" alt="" />
+            </div>
+            <button
+              class="wheel-button w-image-block w-2/3 lg:w-7/12 z-10"
+              data-toggle="show"
+              data-target="wheel-button-small">
+              <img
+                class="animate__loop animate__bling"
+                src="./images/block002/button.webp"
+                alt="" />
+            </button>
+            <!-- button -->
+            <div
+              id="wheel-button-small"
+              class="whidden wheel-button-small lg:text-[1.25em]">
+              <button data-dismiss="show">Quay x1 Lần</button>
+              <button data-dismiss="show">Quay x10 Lần</button>
+            </div>
+          </div>
+          <!-- info -->
+          <div
+            class="info text-center p-[1em] mt-[1em] w-11/12 mx-auto h-fit lg:mx-0 lg:w-[18em] lg:order-1 lg:mt-[30em]">
+            Xin chào, Thọ Đần Độn
+            <a
+              class="text-primary text-[.8em] cursor-pointer"
+              data-toggle="modal"
+              data-target="modal-logout"
+              >Đăng xuất</a
+            >
+            <div class="grid grid-cols-1">
+              <div>Lượt gieo quẻ: <span class="text-primary">1000</span></div>
+              <div>Tổng điểm: <span class="text-primary">1000</span></div>
+            </div>
           </div>
         </div>
       </div>
