@@ -1,0 +1,46 @@
+.item-big {
+  background: rgba(0, 0, 0, 0) url(../images/block002/block-item.webp) no-repeat
+    center center scroll;
+  background-size: auto;
+  background-size: 100% 100%;
+  aspect-ratio: 291/400;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.75em 0.5em;
+  text-align: center;
+  gap: 0.25em;
+  color: #fff;
+  line-height: 1;
+  cursor: pointer;
+  .icon {
+    width: 69%;
+    animation: glow 1s ease 0s infinite;
+  }
+  .price {
+    background-color: var(--w-primary);
+    color: #fff;
+    padding: 0.25em 0.5em;
+    border-radius: 1em;
+  }
+  .quantity {
+    color: #fcff49;
+    opacity: 0.69;
+    font-size: 0.8em;
+  }
+}
+
+//pag
+.swiper-pag {
+  display: flex;
+  justify-content: center;
+  > span {
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    color: var(--w-primary);
+    border-radius: 0.25em;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
