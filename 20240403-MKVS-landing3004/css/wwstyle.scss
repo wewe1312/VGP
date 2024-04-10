@@ -1,0 +1,112 @@
+@import "../wstyle/wstyle";
+@import "../wstyle/woffcanvas";
+@import "../wstyle/ztimeline";
+@import "../wstyle/wmodal";
+@import "../wstyle/zbgvideo";
+@import "../wstyle/zanimate";
+@import "../wstyle/wtabs";
+@import "../wstyle/scroll";
+@import "../wstyle/checkin";
+@import "../wstyle/float";
+@import "../wstyle/ranking";
+@import "../wstyle/wwheel";
+@import "../wstyle/modal-gift-content";
+@import "../wstyle/footer";
+
+@import "../wstyle/block-003";
+
+.w-btn {
+  padding: 0.5em 1em;
+  border: 1px var(--w-secondary) solid;
+  border-radius: 1em;
+}
+
+/* ANCHOR section02 */
+#section-02 {
+  .event {
+    display: block;
+    position: relative;
+    background: transparent url(../images/block002/day/day001.webp) no-repeat
+      center center;
+    background-size: 100% 100%;
+    aspect-ratio: 230/324;
+    transform: scale(1.15);
+
+    .btn-thamgia {
+      width: 69%;
+      margin: 11em auto 0 auto;
+    }
+  }
+
+  .event.disabled {
+    .btn-thamgia {
+      display: none;
+    }
+  }
+
+  .event:nth-child(1) {
+    background-image: url(../images/block002/day/day001.webp);
+  }
+  .event:nth-child(2) {
+    background-image: url(../images/block002/day/day002.webp);
+  }
+  .event:nth-child(3) {
+    background-image: url(../images/block002/day/day003.webp);
+  }
+  .event:nth-child(4) {
+    background-image: url(../images/block002/day/day004.webp);
+  }
+  .event:nth-child(5) {
+    background-image: url(../images/block002/day/day005.webp);
+    grid-column-start: 2;
+  }
+  .event:nth-child(6) {
+    background-image: url(../images/block002/day/day006.webp);
+  }
+  .event:nth-child(7) {
+    background-image: url(../images/block002/day/day007.webp);
+  }
+}
+
+@media (min-width: 1024px) {
+  .event:nth-child(2n + 1) {
+    transform: translateY(1em) scale(1.15) !important;
+  }
+}
+
+/* ANCHOR section-003 */
+@media (min-width: 1024px) {
+  .block-gift {
+    position: relative;
+    height: 35em;
+
+    .gift {
+      width: 13.8em;
+      position: absolute;
+    }
+    .gift:nth-child(1) {
+      top: 0;
+      left: 8em;
+    }
+    .gift:nth-child(2) {
+      top: 10em;
+      left: 0em;
+    }
+    .gift:nth-child(3) {
+      top: 18em;
+      left: 11em;
+    }
+    .gift:nth-child(4) {
+      top: 0;
+      right: 8em;
+    }
+    .gift:nth-child(5) {
+      top: 10em;
+      right: 0em;
+    }
+    .gift:nth-child(6) {
+      top: 18em;
+      right: 11em;
+    }
+  }
+}
