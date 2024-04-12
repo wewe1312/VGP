@@ -1,0 +1,114 @@
+@import "../wstyle/wstyle";
+@import "../wstyle/woffcanvas";
+@import "../wstyle/ztimeline";
+@import "../wstyle/wmodal";
+@import "../wstyle/zbgvideo";
+@import "../wstyle/zanimate";
+@import "../wstyle/wtabs";
+@import "../wstyle/scroll";
+@import "../wstyle/checkin";
+@import "../wstyle/float";
+@import "../wstyle/ranking";
+@import "../wstyle/wwheel";
+@import "../wstyle/modal-gift-content";
+@import "../wstyle/footer";
+
+.w-btn {
+  padding: 0.5em 1em;
+  border: 1px var(--w-secondary) solid;
+  border-radius: 1em;
+}
+
+.info {
+  background-color: rgba($color: #fff, $alpha: 0.85);
+  border-radius: 1em;
+  border: dashed var(--w-primary) 1px;
+}
+
+/* ANCHOR section02 */
+#section-02 {
+  .event {
+    display: block;
+    position: relative;
+    background: transparent url(../images/block002/day/day001.webp) no-repeat
+      center center;
+    background-size: 100% 100%;
+    aspect-ratio: 215/447;
+    transform: scale(1.1);
+
+    .btn-thamgia {
+      width: 69%;
+      margin: 11em auto 0 auto;
+    }
+  }
+
+  .event.disabled {
+    .btn-thamgia {
+      display: none;
+    }
+  }
+
+  .event:nth-child(1) {
+    background-image: url(../images/block002/day/day001.webp);
+  }
+  .event:nth-child(2) {
+    background-image: url(../images/block002/day/day002.webp);
+  }
+  .event:nth-child(3) {
+    background-image: url(../images/block002/day/day003.webp);
+  }
+  .event:nth-child(4) {
+    background-image: url(../images/block002/day/day004.webp);
+  }
+  .event:nth-child(5) {
+    background-image: url(../images/block002/day/day005.webp);
+    grid-column-start: 2;
+  }
+  .event:nth-child(6) {
+    background-image: url(../images/block002/day/day006.webp);
+  }
+  .event:nth-child(7) {
+    background-image: url(../images/block002/day/day007.webp);
+  }
+}
+
+@media (min-width: 1024px) {
+  .event:nth-child(2n + 1) {
+    transform: translateY(1em) scale(1.15) !important;
+  }
+}
+
+/* ANCHOR section-003 */
+.block-items {
+  background-color: #ccc;
+  border: #ccc solid 1px;
+}
+.block-items .item {
+  background-color: #fff;
+  padding: 1.75em 1em;
+}
+.block-items .item button {
+  padding: 0.5em 0.75em;
+  background-color: var(--w-primary);
+  color: #fff;
+  border-radius: 1em;
+}
+
+/* ANCHOR section-004 */
+
+/* ANCHOR section-005 */
+.block-quabaovat {
+  background: transparent url("../images/block005/bg-quabaovat.webp") no-repeat
+    center center;
+  background-size: 100% 100%;
+  aspect-ratio: 350/600;
+  padding: 4.5em 1.5em 0 1.5em;
+}
+
+.block-lichsunhan {
+  background: transparent url("../images/block005/bg-lichsunhan.webp") no-repeat
+    center center;
+  background-size: 100% 100%;
+  //aspect-ratio: 350/460;
+  padding: 4.5em 1.5em 1.5em 1.5em;
+}
