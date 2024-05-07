@@ -121,7 +121,10 @@
         <div class="wcontainer z-10 relative">
           <div class="layout lg:grid lg:grid-cols-8">
             <!-- ANCHOR download M-->
-            <div class="w-full mx-auto lg:hidden">
+            <div
+              class="w-full mx-auto lg:hidden"
+              data-toggle="modal"
+              data-target="modal-fanpage">
               <button class="w-image-button w-full">
                 <img
                   class="animate__loop animate__glow"
@@ -131,7 +134,9 @@
             </div>
             <!-- ANCHOR download LG-->
             <div
-              class="block-download w-full mx-auto hidden lg:block pr-[.69em] lg:pr-[1em] relative">
+              class="block-download w-full mx-auto hidden lg:block pr-[.69em] lg:pr-[1em] relative"
+              data-toggle="modal"
+              data-target="modal-fanpage">
               <div class="w-image-block icon mx-auto w-10/12 relative z-10">
                 <img src="./images/game-icon.webp" alt="" />
               </div>
@@ -589,6 +594,34 @@
       </div>
     </div>
     <!-- end div page-wrapper -->
+    <!-- ANCHOR modal ---------------------------------------------->
+    <!-- modal confirm -->
+    <div class="wmodal" id="modal-fanpage">
+      <div class="wmodal-content relative">
+        <button class="btn-close-modal" data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Thông báo</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit text-center">
+              <p>
+                Lăng Vân Chi Kiếm - VGP sẽ ra mắt vào cuối tháng 5/2024, chi
+                tiết các Đại Hiệp xin vui lòng truy cập vào fanpage:
+                <a href="#">....</a>
+              </p>
+              <div class="mt-[1em] grid grid-flow-col gap-[1em] w-8/12 mx-auto">
+                <button
+                  data-dismiss="modal"
+                  class="bg-primary py-[.5em] text-white rounded">
+                  Vào Fanpage
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- <script src="./script/waccordion.js"></script> -->
   </body>
