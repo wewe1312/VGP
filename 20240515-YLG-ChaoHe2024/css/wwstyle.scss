@@ -1,0 +1,65 @@
+@import "../wstyle/wstyle";
+@import "../wstyle/woffcanvas";
+@import "../wstyle/ztimeline";
+@import "../wstyle/wmodal";
+@import "../wstyle/zbgvideo";
+@import "../wstyle/zanimate";
+@import "../wstyle/wtabs";
+@import "../wstyle/scroll";
+@import "../wstyle/checkin";
+@import "../wstyle/float";
+@import "../wstyle/character";
+@import "../wstyle/wwheel";
+@import "../wstyle/modal-gift-content";
+@import "../wstyle/board";
+@import "../wstyle/wwheel";
+@import "../wstyle/layout-02";
+
+.w-btn {
+  padding: 0.5em 1em;
+  border: 1px var(--w-secondary) solid;
+  border-radius: 1em;
+}
+
+/* ANCHOR section-04 */
+#section-04 {
+  background: url("../images/block004/bg-sm.webp") no-repeat center top;
+  background-size: 100% auto;
+}
+#section-04 {
+  .gift {
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    padding: 9.5em 3em 0;
+    aspect-ratio: 361/459;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    align-content: flex-start;
+    gap: 0.25em;
+    cursor: pointer;
+
+    transform: scale(1);
+  }
+
+  @for $i from 1 through 4 {
+    .gift:nth-child(#{$i}) {
+      $link: "../images/block004/block-top" + $i + ".webp";
+      background-image: url($link);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  #section-04 {
+    background-image: url(../images/block004/bg-lg.webp);
+    .gift {
+      padding: 16.75em 4.5em 0;
+    }
+
+    .gift:nth-child(2n) {
+      margin-top: 2em;
+    }
+  }
+}
