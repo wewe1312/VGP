@@ -1,8 +1,0 @@
-.layout-02 {
-  grid-template-areas: "wheel" "content";
-}
-@media (min-width: 1024px) {
-  .layout-02 {
-    grid-template-areas: "content wheel";
-  }
-}
