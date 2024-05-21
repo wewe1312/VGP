@@ -1,0 +1,7 @@
+.tabs-button button:not(.active) {
+  filter: brightness(0.69) grayscale(0.1);
+  transition: all 0.36s ease;
+}
+.tabs-content .content:not(.active) {
+  display: none;
+}

@@ -1,0 +1,44 @@
+.btn-atk-small {
+  width: 16em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -8em;
+  margin-left: -8em;
+  transform: scale(0.1);
+  opacity: 0;
+  transition: all 0.36s ease;
+  aspect-ratio: 1/1;
+  z-index: 0;
+  background: url("../images/block003/bg-btn-atk-small.png") no-repeat center
+    center;
+  background-size: 100% 100%;
+  filter: drop-shadow(0em 0em 4em rgba(0, 0, 0, 0.5));
+}
+
+.btn-atk-small.show {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .block-boss {
+    grid-template-areas: "cumbtn boss btnatk";
+    .boss {
+      grid-area: boss;
+    }
+    .btn-atk {
+      grid-area: btnatk;
+    }
+    .cum-btn {
+      grid-area: cumbtn;
+    }
+  }
+
+  .btn-atk-small {
+    width: 20em;
+    margin-top: -10em;
+    margin-left: -10em;
+  }
+}

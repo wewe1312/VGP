@@ -1,0 +1,129 @@
+@import "../wstyle/wstyle";
+@import "../wstyle/woffcanvas";
+@import "../wstyle/ztimeline";
+@import "../wstyle/wmodal";
+@import "../wstyle/zbgvideo";
+@import "../wstyle/zanimate";
+@import "../wstyle/wtabs";
+@import "../wstyle/scroll";
+@import "../wstyle/checkin";
+@import "../wstyle/float";
+@import "../wstyle/character";
+@import "../wstyle/wwheel";
+@import "../wstyle/modal-gift-content";
+@import "../wstyle/board";
+@import "../wstyle/wwheel";
+@import "../wstyle/layout-02";
+
+.w-btn {
+  padding: 0.5em 1em;
+  border: 1px var(--w-secondary) solid;
+  border-radius: 1em;
+}
+
+/* ANCHOR section-03 */
+#section-03 {
+  background: url("../images/block003/bg-sm.webp") no-repeat center top;
+  background-size: 100% auto;
+}
+.info {
+  background-color: rgba(255, 255, 255, 0.8);
+  filter: drop-shadow(0 0 0.5em rgba(0, 0, 0, 0.25));
+  border-radius: 1em;
+}
+.item-big {
+  background: rgba(0, 0, 0, 0) url(../images/block003/block-item.webp) no-repeat
+    center center scroll;
+  background-size: auto;
+  background-size: 100% 100%;
+  aspect-ratio: 291/400;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.75em 0.5em;
+  text-align: center;
+  gap: 0.25em;
+  color: #fff;
+  line-height: 1;
+  cursor: pointer;
+  .icon {
+    width: 69%;
+    animation: glow 1s ease 0s infinite;
+  }
+  .price {
+    background-color: var(--w-secondary);
+    color: #fff;
+    padding: 0.25em 0.5em;
+    border-radius: 1em;
+  }
+  .quantity {
+    color: #fcff49;
+    opacity: 0.69;
+    font-size: 0.8em;
+  }
+}
+//pag
+.swiper-pag {
+  display: flex;
+  justify-content: center;
+  > span {
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    color: white;
+    border-radius: 0.25em;
+    background-color: var(--w-primary);
+  }
+}
+@media (min-width: 1024px) {
+  #section-03 {
+    background-image: url(../images/block003/bg-lg.webp);
+  }
+}
+
+/* ANCHOR section-04 */
+#section-04 {
+  background: url("../images/block004/bg-sm.webp") no-repeat center top;
+  background-size: 100% auto;
+}
+#section-04 {
+  .gift {
+    width: 50%;
+    height: fit-content;
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    padding: 9.5em 2.5em 0;
+    aspect-ratio: 361/459;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    align-content: flex-start;
+    gap: 0.25em;
+    cursor: pointer;
+
+    transform: scale(1.1);
+  }
+
+  @for $i from 1 through 5 {
+    .gift:nth-child(#{$i}) {
+      $link: "../images/block004/block-top" + $i + ".webp";
+      background-image: url($link);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  #section-04 {
+    background-image: url(../images/block004/bg-lg.webp);
+    .gift {
+      width: 20%;
+      padding: 13.25em 3em 0;
+    }
+
+    .gift:nth-child(2n) {
+      margin-top: 2em;
+    }
+  }
+}
