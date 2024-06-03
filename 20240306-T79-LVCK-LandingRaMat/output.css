@@ -3185,8 +3185,32 @@ body {
     font-size: .8em;
   }
 
-  .lg\:leading-\[2\.75\]{
-    line-height: 2.75;
+  .lg\:text-\[1\.5em\]{
+    font-size: 1.5em;
+  }
+
+  .lg\:text-\[1\.35em\]{
+    font-size: 1.35em;
+  }
+
+  .lg\:text-\[1\.3em\]{
+    font-size: 1.3em;
+  }
+
+  .lg\:leading-\[2\]{
+    line-height: 2;
+  }
+
+  .lg\:leading-\[2\.5\]{
+    line-height: 2.5;
+  }
+
+  .lg\:leading-\[1\.75\]{
+    line-height: 1.75;
+  }
+
+  .lg\:leading-\[1\.8\]{
+    line-height: 1.8;
   }
 }
 
