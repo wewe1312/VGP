@@ -1,0 +1,50 @@
+.block-character {
+  background: transparent url("../images/character/bg-char.webp") no-repeat
+    center center scroll;
+  background-size: 100% auto;
+}
+
+.character-slide {
+  aspect-ratio: 750/779;
+
+  .swiper-slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    max-width: 200% !important;
+    height: auto;
+  }
+  .swiper-slide video {
+    position: absolute;
+    bottom: 2%;
+    right: 1.25%;
+    aspect-ratio: 646/415;
+    background-color: #000;
+    width: 67%;
+    display: none;
+  }
+}
+
+.character-thumb-slide {
+  .swiper-slide:not(.swiper-slide-thumb-active) {
+    img {
+      opacity: 1;
+      filter: brightness(0.5);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .character-slide {
+    aspect-ratio: 1491/779;
+
+    .swiper-slide img {
+      width: 100%;
+    }
+
+    .swiper-slide video {
+      display: block;
+    }
+  }
+}
