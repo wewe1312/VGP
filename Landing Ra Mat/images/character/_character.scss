@@ -1,27 +1,27 @@
 .block-character {
-  background: transparent url("../images/character/bg-char.webp") no-repeat
-    center center scroll;
+  /* background: transparent url("../images/character/bg-char.webp") no-repeat
+    center center scroll; */
   background-size: 100% auto;
 }
 
 .character-slide {
-  aspect-ratio: 750/779;
+  aspect-ratio: 600/735;
 
   .swiper-slide img {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 200%;
-    max-width: 200% !important;
+    left: -10em;
+    width: 300%;
+    max-width: 300% !important;
     height: auto;
   }
   .swiper-slide video {
     position: absolute;
-    bottom: 2%;
-    right: 1.25%;
-    aspect-ratio: 646/415;
+    bottom: 5%;
+    right: 0%;
+    aspect-ratio: 1200/561;
     background-color: #000;
-    width: 67%;
+    width: 66%;
     display: none;
   }
 }
@@ -37,10 +37,11 @@
 
 @media (min-width: 1024px) {
   .character-slide {
-    aspect-ratio: 1491/779;
+    aspect-ratio: 1920/735;
 
     .swiper-slide img {
       width: 100%;
+      left: 0em;
     }
 
     .swiper-slide video {

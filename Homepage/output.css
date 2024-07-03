@@ -696,12 +696,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0;
 }
 
-.mt-\[0em\]{
-  margin-top: 0em;
+.mt-\[10em\]{
+  margin-top: 10em;
 }
 
-.mt-\[-2em\]{
-  margin-top: -2em;
+.mt-\[0em\]{
+  margin-top: 0em;
 }
 
 .mt-\[5em\]{
@@ -710,6 +710,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-2{
   margin-top: 0.5rem;
+}
+
+.mt-\[-2em\]{
+  margin-top: -2em;
 }
 
 .box-border{
@@ -864,6 +868,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: calc(100% - 0.25rem);
 }
 
+.h-\[40em\]{
+  height: 40em;
+}
+
+.h-\[35em\]{
+  height: 35em;
+}
+
+.h-\[32em\]{
+  height: 32em;
+}
+
+.h-\[32\.5em\]{
+  height: 32.5em;
+}
+
 .w-\[15em\]{
   width: 15em;
 }
@@ -894,10 +914,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[2\.5em\]{
   width: 2.5em;
-}
-
-.w-8\/12{
-  width: 66.666667%;
 }
 
 .w-\[8em\]{
@@ -2617,6 +2633,34 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 1024px){
+  .lg\:absolute{
+    position: absolute;
+  }
+
+  .lg\:top-0{
+    top: 0px;
+  }
+
+  .lg\:right-0{
+    right: 0px;
+  }
+
+  .lg\:left-0{
+    left: 0px;
+  }
+
+  .lg\:left-\[-10em\]{
+    left: -10em;
+  }
+
+  .lg\:left-\[-6em\]{
+    left: -6em;
+  }
+
+  .lg\:left-\[-5em\]{
+    left: -5em;
+  }
+
   .lg\:col-span-6{
     grid-column: span 6 / span 6;
   }
@@ -2637,8 +2681,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-left: 53em;
   }
 
-  .lg\:mt-\[25em\]{
-    margin-top: 25em;
+  .lg\:mt-\[23em\]{
+    margin-top: 23em;
   }
 
   .lg\:mb-\[0\.5em\]{
@@ -2653,12 +2697,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: -4em;
   }
 
-  .lg\:mt-\[23em\]{
-    margin-top: 23em;
+  .lg\:ml-\[54em\]{
+    margin-left: 54em;
   }
 
-  .lg\:mt-\[24em\]{
-    margin-top: 24em;
+  .lg\:ml-\[55em\]{
+    margin-left: 55em;
+  }
+
+  .lg\:mt-0{
+    margin-top: 0px;
   }
 
   .lg\:block{
@@ -2693,20 +2741,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 22em;
   }
 
-  .lg\:w-\[13em\]{
-    width: 13em;
-  }
-
-  .lg\:w-\[70\.5em\]{
-    width: 70.5em;
+  .lg\:w-\[12em\]{
+    width: 12em;
   }
 
   .lg\:w-\[30em\]{
     width: 30em;
   }
 
-  .lg\:w-\[12em\]{
-    width: 12em;
+  .lg\:w-\[20em\]{
+    width: 20em;
   }
 
   .lg\:grid-cols-8{
