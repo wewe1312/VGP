@@ -1,0 +1,93 @@
+@import "../wstyle/wstyle";
+@import "../wstyle/woffcanvas";
+@import "../wstyle/ztimeline";
+@import "../wstyle/wmodal";
+@import "../wstyle/zbgvideo";
+@import "../wstyle/zanimate";
+@import "../wstyle/wtabs";
+@import "../wstyle/scroll";
+@import "../wstyle/checkin";
+@import "../wstyle/float";
+@import "../wstyle/character";
+@import "../wstyle/wwheel";
+@import "../wstyle/modal-gift-content";
+@import "../wstyle/saber";
+
+@import "../wstyle/board";
+
+.w-btn {
+  padding: 0.5em 1em;
+  border: 1px var(--w-secondary) solid;
+  border-radius: 1em;
+}
+
+/* ANCHOR section 01 */
+
+/* ANCHOR section-02 */
+.info {
+  background-color: rgba(255, 255, 255, 0.8);
+  filter: drop-shadow(0 0 0.5em rgba(0, 0, 0, 0.25));
+  border-radius: 1em;
+}
+
+/* section-03 */
+
+@media (min-width: 1024px) {
+  .block-boss {
+    grid-template-areas: "start center end";
+
+    .cum-btn {
+      grid-area: start;
+    }
+    .boss {
+      grid-area: center;
+    }
+    .info {
+      grid-area: end;
+      height: fit-content;
+    }
+  }
+}
+
+/* ANCHOR section-04 */
+#section-04 {
+  .gift {
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    height: fit-content;
+    padding: 9.75em 2em 0;
+    aspect-ratio: 347/457;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    align-content: flex-start;
+    gap: 0.25em;
+    cursor: pointer;
+
+    transform: scale(1);
+  }
+
+  @for $i from 1 through 5 {
+    .gift:nth-child(#{$i}) {
+      $link: "../images/block004/block-top" + $i + ".webp";
+      background-image: url($link);
+    }
+  }
+
+  .gift:nth-child(1) {
+    padding: 12.5em 2.5em 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  #section-04 {
+    .gift {
+      padding: 12em 2em 0 !important;
+    }
+
+    .gift:nth-child(2n) {
+      margin-top: 2em;
+    }
+  }
+}
