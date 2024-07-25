@@ -1,0 +1,52 @@
+.wwheel .w-image-block,
+.wwheel .w-image-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wwheel {
+  background: transparent url("../images/block002/wheelbg.webp") center center
+    scroll;
+  background-size: 100% 100%;
+  aspect-ratio: 1/1;
+  position: relative;
+  cursor: pointer;
+
+  .num {
+    position: absolute;
+    background-color: white;
+    padding: 0.25em 0.5em;
+    border-radius: 1em;
+    font-weight: bold;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+}
+.wheel {
+  aspect-ratio: 1/1;
+  transform-origin: center center;
+  > img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.wheel-button-small {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: grid;
+  gap: 0.5em;
+  filter: drop-shadow(0 0 1em rgba(0, 0, 0, 0.5));
+
+  > button {
+    padding: 0.75em 1.5em;
+    background-color: var(--w-primary);
+    color: white;
+    border-radius: 1em;
+  }
+}

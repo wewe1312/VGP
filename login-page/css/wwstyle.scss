@@ -1,0 +1,42 @@
+@import "../wstyle/wstyle";
+@import "../wstyle/popup-login";
+@import "../wstyle/wmodal";
+@import "../wstyle/zanimate";
+
+.w-btn {
+  padding: 0.5em 1em;
+  border: 1px var(--w-secondary) solid;
+  border-radius: 1em;
+}
+
+.info {
+  background-color: rgba($color: #726151, $alpha: 0.75);
+  color: #fff;
+  filter: drop-shadow(0 0 0.5em rgba(0, 0, 0, 0.25));
+  border-radius: 1em;
+}
+
+/* ANCHOR */
+.side-login {
+  background: transparent url(../images/login/bg-closet.webp) no-repeat center
+    center;
+  background-size: 100% 100%;
+  transition: width 0.15s ease-in;
+
+  &:not(.active) {
+    width: 10px !important;
+    padding: 0 !important;
+    > .wrapper {
+      opacity: 0;
+      display: none;
+    }
+  }
+}
+
+.btn-closet {
+  > img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
