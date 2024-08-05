@@ -37,10 +37,10 @@
       <!-- ANCHOR side 1 ---------------------------------------------->
       <div
         id="block-closet"
-        class="side-login active relative text-[1rem] w-[17em] h-full px-[1.6em] flex flex-wrap justify-center items-center">
+        class="side-login active relative w-[10em] px-[0.5em] text-[0.9rem] lg:text-[1rem] lg:w-[17em] h-full lg:px-[1.6em] flex flex-wrap justify-center items-center">
         <!-- butotn open close -->
         <div
-          class="absolute w-[2.94em] right-[-2em] top-[50%] -translate-y-1/2 cursor-pointer">
+          class="absolute w-[1.5em] lg:w-[2.94em] right-[-1em] lg:right-[-2em] top-[50%] -translate-y-1/2 cursor-pointer">
           <div id="btn-closet" class="btn-closet" data-toggle="switch">
             <img class="" src="./images/login/arrow-left.webp" alt="" />
             <img class="whidden" src="./images/login/arrow-right.webp" alt="" />
@@ -63,11 +63,14 @@
               alt="" />
           </a>
           <!-- info -->
-          <div class="info text-center p-[0.75em] mx-auto w-full mt-[1em]">
+          <div
+            class="info text-[0.69em] lg:text-[1em] text-center p-[0.75em] mx-auto w-full mt-[1em]">
+            <h3>Xin chào,</h3>
             <h3><b>Ma Thế Phú Cơ</b></h3>
             <div class="grid grid-cols-1">
-              <div>Lượt gieo quẻ: <span class="text-primary">1000</span></div>
-              <div>Tổng điểm: <span class="text-primary">1000</span></div>
+              <div>
+                Bạn đang chơi máy chủ: <span class="text-primary">XXX XXX</span>
+              </div>
             </div>
             <a
               class="text-primary text-[.8em] cursor-pointer block"
@@ -95,7 +98,7 @@
       <!-- ANCHOR side 2 ---------------------------------------------->
       <div class="side-ingame w-full bg-[#111]">
         <div
-          class="text-[0.9rem] w-full h-full flex justify-center items-center">
+          class="text-[0.45rem] lg:text-[0.9rem] w-full h-full flex justify-center items-center">
           <div class="popup-login w-[40.9em] relative">
             <!--  btn-close -->
             <button
@@ -104,8 +107,8 @@
             </button>
             <!-- ANCHOR side dang nhap -->
             <div
-              class="w-9/12 mx-auto flex flex-col flex-wrap justify-center items-start gap-[0.8em]">
-              <div class="w-image-block w-[10em] mx-auto">
+              class="w-9/12 mx-auto hidden flex-col flex-wrap justify-center items-start gap-[0.8em]">
+              <div class="w-image-block w-[9em] mx-auto">
                 <img
                   src="./images/login-popup/title-dangnhap.webp"
                   alt="Đăng
@@ -126,8 +129,8 @@
             </div>
             <!-- ANCHOR side dang ky -->
             <div
-              class="w-9/12 mx-auto hidden flex-col flex-wrap justify-center items-start gap-[0.8em]">
-              <div class="w-image-block w-[10em] mx-auto">
+              class="w-9/12 mx-auto flex flex-col flex-wrap justify-center items-start gap-[0.8em]">
+              <div class="w-image-block w-[9em] mx-auto">
                 <img
                   src="./images/login-popup/title-dangky.webp"
                   alt="Đăng Ký" />
@@ -150,13 +153,10 @@
               class="w-9/12 mx-auto flex flex-col flex-wrap justify-center items-start gap-[0.5em]">
               <h3 class="opacity-50 mx-auto">Hoặc đăng nhập bằng</h3>
               <button type="button" class="w-image-button">
+                <img src="./images/login-popup/button-vgp.png" alt="" />
+              </button>
+              <button type="button" class="w-image-button">
                 <img src="./images/login-popup/button-facebook.webp" alt="" />
-              </button>
-              <button type="button" class="w-image-button">
-                <img src="./images/login-popup/button-apple.webp" alt="" />
-              </button>
-              <button type="button" class="w-image-button">
-                <img src="./images/login-popup/btn-dangky.webp" alt="" />
               </button>
             </div>
           </div>
