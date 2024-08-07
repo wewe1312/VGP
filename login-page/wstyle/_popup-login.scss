@@ -16,6 +16,11 @@
   }
 }
 
+.wrap-login {
+  background-color: rgba(0, 0, 0, 0.69);
+  backdrop-filter: blur(1em);
+}
+
 #block-dangnhap:not(.active) {
   display: none;
 }
