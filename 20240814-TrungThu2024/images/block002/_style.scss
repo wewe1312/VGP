@@ -1,0 +1,49 @@
+#section-02 {
+  .day-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .day {
+      display: block;
+      position: relative;
+      background: transparent url(../images/block002/day/day001.webp) no-repeat
+        center center;
+      background-size: 100% 100%;
+      aspect-ratio: 179/302;
+      transform: scale(1);
+
+      // .btn-thamgia {
+      //   width: 69%;
+      //   margin: 11em auto 0 auto;
+      // }
+    }
+
+    .day.disabled {
+      filter: grayscale(0.5) brightness(0.69);
+
+      .btn-thamgia {
+        display: none;
+      }
+    }
+
+    @for $i from 1 through 7 {
+      .day:nth-child(#{$i}) {
+        background-image: url("../images/block002/day/day00" + $i + ".webp");
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    .day:last-child {
+      width: 75%;
+      aspect-ratio: 640/251;
+      background-image: url("../images/block002/day/day007-m.webp") !important;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .day:nth-child(2n) {
+    transform: translateY(3em) scale(1) !important;
+  }
+}

@@ -1,0 +1,86 @@
+#section-03 {
+  background-color: #fff !important;
+
+  .pack-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .pack {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20% 7% 20%;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background: transparent url(../images/block003/pack/goi-001.webp)
+        no-repeat center center;
+      background-size: 100% 100%;
+      aspect-ratio: 351/579;
+      overflow: hidden;
+      transform: scale(1);
+
+      @media (min-width: 1024px) {
+        padding: 14% 3% 12%;
+      }
+
+      .wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .item {
+        width: 30%;
+        height: fit-content;
+      }
+    }
+
+    @for $i from 1 through 6 {
+      .pack:nth-child(#{$i}) {
+        background-image: url("../images/block003/pack/goi-00" + $i + ".webp");
+      }
+    }
+  }
+}
+
+.item {
+  line-height: 1;
+  text-align: center;
+  position: relative;
+  aspect-ratio: 100/150;
+  overflow: hidden;
+  @media (min-width: 1024px) {
+    aspect-ratio: 100/150;
+  }
+
+  > img {
+    aspect-ratio: 1/1;
+    width: 90%;
+    margin: 0 auto;
+  }
+  > h1 {
+    font-size: 0.5em;
+    // height: 3em;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    margin-top: 0.5em;
+
+    @media (min-width: 1024px) {
+      font-size: 0.69em;
+    }
+  }
+  > h2 {
+    display: block;
+    position: absolute;
+    color: #fff;
+    background-color: #900;
+    padding: 0.25em;
+    border-radius: 0.25em;
+    top: 0;
+    right: 0;
+    font-size: 0.69em;
+  }
+}
