@@ -1,0 +1,67 @@
+@import "../wstyle/style";
+@import "../wstyle/woffcanvas";
+@import "../wstyle/waccordion";
+@import "../wstyle/zanimate";
+@import "../images/character/character";
+@import "../wstyle/single";
+@import "../wstyle/wmodal";
+
+@import "../images/bgvideo/bgvideo";
+
+.block-choingay {
+  background: transparent url(../images/block-download.webp) no-repeat center
+    center;
+  background-size: 100% 100%;
+  aspect-ratio: 1170/317;
+  grid-template-columns: 28em 17.17em auto;
+
+  .block-store {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: end;
+    padding-left: 13em;
+    height: fit-content;
+    padding-top: 7.6em;
+    gap: 0.25em;
+
+    > a {
+      flex: auto;
+      width: 100%;
+    }
+  }
+
+  .block-btnchoingay {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    padding-bottom: 1.25em;
+  }
+
+  .block-cumbutton {
+    width: 92%;
+    padding-top: 8.25em;
+    padding-left: 1em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 0.5em;
+
+    a {
+      background: transparent url(../images/btn-big.webp) no-repeat center
+        center;
+      background-size: 300% 100%;
+      aspect-ratio: 130/144;
+      display: block;
+      text-indent: -9999px;
+    }
+
+    @for $i from 1 through 3 {
+      a:nth-child(#{$i}) {
+        background-position: (50% * ($i - 1)) 0%;
+      }
+    }
+  }
+}

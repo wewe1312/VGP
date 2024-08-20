@@ -1,0 +1,35 @@
+@import "../wstyle/wstyle";
+@import "../wstyle/woffcanvas";
+@import "../wstyle/ztimeline";
+@import "../wstyle/wmodal";
+@import "../wstyle/zbgvideo";
+@import "../wstyle/zanimate";
+@import "../wstyle/wtabs";
+@import "../wstyle/scroll";
+@import "../wstyle/checkin";
+@import "../wstyle/float";
+@import "../wstyle/ranking";
+@import "../wstyle/wwheel";
+@import "../wstyle/modal-gift-content";
+@import "../wstyle/footer";
+
+// import
+@import "../images/block001/style";
+@import "../images/bgvideo/bgvideo";
+@import "../images/block-diemdanh/style";
+@import "../images/block-diemdanh-2/style";
+@import "../images/block-minigame/style";
+@import "../images/block-slider/style";
+@import "../images/block-bxh/style";
+
+.w-btn {
+  padding: 0.5em 1em;
+  border: 1px var(--w-secondary) solid;
+  border-radius: 1em;
+}
+
+.info {
+  background-color: rgba($color: #fff, $alpha: 0.85);
+  border-radius: 1em;
+  border: dashed var(--w-primary) 1px;
+}

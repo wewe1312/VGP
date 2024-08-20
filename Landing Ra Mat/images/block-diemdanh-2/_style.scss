@@ -1,0 +1,100 @@
+#section-diemdanh-2 {
+  background: url(../images/block-diemdanh-2/bg-sm.webp) no-repeat center 0em
+    scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    background: url(../images/block-diemdanh-2/bg-lg.webp) no-repeat center 0em
+      scroll;
+    background-size: 100vw auto;
+  }
+
+  .day-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .day {
+      width: 70%;
+      display: block;
+      position: relative;
+      background: transparent url(../images/block-diemdanh-2/moc/moc-001.webp)
+        no-repeat center center;
+      background-size: 100% 100%;
+      aspect-ratio: 467/337;
+      transform: scale(1) rotate(0deg);
+      cursor: pointer;
+
+      // .btn-thamgia {
+      //   width: 69%;
+      //   margin: 11em auto 0 auto;
+      // }
+    }
+
+    .day:nth-child(3n) {
+      transform: translateX(0em) scale(1);
+      @media (min-width: 1024px) {
+        transform: translateX(0em) scale(1) rotate(0deg);
+      }
+    }
+
+    .day:last-child {
+      transform-origin: center top;
+      transform: scale(1.15);
+
+      @media (min-width: 1024px) {
+        transform: translateX(0em) scale(1) rotate(0deg);
+      }
+    }
+
+    .day.disabled {
+      filter: grayscale(0.5) brightness(0.69);
+
+      .btn-thamgia {
+        display: none;
+      }
+    }
+
+    @for $i from 1 through 5 {
+      .day:nth-child(#{$i}) {
+        background-image: url("../images/block-diemdanh-2/moc/moc-00" + $i + ".webp");
+      }
+    }
+  }
+  /* @media (max-width: 1024px) {
+    .day:last-child {
+      width: 75%;
+      aspect-ratio: 640/251;
+      background-image: url("../images/block002/day/day007-m.webp") !important;
+    }
+  } */
+
+  .block-luotdangky {
+    background-color: var(--w-primary);
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+
+    h3 {
+      opacity: 0.5;
+    }
+    h1 {
+      font-size: 2em;
+      font-weight: bold;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .day {
+      width: 33% !important;
+    }
+    .day:first-child {
+      /* margin-left: 2% !important; */
+    }
+  }
+}

@@ -1,0 +1,128 @@
+#section-minigame {
+  background: #ffebd4 url(../images/block-minigame/bg-sm.webp) no-repeat center
+    0em scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    background: url(../images/block-minigame/bg-lg.webp) no-repeat center 0em
+      scroll;
+    background-size: 100vw auto;
+  }
+
+  .tivi {
+    background: url(../images/block-minigame/tivi.webp) no-repeat center center
+      scroll;
+    background-size: 100% 100%;
+    aspect-ratio: 662/750;
+    padding: 2em;
+    position: relative;
+    @media (min-width: 1024px) {
+      padding: 3em;
+    }
+
+    .wrap {
+      gap: 1%;
+      aspect-ratio: 1/1;
+
+      .item {
+        width: 100%;
+        transition: all 0.1s ease;
+      }
+
+      .item.active {
+        filter: brightness(1.5);
+        transform: scale(1.1);
+      }
+    }
+
+    .block-button {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0.5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (min-width: 1024px) {
+        bottom: 1em;
+      }
+
+      .luotquay {
+        background: url(../images/block-minigame/luotquay.webp) no-repeat center
+          center scroll;
+        background-size: 100% 100%;
+        aspect-ratio: 168/65;
+        height: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 0.8em;
+        @media (min-width: 1024px) {
+          padding: 1.1em;
+        }
+
+        span {
+          font-size: 1em;
+          font-weight: bold;
+          color: var(--w-secondary);
+
+          @media (min-width: 1024px) {
+            font-size: 1.75em;
+          }
+        }
+      }
+    }
+  }
+
+  /* quest */
+  .quest {
+    background-color: rgba($color: #fff, $alpha: 0.85);
+    padding: 1.5em;
+    border-radius: 1em;
+    @media (min-width: 1024px) {
+      background-color: transparent;
+    }
+
+    .block-button {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .quest-wrap {
+      display: grid;
+      gap: 0.25em;
+
+      .quest-content {
+        background: rgb(229, 235, 255);
+        background: linear-gradient(
+          90deg,
+          rgba(229, 235, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 100%
+        );
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        border: dotted 1px #fff;
+        padding: 1em 1.25em;
+        border-radius: 1.5em;
+
+        h1 {
+          color: var(--w-primary);
+        }
+        h2 {
+          font-size: 0.9em;
+          font-style: italic;
+          opacity: 0.9;
+        }
+
+        .w-btn {
+          color: #fff;
+          background-color: var(--w-primary);
+          border-color: var(--w-primary);
+        }
+      }
+    }
+  }
+}
