@@ -10,40 +10,52 @@
 
 .block-choingay {
   background: transparent url(../images/block-download.webp) no-repeat center
-    center;
-  background-size: 100% 100%;
-  aspect-ratio: 1170/317;
-  grid-template-columns: 28em 17.17em auto;
+    bottom;
+  background-size: 100% auto;
+  aspect-ratio: 1170/332;
+  grid-template-columns: 27.25em 17.17em auto;
 
   .block-store {
     display: flex;
     flex-wrap: wrap;
-    justify-content: end;
-    align-items: end;
-    padding-left: 13em;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     height: fit-content;
-    padding-top: 7.6em;
-    gap: 0.25em;
+    padding: 8.6em 0 0 2em;
 
-    > a {
-      flex: auto;
-      width: 100%;
+    .game-icon {
+      width: 40%;
+    }
+
+    .wrap {
+      width: 60%;
+      display: block;
+      height: fit-content;
+      overflow: hidden;
+      padding: 0 0.75em;
+      gap: 0;
+
+      a {
+        flex: auto;
+        width: 100%;
+      }
     }
   }
 
   .block-btnchoingay {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: end;
-    padding-bottom: 1.25em;
+    padding-bottom: 0em;
   }
 
   .block-cumbutton {
-    width: 92%;
-    padding-top: 8.25em;
+    width: 95%;
+    padding-top: 9.25em;
     padding-left: 1em;
     display: grid;
     grid-template-columns: auto auto auto;
