@@ -577,6 +577,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
+.top-\[6\%\]{
+  top: 6%;
+}
+
+.left-\[4\%\]{
+  left: 4%;
+}
+
 .bottom-\[\.5em\]{
   bottom: .5em;
 }
@@ -720,12 +728,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 11em;
 }
 
-.mt-\[0\.5em\]{
-  margin-top: 0.5em;
-}
-
-.mt-\[10em\]{
-  margin-top: 10em;
+.mt-\[11\.5em\]{
+  margin-top: 11.5em;
 }
 
 .mr-\[\.75em\]{
@@ -746,14 +750,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.mt-\[12em\]{
-  margin-top: 12em;
-}
-
-.mt-\[11\.5em\]{
-  margin-top: 11.5em;
 }
 
 .box-border{
@@ -864,10 +860,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   aspect-ratio: 927 / 262;
 }
 
-.aspect-square{
-  aspect-ratio: 1 / 1;
-}
-
 .aspect-\[16\/9\]{
   aspect-ratio: 16 / 9;
 }
@@ -926,6 +918,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2em;
 }
 
+.w-\[36\%\]{
+  width: 36%;
+}
+
 .w-\[2\.5em\]{
   width: 2.5em;
 }
@@ -940,10 +936,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[45\%\]{
   width: 45%;
-}
-
-.w-9\/12{
-  width: 75%;
 }
 
 .w-\[48\%\]{
@@ -968,10 +960,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[\.8em\]{
   width: .8em;
-}
-
-.w-10\/12{
-  width: 83.333333%;
 }
 
 .flex-1{
@@ -2105,12 +2093,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2em;
 }
 
-.pt-\[2em\]{
-  padding-top: 2em;
-}
-
 .pb-\[3em\]{
   padding-bottom: 3em;
+}
+
+.pt-\[2em\]{
+  padding-top: 2em;
 }
 
 .text-left{
@@ -2961,28 +2949,16 @@ body {
     margin-top: 16em;
   }
 
-  .lg\:mt-\[0em\]{
-    margin-top: 0em;
+  .lg\:mt-\[13\.5em\]{
+    margin-top: 13.5em;
   }
 
   .lg\:mt-\[1\.5em\]{
     margin-top: 1.5em;
   }
 
-  .lg\:mt-\[-2em\]{
-    margin-top: -2em;
-  }
-
-  .lg\:mt-\[10em\]{
-    margin-top: 10em;
-  }
-
-  .lg\:mt-\[14em\]{
-    margin-top: 14em;
-  }
-
-  .lg\:mt-\[13\.5em\]{
-    margin-top: 13.5em;
+  .lg\:mt-\[0em\]{
+    margin-top: 0em;
   }
 
   .lg\:block{
@@ -3071,14 +3047,6 @@ body {
 
   .lg\:w-\[19em\]{
     width: 19em;
-  }
-
-  .lg\:w-\[30\%\]{
-    width: 30%;
-  }
-
-  .lg\:w-10\/12{
-    width: 83.333333%;
   }
 
   .lg\:grid-cols-6{
