@@ -357,12 +357,12 @@
         </div>
         <div
           class="w-10/12 flex flex-wrap justify-center mx-auto gap-x-[2%] gap-y-[0.5em] mt-[1em] lg:w-6/12">
-          <button
+          <!-- <button
             class="w-image-button w-[48%] lg:w-[32%]"
             data-toggle="modal"
             data-target="modal-login">
             <img src="./images/block-diemdanh/btn-dangnhap.webp" alt="" />
-          </button>
+          </button> -->
           <button
             class="w-image-button w-[48%] lg:w-[32%]"
             data-toggle="modal"
@@ -440,7 +440,7 @@
           <button
             class="w-image-button"
             data-toggle="modal"
-            data-target="modal-login">
+            data-target="modal-nhiemvu">
             <img src="./images/block003/btn-nhanluot.webp" alt="" />
           </button>
           <button
@@ -461,7 +461,10 @@
             data-target="modal-thele">
             <img src="./images/block003/btn-thele.webp" alt="" />
           </button>
-          <button class="w-image-button" data-toggle="modal" data-target="">
+          <button
+            class="w-image-button"
+            data-toggle="modal"
+            data-target="modal-doiqua">
             <img src="./images/block003/btn-doiqua.webp" alt="" />
           </button>
           <button
@@ -480,9 +483,9 @@
         <div class="w-12/12 mx-auto mt-[10em] lg:w-[69em] lg:mt-[16.5em]">
           <!-- player info -->
           <div class="ranking-info w-12/12 mx-auto">
-            <div>
+            <div class="text-center w-full">
               <h1 class="font-bold">
-                Bạn đã tiêu <span class="text-primary">10.000</span>
+                Bạn đang có <span class="text-primary">10.000</span> tích điểm.
               </h1>
             </div>
             <button
@@ -522,7 +525,7 @@
                   <h1>Quà TOP 1</h1>
                   <div class="wrap">
                     <!-- item -->
-                    <div class="witem" data-loop="6">
+                    <div class="witem" data-loop="4">
                       <img
                         src="./images/item/item.webp"
                         alt="Bối Thiên Thạch Cỡ Đại" />
@@ -533,10 +536,10 @@
                 </div>
                 <!-- top 1  -->
                 <div class="quatop">
-                  <h1>Quà TOP 1</h1>
+                  <h1>Quà TOP 2-10</h1>
                   <div class="wrap">
                     <!-- item -->
-                    <div class="witem" data-loop="6">
+                    <div class="witem" data-loop="4">
                       <img
                         src="./images/item/item.webp"
                         alt="Bối Thiên Thạch Cỡ Đại" />
@@ -547,38 +550,10 @@
                 </div>
                 <!-- top 1  -->
                 <div class="quatop">
-                  <h1>Quà TOP 3</h1>
+                  <h1>Quà TOP 11-20</h1>
                   <div class="wrap">
                     <!-- item -->
-                    <div class="witem" data-loop="5">
-                      <img
-                        src="./images/item/item.webp"
-                        alt="Bối Thiên Thạch Cỡ Đại" />
-                      <h1 class="name">Bối Thiên Thạch Cỡ Đại Cỡ Cực Đại</h1>
-                      <span class="quantity">x5</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- top 1  -->
-                <div class="quatop">
-                  <h1>Quà TOP 4</h1>
-                  <div class="wrap">
-                    <!-- item -->
-                    <div class="witem" data-loop="5">
-                      <img
-                        src="./images/item/item.webp"
-                        alt="Bối Thiên Thạch Cỡ Đại" />
-                      <h1 class="name">Bối Thiên Thạch Cỡ Đại Cỡ Cực Đại</h1>
-                      <span class="quantity">x5</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- top 1  -->
-                <div class="quatop">
-                  <h1>Quà TOP 5</h1>
-                  <div class="wrap">
-                    <!-- item -->
-                    <div class="witem" data-loop="3">
+                    <div class="witem" data-loop="4">
                       <img
                         src="./images/item/item.webp"
                         alt="Bối Thiên Thạch Cỡ Đại" />
@@ -626,7 +601,7 @@
         </div>
         <!-- status -->
         <div class="block-luotdangky text-[1.1em] mt-[1em] mx-auto lg:w-5/12">
-          Toàn Server đã tích được XXXX lượt Thổi Nến
+          Toàn Server đã tích được XXXX Tích Điểm Thổi Nến
         </div>
       </div>
     </section>
@@ -691,7 +666,7 @@
                     <button
                       class="btn-xemqua w-image-button w-11/12 lg:hidden"
                       data-toggle="modal"
-                      data-target="modal-gift">
+                      data-target="modal-list-gift">
                       <img
                         src="./images/block-webshop/btn-xemqua.webp"
                         alt="" />
@@ -1005,6 +980,31 @@
       </div>
     </div>
 
+    <!-- modal list gift -->
+    <div class="wmodal" id="modal-list-gift">
+      <div class="wmodal-content relative">
+        <button class="btn-close-modal" data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Bảo Rương</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <ul class="grid grid-cols-1 gap-[1em] mt-[1em]">
+              <li
+                class="flex flex-row justify-center items-center gap-[0.5em]"
+                data-toggle="loop"
+                data-loop="5">
+                <div class="w-[3em] w-image-block">
+                  <img src="./images/item.png" alt="" />
+                </div>
+                <div class="font-bold">Áo Choàng Bóng Tối x 1</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- modal lichsu -->
     <div class="wmodal" id="modal-lichsu">
       <div class="wmodal-content relative">
@@ -1159,6 +1159,62 @@
       </div>
     </div>
 
+    <!-- modal doiqua -->
+    <div class="wmodal" id="modal-doiqua">
+      <div class="wmodal-content relative">
+        <button
+          class="btn-close-modal aspect-square"
+          data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Mốc Quà</span>
+          </h1>
+          <div class="content-scroll mt-[1em]" data-simplebar="">
+            <div class="h-fit">
+              <div class="grid grid-cols-1">
+                <div
+                  class="w-full flex justify-around items-center py-[0.75em] border-b"
+                  data-loop="10">
+                  <div class="text-primary uppercase">10 tích điểm</div>
+                  <div class="w-5/12 flex flex-wrap">
+                    <div class="w-1/4 witem">
+                      <img
+                        src="./images/item/item.webp"
+                        alt="Bối Thiên Thạch Cỡ Đại" />
+                      <h1 class="name">Bối Thiên Thạch Cỡ Đại Cỡ Cực Đại</h1>
+                      <span class="quantity">x5</span>
+                    </div>
+                    <div class="w-1/4 witem">
+                      <img
+                        src="./images/item/item.webp"
+                        alt="Bối Thiên Thạch Cỡ Đại" />
+                      <h1 class="name">Bối Thiên Thạch Cỡ Đại Cỡ Cực Đại</h1>
+                      <span class="quantity">x5</span>
+                    </div>
+                    <div class="w-1/4 witem">
+                      <img
+                        src="./images/item/item.webp"
+                        alt="Bối Thiên Thạch Cỡ Đại" />
+                      <h1 class="name">Bối Thiên Thạch Cỡ Đại Cỡ Cực Đại</h1>
+                      <span class="quantity">x5</span>
+                    </div>
+                    <div class="w-1/4 witem">
+                      <img
+                        src="./images/item/item.webp"
+                        alt="Bối Thiên Thạch Cỡ Đại" />
+                      <h1 class="name">Bối Thiên Thạch Cỡ Đại Cỡ Cực Đại</h1>
+                      <span class="quantity">x5</span>
+                    </div>
+                  </div>
+                  <button class="w-btn text-white bg-primary">Nhận</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- modal item detail -->
     <div class="wmodal" id="modal-item">
       <div class="wmodal-content relative">
@@ -1199,6 +1255,63 @@
                       Đổi
                     </button>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANCHOR modal nhiemvu -->
+    <div class="wmodal" id="modal-nhiemvu">
+      <div class="wmodal-content">
+        <button
+          class="btn-close-modal aspect-square w-[6em]"
+          data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Nhiệm Vụ</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit">
+              <!-- nhiem vu -->
+              <div
+                class="grid grid-cols-3 gap-[.5em] py-[1em] border-b-[1px] border-b-[#ccc]">
+                <div class="col-span-2">
+                  <span class="text-primary">Nhiệm vụ hàng ngày</span><br />
+                  Useless selectors can be written using this pseudo-class.
+                </div>
+                <div class="col-span-1 flex justify-center items-center">
+                  <button class="p-[.5em] text-white bg-primary rounded">
+                    Nhận NV
+                  </button>
+                </div>
+              </div>
+              <!-- nhiem vu -->
+              <div
+                class="grid grid-cols-3 gap-[.5em] py-[1em] border-b-[1px] border-b-[#ccc]">
+                <div class="col-span-2">
+                  <span class="text-primary">Nhiệm vụ hàng ngày</span><br />
+                  Useless selectors can be written using this pseudo-class.
+                </div>
+                <div class="col-span-1 flex justify-center items-center">
+                  <button class="p-[.5em] text-white bg-green-400 rounded">
+                    Đã nhận
+                  </button>
+                </div>
+              </div>
+              <!-- nhiem vu -->
+              <div
+                class="grid grid-cols-3 gap-[.5em] py-[1em] border-b-[1px] border-b-[#ccc]">
+                <div class="col-span-2">
+                  <span class="text-primary">Nhiệm vụ hàng ngày</span><br />
+                  Useless selectors can be written using this pseudo-class.
+                </div>
+                <div class="col-span-1 flex justify-center items-center">
+                  <button class="p-[.5em] text-white bg-[#ccc] rounded">
+                    Hoàn thành
+                  </button>
                 </div>
               </div>
             </div>
