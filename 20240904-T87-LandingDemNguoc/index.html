@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="output.css" rel="stylesheet" />
+    <link href="css/wwstyle.min.css" rel="stylesheet" />
+
+    <!-- ANCHOR my script -->
+    <script type="module" src="./script/wloop.js"></script>
+    <script type="module" src="./images/item/script.js"></script>
+    <script type="module" src="./script/ztimeline.js"></script>
+    <script type="module" src="./script/countdown.js"></script>
+    <script type="module" src="./script/wmodal.js"></script>
+    <script type="module" src="./script/wtabs.js"></script>
+    <script type="module" src="./script/wsound.js"></script>
+
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script type="module" src="./script/wswiper.js"></script>
+    <!-- AOS -->
+    <link href="plugin/aos/aos.css" rel="stylesheet" />
+    <script src="plugin/aos/aos.js"></script>
+    <!-- simplebar -->
+    <link href="plugin/simplebar/simplebar.min.css" rel="stylesheet" />
+    <script src="plugin/simplebar/simplebar.min.js"></script>
+    <!-- dragscroll -->
+    <script src="plugin/dragscroll.js"></script>
+    <!-- scrollspy -->
+    <script src="plugin/simple-scrollspy.min.js"></script>
+  </head>
+  <body class="">
+    <!-- offcanvas -->
+    <div id="w-offcanvas" class="offcanvas float">
+      <div class="offcanvas-content w-[15em] lg:w-[15em]">
+        <div class="icon w-image-block w-full mx-auto">
+          <img src="./images/game-icon.png" alt="" />
+        </div>
+        <!-- link -->
+        <div class="link grid grid-flow-row">
+          <a href="#">Trang Chủ</a>
+          <a href="#">Fanpage</a>
+          <a href="#">Tin Tức</a>
+          <a href="#">Sự Kiện</a>
+          <a href="#">Cộng Đồng</a>
+          <a href="#">Tải Game</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- login block -->
+    <div
+      id="vgp-login-block"
+      class="btn-login-vgp absolute top-0 right-0 m-[1em] p-[.75em] z-[9] flex">
+      <!-- login 
+      <button class="w-image-button text-white cursor-pointer">
+        <div class="flex justify-end items-center">
+          <span class="content text-[1.5em] lg:text-[1em]">Đăng nhập</span>
+          <div class="w-[3em] md:w-[2em]">
+            <svg
+              class="w-full"
+              fill="#fff"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M 8 2 C 6.347656 2 5 3.347656 5 5 C 5 6.652344 6.347656 8 8 8 C 9.652344 8 11 6.652344 11 5 C 11 3.347656 9.652344 2 8 2 Z M 8 8 C 5.246094 8 3 10.246094 3 13 L 4 13 C 4 10.785156 5.785156 9 8 9 C 10.214844 9 12 10.785156 12 13 L 13 13 C 13 10.246094 10.753906 8 8 8 Z M 8 3 C 9.109375 3 10 3.890625 10 5 C 10 6.109375 9.109375 7 8 7 C 6.890625 7 6 6.109375 6 5 C 6 3.890625 6.890625 3 8 3 Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </button>
+    -->
+      <!-- logout -->
+      <button
+        class="w-image-button text-white cursor-pointer"
+        data-toggle="modal"
+        data-target="modal-login">
+        <div class="flex justify-end items-center">
+          <span class="content text-[1em] lg:text-[1em]">Đăng nhập</span>
+          <div class="w-[2em] lg:w-[2em]">
+            <svg
+              class="w-full"
+              fill="#fff"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16">
+              <path
+                d="M 8 2 C 6.347656 2 5 3.347656 5 5 C 5 6.652344 6.347656 8 8 8 C 9.652344 8 11 6.652344 11 5 C 11 3.347656 9.652344 2 8 2 Z M 8 8 C 5.246094 8 3 10.246094 3 13 L 4 13 C 4 10.785156 5.785156 9 8 9 C 10.214844 9 12 10.785156 12 13 L 13 13 C 13 10.246094 10.753906 8 8 8 Z M 8 3 C 9.109375 3 10 3.890625 10 5 C 10 6.109375 9.109375 7 8 7 C 6.890625 7 6 6.109375 6 5 C 6 3.890625 6.890625 3 8 3 Z" />
+            </svg>
+          </div>
+        </div>
+      </button>
+    </div>
+    <!-- modal login -->
+    <div class="wmodal" id="modal-login">
+      <div class="wmodal-content">
+        <button class="btn-close-modal" data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title text-primary text-center">
+            <span class="">Đăng nhập</span>
+          </h1>
+          <div class="content-scroll">
+            <div class="h-fit">
+              <div class="text-center mt-[1em]">
+                Xin hãy đăng nhập tài khoản
+              </div>
+              <form
+                class="mt-[1em] w-full overflow-hidden grid grid-flow-row gap-[.5em] text-center">
+                <input
+                  class="px-[1em] py-[.5em] rounded"
+                  type="text"
+                  placeholder="Tên Đăng Nhập" />
+                <input
+                  class="px-[1em] py-[.5em] rounded"
+                  type="password"
+                  placeholder="Mật khẩu" />
+                <select class="px-[1em] py-[.5em] rounded">
+                  <option value="1" selected disabled>Chọn máy chủ</option>
+                  <option value="1">Chọn máy chủ</option>
+                </select>
+                <select class="px-[1em] py-[.5em] rounded">
+                  <option selected disabled>Chọn nhân vật</option>
+                </select>
+                <button class="w-full p-[.5em] bg-vgp text-white rounded">
+                  Đăng nhập
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal logout -->
+    <div class="wmodal" id="modal-logout">
+      <div class="wmodal-content">
+        <button class="btn-close-modal" data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title text-primary text-center">
+            <span class="">Đăng xuất</span>
+          </h1>
+          <div class="content-scroll">
+            <div class="text-[1.6em] h-fit">
+              <div class="text-center mt-[1em]">
+                Bạn có chắc chắn muốn [Đăng Xuất]?
+              </div>
+              <div class="grid grid-cols-2 gap-[.5em] mt-[2em]">
+                <button
+                  class="p-[.5em] bg-gray-700 text-white rounded"
+                  data-dismiss="modal">
+                  Không
+                </button>
+                <button
+                  class="p-[.5em] bg-primary text-white rounded"
+                  data-dismiss="modal">
+                  Đồng ý
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- float -->
+    <div
+      class="block-float right-0 hidden lg:w-[11em] aspect-[300/788] px-[1em] m-[.5em] overflow-hidden z-[3]">
+      <div class="w-image-block w-full mx-auto">
+        <img src="./images/game-icon.png" alt="" />
+      </div>
+      <!-- store -->
+      <div
+        class="w-image-block w-full mx-auto mt-[1em] overflow-hidden relative">
+        <img src="./images/float/store.webp" alt="" />
+        <div
+          class="grid grid-flow-row absolute h-full w-full top-0 left-0 z-[1]">
+          <a href="#" class="-indent-[9999px]">Appstore</a>
+          <a href="#" class="-indent-[9999px]">Googleplay</a>
+        </div>
+      </div>
+      <!-- link -->
+      <div
+        class="link text-white grid grid-flow-row text-center aspect-[150/184] mt-[.75em]">
+        <a href="#">Trang Chủ</a>
+        <a href="#">Fanpage</a>
+        <a href="#">Cộng Đồng</a>
+      </div>
+      <!-- minimize -->
+      <button
+        class="w-full h-[5em] mt-0 block"
+        data-toggle="minimize"
+        data-target=".block-float"></button>
+      <!-- block minimize -->
+      <div
+        class="block-mini w-image-button aspect-[300/156]"
+        data-toggle="minimize"
+        data-target=".block-float">
+        <div class="icon w-[36%] absolute top-[6%] left-[4%]">
+          <img src="./images/game-icon.png" alt="" />
+        </div>
+        <img src="./images/float/float-minimize.webp" alt="" />
+      </div>
+    </div>
+
+    <!-- sound -->
+    <div class="fixed bottom-[.5em] left-[.5em] z-10 hidden">
+      <button
+        id="soundbtn"
+        class="p-[.5em] bg-primary text-white rounded-[100%] cursor-pointer opacity-50 transition">
+        <div class="flex justify-end items-center">
+          <div class="w-[2.5em] lg:w-[2em]">
+            <svg
+              width="100%"
+              height="100%"
+              fill="#fff"
+              viewBox="0 0 1024 1024"
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon">
+              <path
+                d="M892.1 737.8l-110.3-63.7a15.9 15.9 0 0 0-21.7 5.9l-19.9 34.5c-4.4 7.6-1.8 17.4 5.8 21.8L856.3 800a15.9 15.9 0 0 0 21.7-5.9l19.9-34.5c4.4-7.6 1.7-17.4-5.8-21.8zM760 344a15.9 15.9 0 0 0 21.7 5.9L892 286.2c7.6-4.4 10.2-14.2 5.8-21.8L878 230a15.9 15.9 0 0 0-21.7-5.9L746 287.8a15.99 15.99 0 0 0-5.8 21.8L760 344zm174 132H806c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16h128c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16zM625.9 115c-5.9 0-11.9 1.6-17.4 5.3L254 352H90c-8.8 0-16 7.2-16 16v288c0 8.8 7.2 16 16 16h164l354.5 231.7c5.5 3.6 11.6 5.3 17.4 5.3 16.7 0 32.1-13.3 32.1-32.1V147.1c0-18.8-15.4-32.1-32.1-32.1z" />
+            </svg>
+          </div>
+        </div>
+      </button>
+    </div>
+
+    <!-- ANCHOR - section 01 -->
+    <!--------------------------------------- section 01 ---------------------------------------------->
+    <section id="section-01" class="scrollspy relative z-[2]">
+      <!-- header menu -->
+      <div class="absolute top-[.75em] left-[.75em] z-[4]">
+        <button
+          class="w-image-button w-[3em] lg:w-[3em]"
+          data-toggle="offcanvas"
+          data-target="w-offcanvas">
+          <svg
+            class="w-full"
+            fill="#fff"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24">
+            <path
+              d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="wcontainer relative z-[3] lg:pr-[0em]">
+        <!-- ANCHOR countdown -->
+        <div
+          id="countdown"
+          class="countdown mx-auto text-secondary mt-[19.85em] lg:mt-[36em]">
+          <div class="day">00</div>
+          <div class="hour">00</div>
+          <div class="min">00</div>
+          <div class="sec">00</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANCHOR - section 02 -->
+    <section
+      id="section-diemdanh-3"
+      class="scrollspy h-[69em] lg:h-[50em] relative z-[2] overflow-hidden">
+      <div class="wcontainer">
+        <!-- gift -->
+        <div
+          class="day-wrap mt-[11em] w-11/12 mx-auto lg:w-9/12 lg:mt-[15em] animate__loop animate__glow">
+          <div
+            class="day cursor-pointer disabled"
+            data-toggle="modal"
+            data-target="modal-list-gift"
+            data-loop="4"
+            data-aos="fade-down"
+            data-aos-delay="0"></div>
+        </div>
+
+        <!-- timeline -->
+        <div
+          class="ztimeline w-10/12 mt-[1em] mx-auto cursor-pointer lg:w-9/12 lg:mt-[-0.5em]"
+          data-aos="fade-down">
+          <div class="timeline-bar" data-percent="50%"></div>
+          <!-- <div class="timeline-gifts" data-active="1/3"></div> -->
+          <div class="timeline-front"></div>
+        </div>
+
+        <!-- button -->
+        <div class="w-8/12 lg:w-3/12 mt-[1em] mx-auto">
+          <button
+            class="w-image-button w-full animate__loop animate__bling"
+            data-toggle="modal"
+            data-target="modal-confirm">
+            <img src="./images/block-diemdanh-3/btn-diemdanh.webp" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------------------------- section final ---------------------------------------------->
+    <section
+      id="section-final"
+      class="h-[15em] lg:h-[31em] relative z-[2] w-full overflow-hidden">
+      <div
+        data-aos="zoom-out"
+        class="h-full w-full flex justify-center items-center">
+        <!-- icon -->
+        <div class="w-image-block w-[8em] lg:w-[11.75em] mr-[.75em]">
+          <img
+            class="animate__loop animate__glow"
+            src="./images/game-icon.png" />
+        </div>
+        <!-- 18+ -->
+        <div class="w-[12em] lg:w-[19em]">
+          <div
+            class="search-box px-[1em] py-[.75em] flex justify-between items-center">
+            <span class="text-primary text-[.85em] leading-[1] lg:text-[1em]"
+              >Tên Game Ở Đây</span
+            >
+            <div class="w-image-block w-[1em]">
+              <img src="./images/store-badge/icon-search.webp" alt="" />
+            </div>
+          </div>
+          <div class="block-18 mt-[.5em] gap-[.25em]">
+            <div class="">
+              <a href="#">Googleplay</a>
+              <a href="#">Appstore</a>
+            </div>
+            <div class=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section>
+      <!-- 18+ -->
+      <div
+        class="text-[1em] text-center mt-[0em] px-[2em] py-[1.5em] text-red-600 bg-[#111] lg:text-[.8em]">
+        Chơ Game quá 180 phút một ngày sẽ ảnh hưởng xấu đến sức khỏe
+      </div>
+      <!-- footer -->
+      <div
+        class="footer bg-[#050505] text-white flex flex-col justify-center py-[.5em] pt-[2em]">
+        <div class="container-fluid">
+          <!-- logo -->
+          <div class="mx-auto w-[8em] flex flex-1 justify-center items-center">
+            <div class="w-image-block mx-[.5em]">
+              <img src="./images/vgp-logo-simple.webp" alt="" />
+            </div>
+          </div>
+          <!-- text -->
+          <div class="text-center text-[0.9em] my-[2em] px-[1em] opacity-80">
+            Hotline: 1900 636 521 (từ 8:00 đến 22:00) - Email:
+            hotro@vgpjsc.vn<br />Công ty CP VGP phân phối độc quyền tại Việt
+            Nam.<br />
+            Giấy phép phê duyệt nội dung số: 30/QĐ-BTTTT
+            <br />Bộ Thông Tin Và Truyền thông cấp ngày 08/01/2019 <br />Tầng 4
+            tòa nhà Greenpark Tower, 33 Dương Đình Nghệ, Yên Hòa, Cầu Giấy, Hà
+            Nội.<br />
+          </div>
+        </div>
+      </div>
+      <!-- menu -->
+      <div class="footer-menu">
+        <div class="container-fluid">
+          <div class="flex justify-center py-[.25em] text-white">
+            <a class="transition" href="#">Trang chủ</a>
+            <a class="transition" href="#">Tin tức</a>
+            <a class="transition" href="#">Sự kiện</a>
+            <a class="transition" href="#">Fanpage</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------------------------- modal ---------------------------------------------->
+    <!-- modal confirm -->
+    <div class="wmodal" id="modal-confirm">
+      <div class="wmodal-content relative">
+        <button class="btn-close-modal" data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Bạn có muốn</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit text-center">
+              <p>Đổi phần quà này?</p>
+              <div class="mt-[1em] grid grid-flow-col gap-[1em] w-8/12 mx-auto">
+                <button
+                  data-dismiss="modal"
+                  class="bg-gray-800 py-[.5em] text-white rounded">
+                  Không
+                </button>
+                <button
+                  data-dismiss="modal"
+                  class="bg-primary py-[.5em] text-white rounded">
+                  Đồng ý
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal bao danh -->
+    <div class="wmodal" id="modal-baodanh">
+      <div class="wmodal-content relative">
+        <button class="btn-close-modal" data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Báo danh trước</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <form
+              class="mt-[1em] w-full overflow-hidden grid grid-flow-row gap-[.5em] text-center">
+              <input
+                class="px-[1em] py-[.5em] rounded"
+                type="text"
+                placeholder="Họ tên" />
+              <input
+                class="px-[1em] py-[.5em] rounded"
+                type="text"
+                placeholder="Số điện thoại" />
+              <input
+                class="px-[1em] py-[.5em] rounded"
+                type="text"
+                placeholder="Email" />
+
+              <button class="w-full p-[.5em] bg-vgp text-white rounded">
+                Báo danh
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal thele -->
+    <div class="wmodal" id="modal-thele">
+      <div class="wmodal-content relative">
+        <button class="btn-close-modal" data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Thể lệ</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit text-center">
+              <p>
+                Lorem ipsum dolor sit amet, officia excepteur ex fugiat
+                reprehenderit enim labore culpa sint ad nisi Lorem pariatur
+                mollit ex esse exercitation amet. Nisi animcupidatat excepteur
+                officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip
+                amet voluptate voluptate dolor minim nulla est proident. Nostrud
+                officia pariatur ut officia. Sit irure elit esse ea nulla sunt
+                ex occaecat reprehenderit commodo officia dolor Lorem duis
+                laboris cupidatat officia voluptate. Culpa proident adipisicing
+                id nulla nisi laboris ex in Lorem sunt duis officia eiusmod.
+                Aliqua reprehenderit commodo ex non excepteur duis sunt velit
+                enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur
+                et est culpa et culpa duis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal gift -->
+    <div class="wmodal" id="modal-gift">
+      <div class="wmodal-content relative">
+        <button class="btn-close-modal" data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Phần quà</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <ul
+              class="modal-gift-content grid grid-cols-1 mt-[1em] rounded-[1em]">
+              <li>
+                <div>5.000 lượt</div>
+                <div class="font-bold">
+                  Áo Choàng Bóng Tối x 1, Áo Choàng Bóng Tối x 1, Áo Choàng Bóng
+                  Tối x 1, Áo Choàng Bóng Tối x 1
+                </div>
+                <div>
+                  <div class="icon w-[3em]"></div>
+                </div>
+              </li>
+              <li>
+                <div>5.000 lượt</div>
+                <div class="font-bold">
+                  Áo Choàng Bóng Tối x 1, Áo Choàng Bóng Tối x 1, Áo Choàng Bóng
+                  Tối x 1, Áo Choàng Bóng Tối x 1
+                </div>
+                <div>
+                  <div class="icon w-[3em] opacity-50 grayscale"></div>
+                </div>
+              </li>
+              <li>
+                <div>5.000 lượt</div>
+                <div class="font-bold">
+                  Áo Choàng Bóng Tối x 1, Áo Choàng Bóng Tối x 1, Áo Choàng Bóng
+                  Tối x 1, Áo Choàng Bóng Tối x 1
+                </div>
+                <div>
+                  <div class="icon w-[3em] opacity-50 grayscale"></div>
+                </div>
+              </li>
+              <li>
+                <div>5.000 lượt</div>
+                <div class="font-bold">
+                  Áo Choàng Bóng Tối x 1, Áo Choàng Bóng Tối x 1, Áo Choàng Bóng
+                  Tối x 1, Áo Choàng Bóng Tối x 1
+                </div>
+                <div>
+                  <div class="icon w-[3em] opacity-50 grayscale"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal list gift -->
+    <div class="wmodal" id="modal-list-gift">
+      <div class="wmodal-content relative">
+        <button class="btn-close-modal" data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Bảo Rương</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <ul class="grid grid-cols-1 gap-[1em] mt-[1em]">
+              <li
+                class="flex flex-row justify-center items-center gap-[0.5em]"
+                data-toggle="loop"
+                data-loop="5">
+                <div class="w-[3em] w-image-block">
+                  <img src="./images/item.png" alt="" />
+                </div>
+                <div class="font-bold">Áo Choàng Bóng Tối x 1</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal lichsu -->
+    <div class="wmodal" id="modal-lichsu">
+      <div class="wmodal-content relative">
+        <button class="btn-close-modal" data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Lịch sử</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit text-center">
+              <table class="w-full text-center leading-[2.5]">
+                <thead>
+                  <tr>
+                    <th class="st1">Top</th>
+                    <th class="st3">Tên</th>
+                    <th class="st2">Server</th>
+                    <th class="st4">Chiến Lực</th>
+                  </tr>
+                </thead>
+                <tbody class="content">
+                  <tr data-toggle="loop" data-loop="10">
+                    <td><span>1</span></td>
+                    <td>G63.AMG</td>
+                    <td>Thần Vương 1</td>
+                    <td>528404</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal shop -->
+    <div class="wmodal" id="modal-shop">
+      <div class="wmodal-content relative">
+        <button
+          class="btn-close-modal aspect-square"
+          data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>SHOP</span>
+          </h1>
+          <div class="text-center">
+            Số điểm hiện có <span class="text-primary">10000</span>
+          </div>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit">
+              <div class="block-items grid grid-cols-2 gap-[1px] mt-[1em]">
+                <div data-toggle="loop" data-loop="8">
+                  <!-- item -->
+                  <div class="item">
+                    <div class="w-image-block mx-auto w-8/12">
+                      <img src="./images/item.png" alt="" />
+                    </div>
+                    <div class="description text-center mt-[.5em]">
+                      <div class="name h-[3.5em]">
+                        Tên Vật Phẩm Chỉ dài như này
+                      </div>
+                      <button
+                        class="e-btn-hover-glow"
+                        data-toggle="modal"
+                        data-target="modal-confirm-item">
+                        Đổi 10 điểm
+                      </button>
+                    </div>
+                  </div>
+                  <!-- end item -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal bxh -->
+    <div class="wmodal" id="modal-bxh">
+      <div class="wmodal-content relative">
+        <button
+          class="btn-close-modal aspect-square"
+          data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Quà Lì Xì</span>
+          </h1>
+          <div class="content-scroll mt-[1em]" data-simplebar="">
+            <div class="h-fit">
+              <table class="w-full text-center leading-[2.8]">
+                <thead>
+                  <tr>
+                    <th class="st1">Top</th>
+                    <th class="st3">Tên</th>
+                    <th class="st4">Chiến Lực</th>
+                  </tr>
+                </thead>
+                <tbody class="content">
+                  <tr data-toggle="loop" data-loop="10">
+                    <td><span>1</span></td>
+                    <td>G63.AMG</td>
+                    <td>528404</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal lichsunhan -->
+    <div class="wmodal" id="modal-lichsunhan">
+      <div class="wmodal-content relative">
+        <button
+          class="btn-close-modal aspect-square"
+          data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Lịch sử</span>
+          </h1>
+          <div class="content-scroll mt-[1em]" data-simplebar="">
+            <div class="h-fit">
+              <div data-toggle="loop" data-loop="8">
+                <b>Lorem ipsum dolor:</b> sit amet consectetur adipisicing elit.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal qua -->
+    <div class="wmodal" id="modal-qua">
+      <div class="wmodal-content relative">
+        <button
+          class="btn-close-modal aspect-square"
+          data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Quà Lì Xì</span>
+          </h1>
+          <div class="content-scroll mt-[1em]" data-simplebar="">
+            <div class="h-fit">
+              <div class="text-center" data-toggle="loop" data-loop="6">
+                <b class="text-primary">Lì Xì Sơ:</b> Lorem ipsum dolor sit,
+                amet consectetur adipisicing elit.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal doiqua -->
+    <div class="wmodal" id="modal-doiqua">
+      <div class="wmodal-content relative">
+        <button
+          class="btn-close-modal aspect-square"
+          data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Mốc Quà</span>
+          </h1>
+          <div class="content-scroll mt-[1em]" data-simplebar="">
+            <div class="h-fit">
+              <div class="grid grid-cols-1">
+                <div
+                  class="w-full flex justify-around items-center py-[0.75em] border-b"
+                  data-loop="10">
+                  <div class="text-primary uppercase">10 tích điểm</div>
+                  <div class="w-5/12 flex flex-wrap">
+                    <div class="w-1/4 witem">
+                      <img
+                        src="./images/item/item.webp"
+                        alt="Bối Thiên Thạch Cỡ Đại" />
+                      <h1 class="name">Bối Thiên Thạch Cỡ Đại Cỡ Cực Đại</h1>
+                      <span class="quantity">x5</span>
+                    </div>
+                    <div class="w-1/4 witem">
+                      <img
+                        src="./images/item/item.webp"
+                        alt="Bối Thiên Thạch Cỡ Đại" />
+                      <h1 class="name">Bối Thiên Thạch Cỡ Đại Cỡ Cực Đại</h1>
+                      <span class="quantity">x5</span>
+                    </div>
+                    <div class="w-1/4 witem">
+                      <img
+                        src="./images/item/item.webp"
+                        alt="Bối Thiên Thạch Cỡ Đại" />
+                      <h1 class="name">Bối Thiên Thạch Cỡ Đại Cỡ Cực Đại</h1>
+                      <span class="quantity">x5</span>
+                    </div>
+                    <div class="w-1/4 witem">
+                      <img
+                        src="./images/item/item.webp"
+                        alt="Bối Thiên Thạch Cỡ Đại" />
+                      <h1 class="name">Bối Thiên Thạch Cỡ Đại Cỡ Cực Đại</h1>
+                      <span class="quantity">x5</span>
+                    </div>
+                  </div>
+                  <button class="w-btn text-white bg-primary">Nhận</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal item detail -->
+    <div class="wmodal" id="modal-item">
+      <div class="wmodal-content relative">
+        <button
+          class="btn-close-modal aspect-square"
+          data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Đổi vật phẩm</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit">
+              <div class="text-center mt-[1em] pb-[2em]">
+                Bạn đang đổi vật phẩm
+                <div class="w-image-block w-[8em] my-[.5em] mx-auto">
+                  <img src="./images/item.png" alt="" />
+                </div>
+                <span class="block text-[1.25em] text-primary">
+                  [Tên Vật phẩm ở đây]
+                </span>
+                <p>
+                  Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
+                  sint cillum sint consectetur cupidatat.
+                </p>
+                <span class="text-red-700 text-[.8em]"
+                  >Giới hạn đổi quà 5/12
+                </span>
+                <div
+                  class="mt-[1em] mx-auto w-full lg:w-10/12 p-[1em] border-[1px] border-[#ccc] rounded">
+                  <div class="mx-auto flex flex-1 justify-center items-center">
+                    <span class="mr-[1em]">Hãy nhập số lượng:</span>
+                    <input
+                      class="w-[4em] h-[3em] text-center"
+                      type="text"
+                      placeholder="0" />
+                    <button
+                      class="px-[1em] h-[3em] bg-secondary text-white rounded">
+                      Đổi
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANCHOR modal nhiemvu -->
+    <div class="wmodal" id="modal-nhiemvu">
+      <div class="wmodal-content">
+        <button
+          class="btn-close-modal aspect-square w-[6em]"
+          data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Nhiệm Vụ</span>
+          </h1>
+          <div class="content-scroll" data-simplebar="">
+            <div class="h-fit">
+              <!-- nhiem vu -->
+              <div
+                class="grid grid-cols-3 gap-[.5em] py-[1em] border-b-[1px] border-b-[#ccc]">
+                <div class="col-span-2">
+                  <span class="text-primary">Nhiệm vụ hàng ngày</span><br />
+                  Useless selectors can be written using this pseudo-class.
+                </div>
+                <div class="col-span-1 flex justify-center items-center">
+                  <button class="p-[.5em] text-white bg-primary rounded">
+                    Nhận NV
+                  </button>
+                </div>
+              </div>
+              <!-- nhiem vu -->
+              <div
+                class="grid grid-cols-3 gap-[.5em] py-[1em] border-b-[1px] border-b-[#ccc]">
+                <div class="col-span-2">
+                  <span class="text-primary">Nhiệm vụ hàng ngày</span><br />
+                  Useless selectors can be written using this pseudo-class.
+                </div>
+                <div class="col-span-1 flex justify-center items-center">
+                  <button class="p-[.5em] text-white bg-green-400 rounded">
+                    Đã nhận
+                  </button>
+                </div>
+              </div>
+              <!-- nhiem vu -->
+              <div
+                class="grid grid-cols-3 gap-[.5em] py-[1em] border-b-[1px] border-b-[#ccc]">
+                <div class="col-span-2">
+                  <span class="text-primary">Nhiệm vụ hàng ngày</span><br />
+                  Useless selectors can be written using this pseudo-class.
+                </div>
+                <div class="col-span-1 flex justify-center items-center">
+                  <button class="p-[.5em] text-white bg-[#ccc] rounded">
+                    Hoàn thành
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal youtube -->
+    <div class="wmodal" id="modal-youtube">
+      <div class="wmodal-content youtube">
+        <button
+          class="float-right p-[.5em] flex justify-center items-center text-[1em] text-white"
+          data-dismiss="modal">
+          <svg
+            class="w-[.8em] fill-white mr-[.25em]"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 460.775 460.775"
+            style="enable-background: new 0 0 460.775 460.775"
+            xml:space="preserve">
+            <path
+              d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+	c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+	c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+	c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+	l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+	c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z" />
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg>
+          Đóng
+        </button>
+        <div class="aspect-[16/9]">
+          <iframe
+            id="w-youtube"
+            width="100%"
+            height="100%"
+            src=""
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script src="./script/jquery-3.6.0.slim.min.js"></script>
+    <script src="./script/jquery.fortune.js"></script>
+    <!-- <script src="./script/text-animate.js"></script> -->
+
+    <script>
+      AOS.init({ delay: 200, duration: 500, offset: 10 });
+
+      //jquery fortune
+      var prices = [
+        {
+          name: "1",
+        },
+        {
+          name: "2",
+        },
+        {
+          name: "3",
+        },
+        {
+          name: "4",
+        },
+        {
+          name: "5",
+        },
+        {
+          name: "6",
+        },
+        {
+          name: "7",
+        },
+        {
+          name: "10",
+        },
+      ];
+
+      $(function () {
+        var $r = $(".wheel").fortune(prices);
+
+        var clickHandler = function () {
+          $(".wheel-button-small button").off("click");
+          $r.spin().done(function (price) {
+            $(".wheel-button-small button").on("click", clickHandler);
+          });
+        };
+
+        $(".wheel-button-small button").on("click", clickHandler);
+      });
+
+      //scrollspy
+      window.onload = function () {
+        //scrollSpy("#menu-scrollspy");
+      };
+    </script>
+  </body>
+</html>
