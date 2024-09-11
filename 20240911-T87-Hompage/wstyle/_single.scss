@@ -1,0 +1,14 @@
+#block-single {
+  .body-content {
+    grid-area: content;
+    background-color: var(--w-bodycontent);
+    overflow: auto;
+  }
+  .body-content .content p {
+    line-height: 1.75;
+    margin: 1em 0;
+  }
+
+  @media (min-width: 1024px) {
+  }
+}
