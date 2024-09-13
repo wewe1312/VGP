@@ -31,7 +31,12 @@
     border: solid 2px var(--w-primary);
     border-radius: 1em;
     padding: 1em 1em;
-    overflow: auto;
+    overflow: hidden;
+
+    .content .wrapper {
+      overflow: auto;
+    }
+
     @media (min-width: 1024px) {
       background-color: transparent;
       border: none;
