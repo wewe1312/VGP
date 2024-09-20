@@ -1,0 +1,44 @@
+$classname: moqua-01;
+
+#section-#{$classname} {
+  height: (1599 * $em);
+  position: relative;
+  z-index: 2;
+  background: #f7eacc url('../images/block-'+#{$classname}+'/bg-sm.webp')
+    no-repeat center 0em scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (1079 * $lgem);
+    background: url('../images/block-'+#{$classname}+'/bg-lg.webp') no-repeat
+      center 0em scroll;
+    background-size: 100vw auto;
+  }
+
+  .block-moqua {
+    margin-top: 32em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+    @media (min-width: 1024px) {
+      margin-top: 1em;
+    }
+
+    > button {
+      width: 48%;
+      @media (min-width: 1024px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .block-button {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.25em;
+    @media (min-width: 1024px) {
+      grid-template-columns: auto;
+    }
+  }
+}

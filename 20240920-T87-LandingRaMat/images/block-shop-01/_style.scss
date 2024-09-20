@@ -1,0 +1,116 @@
+$classname: shop-01;
+
+#section-#{$classname} {
+  $ratio: 291/400;
+
+  height: (1400 * $em);
+  position: relative;
+  z-index: 2;
+  background: #f7eacc url('../images/block-'+#{$classname}+'/bg-sm.webp')
+    no-repeat center 0em scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (1080 * $lgem);
+    background: url('../images/block-'+#{$classname}+'/bg-lg.webp') no-repeat
+      center 0em scroll;
+    background-size: 100vw auto;
+  }
+
+  .block-info {
+    text-align: center;
+    margin: 1em auto 0 auto;
+    background-color: rgba($color: #fff0dc, $alpha: 0.95);
+    border-radius: 1em;
+    border: solid var(--w-primary) 1px;
+    padding: 1em;
+
+    @media (min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25em;
+    }
+  }
+
+  .block-button {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0.25em;
+    margin: 0.5em auto 0 auto;
+    @media (min-width: 1024px) {
+      margin: 0;
+      justify-content: flex-end;
+    }
+
+    > button {
+      max-width: 8em;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1%;
+
+    .item-big {
+      background: url('../images/block-'+#{$classname}+'/item.webp') no-repeat
+        center center scroll;
+      background-size: 100% 100%;
+      aspect-ratio: $ratio;
+      width: 32%;
+      font-size: 0.9em;
+      padding: 1em;
+      display: flex;
+      color: rgb(255, 238, 140);
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1%;
+      cursor: pointer;
+      .name,
+      .price,
+      .quantity {
+        width: 100%;
+        text-align: center;
+        line-height: 1;
+      }
+      .icon {
+        width: 69%;
+      }
+      .price {
+        background-color: var(--w-primary);
+        border-radius: 1em;
+        padding: 0.25em 0;
+      }
+      .quantity {
+        font-size: 0.8em;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 1em;
+        width: 18%;
+      }
+    }
+  }
+
+  .swiper-pag {
+    display: flex;
+    justify-content: center;
+
+    span {
+      display: block;
+      aspect-ratio: 1/1;
+      width: 2em;
+      height: 2em;
+      line-height: 2em;
+      text-align: center;
+      background-color: var(--w-primary);
+      color: #fff;
+      border-radius: 0.5em;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+// global variables
+$em: 0.038461em; //18px = 1em
+$lgem: 0.05555em; //26px = 1em
+
+@import "../wstyle/wstyle";
+@import "../wstyle/woffcanvas";
+@import "../wstyle/ztimeline";
+@import "../wstyle/wmodal";
+@import "../wstyle/zbgvideo";
+@import "../wstyle/zanimate";
+@import "../wstyle/wtabs";
+@import "../wstyle/scroll";
+@import "../wstyle/checkin";
+@import "../wstyle/float";
+@import "../wstyle/ranking";
+@import "../wstyle/wwheel";
+@import "../wstyle/modal-gift-content";
+@import "../wstyle/footer";
+@import "../images/item/style";
+
+// import
+@import "../images/block001/style";
+@import "../images/block-moqua-01/style";
+@import "../images/block-shop-01/style";
+@import "../images/block-quatop-01/style";
+
+.w-btn {
+  padding: 0.5em 1em;
+  border: 1px var(--w-secondary) solid;
+  border-radius: 1em;
+}
+
+.info {
+  background-color: rgba($color: #fff0dc, $alpha: 0.95);
+  border-radius: 1em;
+  border: solid var(--w-primary) 1px;
+}

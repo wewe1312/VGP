@@ -1,0 +1,70 @@
+$classname: quatop-01;
+
+#section-#{$classname} {
+  $ratio: 320/440;
+
+  height: (2000 * $em);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  background: #f7eacc url('../images/block-'+#{$classname}+'/bg-sm.webp')
+    no-repeat center 0em scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (900 * $lgem);
+    background: url('../images/block-'+#{$classname}+'/bg-lg.webp') no-repeat
+      center 0em scroll;
+    background-size: 100vw auto;
+  }
+
+  .gift {
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    height: fit-content;
+    padding: 6.5em 1em 0 1em;
+    aspect-ratio: $ratio;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    align-content: flex-start;
+    gap: 0.5em;
+    cursor: pointer;
+    transform: scale(1);
+    @media (min-width: 1024px) {
+      padding: 9em 2em 0 2em;
+    }
+
+    > .witem {
+      color: #fff;
+      width: 30%;
+    }
+  }
+
+  /* first gift */
+  .gift:nth-child(1) {
+    grid-column: span 2 / span 2;
+    width: 69%;
+    margin: 0 auto;
+    padding: 9em 2em 0 2em;
+    @media (min-width: 1024px) {
+      grid-column: span 1 / span 1;
+      width: auto;
+    }
+  }
+
+  /* litle decorate */
+  .gift:nth-child(2n) {
+    @media (min-width: 1024px) {
+      transform: translateY(1em);
+    }
+  }
+
+  @for $i from 1 through 5 {
+    .gift:nth-child(#{$i}) {
+      $link: "../images/block-" + #{$classname}+ "/block-top" + $i + ".webp";
+      background-image: url($link);
+    }
+  }
+}

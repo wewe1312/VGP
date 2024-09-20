@@ -1,0 +1,50 @@
+#section-01 {
+  height: (1100 * $em);
+  background: #a20000 url(../images/block001/bg-sm.webp) no-repeat center 0em
+    scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (900 * $lgem);
+    background: #a20000 url(../images/block001/bg-lg.webp) no-repeat center 0em
+      scroll;
+    background-size: 100vw auto;
+  }
+
+  .group-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+
+    > .w-image-button {
+      width: 60%;
+
+      @media (min-width: 1024px) {
+        width: 30%;
+      }
+    }
+  }
+
+  .countdown {
+    width: 380 * $em;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    text-align: center;
+    @media (min-width: 1024px) {
+      width: 380 * $lgem;
+    }
+
+    > div {
+      font-size: 1.5em;
+      letter-spacing: 0.15em;
+      font-weight: bold;
+      @media (min-width: 1024px) {
+        font-size: 2.15em;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+}
