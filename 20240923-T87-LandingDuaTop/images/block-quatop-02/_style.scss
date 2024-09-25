@@ -1,0 +1,51 @@
+$classname: quatop-02;
+
+#section-#{$classname} {
+  $ratio: 330/306;
+
+  height: (1300 * $em);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  background: #a20000 url('../images/block-'+#{$classname}+'/bg-sm.webp')
+    no-repeat center 0em scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (999 * $lgem);
+    background: url('../images/block-'+#{$classname}+'/bg-lg.webp') no-repeat
+      center 0em scroll;
+    background-size: 100vw auto;
+  }
+
+  .gift-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gift {
+    width: 50%;
+    display: block;
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    aspect-ratio: $ratio;
+
+    @media (min-width: 1024px) {
+      width: 25%;
+    }
+  }
+
+  /* litle decorate */
+  .gift:nth-child(3n + 1) {
+    @media (min-width: 1024px) {
+      transform: translateY(-2.5em);
+    }
+  }
+
+  @for $i from 1 through 4 {
+    .gift:nth-child(#{$i}) {
+      $link: "../images/block-" + #{$classname}+ "/item-00" + $i + ".webp";
+      background-image: url($link);
+    }
+  }
+}
