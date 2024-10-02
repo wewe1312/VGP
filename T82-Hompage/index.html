@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="output.css" rel="stylesheet" />
+    <link href="css/wstyle.min.css" rel="stylesheet" />
+    <!-- some script -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@9/swiper-bundle.min.css" />
+    <script src="script/wswiper.js" type="module"></script>
+    <script src="script/wmodal.js" type="module"></script>
+  </head>
+  <body>
+    <!-- this is the fake body div -->
+    <div class="page-wrapper">
+      <!-- ANCHOR offcanvas -->
+      <div id="w-offcanvas" class="offcanvas float">
+        <div class="offcanvas-content w-[15em] lg:w-[15em]">
+          <div class="icon w-image-block w-full mx-auto">
+            <img src="./images/game-icon.webp" alt="" />
+          </div>
+          <!-- link -->
+          <div class="link grid grid-flow-row h-[20em]">
+            <a href="#">Trang Chủ</a>
+            <a href="#">Fanpage</a>
+            <a href="#">Tin Tức</a>
+            <a href="#">Sự Kiện</a>
+            <a href="#">Cộng Đồng</a>
+            <a href="#">Tải Game</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANCHOR float -->
+      <div
+        class="block-float right-0 hidden lg:block lg:w-[11em] aspect-[300/788] px-[1em] m-[.5em] overflow-hidden z-[3]">
+        <div class="w-image-block w-full mx-auto">
+          <img src="./images/game-icon.webp" alt="" />
+        </div>
+        <!-- store -->
+        <div
+          class="w-image-block w-full mx-auto mt-[1em] overflow-hidden relative">
+          <img src="./images/float/store.webp" alt="" />
+          <div
+            class="grid grid-flow-row absolute h-full w-full top-0 left-0 z-[1]">
+            <a href="#" class="-indent-[9999px]">Appstore</a>
+            <a href="#" class="-indent-[9999px]">Googleplay</a>
+          </div>
+        </div>
+        <!-- link -->
+        <div
+          class="link text-white grid grid-flow-row text-center aspect-[150/184] mt-[.75em]">
+          <a href="#">Trang Chủ</a>
+          <a href="#">Fanpage</a>
+          <a href="#">Cộng Đồng</a>
+        </div>
+        <!-- minimize -->
+        <button
+          class="w-full h-[5em] mt-0 block"
+          data-toggle="minimize"
+          data-target=".block-float"></button>
+        <!-- block minimize -->
+        <button
+          class="block-mini w-image-button aspect-[300/156]"
+          data-toggle="minimize"
+          data-target=".block-float">
+          <div class="icon w-[36%] absolute top-[6%] left-[4%]">
+            <img src="./images/game-icon.webp" alt="" />
+          </div>
+          <img src="./images/float/float-minimize.webp" alt="" />
+        </button>
+      </div>
+
+      <!-- ANCHOR Offcanvas header menu -->
+      <div class="absolute top-[.75em] left-[.75em] z-[3]">
+        <button
+          class="w-image-button w-[3em] lg:w-[2.5em]"
+          data-toggle="offcanvas"
+          data-target="w-offcanvas">
+          <svg
+            class="w-full"
+            fill="#fff"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24">
+            <path
+              d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- ANCHOR 001 -->
+      <div class="wcontainer relative z-[2]" style="overflow: visible">
+        <div class="w-full h-[37em] lg:h-[45em] overflow-hidden">
+          <!-- logo -->
+          <!-- <div
+            class="w-image-block w-[20em] mt-[17.5em] lg:hidden lg:w-[20em] lg:absolute lg:top-0 lg:left-[-5em] lg:mt-0 mx-auto">
+            <img src="./images/game-logo.webp" alt="" />
+          </div> -->
+          <!-- <button
+            class="w-image-button mx-auto w-[13em] mt-[14em] lg:mt-[5em]"
+            data-toggle="youtube"
+            data-target="https://www.youtube.com/embed/6gkVvA7gOOg">
+            <img src="./images/btn-trailer.gif" alt="" />
+          </button> -->
+          <!-- 18+ -->
+          <div
+            class="w-[13em] mx-auto mt-[27em] lg:hidden lg:w-[15em] lg:mt-[41em] lg:top-0 lg:right-0">
+            <div class="block-18">
+              <div class="">
+                <a href="#">Apple</a>
+                <a href="#">Google</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANCHOR  bg video 
+      <div class="bgvideo hidden lg:block">
+        <div class="aspect-[1920/1000] w-[100vw]">
+          <video nocontrol loop autoplay muted playsinline>
+            <source src="./images/bgvideo/bg-video.webm" type="video/ogg" />
+            <source src="./images/bgvideo/bg-video.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div> -->
+      <!--end bg video -->
+
+      <!-- ANCHOR section 2 -->
+      <section id="block-002">
+        <div class="wcontainer z-10 relative">
+          <!-- ANCHOR download M-->
+          <div class="w-full mx-auto lg:hidden">
+            <button class="btn-download-m w-image-button w-full">
+              <img
+                class="game-icon w-image-block animate__loop animate__glow"
+                src="./images/game-icon.webp"
+                alt="" />
+            </button>
+          </div>
+
+          <!-- ANCHOR download LG-->
+          <div class="block-download hidden lg:block mb-[2em]">
+            <div class="block-download-content w-6/12 mx-auto">
+              <div class="w-[9em]">
+                <img
+                  class="w-image-block animate__loop animate__glow"
+                  src="./images/game-icon.webp"
+                  alt="" />
+              </div>
+              <div class="grid grid-cols-2 gap-[0.5em] w-8/12">
+                <button class="w-image-button">
+                  <img src="./images/icon-store/btn-download-apk.webp" alt="" />
+                </button>
+                <button class="w-image-button">
+                  <img
+                    src="./images/icon-store/btn-download-googleplay.webp"
+                    alt="" />
+                </button>
+                <button class="w-image-block">
+                  <img src="./images/icon-store/btn-download-18.webp" alt="" />
+                </button>
+                <button class="w-image-button">
+                  <img
+                    src="./images/icon-store/btn-download-appstore.webp"
+                    alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ANCHOR button -->
+          <div
+            class="block-button col-span-1 lg:col-span-6 grid grid-cols-2 lg:grid-cols-4 lg:gap-[0.25em] lg:mb-[0.75em]">
+            <a href="#" class="block aspect-[300/165] transition giftcode"> </a>
+            <a href="#" class="block aspect-[300/165] transition fanpage"> </a>
+            <a href="#" class="block aspect-[300/165] transition napxu"> </a>
+            <a href="#" class="block aspect-[300/165] transition sukien"> </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANCHOR section 3 -->
+      <section id="block-003" style="display: block">
+        <div class="wcontainer z-10 relative">
+          <div class="layout">
+            <!-- ANCHOR newsboard slider -->
+            <div class="w-full swiper newsboard">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="w-image-block w-full">
+                    <img src="./images/img001.webp" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="w-image-block w-full">
+                    <img src="./images/img001 - Copy.webp" alt="" />
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <!-- ANCHOR support -->
+            <div class="block-support grid grid-cols-2 relative">
+              <a href="#" class="block aspect-square transition tanthu"> </a>
+              <a href="#" class="block aspect-square transition camnang"> </a>
+              <a href="#" class="block aspect-square transition vip"> </a>
+              <a href="#" class="block aspect-square transition hotro"> </a>
+            </div>
+            <!-- ANCHOR feature -->
+            <div class="block-feature grid grid-cols-3 mt-[1em]">
+              <a
+                href="#"
+                class="block aspect-[195/390] hover:brightness-110 transition landing">
+              </a>
+              <a
+                href="#"
+                class="block aspect-[195/390] hover:brightness-110 transition tonghopsukien">
+              </a>
+              <a
+                href="javascript:void(0);"
+                data-toggle="youtube"
+                data-target="https://www.youtube.com/embed/dYzD5tvqmos"
+                class="block aspect-[195/390] hover:brightness-110 transition trailer">
+              </a>
+            </div>
+            <!-- ANCHOR news -->
+            <div
+              class="block-news overflow-hidden aspect-[585/390] text-[.9em] p-[1em] mt-[0] lg:text-[1em] lg:p-[2em] lg:mt-[1em]">
+              <div class="title flex justify-between items-center">
+                <div class="text-white px-[1em] py-[.4em] bg-secondary">
+                  Tin tức
+                </div>
+                <button
+                  class="text-secondary opacity-50 hover:opacity-100 transiton">
+                  Xem thêm +
+                </button>
+              </div>
+              <div class="news-list mt-[1em] lg:mt-[2em]">
+                <ul>
+                  <li>
+                    <a href="#">"Of Drink A-Dreaming" - Gameplay Details</a>
+                  </li>
+                  <li>
+                    <a href="#">"Of Drink A-Dreaming" - Gameplay Details</a>
+                  </li>
+                  <li>
+                    <a href="#">"Of Drink A-Dreaming" - Gameplay Details</a>
+                  </li>
+                  <li>
+                    <a href="#">"Of Drink A-Dreaming" - Gameplay Details</a>
+                  </li>
+                  <li>
+                    <a href="#">"Of Drink A-Dreaming" - Gameplay Details</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ANCHOR Slider Character -->
+        <div class="block-character mt-[1em]">
+          <div
+            style="overflow: hidden"
+            class="swiper character-slide relative w-12/12 mx-auto mt-[0em]">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <button
+                  data-toggle="youtube"
+                  data-target="https://www.youtube.com/embed/6gkVvA7gOOg"></button>
+                <img src="./images/character/char01.webp" alt="" />
+              </div>
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <button
+                  data-toggle="youtube"
+                  data-target="https://www.youtube.com/embed/6gkVvA7gOOg"></button>
+                <img src="./images/character/char02.webp" alt="" />
+              </div>
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <button
+                  data-toggle="youtube"
+                  data-target="https://www.youtube.com/embed/6gkVvA7gOOg"></button>
+                <img src="./images/character/char03.webp" alt="" />
+              </div>
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <button
+                  data-toggle="youtube"
+                  data-target="https://www.youtube.com/embed/6gkVvA7gOOg"></button>
+                <img src="./images/character/char04.webp" alt="" />
+              </div>
+            </div>
+            <!-- If we need navigation buttons 
+                <div class="button-prev">
+                  <img
+                    style="transform: scaleX(-1)"
+                    src="./images/slide/btn-arrow.webp"
+                    alt="" />
+                </div>
+                <div class="button-next">
+                  <img src="./images/slide/btn-arrow.webp" alt="" />
+                </div>-->
+          </div>
+          <!-- thumbs -->
+          <div style="overflow: visible" class="swiper character-thumb-slide">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="w-image-block">
+                  <img src="./images/character/icon01.webp" alt="" />
+                </div>
+              </div>
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="w-image-block">
+                  <img src="./images/character/icon02.webp" alt="" />
+                </div>
+              </div>
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="w-image-block">
+                  <img src="./images/character/icon03.webp" alt="" />
+                </div>
+              </div>
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="w-image-block">
+                  <img src="./images/character/icon04.webp" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANCHOR BLOCK SINGLE - only show on single page -->
+      <section id="block-single" style="display: none">
+        <div class="wcontainer z-10 relative">
+          <div class="layout-single">
+            <!-- --------------------------------------------------------------------------------------- -->
+            <!-- content single page-->
+            <div class="body-content">
+              <div class="content p-[2em] md:p-[3em]">
+                <h4 class="title text-[2em] leading-[1] text-primary">
+                  Thiều Bảo Trâm cãi nhau ầm ĩ với một người đàn ông
+                </h4>
+                <h6 class="date text-[.8em] opacity-50 mt-[1em]">
+                  Ngày 14/12/2022
+                </h6>
+                <div class="py-[1.5em]">
+                  <p>
+                    Đến mới đây, trên trang cá nhân, Thiều Bảo Trâm bất ngờ chia
+                    sẻ đoạn clip ghi lại cảnh cô cãi nhau ầm ĩ với một người đàn
+                    ông trong phòng riêng. Qua âm thanh của clip, có thể thấy
+                    giọng ca Sau Lưng Anh Có Ai Kia đã rất lớn tiếng, thái độ
+                    bực tức thấy rõ.
+                  </p>
+                  <p>
+                    Ở những giây cuối, nữ ca sĩ đóng cửa mạnh, ngồi bệt xuống
+                    sàn rồi bật khóc, toàn thân đỏ bừng. Tuy nhiên, nếu theo dõi
+                    mọi hoạt động của cô, không khó để nhận ra đây chỉ là một
+                    phân cảnh trong MV mà Thiều Bảo Trâm vừa ra mắt, tuy nhiên ở
+                    sản phẩm công bố không hề có âm thanh la hét, đập cửa chân
+                    thực như trong clip được chia sẻ. Điều này khiến netizen bất
+                    ngờ, hết lời ngợi khen cho tài diễn xuất của giọng ca sinh
+                    năm 1994.
+                  </p>
+                </div>
+                <!-- See more -->
+                <div class="news-list mt-[1em] lg:mt-[2em]">
+                  <h4 class="title text-[1.5em] text-primary">Tin liên quan</h4>
+                  <ul>
+                    <li>
+                      <a href="#">"Of Drink A-Dreaming" - Gameplay Details</a>
+                    </li>
+                    <li>
+                      <a href="#">"Of Drink A-Dreaming" - Gameplay Details</a>
+                    </li>
+                    <li>
+                      <a href="#">"Of Drink A-Dreaming" - Gameplay Details</a>
+                    </li>
+                    <li>
+                      <a href="#">"Of Drink A-Dreaming" - Gameplay Details</a>
+                    </li>
+                    <li>
+                      <a href="#">"Of Drink A-Dreaming" - Gameplay Details</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------------------------------------------------------------------------- -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ANCHOR footer -->
+      <section class="mt-[2em]">
+        <!-- 18+ -->
+        <div
+          class="text-[1em] text-center mt-[0em] px-[2em] py-[1.5em] text-vgp bg-[#111] lg:text-[.8em]">
+          Chơ Game quá 180 phút một ngày sẽ ảnh hưởng xấu đến sức khỏe
+        </div>
+        <!-- footer -->
+        <div
+          class="footer bg-[#080808] flex flex-col justify-center py-[.5em] pt-[2em]">
+          <div class="container-fluid">
+            <!-- logo -->
+            <div
+              class="mx-auto w-[8em] flex flex-1 justify-center items-center">
+              <div class="w-image-block mx-[.5em]">
+                <img src="./images/vgp-logo-simple.webp" alt="" />
+              </div>
+            </div>
+            <!-- text -->
+            <div class="text-center text-[0.9em] my-[2em] px-[1em] opacity-80">
+              Hotline: 1900 636 521 (từ 8:00 đến 22:00) - Email:
+              hotro@vgpjsc.vn<br />Công ty CP VGP phân phối độc quyền tại Việt
+              Nam.<br />
+              Giấy phép phê duyệt nội dung số: 30/QĐ-BTTTT
+              <br />Bộ Thông Tin Và Truyền thông cấp ngày 08/01/2019 <br />Tầng
+              4 tòa nhà Greenpark Tower, 33 Dương Đình Nghệ, Yên Hòa, Cầu Giấy,
+              Hà Nội.<br />
+            </div>
+          </div>
+        </div>
+        <!-- menu -->
+        <div class="footer-menu bg-[#111] py-[1em]">
+          <div class="container-fluid">
+            <div class="flex justify-center py-[.25em]">
+              <a class="transition" href="#">Trang chủ</a>
+              <a class="transition" href="#">Tin tức</a>
+              <a class="transition" href="#">Sự kiện</a>
+              <a class="transition" href="#">Fanpage</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- end div page-wrapper -->
+
+    <!-- modal youtube -->
+    <div class="wmodal" id="modal-youtube">
+      <div class="wmodal-content youtube">
+        <button
+          class="float-right p-[.5em] flex justify-center items-center text-[1em] text-white"
+          data-dismiss="modal">
+          <svg
+            class="w-[.8em] fill-white mr-[.25em]"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 460.775 460.775"
+            style="enable-background: new 0 0 460.775 460.775"
+            xml:space="preserve">
+            <path
+              d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+      c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+      c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+      c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+      l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+      c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z" />
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg>
+          Đóng
+        </button>
+        <div class="aspect-[16/9]">
+          <iframe
+            id="w-youtube"
+            width="100%"
+            height="100%"
+            src=""
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="./script/waccordion.js"></script> -->
+  </body>
+</html>
