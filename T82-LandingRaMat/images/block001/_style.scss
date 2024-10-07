@@ -1,0 +1,51 @@
+#section-01 {
+  height: (1200 * $em);
+  background: #08335b url(../images/block001/bg-sm.webp) no-repeat center 0em
+    scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (1080 * $lgem);
+    background: #08335b url(../images/block001/bg-lg.webp) no-repeat center 0em
+      scroll;
+    background-size: 100vw auto;
+  }
+
+  .group-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0em;
+
+    > .w-image-button {
+      width: 33%;
+      transform: scale(1.25);
+
+      @media (min-width: 1024px) {
+        width: 20%;
+      }
+    }
+  }
+
+  .countdown {
+    width: 380 * $em;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    text-align: center;
+    @media (min-width: 1024px) {
+      width: 380 * $lgem;
+    }
+
+    > div {
+      font-size: 1.5em;
+      letter-spacing: 0.15em;
+      font-weight: bold;
+      @media (min-width: 1024px) {
+        font-size: 2.15em;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+}

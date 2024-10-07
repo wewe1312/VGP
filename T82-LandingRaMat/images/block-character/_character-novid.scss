@@ -1,0 +1,70 @@
+.block-character {
+  // background: transparent url("../images/character/bg-char.webp") no-repeat
+  //   center center scroll;
+  background-size: 300% auto;
+  overflow: hidden;
+  height: fit-content;
+  @media (min-width: 1024px) {
+    aspect-ratio: 1200/600;
+    background-size: 100% auto;
+  }
+}
+
+.character-slide {
+  aspect-ratio: 1000/1000;
+
+  .swiper-slide img {
+    position: absolute;
+    top: 0;
+    left: -40%;
+    width: 200%;
+    max-width: 200% !important;
+    height: auto;
+  }
+  .swiper-slide button {
+    background-color: transparent;
+    aspect-ratio: 1/1;
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    top: 13em;
+    left: 4.5em;
+    z-index: 2;
+    @media (min-width: 1024px) {
+      top: 17.5em;
+      left: 22em;
+    }
+  }
+}
+
+.character-thumb-slide {
+  width: 70%;
+  margin-top: -8em;
+  @media (min-width: 1024px) {
+    width: 500 * $lgem;
+    margin-top: -9em;
+  }
+
+  .swiper-slide:not(.swiper-slide-thumb-active) {
+    img {
+      opacity: 1;
+      filter: brightness(0.5);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .character-slide {
+    aspect-ratio: 1200/600;
+    width: 1400 * $lgem;
+
+    .swiper-slide img {
+      width: 100%;
+      left: 0em;
+    }
+
+    .swiper-slide video {
+      display: block;
+    }
+  }
+}

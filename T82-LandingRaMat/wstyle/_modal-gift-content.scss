@@ -1,0 +1,27 @@
+.modal-gift-content {
+  background-color: #ccc;
+  gap: 1px;
+  overflow: hidden;
+
+  > li {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1px;
+
+    > div {
+      padding: 0.5em;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icon {
+      display: block;
+      background: url("https://api.iconify.design/material-symbols/check-circle-rounded.svg?color=%230c6")
+        no-repeat center center / contain;
+      aspect-ratio: 1/1;
+    }
+  }
+}
