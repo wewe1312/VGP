@@ -33,167 +33,171 @@
   </head>
   <body class="">
     <!-- ANCHOR full ---------------------------------------------->
-    <section class="h-[100vh] w-[100-vw] flex flex-nowrap">
+    <section class="h-[100vh] w-[100-vw] flex flex-wrap">
       <!-- ANCHOR side 1 ---------------------------------------------->
-      <div
-        id="block-closet"
-        class="side-login active relative z-10 w-[10em] px-[0.5em] text-[0.9rem] lg:text-[1rem] lg:w-[17em] h-full lg:px-[1.6em] flex flex-wrap justify-center items-center">
-        <!-- butotn open close -->
-        <div
-          class="absolute w-[1.5em] lg:w-[2.94em] right-[-1em] lg:right-[-2em] top-[50%] -translate-y-1/2 cursor-pointer">
-          <div id="btn-closet" class="btn-closet" data-toggle="switch">
-            <img class="" src="./images/login/arrow-left.webp" alt="" />
-            <img class="whidden" src="./images/login/arrow-right.webp" alt="" />
-          </div>
-        </div>
-        <div class="wrapper grid grid-flow-row gap-[0.5em]">
-          <a
-            href="#"
-            target="_blank"
-            class="logo w-image-block w-full scale-110">
-            <img src="./images/game-logo.webp" alt="Dũng Giả Đại Lục" />
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            class="w-image-block mt-[1em] w-full scale-105">
-            <img
-              class="animate__loop animate__bling"
-              src="./images/login/btn-napthe.webp"
-              alt="" />
-          </a>
-          <!-- info -->
-          <div
-            class="info text-[0.69em] lg:text-[1em] text-center p-[0.75em] mx-auto w-full mt-[1em]">
-            <h3>Xin chào,</h3>
-            <h3><b>Ma Thế Phú Cơ</b></h3>
-            <div class="grid grid-cols-1">
-              <div>
-                Bạn đang chơi máy chủ: <span class="text-primary">XXX XXX</span>
-              </div>
+      <div id="side-login" class="side-login active">
+        <div id="block-closet" class="z-10">
+          <!-- butotn open close -->
+          <div id="btn-closet">
+            <div class="btn-closet" data-toggle="switch">
+              <img class="" src="./images/login/arrow-left.webp" alt="" />
+              <img
+                class="whidden"
+                src="./images/login/arrow-right.webp"
+                alt="" />
             </div>
-            <a
-              class="text-primary text-[.8em] cursor-pointer block"
-              data-toggle="modal"
-              data-target="modal-logout"
-              >Đăng xuất</a
-            >
           </div>
-          <a href="#" target="_blank" class="w-image-block w-full">
-            <img src="./images/login/btn-giftcode.webp" alt="" />
+          <!-- logo -->
+          <a href="#" target="_blank" class="logo w-image-block w-full">
+            <img src="./images/login/logo-game.webp" alt="Dũng Giả Đại Lục" />
           </a>
-          <a href="#" target="_blank" class="w-image-block w-full">
-            <img src="./images/login/btn-huongdan.webp" alt="" />
-          </a>
-          <div class="grid grid-cols-2 gap-[0.5em]">
+          <!--  -->
+          <div class="wrapper grid grid-flow-row gap-[1em] px-[1.5em]">
             <a href="#" target="_blank" class="w-image-block w-full">
-              <img src="./images/login/btn-fanpage.webp" alt="" />
+              <img
+                class="animate__loop animate__bling"
+                src="./images/login/btn-napthe.webp"
+                alt="" />
             </a>
-            <a href="#" target="_blank" class="w-image-block w-full">
-              <img src="./images/login/btn-group.webp" alt="" />
-            </a>
+            <!-- info -->
+            <div class="info">
+              <h3>Xin chào,</h3>
+              <h3><b>Ma Thế Phú Cơ</b></h3>
+              <div class="grid grid-cols-1">
+                <div>
+                  Bạn đang chơi máy chủ:
+                  <span class="text-primary">XXX XXX</span>
+                </div>
+              </div>
+              <a
+                class="text-primary text-[.8em] cursor-pointer block"
+                data-toggle="modal"
+                data-target="modal-logout"
+                >Đăng xuất</a
+              >
+            </div>
+            <div class="grid gap-[0.5em]">
+              <a
+                href="#"
+                target="_blank"
+                class="w-image-block w-full e-btn-hover-glow">
+                <img src="./images/login/btn-giftcode.webp" alt="" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="w-image-block w-full e-btn-hover-glow">
+                <img src="./images/login/btn-huongdan.webp" alt="" />
+              </a>
+            </div>
+            <div class="grid grid-cols-2 gap-[0.5em]">
+              <a href="#" target="_blank" class="w-image-block w-full">
+                <img src="./images/login/btn-fanpage.webp" alt="" />
+              </a>
+              <a href="#" target="_blank" class="w-image-block w-full">
+                <img src="./images/login/btn-group.webp" alt="" />
+              </a>
+            </div>
           </div>
+          <!-- vgp -->
+          <a href="#" target="_blank" class="logo w-image-block w-full">
+            <img src="./images/login/logo-vgp.webp" alt="Dũng Giả Đại Lục" />
+          </a>
         </div>
       </div>
       <!-- ANCHOR side 2 ---------------------------------------------->
-      <div class="side-ingame w-full bg-[#111] relative">
-        <div
-          class="wrap-login text-[0.45rem] lg:text-[0.9rem] w-full h-full flex justify-center items-center absolute top-0 left-0">
-          <div class="popup-login w-[40.9em] relative">
+      <div id="side-ingame" class="side-ingame relative z-0">
+        <div class="wrap-login">
+          <!-- ANCHOR popup dang nhap -->
+          <div id="block-dangnhap" class="popup-login">
             <!--  btn-close -->
-            <button
-              class="btn-closee w-image-button absolute w-[2em] h-[2em] top-[1.25em] right-[1.25em]">
+            <button class="btn-close w-image-button">
               <img src="./images/login-popup/btn-close.webp" alt="" />
             </button>
-
-            <!-- ANCHOR side dang nhap -->
-            <div id="block-dangnhap" class="grid grid-cols-2 h-full">
-              <div
-                class="w-9/12 mx-auto flex flex-col flex-wrap justify-center items-center gap-[0.8em]">
-                <div class="w-image-block w-[9em] mx-auto">
-                  <img
-                    src="./images/login-popup/title-dangnhap.webp"
-                    alt="Đăng
-                nhập" />
+            <div class="block-login">
+              <form class="">
+                <div class="alert">Tên đăng nhập hoặc mật khẩu không đúng.</div>
+                <input type="text" placeholder="Tên Đăng Nhập" />
+                <input type="password" placeholder="Mật Khẩu" />
+                <div>
+                  <input id="fname" type="checkbox" />
+                  <label for="fname"
+                    >Tôi đồng ý với
+                    <a class="underline" href="#">Điều khoản</a>
+                  </label>
                 </div>
-                <form class="grid grid-cols-1 gap-[0.5em]">
-                  <input type="text" placeholder="Tên Đăng Nhập" />
-                  <input type="password" placeholder="Mật Khẩu" />
-                  <div>
-                    <input id="fname" type="checkbox" />
-                    <label for="fname">Tôi đồng ý với điều khoản</label>
-                  </div>
-                  <button
-                    type="button"
-                    class="w-image-button"
-                    onclick="hideLogin()">
-                    <img src="./images/login-popup/btn-dangnhap.webp" alt="" />
-                  </button>
-                </form>
+                <button
+                  type="button"
+                  class="w-image-button"
+                  onclick="hideLogin()">
+                  <img src="./images/login-popup/btn-dangnhap.webp" alt="" />
+                </button>
                 <a href="#" class="mx-auto text-vgp">Quên mật khẩu?</a>
-              </div>
-              <!-- by side -->
-              <div
-                class="w-9/12 mx-auto flex flex-col flex-wrap justify-center items-start gap-[0.5em]">
-                <h3 class="opacity-50 mx-auto">Hoặc đăng nhập bằng</h3>
-                <button type="button" class="w-image-button">
-                  <img src="./images/login-popup/button-facebook.webp" alt="" />
-                </button>
-                <h3 class="opacity-50 mx-auto">Hoặc đăng ký tài khoản mới</h3>
-                <button
-                  type="button"
-                  class="w-image-button"
-                  onclick="openReg()">
-                  <img
-                    src="./images/login-popup/button-dangkymoi.webp"
-                    alt="" />
-                </button>
-              </div>
-            </div>
-
-            <!-- ANCHOR side dang ky -->
-            <div id="block-dangky" class="grid grid-cols-2 h-full active">
-              <div
-                class="w-9/12 mx-auto flex flex-col flex-wrap justify-center items-start gap-[0.8em]">
-                <div class="w-image-block w-[9em] mx-auto">
-                  <img
-                    src="./images/login-popup/title-dangky.webp"
-                    alt="Đăng Ký" />
-                </div>
-                <form class="grid grid-cols-1 gap-[0.5em]">
-                  <input type="text" placeholder="Tên Đăng Nhập" />
-                  <input type="password" placeholder="Mật Khẩu" />
-                  <input type="password" placeholder="Nhập lại Mật Khẩu" />
-                  <div>
-                    <input id="fname" type="checkbox" />
-                    <label for="fname">Tôi đồng ý với điều khoản</label>
-                  </div>
+                <span class="split"></span>
+                <div class="grid grid-cols-2 gap-[0.35em]">
                   <button
                     type="button"
                     class="w-image-button"
                     onclick="hideLogin()">
-                    <img src="./images/login-popup/btn-dangky.webp" alt="" />
+                    <img src="./images/login-popup/btn-facebook.webp" alt="" />
                   </button>
-                </form>
-              </div>
-              <!-- by side -->
-              <div
-                class="w-9/12 mx-auto flex flex-col flex-wrap justify-center items-start gap-[0.5em]">
-                <h3 class="opacity-50 mx-auto">Hoặc đăng nhập bằng</h3>
+                  <button
+                    type="button"
+                    class="w-image-button"
+                    onclick="openReg()">
+                    <img src="./images/login-popup/btn-register.webp" alt="" />
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- ANCHOR popup dang nhap -->
+          <div id="block-dangky" class="active popup-login">
+            <!--  btn-close -->
+            <button class="btn-close w-image-button">
+              <img src="./images/login-popup/btn-close.webp" alt="" />
+            </button>
+            <div class="block-login">
+              <form class="">
+                <div class="alert">Tên đăng nhập hoặc mật khẩu không đúng.</div>
+                <input class="error" type="text" placeholder="Địa chỉ Email" />
+                <input type="text" placeholder="Tên Đăng Nhập" />
+                <input type="password" placeholder="Mật Khẩu" />
+                <input type="password" placeholder="Nhập lại mật Khẩu" />
+                <div>
+                  <input id="fname" type="checkbox" />
+                  <label for="fname"
+                    >Tôi đồng ý với
+                    <a class="underline" href="#">Điều khoản</a>
+                  </label>
+                </div>
                 <button
                   type="button"
                   class="w-image-button"
-                  onclick="openReg()">
-                  <img src="./images/login-popup/button-vgp.webp" alt="" />
+                  onclick="hideLogin()">
+                  <img src="./images/login-popup/btn-dangky.webp" alt="" />
                 </button>
-                <button type="button" class="w-image-button">
-                  <img src="./images/login-popup/button-facebook.webp" alt="" />
-                </button>
-              </div>
+                <!-- <a href="#" class="mx-auto text-vgp">Quên mật khẩu?</a> -->
+                <span class="split"></span>
+                <div class="grid grid-cols-2 gap-[0.35em]">
+                  <button
+                    type="button"
+                    class="w-image-button"
+                    onclick="hideLogin()">
+                    <img src="./images/login-popup/btn-facebook.webp" alt="" />
+                  </button>
+                  <button
+                    type="button"
+                    class="w-image-button"
+                    onclick="openReg()">
+                    <img src="./images/login-popup/btn-vgp.webp" alt="" />
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-        <!-- button -->
+        <!-- button 
         <div
           class="text-[0.45rem] lg:text-[0.9rem] w-full h-full flex justify-center items-center">
           <div class="grid grid-cols-4 w-10/12 mx-auto">
@@ -209,6 +213,16 @@
             <button class="w-image-button">
               <img src="./images/button/4.png" alt="" />
             </button>
+          </div>
+        </div>
+        -->
+        <!-- ANCHOR  bg video -->
+        <div class="bgvideo hidden lg:block">
+          <div class="aspect-[1920/1000] h-[100vh] opacity-10">
+            <video nocontrol loop autoplay muted playsinline>
+              <source src="./images/bgvideo/bg-video.webm" type="video/ogg" />
+              <source src="./images/bgvideo/bg-video.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </div>
@@ -247,18 +261,10 @@
     <!-- script -->
     <script src="./script/jquery-3.6.0.slim.min.js"></script>
     <script src="./script/jquery.fortune.js"></script>
+    <script src="./images/login/script.js"></script>
 
     <script>
       AOS.init({ delay: 200, duration: 500, offset: 10 });
-
-      function openReg() {
-        $("#block-dangky").toggleClass("active");
-        $("#block-dangnhap").toggleClass("active");
-      }
-
-      function hideLogin() {
-        $(".wrap-login").hide();
-      }
 
       //jquery fortune
       var prices = [
@@ -305,13 +311,6 @@
       window.onload = function () {
         //scrollSpy("#menu-scrollspy");
       };
-
-      //btn-closet
-      const btncloset = document.querySelector("#btn-closet");
-      const blkcloset = document.querySelector("#block-closet");
-      btncloset.addEventListener("click", function () {
-        blkcloset.classList.toggle("active");
-      });
     </script>
   </body>
 </html>

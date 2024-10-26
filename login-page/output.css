@@ -597,6 +597,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   isolation: auto;
 }
 
+.z-0{
+  z-index: 0;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -632,6 +636,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+
+.mt-\[10em\]{
+  margin-top: 10em;
 }
 
 .mt-\[1em\]{
@@ -734,6 +742,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.aspect-\[1920\/1000\]{
+  aspect-ratio: 1920 / 1000;
+}
+
 .h-\[100vh\]{
   height: 100vh;
 }
@@ -760,12 +772,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: calc(100% - 0.25rem);
 }
 
-.w-\[100-vw\]{
-  width: 100 - vw;
+.h-\[100\%\]{
+  height: 100%;
 }
 
-.w-\[10em\]{
-  width: 10em;
+.w-\[100-vw\]{
+  width: 100 - vw;
 }
 
 .w-\[1\.5em\]{
@@ -792,12 +804,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 9em;
 }
 
+.w-10\/12{
+  width: 83.333333%;
+}
+
 .w-8\/12{
   width: 66.666667%;
 }
 
-.w-10\/12{
-  width: 83.333333%;
+.w-\[100vw\]{
+  width: 100vw;
+}
+
+.w-\[50em\]{
+  width: 50em;
 }
 
 .flex-shrink{
@@ -840,12 +860,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .scale-110{
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-105{
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1312,6 +1326,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-items: stretch;
 }
 
+.gap-\[1em\]{
+  gap: 1em;
+}
+
 .gap-\[0\.5em\]{
   gap: 0.5em;
 }
@@ -1320,8 +1338,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 0.8em;
 }
 
-.gap-\[1em\]{
-  gap: 1em;
+.gap-\[0\.25em\]{
+  gap: 0.25em;
+}
+
+.gap-\[0\.35em\]{
+  gap: 0.35em;
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]){
@@ -1837,15 +1859,6 @@ Ensure the default browser behavior of the `hidden` attribute.
      object-fit: scale-down;
 }
 
-.p-\[0\.75em\]{
-  padding: 0.75em;
-}
-
-.px-\[0\.5em\]{
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-
 .py-\[\.5em\]{
   padding-top: .5em;
   padding-bottom: .5em;
@@ -1859,6 +1872,40 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.px-\[2em\]{
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.px-\[1\.5em\]{
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.pt-\[10em\]{
+  padding-top: 10em;
+}
+
+.pt-\[15em\]{
+  padding-top: 15em;
+}
+
+.pt-\[13em\]{
+  padding-top: 13em;
+}
+
+.pt-\[12em\]{
+  padding-top: 12em;
+}
+
+.pt-\[11em\]{
+  padding-top: 11em;
+}
+
+.pt-\[14em\]{
+  padding-top: 14em;
 }
 
 .text-left{
@@ -1915,14 +1962,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-\[\"some_font\"\2c sans-serif\]{
   font-family: "some font",sans-serif;
-}
-
-.text-\[0\.9rem\]{
-  font-size: 0.9rem;
-}
-
-.text-\[0\.69em\]{
-  font-size: 0.69em;
 }
 
 .text-\[\.8em\]{
@@ -2070,8 +2109,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 0.5;
 }
 
-.opacity-0{
-  opacity: 0;
+.opacity-25{
+  opacity: 0.25;
+}
+
+.opacity-10{
+  opacity: 0.1;
 }
 
 .bg-blend-normal{
@@ -2651,25 +2694,12 @@ body {
     right: -2em;
   }
 
-  .lg\:w-\[17em\]{
-    width: 17em;
+  .lg\:block{
+    display: block;
   }
 
   .lg\:w-\[2\.94em\]{
     width: 2.94em;
-  }
-
-  .lg\:px-\[1\.6em\]{
-    padding-left: 1.6em;
-    padding-right: 1.6em;
-  }
-
-  .lg\:text-\[1rem\]{
-    font-size: 1rem;
-  }
-
-  .lg\:text-\[1em\]{
-    font-size: 1em;
   }
 
   .lg\:text-\[0\.9rem\]{
