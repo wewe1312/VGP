@@ -565,30 +565,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: -0.25rem;
 }
 
-.right-\[-1em\]{
-  right: -1em;
-}
-
-.top-\[50\%\]{
-  top: 50%;
-}
-
-.top-0{
-  top: 0px;
-}
-
-.left-0{
-  left: 0px;
-}
-
-.top-\[1\.25em\]{
-  top: 1.25em;
-}
-
-.right-\[1\.25em\]{
-  right: 1.25em;
-}
-
 .isolate{
   isolation: isolate;
 }
@@ -597,12 +573,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   isolation: auto;
 }
 
-.z-0{
-  z-index: 0;
-}
-
 .z-10{
   z-index: 10;
+}
+
+.z-0{
+  z-index: 0;
 }
 
 .float-right{
@@ -636,10 +612,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
-}
-
-.mt-\[10em\]{
-  margin-top: 10em;
 }
 
 .mt-\[1em\]{
@@ -754,10 +726,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }
 
-.h-\[2em\]{
-  height: 2em;
-}
-
 .h-fit{
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -772,36 +740,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: calc(100% - 0.25rem);
 }
 
-.h-\[100\%\]{
-  height: 100%;
-}
-
 .w-\[100-vw\]{
   width: 100 - vw;
 }
 
-.w-\[1\.5em\]{
-  width: 1.5em;
-}
-
 .w-full{
   width: 100%;
-}
-
-.w-\[40\.9em\]{
-  width: 40.9em;
-}
-
-.w-\[2em\]{
-  width: 2em;
-}
-
-.w-9\/12{
-  width: 75%;
-}
-
-.w-\[9em\]{
-  width: 9em;
 }
 
 .w-10\/12{
@@ -810,14 +754,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-8\/12{
   width: 66.666667%;
-}
-
-.w-\[100vw\]{
-  width: 100vw;
-}
-
-.w-\[50em\]{
-  width: 50em;
 }
 
 .flex-shrink{
@@ -850,17 +786,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-separate{
   border-collapse: separate;
-}
-
-.-translate-y-1\/2{
-  --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-110{
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform{
@@ -1334,14 +1259,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 0.5em;
 }
 
-.gap-\[0\.8em\]{
-  gap: 0.8em;
-}
-
-.gap-\[0\.25em\]{
-  gap: 0.25em;
-}
-
 .gap-\[0\.35em\]{
   gap: 0.35em;
 }
@@ -1710,11 +1627,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-style: none;
 }
 
-.bg-\[\#111\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 17 17 / var(--tw-bg-opacity));
-}
-
 .bg-gray-800{
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
@@ -1859,6 +1771,11 @@ Ensure the default browser behavior of the `hidden` attribute.
      object-fit: scale-down;
 }
 
+.px-\[1\.5em\]{
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
 .py-\[\.5em\]{
   padding-top: .5em;
   padding-bottom: .5em;
@@ -1872,40 +1789,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-}
-
-.px-\[2em\]{
-  padding-left: 2em;
-  padding-right: 2em;
-}
-
-.px-\[1\.5em\]{
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-}
-
-.pt-\[10em\]{
-  padding-top: 10em;
-}
-
-.pt-\[15em\]{
-  padding-top: 15em;
-}
-
-.pt-\[13em\]{
-  padding-top: 13em;
-}
-
-.pt-\[12em\]{
-  padding-top: 12em;
-}
-
-.pt-\[11em\]{
-  padding-top: 11em;
-}
-
-.pt-\[14em\]{
-  padding-top: 14em;
 }
 
 .text-left{
@@ -2105,16 +1988,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   -moz-osx-font-smoothing: auto;
 }
 
-.opacity-50{
-  opacity: 0.5;
-}
-
-.opacity-25{
-  opacity: 0.25;
-}
-
 .opacity-10{
   opacity: 0.1;
+}
+
+.opacity-50{
+  opacity: 0.5;
 }
 
 .bg-blend-normal{
@@ -2420,7 +2299,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: #414141;
   --w-primary: rgb(255, 215, 36);
   --w-secondary: #0c81cf;
-  --w-tertiary: #e07c18;
+  --w-tertiary: #6508e4;
   --w-animate-duration: 2s;
   --w-active: #ffd694;
   --w-highlight: #ffff00;
@@ -2690,16 +2569,8 @@ body {
 }
 
 @media (min-width: 1024px){
-  .lg\:right-\[-2em\]{
-    right: -2em;
-  }
-
   .lg\:block{
     display: block;
-  }
-
-  .lg\:w-\[2\.94em\]{
-    width: 2.94em;
   }
 
   .lg\:text-\[0\.9rem\]{

@@ -69,11 +69,39 @@ $width: 16.66em;
     background: transparent url(../images/login-popup/bg-log-popup-lg.webp)
       no-repeat center center;
     background-size: 100% 100%;
+    transition: all 0.25s ease;
+    display: none;
+
+    &.active {
+      display: block;
+      animation: popOut 0.3s ease 0s 1;
+    }
   }
   #block-dangky {
     background: transparent url(../images/login-popup/bg-reg-popup-lg.webp)
       no-repeat center center;
     background-size: 100% 100%;
+    display: none;
+
+    &.active {
+      display: block;
+      animation: popOut 0.3s ease 0s 1;
+    }
+  }
+
+  /* The animation code */
+  @keyframes popOut {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    80% {
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   .popup-login {
@@ -152,11 +180,18 @@ $width: 16.66em;
     position: relative;
     z-index: 5;
   }
+}
 
-  #block-dangnhap:not(.active) {
-    display: none;
-  }
-  #block-dangky:not(.active) {
-    display: none;
+// ANCHOR custom modal style
+.wmodal-content {
+  border-radius: 0.25em;
+  border: 2px solid rgba(#6508e4, 0.5);
+
+  h1.title {
+    color: #6508e4;
+
+    span {
+      color: inherit;
+    }
   }
 }
