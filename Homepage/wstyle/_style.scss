@@ -7,7 +7,7 @@ body {
 
 .page-wrapper {
   overflow: hidden;
-  background: transparent url("../images/bg-small.webp") no-repeat center top
+  background: transparent url("../images/bg-sm.webp") no-repeat center top
     scroll;
   background-size: 100% auto;
 }
@@ -467,7 +467,7 @@ a.hotro {
     // 16px in 1920px
   }
   .page-wrapper {
-    background: transparent url("../images/bg-big.webp") no-repeat center top
+    background: transparent url("../images/bg-lg.webp") no-repeat center top
       scroll;
     background-size: 100% auto;
   }
