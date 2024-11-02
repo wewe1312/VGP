@@ -729,6 +729,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 9em;
 }
 
+.mt-\[18em\]{
+  margin-top: 18em;
+}
+
 .mr-\[\.75em\]{
   margin-right: .75em;
 }
@@ -751,18 +755,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.mt-\[20em\]{
-  margin-top: 20em;
-}
-
-.mt-\[15em\]{
-  margin-top: 15em;
-}
-
-.mt-\[18em\]{
-  margin-top: 18em;
 }
 
 .box-border{
@@ -911,12 +903,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 70em;
 }
 
-.h-\[40em\]{
-  height: 40em;
+.h-\[32\.75em\]{
+  height: 32.75em;
 }
 
-.h-auto{
-  height: auto;
+.h-\[65em\]{
+  height: 65em;
 }
 
 .h-\[15em\]{
@@ -937,38 +929,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-\[calc\(100\%-theme\(\"spacing\.1\"\)\)\]{
   height: calc(100% - 0.25rem);
-}
-
-.h-\[30em\]{
-  height: 30em;
-}
-
-.h-\[33\.33em\]{
-  height: 33.33em;
-}
-
-.h-\[33em\]{
-  height: 33em;
-}
-
-.h-\[32\.5em\]{
-  height: 32.5em;
-}
-
-.h-\[32\.75em\]{
-  height: 32.75em;
-}
-
-.h-\[68em\]{
-  height: 68em;
-}
-
-.h-\[66em\]{
-  height: 66em;
-}
-
-.h-\[65em\]{
-  height: 65em;
 }
 
 .w-\[15em\]{
@@ -1023,6 +983,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 6em;
 }
 
+.w-\[20em\]{
+  width: 20em;
+}
+
 .w-\[8em\]{
   width: 8em;
 }
@@ -1041,6 +1005,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[\.8em\]{
   width: .8em;
+}
+
+.w-6\/12{
+  width: 50%;
 }
 
 .flex-1{
@@ -1386,6 +1354,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-row{
   flex-direction: row;
 }
@@ -1550,6 +1522,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 0.5em;
 }
 
+.gap-\[0\.25em\]{
+  gap: 0.25em;
+}
+
 .gap-\[\.25em\]{
   gap: .25em;
 }
@@ -1560,10 +1536,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-\[1px\]{
   gap: 1px;
-}
-
-.gap-\[0\.25em\]{
-  gap: 0.25em;
 }
 
 .gap-x-\[2\%\]{
@@ -2171,8 +2143,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.25rem;
 }
 
-.pb-\[3em\]{
-  padding-bottom: 3em;
+.px-\[3em\]{
+  padding-left: 3em;
+  padding-right: 3em;
 }
 
 .pt-\[2em\]{
@@ -2181,6 +2154,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pb-\[2em\]{
   padding-bottom: 2em;
+}
+
+.pt-\[1em\]{
+  padding-top: 1em;
+}
+
+.pt-\[5em\]{
+  padding-top: 5em;
+}
+
+.pt-\[6em\]{
+  padding-top: 6em;
 }
 
 .text-left{
@@ -2276,10 +2261,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
-.text-\[0\.8em\]{
-  font-size: 0.8em;
-}
-
 .font-bold{
   font-weight: 700;
 }
@@ -2362,10 +2343,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .leading-\[2\.8\]{
   line-height: 2.8;
-}
-
-.leading-\[3\]{
-  line-height: 3;
 }
 
 .text-white{
@@ -3044,34 +3021,6 @@ body {
     margin-top: 10em;
   }
 
-  .lg\:mt-\[16em\]{
-    margin-top: 16em;
-  }
-
-  .lg\:mt-\[-2em\]{
-    margin-top: -2em;
-  }
-
-  .lg\:mt-\[1\.5em\]{
-    margin-top: 1.5em;
-  }
-
-  .lg\:mt-\[15em\]{
-    margin-top: 15em;
-  }
-
-  .lg\:mt-\[12em\]{
-    margin-top: 12em;
-  }
-
-  .lg\:mt-\[2em\]{
-    margin-top: 2em;
-  }
-
-  .lg\:mt-\[1em\]{
-    margin-top: 1em;
-  }
-
   .lg\:mt-\[11em\]{
     margin-top: 11em;
   }
@@ -3104,12 +3053,12 @@ body {
     height: 55.25em;
   }
 
-  .lg\:h-\[31em\]{
-    height: 31em;
-  }
-
   .lg\:h-\[62\.5em\]{
     height: 62.5em;
+  }
+
+  .lg\:h-\[31em\]{
+    height: 31em;
   }
 
   .lg\:min-h-\[33\.33em\]{
@@ -3180,24 +3129,20 @@ body {
     width: 24.8em;
   }
 
-  .lg\:w-\[11\.75em\]{
-    width: 11.75em;
-  }
-
-  .lg\:w-\[19em\]{
-    width: 19em;
-  }
-
-  .lg\:w-\[56em\]{
-    width: 56em;
+  .lg\:w-\[51\.5em\]{
+    width: 51.5em;
   }
 
   .lg\:w-\[30\%\]{
     width: 30%;
   }
 
-  .lg\:w-\[51\.5em\]{
-    width: 51.5em;
+  .lg\:w-\[11\.75em\]{
+    width: 11.75em;
+  }
+
+  .lg\:w-\[19em\]{
+    width: 19em;
   }
 
   .lg\:scale-\[130\%\]{
@@ -3226,6 +3171,21 @@ body {
     gap: 0px;
   }
 
+  .lg\:px-\[7em\]{
+    padding-left: 7em;
+    padding-right: 7em;
+  }
+
+  .lg\:px-\[4em\]{
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+
+  .lg\:px-\[5em\]{
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+
   .lg\:px-\[3em\]{
     padding-left: 3em;
     padding-right: 3em;
@@ -3243,20 +3203,16 @@ body {
     padding-left: 17em;
   }
 
-  .lg\:pl-\[20em\]{
-    padding-left: 20em;
-  }
-
-  .lg\:pl-\[30em\]{
-    padding-left: 30em;
-  }
-
-  .lg\:pl-\[25em\]{
-    padding-left: 25em;
-  }
-
   .lg\:pl-\[27em\]{
     padding-left: 27em;
+  }
+
+  .lg\:pt-\[8em\]{
+    padding-top: 8em;
+  }
+
+  .lg\:pt-\[2em\]{
+    padding-top: 2em;
   }
 
   .lg\:text-\[1em\]{
@@ -3265,14 +3221,6 @@ body {
 
   .lg\:text-\[\.8em\]{
     font-size: .8em;
-  }
-
-  .lg\:text-\[1\.25em\]{
-    font-size: 1.25em;
-  }
-
-  .lg\:leading-\[1\.8\]{
-    line-height: 1.8;
   }
 }
 

@@ -12,6 +12,7 @@
     <script type="module" src="./script/wmodal.js"></script>
     <script type="module" src="./script/wtabs.js"></script>
     <script type="module" src="./script/wsound.js"></script>
+    <script type="module" src="./images/item/script.js"></script>
 
     <!-- swiper -->
     <link
@@ -329,7 +330,26 @@
             data-toggle="loop"
             data-loop="5"
             data-aos="fade-down"
-            data-aos-delay="0"></div>
+            data-aos-delay="0">
+            <div
+              class="grid grid-flow-col gap-[0.25em] pt-[1em] px-[2em] lg:px-[4em] lg:pt-[2em]">
+              <div class="witem">
+                <img src="./images/item/item.webp" alt="Bổ Thiên Thạch" />
+                <h1 class="name">Bổ Thiên Thạch</h1>
+                <span class="quantity">x1</span>
+              </div>
+              <div class="witem">
+                <img src="./images/item/item.webp" alt="Bổ Thiên Thạch" />
+                <h1 class="name">Bổ Thiên Thạch</h1>
+                <span class="quantity">x1</span>
+              </div>
+              <div class="witem">
+                <img src="./images/item/item.webp" alt="Bổ Thiên Thạch" />
+                <h1 class="name">Bổ Thiên Thạch</h1>
+                <span class="quantity">x1</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- button -->
@@ -391,7 +411,26 @@
             data-toggle="loop"
             data-loop="3"
             data-aos="fade-down"
-            data-aos-delay="0"></div>
+            data-aos-delay="0">
+            <div
+              class="grid grid-cols-3 gap-[0.25em] pt-[6em] px-[3em] lg:pt-[8em] lg:px-[5em]">
+              <div class="witem">
+                <img src="./images/item/item.webp" alt="Bổ Thiên Thạch" />
+                <h1 class="name">Bổ Thiên Thạch</h1>
+                <span class="quantity">x1</span>
+              </div>
+              <div class="witem">
+                <img src="./images/item/item.webp" alt="Bổ Thiên Thạch" />
+                <h1 class="name">Bổ Thiên Thạch</h1>
+                <span class="quantity">x1</span>
+              </div>
+              <div class="witem">
+                <img src="./images/item/item.webp" alt="Bổ Thiên Thạch" />
+                <h1 class="name">Bổ Thiên Thạch</h1>
+                <span class="quantity">x1</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- button -->
@@ -568,37 +607,60 @@
               <img src="./images/block-bxh/btn-banghoi.webp" alt="" />
             </button>
           </div>
+
           <!-- tab content -->
           <div class="board tabs-content">
-            <table class="w-full text-center">
-              <thead class="text-secondary">
-                <tr>
-                  <th class="st1">Top</th>
-                  <th class="st3">Tên</th>
-                  <th class="st2">Server</th>
-                  <th class="st4">Chiến Lực</th>
-                </tr>
-              </thead>
-              <tbody class="content active" id="cum01">
-                <tr data-toggle="loop" data-loop="10">
-                  <td class="stt"><span>1</span></td>
-                  <td>G63.AMG</td>
-                  <td>Thần Vương 1</td>
-                  <td>528404</td>
-                </tr>
-              </tbody>
-              <tbody class="content" id="cum02">
-                <tr data-toggle="loop" data-loop="10">
-                  <td class="stt"><span>1</span></td>
-                  <td>G63.AMG</td>
-                  <td>Thần Vương 2</td>
-                  <td>528404</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="content active" id="cum01">
+              <!-- select -->
+              <select class="" name="" id="">
+                <option data-loop="5">S1 - Dũng Giả Đại Lục</option>
+              </select>
+              <table class="w-full text-center">
+                <thead class="text-secondary">
+                  <tr>
+                    <th class="st1">Top</th>
+                    <th class="st3">Tên</th>
+                    <th class="st2">Server</th>
+                    <th class="st4">Chiến Lực</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-toggle="loop" data-loop="10">
+                    <td class="stt"><span>1</span></td>
+                    <td>G63.AMG</td>
+                    <td>Thần Vương 1</td>
+                    <td>528404</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="content" id="cum02">
+              <!-- select -->
+              <select class="" name="" id="">
+                <option data-loop="5">S2 - Dũng Giả Đại Lục</option>
+              </select>
+              <table class="w-full text-center">
+                <thead class="text-secondary">
+                  <tr>
+                    <th class="st1">Top</th>
+                    <th class="st3">Tên</th>
+                    <th class="st2">Server</th>
+                    <th class="st4">Chiến Lực</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-toggle="loop" data-loop="10">
+                    <td class="stt"><span>1</span></td>
+                    <td>G63.AMG</td>
+                    <td>Thần Vương 1</td>
+                    <td>528404</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
           <!-- status -->
-          <div class="status mt-[1em]">Cập nhật lúc 12:00 ngày 25/06/2023</div>
+          <div class="status">Cập nhật lúc 12:00 ngày 25/06/2023</div>
           <!-- <div class="w-[12em] mx-auto">
             <button
               class="w-image-button w-full"
