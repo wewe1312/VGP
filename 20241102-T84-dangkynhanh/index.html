@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="output.css" rel="stylesheet" />
+    <link href="css/wwstyle.min.css" rel="stylesheet" />
+
+    <!-- my script -->
+    <script type="module" src="./script/wloop.js"></script>
+    <script type="module" src="./script/wmodal.js"></script>
+  </head>
+  <body class="quickreg register-show">
+    <!-- toggle class "register-show" on body tag for magic! -->
+    <div class="menu-nav">
+      <a href="#">Trang chủ</a>
+      <a href="#">Fanpage</a>
+      <a href="#">Group</a>
+    </div>
+
+    <div
+      class="fill-click"
+      data-toggle="modal"
+      data-target="modal-register"></div>
+
+    <!-- ANCHOR block dang ky -->
+    <div id="block-dangky" class="popup-login">
+      <!--  btn-close 
+            <button class="btn-close w-image-button">
+              <img src="./images/login-popup/btn-close.webp" alt="" />
+            </button>-->
+      <div class="block-login">
+        <form class="">
+          <div class="alert">Tên đăng nhập hoặc mật khẩu không đúng.</div>
+          <input type="text" placeholder="Tên Đăng Nhập" />
+          <input type="password" placeholder="Mật Khẩu" />
+          <input type="password" placeholder="Nhập lại mật Khẩu" />
+          <div>
+            <input id="fname" type="checkbox" />
+            <label for="fname"
+              >Tôi đồng ý với
+              <a class="underline" href="#">Điều khoản</a>
+            </label>
+          </div>
+          <button
+            type="button"
+            class="w-image-button animate__loop animate__bling">
+            <img src="./images/login-popup/btn-dangky.webp" alt="" />
+          </button>
+          <span class="split"></span>
+          <div class="grid grid-cols-2 gap-[0.35em]">
+            <button type="button" class="w-image-button">
+              <img src="./images/login-popup/btn-facebook.webp" alt="" />
+            </button>
+            <button
+              type="button"
+              class="w-image-button"
+              data-toggle="modal"
+              data-target="modal-login">
+              <img src="./images/login-popup/btn-vgp.webp" alt="" />
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ANCHOR  bg video -->
+    <div class="bgvideo hidden lg:block">
+      <div class="aspect-[1920/1000]">
+        <video preload="auto" nocontrol loop autoplay muted playsinline>
+          <!-- replace video, require video size 1920x1000, 2 format webm & mp4 -->
+          <source src="./images/bgvideo/bg-video.webm" type="video/ogg" />
+          <source src="./images/bgvideo/bg-video.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+
+    <!-- ANCHOR modal ---------------------------------------------->
+    <!-- modal login -->
+    <div class="wmodal" id="modal-login">
+      <div class="wmodal-content relative">
+        <button class="btn-close-modal" data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Đăng nhập</span>
+          </h1>
+          <div class="content-scroll block-login" data-simplebar="">
+            <form class="">
+              <div class="alert">Tên đăng nhập hoặc mật khẩu không đúng.</div>
+              <input type="text" placeholder="Tên Đăng Nhập" />
+              <input type="password" placeholder="Mật Khẩu" />
+              <div>
+                <input id="fname" type="checkbox" />
+                <label for="fname"
+                  >Tôi đồng ý với
+                  <a class="underline" href="#">Điều khoản</a>
+                </label>
+              </div>
+              <button
+                type="button"
+                class="w-image-button animate__loop animate__bling">
+                <img src="./images/login-popup/btn-dangnhap.webp" alt="" />
+              </button>
+              <span class="split"></span>
+              <div class="grid grid-cols-1 gap-[0.35em]">
+                <button type="button" class="w-image-button">
+                  <img
+                    src="./images/login-popup/btn-facebook-long.webp"
+                    alt="" />
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal register -->
+    <div class="wmodal" id="modal-register">
+      <div class="wmodal-content relative">
+        <button class="btn-close-modal" data-dismiss="modal"></button>
+        <div class="content">
+          <h1 class="title">
+            <span>Đăng ký</span>
+          </h1>
+          <div class="content-scroll block-login" data-simplebar="">
+            <form class="">
+              <div class="alert">Tên đăng nhập hoặc mật khẩu không đúng.</div>
+              <input type="text" placeholder="Tên Đăng Nhập" />
+              <input type="password" placeholder="Mật Khẩu" />
+              <input type="password" placeholder="Nhập lại mật Khẩu" />
+              <div>
+                <input id="fname" type="checkbox" />
+                <label for="fname"
+                  >Tôi đồng ý với
+                  <a class="underline" href="#">Điều khoản</a>
+                </label>
+              </div>
+              <button
+                type="button"
+                class="w-image-button animate__loop animate__bling">
+                <img src="./images/login-popup/btn-dangky.webp" alt="" />
+              </button>
+              <span class="split"></span>
+              <div class="grid grid-cols-2 gap-[0.35em]">
+                <button type="button" class="w-image-button">
+                  <img src="./images/login-popup/btn-facebook.webp" alt="" />
+                </button>
+                <button type="button" class="w-image-button">
+                  <img src="./images/login-popup/btn-vgp.webp" alt="" />
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

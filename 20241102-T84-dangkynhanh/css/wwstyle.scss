@@ -1,0 +1,166 @@
+// @import "../wstyle/wstyle";
+// @import "../wstyle/popup-login";
+@import "../wstyle/wmodal";
+@import "../wstyle/zanimate";
+
+// @import "../images/login/login";
+@import "../images/bgvideo/bgvideo";
+
+.w-btn {
+  padding: 0.5em 1em;
+  border: 1px var(--w-secondary) solid;
+  border-radius: 1em;
+}
+
+.info {
+  background-color: rgba($color: #726151, $alpha: 0.75);
+  color: #fff;
+  filter: drop-shadow(0 0 0.5em rgba(0, 0, 0, 0.25));
+  border-radius: 1em;
+}
+
+// CSS
+.quickreg {
+  width: 100vw;
+  aspect-ratio: 1920/1000;
+  background: transparent url("../images/bgvideo/loader.gif") scroll no-repeat
+    center center;
+  background-size: 10vw auto;
+  display: block;
+  // overflow: hidden;
+  position: relative;
+  padding-top: 13.888em;
+}
+
+.menu-nav {
+  font-size: 0.9em;
+  position: absolute;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 1.25em;
+  padding: 0.5em 1em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 0 0em 1em 0;
+}
+
+.fill-click {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 20;
+  // background-color: rgba(0, 0, 0, 0.9);
+}
+
+#block-dangky {
+  margin: 0 auto 0 auto;
+  background: transparent;
+  transition: all 0.25s ease;
+  display: none;
+  position: relative;
+  z-index: 10;
+}
+
+.popup-login,
+#modal-login .wmodal-content,
+#modal-register .wmodal-content {
+  width: 22.222em;
+  aspect-ratio: 400/550;
+  // filter: drop-shadow(0em 1em 2em rgba(0, 0, 0, 0.25));
+  position: relative;
+
+  form input[type="text"],
+  form input[type="password"] {
+    padding: 0 1em;
+    line-height: 3em;
+    height: 3em;
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 0.25em;
+  }
+
+  form input.error {
+    border-color: #c00;
+  }
+
+  .block-login {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    // padding-top: 3em;
+
+    > form {
+      display: grid;
+      gap: 0.6em;
+      padding: 0 2em;
+
+      .alert {
+        width: 100%;
+        background-color: rgba($color: #c00, $alpha: 0.8);
+        text-align: center;
+        color: #fff;
+        font-size: 0.75em;
+        line-height: 1;
+        padding: 0.5em;
+      }
+
+      .split {
+        display: block;
+        background: transparent url(../images/login-popup/split.webp) scroll
+          center center;
+        background-size: 100% 100%;
+        width: 100%;
+        padding-top: 6.6%;
+      }
+    }
+  }
+
+  .btn-close {
+    width: 3.5em;
+    height: 3.5em;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 0;
+    right: 6.5em;
+    display: none;
+  }
+}
+
+// ANCHOR custom modal style
+.wmodal-content {
+  border-radius: 1em;
+  border: 5px solid rgba(#000000, 0.25);
+  padding: 2em 0.5em 2em;
+
+  h1.title {
+    color: orange;
+    letter-spacing: 0;
+    font-weight: 800;
+
+    span {
+      color: inherit;
+    }
+  }
+}
+
+//
+
+.register-show {
+  .fill-click {
+    display: none;
+  }
+  #block-dangky {
+    display: block;
+
+    .block-login {
+      padding-top: 3em;
+    }
+  }
+}

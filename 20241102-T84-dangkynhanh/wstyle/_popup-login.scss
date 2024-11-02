@@ -1,0 +1,29 @@
+.popup-login {
+  background: transparent url(../images/login-popup/bg-login-popup-lg.webp)
+    no-repeat center center;
+  background-size: 100% 100%;
+  aspect-ratio: 736/375;
+  filter: drop-shadow(0em 1em 2em rgba(0, 0, 0, 0.25));
+
+  form input[type="text"],
+  form input[type="password"] {
+    padding: 0 1em;
+    line-height: 2.5em;
+    height: 2.5em;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+  }
+}
+
+.wrap-login {
+  background-color: rgba(0, 0, 0, 0.69);
+  backdrop-filter: blur(1em);
+}
+
+#block-dangnhap:not(.active) {
+  display: none;
+}
+#block-dangky:not(.active) {
+  display: none;
+}
