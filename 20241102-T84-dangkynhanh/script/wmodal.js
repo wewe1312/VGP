@@ -10,8 +10,10 @@ for (let i = 0; i < btnwmodal.length; i++) {
     target_el.classList.add("show");
     myBody.classList.add("overflow-hidden");
     target_el.addEventListener("click", function () {
-      this.classList.remove("show");
-      myBody.classList.remove("overflow-hidden");
+      if (target_el.classList.contains("out-click-hide")) {
+        myBody.classList.remove("overflow-hidden");
+        this.classList.remove("show");
+      }
     });
   });
 }
