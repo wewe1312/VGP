@@ -1,9 +1,11 @@
 #section-diemdanh {
+  height: (1600 * $em);
   background: url(../images/block-diemdanh/bg-sm.webp) no-repeat center 0em
     scroll;
   background-size: 100vw auto;
 
   @media (min-width: 1024px) {
+    height: (900 * $lgem);
     background: url(../images/block-diemdanh/bg-lg.webp) no-repeat center 0em
       scroll;
     background-size: 100vw auto;
@@ -16,7 +18,7 @@
     gap: 1%;
 
     .day {
-      width: 32%;
+      width: 40%;
       display: block;
       position: relative;
       background: transparent url(../images/block-diemdanh/day/day001.webp)
@@ -27,7 +29,7 @@
       cursor: pointer;
       overflow: hidden;
       @media (min-width: 1024px) {
-        width: 13%;
+        width: 16%;
       }
 
       //with item inside
@@ -63,14 +65,14 @@
       }
     }
 
-    .day:last-child {
-      transform-origin: center top;
-      /* transform: scale(1.25); */
+    // .day:last-child {
+    //   transform-origin: center top;
+    //   /* transform: scale(1.25); */
 
-      @media (min-width: 1024px) {
-        transform: translateX(0em) scale(1);
-      }
-    }
+    //   @media (min-width: 1024px) {
+    //     transform: translateX(0em) scale(1);
+    //   }
+    // }
 
     .day.disabled {
       filter: grayscale(0.5) brightness(0.69);
@@ -87,15 +89,15 @@
     }
   }
   @media (max-width: 1024px) {
-    .day:last-child {
-      width: 60%;
-      aspect-ratio: 298/180;
-      background-image: url("../images/block-diemdanh/day/day007-m.webp") !important;
+    // .day:last-child {
+    //   width: 60%;
+    //   aspect-ratio: 298/180;
+    //   background-image: url("../images/block-diemdanh/day/day007-m.webp") !important;
 
-      .witem {
-        width: 22%;
-      }
-    }
+    //   .witem {
+    //     width: 22%;
+    //   }
+    // }
   }
 
   .block-luotdangky {
