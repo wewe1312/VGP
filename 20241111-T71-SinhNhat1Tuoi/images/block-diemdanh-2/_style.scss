@@ -1,0 +1,114 @@
+#section-diemdanh-2 {
+  $ratio: 166/531;
+
+  height: (1859 * $em);
+  position: relative;
+  z-index: 2;
+  background: url(../images/block-diemdanh-2/bg-sm.webp) no-repeat center 0em
+    scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (1000 * $lgem);
+    background: url(../images/block-diemdanh-2/bg-lg.webp) no-repeat center 0em
+      scroll;
+    background-size: 100vw auto;
+  }
+
+  .day-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1%;
+
+    .day {
+      width: 32%;
+      display: block;
+      position: relative;
+      background: transparent url(../images/block-diemdanh-2/moc/moc001.webp)
+        no-repeat center center;
+      background-size: 100% 100%;
+      aspect-ratio: $ratio;
+      transform: scale(1);
+      cursor: pointer;
+      @media (min-width: 1024px) {
+        width: 13%;
+      }
+
+      //with item inside
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5em;
+      padding: 2.25em;
+      padding-bottom: 160 * $em;
+      @media (min-width: 1024px) {
+        padding: 2.75em;
+        padding-bottom: 160 * $lgem;
+      }
+
+      // .btn-thamgia {
+      //   width: 69%;
+      //   margin: 11em auto 0 auto;
+      // }
+    }
+
+    .day:nth-child(3n) {
+      transform: translateX(0em) scale(1);
+      @media (min-width: 1024px) {
+        transform: translateX(0em) scale(1);
+      }
+    }
+
+    .day:last-child {
+      transform-origin: center top;
+      /* transform: scale(1.25); */
+
+      @media (min-width: 1024px) {
+        transform: translateX(0em) scale(1);
+      }
+    }
+
+    .day.disabled {
+      filter: grayscale(0.5) brightness(0.69);
+
+      .btn-thamgia {
+        display: none;
+      }
+    }
+
+    @for $i from 1 through 7 {
+      .day:nth-child(#{$i}) {
+        background-image: url("../images/block-diemdanh-2/moc/moc00" + $i + ".webp");
+      }
+    }
+  }
+  // @media (max-width: 1024px) {
+  //   .day:last-child {
+  //     width: 60%;
+  //     aspect-ratio: 298/180;
+  //     background-image: url("../images/block-diemdanh/moc/moc007-m.webp") !important;
+  //   }
+  // }
+
+  .block-luotdangky {
+    background-color: var(--w-primary);
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    border-radius: 0.25em;
+
+    h3 {
+      opacity: 0.5;
+    }
+    h1 {
+      font-size: 2em;
+      font-weight: bold;
+    }
+  }
+}

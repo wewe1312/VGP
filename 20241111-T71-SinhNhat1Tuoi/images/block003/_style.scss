@@ -1,0 +1,50 @@
+#section-03 {
+  $ratio: 166/531;
+
+  height: (1600 * $em);
+  position: relative;
+  z-index: 2;
+  background: url(../images/block003/bg-sm.webp) no-repeat center 0em scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (1080 * $lgem);
+    background: url(../images/block003/bg-lg.webp) no-repeat center 0em scroll;
+    background-size: 100vw auto;
+  }
+
+  .group-button-big {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (min-width: 1024px) {
+      width: 1215 * $lgem;
+    }
+
+    > .w-image-button {
+      transform: scale(0.98);
+      width: 50%;
+      @media (min-width: 1024px) {
+        transform: scale(0.98);
+        width: 336 * $lgem;
+
+        &:nth-child(2) {
+          margin-left: 400 * $lgem;
+        }
+        &:nth-child(4) {
+          margin-left: 430 * $lgem;
+        }
+      }
+    }
+  }
+
+  .group-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25em;
+    > .w-image-button {
+      width: 30%;
+    }
+  }
+}
