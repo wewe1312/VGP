@@ -119,4 +119,13 @@
       font-weight: bold;
     }
   }
+
+  .block-btn-big {
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: center;
+    > button {
+      width: 45%;
+    }
+  }
 }
