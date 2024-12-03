@@ -1,0 +1,47 @@
+.checkin-small {
+  .w-image-button {
+    width: 90%;
+    margin: 0 auto;
+  }
+  span {
+    font-size: 1.5em;
+    color: white;
+    letter-spacing: 0.15em;
+  }
+}
+
+.checkin {
+  > .w-image-button {
+    background: transparent url("../images/block003/active/gift-01.png")
+      no-repeat center center;
+    background-size: 100% auto;
+  }
+
+  .w-image-button:nth-child(1) {
+    background-image: url("../images/block003/active/gift-01.png");
+  }
+  .w-image-button:nth-child(2) {
+    background-image: url("../images/block003/active/gift-02.png");
+  }
+  .w-image-button:nth-child(3) {
+    background-image: url("../images/block003/active/gift-03.png");
+  }
+  .w-image-button:nth-child(4) {
+    background-image: url("../images/block003/active/gift-04.png");
+  }
+  .w-image-button:nth-child(5) {
+    background-image: url("../images/block003/active/gift-05.png");
+  }
+  .w-image-button:nth-child(6) {
+    background-image: url("../images/block003/active/gift-06.png");
+  }
+  .w-image-button:nth-child(7) {
+    background-image: url("../images/block003/active/gift-07.png");
+  }
+
+  .active {
+    > img {
+      opacity: 0;
+    }
+  }
+}

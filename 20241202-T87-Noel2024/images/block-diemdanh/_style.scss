@@ -1,0 +1,191 @@
+#section-diemdanh {
+  height: (1250 * $em);
+  background: url(../images/block-diemdanh/bg-sm.webp) no-repeat center 0em
+    scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (950 * $lgem);
+    background: url(../images/block-diemdanh/bg-lg.webp) no-repeat center 0em
+      scroll;
+    background-size: 100vw auto;
+  }
+
+  $ratio: 273/305;
+
+  .day-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+
+    .day {
+      width: 40%;
+      display: block;
+      position: relative;
+      background: transparent url(../images/block-diemdanh/day/day001.webp)
+        no-repeat center center;
+      background-size: 100% 100%;
+      aspect-ratio: $ratio;
+      transform: scale(1);
+      cursor: pointer;
+      overflow: hidden;
+      @media (min-width: 1024px) {
+        width: 22%;
+      }
+
+      //with item inside
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.25em;
+      padding: 1em;
+      padding-top: 80 * $em;
+      color: #fff;
+
+      @media (min-width: 1024px) {
+        padding: 1em;
+        padding-top: 75 * $lgem;
+      }
+
+      > .witem {
+        height: fit-content;
+        width: 45%;
+      }
+
+      // .btn-thamgia {
+      //   width: 69%;
+      //   margin: 11em auto 0 auto;
+      // }
+    }
+
+    .day:nth-child(3n) {
+      transform: translateX(0em) scale(1);
+      @media (min-width: 1024px) {
+        transform: translateX(0em) scale(1);
+      }
+    }
+
+    // .day:last-child {
+    //   transform-origin: center top;
+    //   /* transform: scale(1.25); */
+
+    //   @media (min-width: 1024px) {
+    //     transform: translateX(0em) scale(1);
+    //   }
+    // }
+
+    .day.disabled {
+      filter: grayscale(0.5) brightness(0.69);
+
+      .btn-thamgia {
+        display: none;
+      }
+    }
+
+    @for $i from 1 through 7 {
+      .day:nth-child(#{$i}) {
+        background-image: url("../images/block-diemdanh/day/day00" + $i + ".webp");
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    // .day:last-child {
+    //   width: 60%;
+    //   aspect-ratio: 298/180;
+    //   background-image: url("../images/block-diemdanh/day/day007-m.webp") !important;
+
+    //   .witem {
+    //     width: 22%;
+    //   }
+    // }
+  }
+
+  .block-luotdangky {
+    background-color: var(--w-primary);
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+
+    h3 {
+      opacity: 0.5;
+    }
+    h1 {
+      font-size: 2em;
+      font-weight: bold;
+    }
+  }
+
+  .block-btn-big {
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: center;
+    > button {
+      width: 45%;
+    }
+  }
+}
+
+/*
+<!-- ANCHOR - section 02 -->
+<section
+  id="section-diemdanh"
+  class="scrollspy relative z-[2] overflow-hidden">
+  <div class="wcontainer">
+    <!-- gift -->
+    <div
+      class="day-wrap mt-[14em] w-10/12 mx-auto lg:w-12/12 lg:mt-[20em] animate__loop animate__glow">
+      <div
+        class="day cursor-pointer disabled"
+        data-toggle="loop"
+        data-loop="4"
+        data-aos="fade-down"
+        data-aos-delay="0"></div>
+    </div>
+
+    <!-- button -->
+    <div
+      class="block-btn-big w-12/12 mx-auto mt-[2em] lg:w-5/12 lg:mt-[2em]">
+      <button
+        class="w-image-button w-full"
+        data-toggle="modal"
+        data-target="modal-confirm">
+        <img src="./images/block-diemdanh/btn-diemdanh.webp" alt="" />
+      </button>
+      <!-- <button
+        class="w-image-button w-full"
+        data-toggle="modal"
+        data-target="modal-confirm">
+        <img src="./images/block-diemdanh/btn-nhanbu.webp" alt="" />
+      </button> -->
+    </div>
+    <div
+      class="hidden w-10/12 flex flex-wrap justify-center mx-auto gap-x-[2%] gap-y-[0.5em] mt-[1em] lg:w-6/12">
+      <!-- <button
+        class="w-image-button w-[48%] lg:w-[32%]"
+        data-toggle="modal"
+        data-target="modal-login">
+        <img src="./images/block-diemdanh/btn-dangnhap.webp" alt="" />
+      </button> -->
+      <button
+        class="w-image-button w-[48%] lg:w-[32%]"
+        data-toggle="modal"
+        data-target="modal-thele">
+        <img src="./images/block-diemdanh/btn-thele.webp" alt="" />
+      </button>
+      <button
+        class="w-image-button w-[48%] lg:w-[32%]"
+        data-toggle="modal"
+        data-target="modal-lichsu">
+        <img src="./images/block-diemdanh/btn-lichsu.webp" alt="" />
+      </button>
+    </div>
+  </div>
+</section>
+*/
