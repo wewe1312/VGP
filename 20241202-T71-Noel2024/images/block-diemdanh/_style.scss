@@ -1,0 +1,133 @@
+#section-diemdanh {
+  height: (1250 * $em);
+  background: url(../images/block-diemdanh/bg-sm.webp) no-repeat center 0em
+    scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (950 * $lgem);
+    background: url(../images/block-diemdanh/bg-lg.webp) no-repeat center 0em
+      scroll;
+    background-size: 100vw auto;
+  }
+
+  $ratio: 273/305;
+
+  .day-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+
+    .day {
+      width: 40%;
+      display: block;
+      position: relative;
+      background: transparent url(../images/block-diemdanh/day/day001.webp)
+        no-repeat center center;
+      background-size: 100% 100%;
+      aspect-ratio: $ratio;
+      transform: scale(1);
+      cursor: pointer;
+      overflow: hidden;
+      @media (min-width: 1024px) {
+        width: 22%;
+      }
+
+      //with item inside
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.25em;
+      padding: 1em;
+      padding-top: 80 * $em;
+      color: #fff;
+
+      @media (min-width: 1024px) {
+        padding: 1em;
+        padding-top: 75 * $lgem;
+      }
+
+      > .witem {
+        height: fit-content;
+        width: 45%;
+      }
+
+      // .btn-thamgia {
+      //   width: 69%;
+      //   margin: 11em auto 0 auto;
+      // }
+    }
+
+    .day:nth-child(3n) {
+      transform: translateX(0em) scale(1);
+      @media (min-width: 1024px) {
+        transform: translateX(0em) scale(1);
+      }
+    }
+
+    // .day:last-child {
+    //   transform-origin: center top;
+    //   /* transform: scale(1.25); */
+
+    //   @media (min-width: 1024px) {
+    //     transform: translateX(0em) scale(1);
+    //   }
+    // }
+
+    .day.disabled {
+      filter: grayscale(0.5) brightness(0.69);
+
+      .btn-thamgia {
+        display: none;
+      }
+    }
+
+    @for $i from 1 through 7 {
+      .day:nth-child(#{$i}) {
+        background-image: url("../images/block-diemdanh/day/day00" + $i + ".webp");
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    // .day:last-child {
+    //   width: 60%;
+    //   aspect-ratio: 298/180;
+    //   background-image: url("../images/block-diemdanh/day/day007-m.webp") !important;
+
+    //   .witem {
+    //     width: 22%;
+    //   }
+    // }
+  }
+
+  .block-luotdangky {
+    background-color: var(--w-primary);
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+
+    h3 {
+      opacity: 0.5;
+    }
+    h1 {
+      font-size: 2em;
+      font-weight: bold;
+    }
+  }
+
+  .block-btn-big {
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: center;
+    > button {
+      width: 45%;
+    }
+  }
+}

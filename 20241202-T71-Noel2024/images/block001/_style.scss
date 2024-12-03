@@ -1,0 +1,31 @@
+#section-01 {
+  height: (1250 * $em);
+  background: #fff url(../images/block001/bg-sm.webp) no-repeat center 0em
+    scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (900 * $lgem);
+    background: #fff url(../images/block001/bg-lg.webp) no-repeat center 0em
+      scroll;
+    background-size: 100vw auto;
+  }
+
+  .group-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+
+    > .w-image-button {
+      width: 60%;
+
+      @media (min-width: 1024px) {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+}

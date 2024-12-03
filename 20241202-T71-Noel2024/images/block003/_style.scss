@@ -1,0 +1,83 @@
+#section-03 {
+  $ratio: 312/160;
+
+  height: (2050 * $em);
+  position: relative;
+  z-index: 2;
+  background: #fff url(../images/block003/bg-sm.webp) no-repeat center 0em
+    scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (1180 * $lgem);
+    background: #fff url(../images/block003/bg-lg.webp) no-repeat center 0em
+      scroll;
+    background-size: 100vw auto;
+  }
+
+  .group-button-big {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (min-width: 1024px) {
+      /* width: 1215 * $lgem; */
+    }
+
+    > .w-image-button {
+      transform: scale(0.98);
+      width: 50%;
+      @media (min-width: 1024px) {
+        /* transform: scale(0.98);
+        width: 336 * $lgem;
+
+        &:nth-child(2) {
+          margin-left: 400 * $lgem;
+        }
+        &:nth-child(4) {
+          margin-left: 430 * $lgem;
+        } */
+      }
+    }
+  }
+
+  .group-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25em;
+    > .w-image-button {
+      width: 45%;
+    }
+  }
+
+  .side-by-side {
+    @media (min-width: 1024px) {
+      display: flex;
+      height: 100%;
+      position: relative;
+
+      .group-button {
+        position: absolute;
+        left: 5em;
+        top: 50%;
+        transform: translateY(-40%);
+        > .w-image-button {
+          width: 100%;
+        }
+      }
+
+      .group-button-big {
+        display: block;
+        position: absolute;
+        right: 3em;
+        top: 50%;
+        transform: translateY(-40%);
+
+        > button.w-image-button {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
