@@ -2,6 +2,9 @@
   /* background: transparent url("../images/character/bg-char.webp") no-repeat
     center center scroll; */
   background-size: 100% auto;
+  overflow: hidden;
+  height: max-content;
+  padding-bottom: 1em;
 }
 
 .character-slide {
@@ -49,6 +52,8 @@
 
     .swiper-slide video {
       display: block;
+      aspect-ratio: 1920/600;
+      width: 100%;
     }
   }
 }
