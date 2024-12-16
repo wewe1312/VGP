@@ -606,10 +606,10 @@
           <div class="board tabs-content">
             <!-- cum01 -->
             <div class="content active" id="cum01">
-              <!-- select -->
+              <!-- select 
               <select class="" name="" id="">
                 <option data-loop="5">S1 - Dũng Giả Đại Lục</option>
-              </select>
+              </select>-->
               <div class="content-scroll">
                 <table>
                   <thead class="text-secondary">
@@ -634,9 +634,13 @@
             <!-- cum02 -->
             <div class="content" id="cum02">
               <!-- select -->
-              <select class="" name="" id="">
-                <option data-loop="5">S1 - Dũng Giả Đại Lục</option>
-              </select>
+              <div class="block__select--listserver">
+                <input list="server" name="" id="" placeholder="Chọn Server" />
+                <datalist class="" name="" id="server">
+                  <option data-loop="100">S1 - Dũng Giả Đại Lục</option>
+                </datalist>
+              </div>
+
               <div class="content-scroll">
                 <table>
                   <thead class="text-secondary">

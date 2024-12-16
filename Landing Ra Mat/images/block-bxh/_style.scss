@@ -80,16 +80,24 @@
     border-bottom: #ccc 1px solid;
   }
 
-  select {
-    display: block;
-    line-height: 2.5em;
-    height: 2.5em;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 0 2em;
-    border-radius: 0.5em;
-    width: 60%;
-    margin: 0 auto;
+  .block__select--listserver {
+    width: 100%;
+
+    input {
+      display: block;
+      line-height: 2.5em;
+      height: 2.5em;
+      background-color: #fff;
+      border: 1px solid #ccc !important;
+      padding: 0 1em;
+      border-radius: 0.5em;
+      width: 90%;
+      margin: 0 auto;
+
+      @media (min-width: 1024px) {
+        width: 60%;
+      }
+    }
   }
 
   .board {
