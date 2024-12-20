@@ -1,0 +1,42 @@
+$classname: index;
+
+.block__#{$classname} {
+  height: (1600 * $em);
+  position: relative;
+  z-index: 2;
+  background: #bc0c0c url('../images/block__'+#{$classname}+'/bg-sm.webp')
+    no-repeat center 0em scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (1000 * $lgem);
+    background: #bc0c0c url('../images/block__'+#{$classname}+'/bg-lg.webp')
+      no-repeat center 0em scroll;
+    background-size: 100vw auto;
+  }
+
+  .wcontainer {
+    @media (min-width: 1024px) {
+      padding-right: 550 * $lgem;
+    }
+  }
+
+  .group-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+    margin-top: 1200 * $em;
+    @media (min-width: 1024px) {
+      margin-top: 750 * $lgem;
+    }
+
+    > .w-image-button {
+      width: 60%;
+
+      @media (min-width: 1024px) {
+        width: 45%;
+      }
+    }
+  }
+}

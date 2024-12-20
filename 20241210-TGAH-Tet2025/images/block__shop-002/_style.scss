@@ -1,0 +1,163 @@
+$classname: shop-002;
+$ratio-big: 492/667;
+$ratio-small: 300/500;
+
+.block__#{$classname} {
+  height: (2300 * $em);
+  position: relative;
+  z-index: 2;
+  background: #f8dfaa url('../images/block__'+#{$classname}+'/bg-sm.webp')
+    no-repeat center 0em scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (1500 * $lgem);
+    background: #f8dfaa url('../images/block__'+#{$classname}+'/bg-lg.webp')
+      no-repeat center 0em scroll;
+    background-size: 100vw auto;
+  }
+
+  // .wcontainer {
+  // }
+
+  .info {
+    text-align: center;
+    padding: 1em;
+    width: 90%;
+    margin: 11.5em auto 0 auto;
+    @media (min-width: 1024px) {
+      margin-top: 16em;
+      width: 40%;
+    }
+  }
+
+  .group-button {
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0em;
+    margin: 0.5em auto 0;
+    @media (min-width: 1024px) {
+      width: 40%;
+      margin-top: 1em;
+    }
+  }
+
+  .block__giftshop-big {
+    width: 100%;
+    margin: 2em auto 0 auto;
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      width: 69%;
+      gap: 1.25em;
+    }
+
+    > .item-big {
+      background: transparent
+        url('../images/block__'+#{$classname}+'/gift-big.webp') no-repeat center
+        center scroll;
+      background-size: 100% 100%;
+      aspect-ratio: $ratio-big;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1.5em;
+      width: 100%;
+      grid-column: span 2 / span 2;
+
+      &:nth-child(1) {
+        grid-column-start: 2;
+        @media (min-width: 1024px) {
+          grid-column-start: 1;
+        }
+      }
+
+      > .icon {
+        width: 60%;
+      }
+      > .name {
+        width: 100%;
+        text-align: center;
+        line-height: 0.9;
+        font-size: 1em;
+        padding: 0.35em 1em;
+        color: #fff;
+        background: rgb(222, 27, 0);
+        background: linear-gradient(
+          90deg,
+          rgba(222, 27, 0, 0) 0%,
+          rgba(222, 27, 0, 1) 10%,
+          rgba(222, 27, 0, 1) 90%,
+          rgba(222, 27, 0, 0) 100%
+        );
+        @media (min-width: 1024px) {
+          font-size: 1.25em;
+        }
+      }
+
+      > .price {
+        font-size: 0.9em;
+        color: var(--w-primary);
+        text-align: center;
+        .btn-doi {
+          width: 60%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .block__giftshop-small {
+    width: 100%;
+    margin: 1em auto 0 auto;
+    display: grid;
+    gap: 0.25em;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      width: 90%;
+    }
+
+    > .item {
+      background: transparent
+        url('../images/block__'+#{$classname}+'/gift-small.webp') no-repeat
+        center center scroll;
+      background-size: 100% 100%;
+      aspect-ratio: $ratio-big;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0.75em;
+      width: 100%;
+      // grid-column: span 2 / span 2;
+
+      > .icon {
+        width: 50%;
+      }
+      > .name {
+        width: 100%;
+        text-align: center;
+        line-height: 1;
+        font-size: 0.9em;
+      }
+
+      > .price {
+        font-size: 0.9em;
+        color: var(--w-primary);
+        text-align: center;
+        .btn-doi {
+          width: 60%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
