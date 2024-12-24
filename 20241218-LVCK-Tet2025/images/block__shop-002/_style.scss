@@ -1,9 +1,9 @@
 $classname: shop-002;
-$ratio-big: 492/667;
+$ratio-big: 492/700;
 $ratio-small: 300/500;
 
 .block__#{$classname} {
-  height: (2300 * $em);
+  height: (2400 * $em);
   position: relative;
   z-index: 2;
   background: #fff6cb url('../images/block__'+#{$classname}+'/bg-sm.webp')
@@ -48,7 +48,7 @@ $ratio-small: 300/500;
     width: 100%;
     margin: 2em auto 0 auto;
     display: grid;
-    gap: 0.5em;
+    gap: 0em;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     @media (min-width: 1024px) {
       grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -56,6 +56,7 @@ $ratio-small: 300/500;
       gap: 1.25em;
     }
 
+    // ANCHOR item big
     > .item-big {
       background: transparent
         url('../images/block__'+#{$classname}+'/gift-big.webp') no-repeat center
@@ -67,7 +68,7 @@ $ratio-small: 300/500;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      padding: 1.5em;
+      padding: 3em 2em;
       width: 100%;
       grid-column: span 2 / span 2;
 
@@ -79,7 +80,7 @@ $ratio-small: 300/500;
       }
 
       > .icon {
-        width: 60%;
+        width: 50%;
       }
       > .name {
         width: 100%;
@@ -117,25 +118,26 @@ $ratio-small: 300/500;
     width: 100%;
     margin: 1em auto 0 auto;
     display: grid;
-    gap: 0.25em;
+    gap: 0em;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     @media (min-width: 1024px) {
       grid-template-columns: repeat(6, minmax(0, 1fr));
       width: 90%;
     }
 
+    // ANCHOR item small
     > .item {
       background: transparent
         url('../images/block__'+#{$classname}+'/gift-small.webp') no-repeat
         center center scroll;
       background-size: 100% 100%;
-      aspect-ratio: $ratio-big;
+      aspect-ratio: $ratio-small;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      padding: 0.75em;
+      padding: 2.5em 0.75em;
       width: 100%;
       // grid-column: span 2 / span 2;
 

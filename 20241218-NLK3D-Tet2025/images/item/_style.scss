@@ -31,3 +31,21 @@
     font-size: 1em;
   }
 }
+
+// Effect
+.saber {
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: transparent url("../images/item/item-saber.gif") no-repeat
+      center center;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    mix-blend-mode: screen;
+  }
+}
