@@ -1,0 +1,213 @@
+$classname: shop-003;
+$ratio-big: 500/500;
+
+.block__#{$classname} {
+  height: (2000 * $em);
+  position: relative;
+  z-index: 2;
+  background: #ffd1ad url('../images/block__'+#{$classname}+'/bg-sm.webp')
+    no-repeat center 0em scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (1600 * $lgem);
+    background: #ffd1ad url('../images/block__'+#{$classname}+'/bg-lg.webp')
+      no-repeat center 0em scroll;
+    background-size: 100vw auto;
+  }
+
+  // .wcontainer {
+  // }
+
+  .info {
+    text-align: center;
+    padding: 1em;
+    width: 90%;
+    margin: 5em auto 0 auto;
+    @media (min-width: 1024px) {
+      margin-top: 0em;
+      width: 40%;
+    }
+  }
+
+  .group-button {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0em;
+    margin: 0.5em auto 0;
+    @media (min-width: 1024px) {
+      width: 60%;
+      margin-top: 1em;
+    }
+  }
+
+  .block__giftshop {
+    width: 100%;
+    margin: 3em auto 0 auto;
+    gap: 0em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+    row-gap: 1.25em;
+    @media (min-width: 1024px) {
+      width: 90%;
+    }
+
+    // ANCHOR item big
+    > .item {
+      background: transparent
+        url('../images/block__'+#{$classname}+'/gift.webp') no-repeat center
+        center scroll;
+      background-size: 100% 100%;
+      aspect-ratio: $ratio-big;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      padding: 0em 1em;
+      cursor: pointer;
+      width: 48%;
+      transition-duration: 0.25s;
+      @media (min-width: 1024px) {
+        width: 30%;
+      }
+
+      &:hover {
+        transform: scale(1.03);
+        z-index: 100;
+      }
+
+      // add some margin to align center
+      &:nth-child(1) {
+        margin: 0 10%;
+        @media (min-width: 1024px) {
+          margin: 0;
+          margin-left: 10%;
+        }
+      }
+      &:nth-child(2) {
+        @media (min-width: 1024px) {
+          margin-right: 10%;
+        }
+      }
+
+      > .name {
+        width: 100%;
+        height: percentage(165/500);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        line-height: 0.9;
+        font-size: 1em;
+        color: #fff;
+
+        @media (min-width: 1024px) {
+          font-size: 1.5em;
+        }
+      }
+      .block__items {
+        width: 100%;
+        height: percentage(137/500);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > .witem {
+          /* max 5  */
+          width: 18%;
+        }
+      }
+
+      > .price {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 0.9em;
+        line-height: 1;
+        text-align: center;
+        color: #fff;
+        height: percentage(130/500);
+        padding: 0.75em 0;
+        @media (min-width: 1024px) {
+          font-size: 1.5em;
+          padding-top: 0.65em;
+        }
+
+        .new {
+          color: gold;
+          width: 100%;
+          animation: pulse 2s infinite;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.25em;
+        }
+        .sale {
+          background-color: red;
+          color: #fff;
+          font-size: 0.69em;
+          padding: 0.25em;
+        }
+        .old {
+          margin-top: 0.15em;
+          width: 100%;
+          font-size: 0.69em;
+          text-decoration: line-through;
+          opacity: 0.35;
+        }
+        .quantity {
+          margin-top: 0.65em;
+          width: 100%;
+          font-size: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+// On Modal
+.wmodal {
+  .block__items {
+    background-color: rgba($color: #ffdc9e, $alpha: 0.5);
+    width: 90%;
+    padding: 1em;
+    border-radius: 1em;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em auto;
+
+    > .witem {
+      /* max 5  */
+      width: 20%;
+    }
+  }
+  .btn-mua {
+    background-color: var(--w-primary);
+    color: #ffd1ad;
+    display: block;
+    padding: 0.75em 1.75em;
+    margin: 1em auto 0;
+  }
+}

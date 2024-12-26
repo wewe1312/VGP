@@ -1,0 +1,63 @@
+.witem {
+  line-height: 1;
+  text-align: center;
+  position: relative;
+  aspect-ratio: 100/140;
+  overflow: hidden;
+  @media (min-width: 1024px) {
+    aspect-ratio: 100/140;
+  }
+
+  .w-image-block {
+    aspect-ratio: 1/1;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  > h1.name {
+    margin-top: 0.25em;
+    font-size: 0.9em;
+  }
+
+  > span.quantity {
+    display: block;
+    position: absolute;
+    color: #fff;
+    background-color: #900;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    top: 0;
+    right: 0;
+    font-size: 1em;
+    z-index: 10;
+  }
+}
+
+// Effect
+.saber > .w-image-block {
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: transparent url("../images/item/item-saber.gif") no-repeat
+      center center;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    mix-blend-mode: screen;
+  }
+}
+
+//ANCHOR html template
+/* <div class="witem">
+              <div class="w-image-block">
+                <img
+                  src="./images/item/item.webp"
+                  alt="Bối Thiên Thạch Cỡ Đại" />
+              </div>
+              <h1 class="name">Bối Thiên Thạch Cỡ Đại Cỡ Cực Đại</h1>
+              <span class="quantity">x5</span>
+            </div> */

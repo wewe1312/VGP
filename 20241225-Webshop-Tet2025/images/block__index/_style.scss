@@ -1,0 +1,46 @@
+$classname: index;
+
+.block__#{$classname} {
+  height: (1400 * $em);
+  position: relative;
+  z-index: 2;
+  background: #ffc291 url('../images/block__'+#{$classname}+'/bg-sm.webp')
+    no-repeat center 0em scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (1000 * $lgem);
+    background: #ffc291 url('../images/block__'+#{$classname}+'/bg-lg.webp')
+      no-repeat center 0em scroll;
+    background-size: 100vw auto;
+  }
+
+  .wcontainer {
+    @media (min-width: 1024px) {
+      padding-left: 700 * $lgem;
+    }
+  }
+
+  .group-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1100 * $em;
+    width: 100%;
+    @media (min-width: 1024px) {
+      width: 90%;
+      margin-top: 700 * $lgem;
+    }
+
+    > .w-image-button {
+      width: 60%;
+
+      @media (min-width: 1024px) {
+        width: 45%;
+      }
+    }
+  }
+}

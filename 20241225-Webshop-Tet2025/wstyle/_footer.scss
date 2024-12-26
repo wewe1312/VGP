@@ -1,0 +1,39 @@
+#section-final {
+  background: transparent url("../images/block-final.webp") no-repeat center
+    center;
+  background-size: cover;
+}
+.block-img-store {
+  background: transparent url("../images/store-badge/img-store.webp") no-repeat
+    center center;
+  background-size: 100% 100%;
+}
+.block-img-store a {
+  overflow: hidden;
+  display: block;
+  text-indent: -9999px;
+}
+.search-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 1em;
+  border: 1px solid var(--w-primary);
+}
+
+.block-18 {
+  background: transparent url("../images/store-badge/img-pg18.webp") no-repeat
+    center bottom scroll;
+  background-size: 100% 100%;
+  aspect-ratio: 585/274;
+
+  > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 33%;
+    width: 100%;
+
+    a {
+      text-indent: -9999px;
+      display: block;
+    }
+  }
+}
