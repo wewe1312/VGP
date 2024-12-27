@@ -1,0 +1,98 @@
+$classname: index;
+
+.block__#{$classname} {
+  height: (1100 * $em);
+  position: relative;
+  z-index: 2;
+  background: #e7613e url('../images/block__'+#{$classname}+'/bg-sm.webp')
+    no-repeat center 0em scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (900 * $lgem);
+    background: #e7613e url('../images/block__'+#{$classname}+'/bg-lg.webp')
+      no-repeat center 0em scroll;
+    background-size: 100vw auto;
+  }
+
+  .wcontainer {
+    @media (min-width: 1024px) {
+      padding-left: 550 * $lgem;
+    }
+  }
+
+  .group-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 825 * $em;
+    width: 100%;
+    @media (min-width: 1024px) {
+      width: 90%;
+      margin-top: 650 * $lgem;
+    }
+
+    > .w-image-button {
+      width: 50%;
+
+      @media (min-width: 1024px) {
+        width: 36%;
+      }
+    }
+  }
+}
+
+// HTML TEMPLATE
+// <section id="section-01" class="block__index scrollspy relative z-[2]">
+// <!-- header menu -->
+// <div class="absolute top-[.75em] left-[.75em] z-[4]">
+//   <button
+//     class="w-image-button w-[3em] lg:w-[3em]"
+//     data-toggle="offcanvas"
+//     data-target="w-offcanvas">
+//     <svg
+//       class="w-full"
+//       fill="#fff"
+//       xmlns="http://www.w3.org/2000/svg"
+//       viewBox="0 0 24 24">
+//       <path
+//         d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z" />
+//     </svg>
+//   </button>
+//   <!-- logo -->
+//   <div data-aos="fade-down" class="w-image-block w-[15em] hidden">
+//     <img src="./images/game-logo.webp" alt="" />
+//   </div>
+// </div>
+
+// <div class="wcontainer relative z-[3] lg:pb-[1em]">
+//   <!-- button -->
+//   <div class="group-button">
+//     <button
+//       class="w-image-button animate__loop animate__bling"
+//       data-aos="fade-up"
+//       data-aos-delay="100"
+//       data-toggle="scroll"
+//       data-target="section-02">
+//       <img
+//         class="e-btn-hover-glow"
+//         src="./images/block__index/btn-001.webp"
+//         alt="" />
+//     </button>
+//     <button
+//       class="w-image-button animate__loop animate__bling"
+//       data-aos="fade-up"
+//       data-aos-delay="300"
+//       data-toggle="scroll"
+//       data-target="section-03">
+//       <img
+//         class="e-btn-hover-glow"
+//         src="./images/block__index/btn-002.webp"
+//         alt="" />
+//     </button>
+//   </div>
+// </div>
+// </section>

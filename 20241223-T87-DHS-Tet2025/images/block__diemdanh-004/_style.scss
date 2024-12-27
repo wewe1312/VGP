@@ -1,0 +1,147 @@
+$classname: diemdanh-004;
+$ratio: 273/310;
+$dayCount: 4;
+
+.block__#{$classname} {
+  height: (1300 * $em);
+  position: relative;
+  z-index: 2;
+  background: #e7613e url('../images/block__'+#{$classname}+'/bg-sm.webp')
+    no-repeat center 0em scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (950 * $lgem);
+    background: #e7613e url('../images/block__'+#{$classname}+'/bg-lg.webp')
+      no-repeat center 0em scroll;
+    background-size: 100vw auto;
+  }
+
+  .day-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1%;
+    width: 90%;
+    margin: 13em auto 0;
+
+    @media (min-width: 1024px) {
+      margin-top: 20em;
+      gap: 0%;
+    }
+
+    .day {
+      width: percentage(190 / $dayCount / 100);
+      display: block;
+      position: relative;
+      background: transparent
+        url('../images/block__'+#{$classname}+'/day/day001.webp') no-repeat
+        center center;
+      background-size: 100% 100%;
+      aspect-ratio: $ratio;
+      transform: scale(1);
+      cursor: pointer;
+      overflow: hidden;
+      animation: blingbling 3s ease infinite;
+
+      @media (min-width: 1024px) {
+        width: percentage(90 / $dayCount / 100);
+      }
+
+      //with item inside
+      display: flex;
+      flex-wrap: wrap;
+      /* flex-direction: column; */
+      justify-content: center;
+      align-items: center;
+
+      padding: 1em;
+      padding-top: 80 * $em;
+      color: #fff;
+
+      @media (min-width: 1024px) {
+        padding: 1em;
+        padding-top: 75 * $lgem;
+      }
+      .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        gap: 0em 0.5em;
+        > .witem {
+          flex-shrink: 0;
+          width: 40%;
+        }
+      }
+      // .btn-thamgia {
+      //   width: 69%;
+      //   margin: 11em auto 0 auto;
+      // }
+    }
+
+    .day:nth-child(3n) {
+      transform: translateX(0em) scale(1);
+      @media (min-width: 1024px) {
+        transform: translateX(0em) scale(1);
+      }
+    }
+
+    // .day:last-child {
+    //   transform-origin: center top;
+    //   /* transform: scale(1.25); */
+
+    //   @media (min-width: 1024px) {
+    //     transform: translateX(0em) scale(1);
+    //   }
+    // }
+
+    .day.disabled {
+      filter: grayscale(0.5) brightness(0.69);
+
+      .btn-thamgia {
+        display: none;
+      }
+    }
+
+    @for $i from 1 through $dayCount {
+      .day:nth-child(#{$i}) {
+        background-image: url('../images/block__'+#{$classname}+'/day/day00' + $i + ".webp");
+        animation-delay: $i * 0.25s;
+      }
+    }
+  }
+  // @media (max-width: 1024px) {
+  //   .day:last-child {
+  //     width: 60%;
+  //     aspect-ratio: 298/180;
+  //     background-image: url("../images/block__" +#{$classname}+ "/day/day007-m.webp") !important;
+
+  //     .witem {
+  //       width: 22% !important;
+  //     }
+  //   }
+  // }
+
+  // .group-button-big {
+  //   margin: 2em auto 0;
+  //   display: flex;
+  //   justify-content: center;
+  //   gap: 0.5em;
+
+  //   @media (min-width: 1024px) {
+  //     width: 45%;
+  //   }
+  // }
+  .group-button {
+    margin: 2em auto 0;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    gap: 0.25em;
+    @media (min-width: 1024px) {
+      width: 25%;
+    }
+  }
+}

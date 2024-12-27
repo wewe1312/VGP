@@ -1,0 +1,82 @@
+$classname: rutque-001;
+
+.block__#{$classname} {
+  height: (1850 * $em);
+  position: relative;
+  z-index: 2;
+  background: #ffc291 url('../images/block__'+#{$classname}+'/bg-sm.webp')
+    no-repeat center 0em scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (1080 * $lgem);
+    background: #ffc291 url('../images/block__'+#{$classname}+'/bg-lg.webp')
+      no-repeat center 0em scroll;
+    background-size: 100vw auto;
+  }
+
+  .group-button-big {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 35em;
+    @media (min-width: 1024px) {
+      width: 20em;
+    }
+
+    > .w-image-button {
+      transform: scale(0.98);
+      width: 50%;
+      @media (min-width: 1024px) {
+        /* transform: scale(0.98);
+        width: 336 * $lgem;
+
+        &:nth-child(2) {
+          margin-left: 400 * $lgem;
+        }
+        &:nth-child(4) {
+          margin-left: 430 * $lgem;
+        } */
+      }
+    }
+  }
+
+  .group-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1em;
+    gap: 0.25em;
+    > .w-image-button {
+      width: 45%;
+    }
+  }
+
+  .side-by-side {
+    @media (min-width: 1024px) {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      position: relative;
+      padding-top: 10em;
+
+      .group-button {
+        width: 15em;
+        > .w-image-button {
+          width: 100%;
+        }
+      }
+
+      .group-button-big {
+        width: 17.5em;
+        order: 1;
+        margin-top: 0;
+        > .w-image-button {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
