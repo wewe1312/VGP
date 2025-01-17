@@ -1,0 +1,46 @@
+// global variables
+$em: 0.038461em; //18px = 1em
+$lgem: 0.05555em; //26px = 1em
+
+@import "../wstyle/wstyle";
+@import "../wstyle/woffcanvas";
+@import "../wstyle/wmodal";
+@import "../wstyle/zbgvideo";
+@import "../wstyle/zanimate";
+@import "../wstyle/wtabs";
+@import "../wstyle/scroll";
+@import "../wstyle/float";
+
+@import "../wstyle/modal-gift-content";
+@import "../wstyle/footer";
+@import "../images/item/style";
+
+// import
+@import "../images/block__index/style";
+@import "../images/block__baodanh-001/style";
+@import "../images/block__character-001/style";
+@import "../images/block__dacsac-001/style";
+@import "../images/block__wheel-001/style";
+@import "../images/block__bxh-002/style";
+
+.w-btn {
+  padding: 0.5em 1em;
+  border: 1px var(--w-secondary) solid;
+  border-radius: 1em;
+}
+
+.info {
+  background-color: rgba($color: #fff, $alpha: 0.85);
+  border-radius: 1em;
+  border: solid var(--w-primary) 1px;
+  backdrop-filter: blur(1em);
+}
+
+.text-money {
+  letter-spacing: 0.25em;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}

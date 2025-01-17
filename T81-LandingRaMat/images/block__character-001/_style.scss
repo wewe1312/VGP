@@ -1,0 +1,37 @@
+$classname: character-001;
+
+@import "character";
+.block__#{$classname} {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+
+  height: (900 * $em);
+  background: #fff url('../images/block__'+#{$classname}+'/bg-sm.webp')
+    no-repeat center 0em scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (960 * $lgem);
+    background: #fff url('../images/block__'+#{$classname}+'/bg-lg.webp')
+      no-repeat center 0em scroll;
+    background-size: 100vw auto;
+  }
+
+  .block-character {
+    margin-top: 240 * $em;
+    @media (min-width: 1024px) {
+      margin-top: 205 * $lgem;
+    }
+  }
+
+  .splitter {
+    content: "";
+    display: block;
+    width: 100%;
+    aspect-ratio: 1920/73;
+    background: #fff url('../images/block__'+#{$classname}+'/splitter-02.webp')
+      no-repeat center 0em scroll;
+    background-size: 100vw auto;
+  }
+}

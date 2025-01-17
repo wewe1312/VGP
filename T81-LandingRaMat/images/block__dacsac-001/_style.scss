@@ -1,0 +1,66 @@
+$classname: dacsac-001;
+
+.block__#{$classname} {
+  $ratio: 350/524;
+
+  height: (1500 * $em);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  background: #fff url('../images/block__'+#{$classname}+'/bg-sm.webp')
+    no-repeat center 0em scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (950 * $lgem);
+    background: #fff url('../images/block__'+#{$classname}+'/bg-lg.webp')
+      no-repeat center 0em scroll;
+    background-size: 100vw auto;
+  }
+
+  .wcontainer {
+    height: 100%;
+  }
+
+  .gift-wrap {
+    margin-top: 7em;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1em;
+    @media (min-width: 1024px) {
+      margin-top: 9em;
+    }
+  }
+
+  .gift {
+    width: 50%;
+    display: block;
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    aspect-ratio: $ratio;
+    cursor: pointer;
+    animation: blingbling linear 3s infinite;
+
+    // for borderless item
+    // transform: scale(1.25);
+
+    @media (min-width: 1024px) {
+      width: 25%;
+    }
+  }
+
+  /* litle decorate */
+  .gift:nth-child(3n + 1) {
+    @media (min-width: 1024px) {
+      // transform: translateY(-2.5em) scale(1);
+    }
+  }
+
+  @for $i from 1 through 4 {
+    .gift:nth-child(#{$i}) {
+      $link: "../images/block__" + #{$classname}+ "/item-00" + $i + ".webp";
+      background-image: url($link);
+      animation-delay: 0.25s * $i;
+    }
+  }
+}

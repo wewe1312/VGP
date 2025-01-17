@@ -1,0 +1,44 @@
+$classname: index;
+
+.block__#{$classname} {
+  height: (1600 * $em);
+  position: relative;
+  z-index: 2;
+  background: #fff url('../images/block__'+#{$classname}+'/bg-sm.webp')
+    no-repeat center 0em scroll;
+  background-size: 100vw auto;
+
+  @media (min-width: 1024px) {
+    height: (1000 * $lgem);
+    background: #fff url('../images/block__'+#{$classname}+'/bg-lg.webp')
+      no-repeat center 0em scroll;
+    background-size: 100vw auto;
+  }
+
+  .wcontainer {
+    @media (min-width: 1024px) {
+      // padding-right: 550 * $lgem;
+    }
+  }
+
+  .group-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0em;
+    width: 650 * $em;
+    margin-top: 1115 * $em;
+    @media (min-width: 1024px) {
+      width: 1300 * $lgem;
+      margin-top: 705 * $lgem;
+    }
+
+    > .w-image-button {
+      width: percentage(1/3);
+
+      @media (min-width: 1024px) {
+        width: percentage(1/5);
+      }
+    }
+  }
+}
